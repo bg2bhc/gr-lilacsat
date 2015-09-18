@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="namespacegr_1_1lilacsat" kind="namespace">
+    <compoundname>gr::lilacsat</compoundname>
+    <innerclass refid="classgr_1_1lilacsat_1_1afsk1200__rx__f" prot="public">gr::lilacsat::afsk1200_rx_f</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1afsk1200__tx__f" prot="public">gr::lilacsat::afsk1200_tx_f</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1angle__cf" prot="public">gr::lilacsat::angle_cf</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1bpsk__demod__cb" prot="public">gr::lilacsat::bpsk_demod_cb</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1encode27__bb" prot="public">gr::lilacsat::encode27_bb</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1fec__decode__b" prot="public">gr::lilacsat::fec_decode_b</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1fec__encode__b" prot="public">gr::lilacsat::fec_encode_b</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1kiss__decode__pdu" prot="public">gr::lilacsat::kiss_decode_pdu</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1kiss__encode__pdu" prot="public">gr::lilacsat::kiss_encode_pdu</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1pipe__sink__pdu" prot="public">gr::lilacsat::pipe_sink_pdu</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1plan13__cc" prot="public">gr::lilacsat::plan13_cc</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1satellite__channel__cc" prot="public">gr::lilacsat::satellite_channel_cc</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1serial__sink__pdu" prot="public">gr::lilacsat::serial_sink_pdu</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1vitfilt27__bb" prot="public">gr::lilacsat::vitfilt27_bb</innerclass>
+    <innerclass refid="classgr_1_1lilacsat_1_1vitfilt27__fb" prot="public">gr::lilacsat::vitfilt27_fb</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/afsk1200_rx_f.h" line="29" column="1"/>
+  </compounddef>
+</doxygen>

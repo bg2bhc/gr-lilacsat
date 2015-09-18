@@ -1,0 +1,393 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="serial_8h" kind="file">
+    <compoundname>serial.h</compoundname>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="serial_8h_1acdf721774c51e08c6609e6fa8cf82cc9" prot="public" static="no">
+        <name>XON</name>
+        <initializer>0x11</initializer>
+        <briefdescription>
+<para>Enable XON/XOFF flow control. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you uncomment this definition, the serial port code will stop sending when a XOFF was received, and start again upon receiving XON. However, you need to use the blocking read/write functions!XON flow control character </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="21" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/serial.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="serial_8h_1a67fd78ae15d2b67c10d44d69a49ab1c5" prot="public" static="no">
+        <name>XOFF</name>
+        <initializer>0x13</initializer>
+        <briefdescription>
+<para>XOFF flow control character. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="22" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/serial.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="serial_8h_1a129e782209cb45803638bd4338b3bce3" prot="public" static="no">
+        <name>SEARCH</name>
+        <initializer>&quot;tty&quot;</initializer>
+        <briefdescription>
+<para>Search term to filter the list of available ports. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you define SEARCH, instead of simply returning a list of files in /dev/, <ref refid="serial_8h_1a3c88c12db5f6cca8878210088dd0db43" kindref="member">getSerialPorts()</ref> will only return items that contain the string defined to SEARCH. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="31" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/serial.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="serial_8h_1a45ba202b05caf39795aeca91b0ae547e" prot="public" static="no">
+        <name>TIMEOUT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+<para>Only list real serial ports. </para>        </briefdescription>
+        <detaileddescription>
+<para>If you uncomment this definition, <ref refid="serial_8h_1a3c88c12db5f6cca8878210088dd0db43" kindref="member">getSerialPorts()</ref> will try to open every port, only returning the name if it is a real serial port. This could cause a big delay, if eg. your system tries to open non-existing bluetooth devices, waiting for their timeout. Also, if your console tty is probed, it might change it&apos;s settings.</para><para>The timeout in seconds for raw reading/writing.</para><para>If this amount of time passes without being able to write/read a character, the raw I/O functions will return 0. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="50" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/serial.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="serial_8h_1a3f8feb56e4b40b3b419dc1b66b7cc168" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int serialOpen</definition>
+        <argsstring>(const char *port, unsigned int baud)</argsstring>
+        <name>serialOpen</name>
+        <param>
+          <type>const char *</type>
+          <declname>port</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>baud</declname>
+        </param>
+        <briefdescription>
+<para>open a serial port </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>port</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name of port </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>baud</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>baudrate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>file handle or -1 on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a64b4c1674e3a9db468017abc142c0db0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serialClose</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>serialClose</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>close an open serial port </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to close </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a3c88c12db5f6cca8878210088dd0db43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>char **</type>
+        <definition>char** getSerialPorts</definition>
+        <argsstring>(void)</argsstring>
+        <name>getSerialPorts</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>query available serial ports </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string array with serial port names. Last element is NULL. Don&apos;t forget to free() after using it! </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a7bac10cc9e1661b8a32e6a42ff184976" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int serialReadRaw</definition>
+        <argsstring>(int fd, char *data, int length)</argsstring>
+        <name>serialReadRaw</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>read from an open serial port </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to read from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer big enough to fit all read data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>maximum number of bytes to read </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes really read </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1af7c80f2e330148bc70a7c6f65d4dbcd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int serialWriteRaw</definition>
+        <argsstring>(int fd, const char *data, int length)</argsstring>
+        <name>serialWriteRaw</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+<para>write to an open serial port </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>buffer containing data to write </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>number of bytes to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>number of bytes really written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a40c6e9edd47717bbd8a51964a6142f3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serialWaitUntilSent</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>serialWaitUntilSent</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>wait until data is sent </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to wait for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="104" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a43d467194685601a8b5698279d17f605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int serialHasChar</definition>
+        <argsstring>(int fd)</argsstring>
+        <name>serialHasChar</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>check if a character has arrived and can be read </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to check </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 if a character is available, 0 if not </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1ad834bf2cfb9d52e43b09359fdab599cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serialReadChar</definition>
+        <argsstring>(int fd, char *c)</argsstring>
+        <name>serialReadChar</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>read a single character </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle of port to read from </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>where read character will be stored </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a5e1abc8648071608e1097927ffe83fdf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serialWriteChar</definition>
+        <argsstring>(int fd, char c)</argsstring>
+        <name>serialWriteChar</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>write a single character </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>character to write </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="serial_8h_1a09bde2c37e429cc293aa524be520e225" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void serialWriteString</definition>
+        <argsstring>(int fd, const char *s)</argsstring>
+        <name>serialWriteString</name>
+        <param>
+          <type>int</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>write a string </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fd</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>file handle to write to </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>C string to be written </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/serial.h" line="136" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/serial.h"/>
+  </compounddef>
+</doxygen>

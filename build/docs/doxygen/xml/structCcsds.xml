@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structCcsds" kind="struct" prot="public">
+    <compoundname>Ccsds</compoundname>
+    <includes refid="ccsds_8h" local="no">ccsds.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCcsds_1a215ca14508e10bea16295b62a5a928b3" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>FIFOBuffer Ccsds::tx_fifo</definition>
+        <argsstring></argsstring>
+        <name>tx_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="63" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1ac1e67a3bee277daf23e9782383275ef4" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::tx_buf[CONFIG_CCSDS_TX_BUFLEN]</definition>
+        <argsstring>[CONFIG_CCSDS_TX_BUFLEN]</argsstring>
+        <name>tx_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="64" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1aa56a9908820a2a75a767bd64bbe1cc56" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::encstate</definition>
+        <argsstring></argsstring>
+        <name>encstate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="65" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a65aaace84e3a6b60f650bf8536872b83" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::sending</definition>
+        <argsstring></argsstring>
+        <name>sending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="66" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a43c9440c75d5af9ba18a9988deaf102b" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::preamble_len</definition>
+        <argsstring></argsstring>
+        <name>preamble_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="67" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a14af8836679c0a603f080c6dac372dd9" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::trailer_len</definition>
+        <argsstring></argsstring>
+        <name>trailer_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="68" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1af5ec0ab7bb84a691ecd17d6e3f962d67" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>FIFOBuffer Ccsds::rx_fifo</definition>
+        <argsstring></argsstring>
+        <name>rx_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="69" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a7497e32fcd3b0c0be0451d35f90d8a39" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::rx_buf[CONFIG_CCSDS_RX_BUFLEN]</definition>
+        <argsstring>[CONFIG_CCSDS_RX_BUFLEN]</argsstring>
+        <name>rx_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="70" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a4462d15ed498301caa99d9ca2db80172" prot="public" static="no" mutable="no">
+        <type><ref refid="structv27" kindref="compound">v27</ref></type>
+        <definition>v27 Ccsds::vi</definition>
+        <argsstring></argsstring>
+        <name>vi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="71" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a634fcb0ba052a06c1cf3a98a3384b1bb" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Ccsds::sync_word</definition>
+        <argsstring></argsstring>
+        <name>sync_word</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="72" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a544c285a5693b39f1ed8de4e4d779e23" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::len_frame</definition>
+        <argsstring></argsstring>
+        <name>len_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="73" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a82d405368d5caf66acca1b346d75d196" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::syncing</definition>
+        <argsstring></argsstring>
+        <name>syncing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="74" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1ae7f960309857c18836e4efbe8e7ce7d3" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t Ccsds::buffer_sync_det</definition>
+        <argsstring></argsstring>
+        <name>buffer_sync_det</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="75" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a388ca22fcfa94eb18e69df9ab3ecf6ab" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::n_out</definition>
+        <argsstring></argsstring>
+        <name>n_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="76" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1ab1f79bfd46d9d8e99a8d879079209418" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::mask_bit_out</definition>
+        <argsstring></argsstring>
+        <name>mask_bit_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="77" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1afef09b19b85cd95e1ab5ad88b8e4771e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::buf_sync_out[LENTH_BUF_SYNC_OUT]</definition>
+        <argsstring>[LENTH_BUF_SYNC_OUT]</argsstring>
+        <name>buf_sync_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="78" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a1d2f71289c2923ebe080ded2cbeb7d5d" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::rx_bit_state</definition>
+        <argsstring></argsstring>
+        <name>rx_bit_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="79" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a2cc67a7bbb8e943900b74c05e5f3a330" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::tx_bit_state</definition>
+        <argsstring></argsstring>
+        <name>tx_bit_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="80" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a33407816f33e749039c757c9cef5b6fe" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* Ccsds::obj_ptr</definition>
+        <argsstring></argsstring>
+        <name>obj_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="81" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a283c5862825900bdd05ec9ad16ba2c8a" prot="public" static="no" mutable="no">
+        <type><ref refid="ccsds_8h_1a8d1f4e055053309134143e0e65e30433" kindref="member">sync_hook_t</ref></type>
+        <definition>sync_hook_t Ccsds::hook</definition>
+        <argsstring></argsstring>
+        <name>hook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="82" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1ac1ddab04a32e948a44bfa4f9e222c274" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::cfg_preamble_len</definition>
+        <argsstring></argsstring>
+        <name>cfg_preamble_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="83" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1adcf0cba43beba7cf55b68b803f5bed7e" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Ccsds::cfg_trailer_len</definition>
+        <argsstring></argsstring>
+        <name>cfg_trailer_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="84" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a010594583f45ccf2753e3d248d9d95bc" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::cfg_continous</definition>
+        <argsstring></argsstring>
+        <name>cfg_continous</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="85" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a3305f9d8808621f0b8928c0bcda69ae2" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::cfg_padding_zero</definition>
+        <argsstring></argsstring>
+        <name>cfg_padding_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="86" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a41eded3eaa367b8e76f3135170e5af2a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::cfg_using_m</definition>
+        <argsstring></argsstring>
+        <name>cfg_using_m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="87" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcsds_1a36907706f1ba0cffc57fe32ab8d0fac7" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Ccsds::cfg_using_convolutional_code</definition>
+        <argsstring></argsstring>
+        <name>cfg_using_convolutional_code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="88" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="63">
+        <label>Ccsds</label>
+        <link refid="structCcsds"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>vi</edgelabel>
+        </childnode>
+        <childnode refid="65" relation="usage">
+          <edgelabel>rx_fifo</edgelabel>
+          <edgelabel>tx_fifo</edgelabel>
+        </childnode>
+      </node>
+      <node id="65">
+        <label>FIFOBuffer</label>
+        <link refid="structFIFOBuffer"/>
+      </node>
+      <node id="64">
+        <label>v27</label>
+        <link refid="structv27"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/ccsds.h" line="62" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds.h" bodystart="61" bodyend="89"/>
+    <listofallmembers>
+      <member refid="structCcsds_1afef09b19b85cd95e1ab5ad88b8e4771e" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>buf_sync_out</name></member>
+      <member refid="structCcsds_1ae7f960309857c18836e4efbe8e7ce7d3" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>buffer_sync_det</name></member>
+      <member refid="structCcsds_1a010594583f45ccf2753e3d248d9d95bc" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_continous</name></member>
+      <member refid="structCcsds_1a3305f9d8808621f0b8928c0bcda69ae2" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_padding_zero</name></member>
+      <member refid="structCcsds_1ac1ddab04a32e948a44bfa4f9e222c274" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_preamble_len</name></member>
+      <member refid="structCcsds_1adcf0cba43beba7cf55b68b803f5bed7e" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_trailer_len</name></member>
+      <member refid="structCcsds_1a36907706f1ba0cffc57fe32ab8d0fac7" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_using_convolutional_code</name></member>
+      <member refid="structCcsds_1a41eded3eaa367b8e76f3135170e5af2a" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>cfg_using_m</name></member>
+      <member refid="structCcsds_1aa56a9908820a2a75a767bd64bbe1cc56" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>encstate</name></member>
+      <member refid="structCcsds_1a283c5862825900bdd05ec9ad16ba2c8a" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>hook</name></member>
+      <member refid="structCcsds_1a544c285a5693b39f1ed8de4e4d779e23" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>len_frame</name></member>
+      <member refid="structCcsds_1ab1f79bfd46d9d8e99a8d879079209418" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>mask_bit_out</name></member>
+      <member refid="structCcsds_1a388ca22fcfa94eb18e69df9ab3ecf6ab" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>n_out</name></member>
+      <member refid="structCcsds_1a33407816f33e749039c757c9cef5b6fe" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>obj_ptr</name></member>
+      <member refid="structCcsds_1a43c9440c75d5af9ba18a9988deaf102b" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>preamble_len</name></member>
+      <member refid="structCcsds_1a1d2f71289c2923ebe080ded2cbeb7d5d" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>rx_bit_state</name></member>
+      <member refid="structCcsds_1a7497e32fcd3b0c0be0451d35f90d8a39" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>rx_buf</name></member>
+      <member refid="structCcsds_1af5ec0ab7bb84a691ecd17d6e3f962d67" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>rx_fifo</name></member>
+      <member refid="structCcsds_1a65aaace84e3a6b60f650bf8536872b83" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>sending</name></member>
+      <member refid="structCcsds_1a634fcb0ba052a06c1cf3a98a3384b1bb" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>sync_word</name></member>
+      <member refid="structCcsds_1a82d405368d5caf66acca1b346d75d196" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>syncing</name></member>
+      <member refid="structCcsds_1a14af8836679c0a603f080c6dac372dd9" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>trailer_len</name></member>
+      <member refid="structCcsds_1a2cc67a7bbb8e943900b74c05e5f3a330" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>tx_bit_state</name></member>
+      <member refid="structCcsds_1ac1e67a3bee277daf23e9782383275ef4" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>tx_buf</name></member>
+      <member refid="structCcsds_1a215ca14508e10bea16295b62a5a928b3" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>tx_fifo</name></member>
+      <member refid="structCcsds_1a4462d15ed498301caa99d9ca2db80172" prot="public" virt="non-virtual"><scope>Ccsds</scope><name>vi</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

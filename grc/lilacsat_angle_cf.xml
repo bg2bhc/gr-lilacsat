@@ -1,0 +1,15 @@
+<block>
+  <name>Angle CF</name>
+  <key>lilacsat_angle_cf</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.angle_cf()</make>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

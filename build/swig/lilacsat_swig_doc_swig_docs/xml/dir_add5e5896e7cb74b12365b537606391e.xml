@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_add5e5896e7cb74b12365b537606391e" kind="dir">
+    <compoundname>/home/lilac/gr-lilacsat/include/lilacsat</compoundname>
+    <innerfile refid="afsk1200__rx__f_8h">afsk1200_rx_f.h</innerfile>
+    <innerfile refid="afsk1200__tx__f_8h">afsk1200_tx_f.h</innerfile>
+    <innerfile refid="angle__cf_8h">angle_cf.h</innerfile>
+    <innerfile refid="api_8h">api.h</innerfile>
+    <innerfile refid="bpsk__demod__cb_8h">bpsk_demod_cb.h</innerfile>
+    <innerfile refid="encode27__bb_8h">encode27_bb.h</innerfile>
+    <innerfile refid="fec__decode__b_8h">fec_decode_b.h</innerfile>
+    <innerfile refid="fec__encode__b_8h">fec_encode_b.h</innerfile>
+    <innerfile refid="kiss__decode__pdu_8h">kiss_decode_pdu.h</innerfile>
+    <innerfile refid="kiss__encode__pdu_8h">kiss_encode_pdu.h</innerfile>
+    <innerfile refid="pipe__sink__pdu_8h">pipe_sink_pdu.h</innerfile>
+    <innerfile refid="plan13__cc_8h">plan13_cc.h</innerfile>
+    <innerfile refid="satellite__channel__cc_8h">satellite_channel_cc.h</innerfile>
+    <innerfile refid="serial__sink__pdu_8h">serial_sink_pdu.h</innerfile>
+    <innerfile refid="vitfilt27__bb_8h">vitfilt27_bb.h</innerfile>
+    <innerfile refid="vitfilt27__fb_8h">vitfilt27_fb.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/"/>
+  </compounddef>
+</doxygen>

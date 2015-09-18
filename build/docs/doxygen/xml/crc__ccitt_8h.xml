@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="crc__ccitt_8h" kind="file">
+    <compoundname>crc_ccitt.h</compoundname>
+    <includes refid="bertos_8h" local="yes">bertos.h</includes>
+    <incdepgraph>
+      <node id="180">
+        <label>stdbool.h</label>
+      </node>
+      <node id="181">
+        <label>stdint.h</label>
+      </node>
+      <node id="179">
+        <label>bertos.h</label>
+        <link refid="bertos_8h"/>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="178">
+        <label>crc_ccitt.h</label>
+        <link refid="crc_ccitt.h"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="crc__ccitt_8h_1a4fc816f60939b5a504de4106680b111c" prot="public" static="no">
+        <name>CRC_CCITT_INIT_VAL</name>
+        <initializer>((uint16_t)0xFFFF)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CRC-CCITT init value </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/crc_ccitt.h" line="15" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/crc_ccitt.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="crc__ccitt_8h_1ad8684c47b885bcccd1cdb36f0bb39117" prot="public" static="no" mutable="no">
+        <type>const uint16_t</type>
+        <definition>const uint16_t crc_ccitt_tab[256]</definition>
+        <argsstring>[256]</argsstring>
+        <name>crc_ccitt_tab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/crc_ccitt.h" line="10" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="crc__ccitt_8h_1a02d1ffc2b83acd5dd0f80d44336a754b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t updcrc_ccitt</definition>
+        <argsstring>(uint8_t c, uint16_t oldcrc)</argsstring>
+        <name>updcrc_ccitt</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>oldcrc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/crc_ccitt.h" line="17" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/crc_ccitt.h"/>
+  </compounddef>
+</doxygen>

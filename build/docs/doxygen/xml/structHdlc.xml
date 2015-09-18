@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structHdlc" kind="struct" prot="public">
+    <compoundname>Hdlc</compoundname>
+    <includes refid="afsk_8h" local="no">afsk.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structHdlc_1af84ca3a42c17864225b7c01394b542d0" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Hdlc::demod_bits</definition>
+        <argsstring></argsstring>
+        <name>demod_bits</name>
+        <briefdescription>
+<para>Bitstream from the demodulator. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk.h" line="36" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHdlc_1ae652585b47e13affcd4eafa4bf88c5da" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Hdlc::bit_idx</definition>
+        <argsstring></argsstring>
+        <name>bit_idx</name>
+        <briefdescription>
+<para>Current received bit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHdlc_1a4ff60b1275a400e4d7644c77ebaf0558" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Hdlc::currchar</definition>
+        <argsstring></argsstring>
+        <name>currchar</name>
+        <briefdescription>
+<para>Current received character. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk.h" line="38" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structHdlc_1ae875f34472fc23e17d4d9fd86f11e566" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Hdlc::rxstart</definition>
+        <argsstring></argsstring>
+        <name>rxstart</name>
+        <briefdescription>
+<para>True if an HDLC_FLAG char has been found in the bitstream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>HDLC (High-Level Data Link Control) context. Maybe to be moved in a separate HDLC module one day. </para>    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk.h" line="35" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk.h" bodystart="34" bodyend="40"/>
+    <listofallmembers>
+      <member refid="structHdlc_1ae652585b47e13affcd4eafa4bf88c5da" prot="public" virt="non-virtual"><scope>Hdlc</scope><name>bit_idx</name></member>
+      <member refid="structHdlc_1a4ff60b1275a400e4d7644c77ebaf0558" prot="public" virt="non-virtual"><scope>Hdlc</scope><name>currchar</name></member>
+      <member refid="structHdlc_1af84ca3a42c17864225b7c01394b542d0" prot="public" virt="non-virtual"><scope>Hdlc</scope><name>demod_bits</name></member>
+      <member refid="structHdlc_1ae875f34472fc23e17d4d9fd86f11e566" prot="public" virt="non-virtual"><scope>Hdlc</scope><name>rxstart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

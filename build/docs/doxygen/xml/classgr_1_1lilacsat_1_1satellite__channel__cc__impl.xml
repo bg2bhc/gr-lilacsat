@@ -1,0 +1,351 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl" kind="class" prot="public">
+    <compoundname>gr::lilacsat::satellite_channel_cc_impl</compoundname>
+    <basecompoundref refid="classgr_1_1lilacsat_1_1satellite__channel__cc" prot="public" virt="non-virtual">gr::lilacsat::satellite_channel_cc</basecompoundref>
+    <includes refid="satellite__channel__cc__impl_8h" local="no">satellite_channel_cc_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a56cf3351d2df23ed3be44ffae824b242" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::satellite_channel_cc_impl::d_theta</definition>
+        <argsstring></argsstring>
+        <name>d_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="46" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa9a57a43d2e01c88cd7889197fa0e52f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::satellite_channel_cc_impl::d_theta0</definition>
+        <argsstring></argsstring>
+        <name>d_theta0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="47" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ac559922aa3cbec0bbf1957d94c74bdbb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::satellite_channel_cc_impl::d_d_theta</definition>
+        <argsstring></argsstring>
+        <name>d_d_theta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="48" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a59821c6dd7055d0f141957da3a9bf44e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_omega</definition>
+        <argsstring></argsstring>
+        <name>d_omega</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="49" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa16192c9cf9896a9690bd9fb8046a339" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::satellite_channel_cc_impl::d_current_phase</definition>
+        <argsstring></argsstring>
+        <name>d_current_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="50" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a1ae4f85286b5504f572939d2c4dc201a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_r_semi_long_axis</definition>
+        <argsstring></argsstring>
+        <name>d_r_semi_long_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="52" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a7f2f145f159a1afc0626a3520194439d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_alpha_aos</definition>
+        <argsstring></argsstring>
+        <name>d_alpha_aos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a056a47258d1738f2582f5a012c7396bb" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_fc</definition>
+        <argsstring></argsstring>
+        <name>d_fc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="54" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a6f3a50c6dee88b756106341a547bad41" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_samp_rate</definition>
+        <argsstring></argsstring>
+        <name>d_samp_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="55" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1acb9577b4396a046a173beeee85945040" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::satellite_channel_cc_impl::d_d0</definition>
+        <argsstring></argsstring>
+        <name>d_d0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="56" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a4e23f9f4ff7724052294789a9841812f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::lilacsat::satellite_channel_cc_impl::d_doppler</definition>
+        <argsstring></argsstring>
+        <name>d_doppler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="57" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ae07f5bb69b72b962e3be32b3a01d0309" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::lilacsat::satellite_channel_cc_impl::d_link_loss</definition>
+        <argsstring></argsstring>
+        <name>d_link_loss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="58" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1afd78406a85de6d35709e1709bb7ed85e" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::lilacsat::satellite_channel_cc_impl::d_verbose</definition>
+        <argsstring></argsstring>
+        <name>d_verbose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="59" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a21d1a9eca9d8c949aba9ce4f691c776d" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr::lilacsat::satellite_channel_cc_impl::d_nout</definition>
+        <argsstring></argsstring>
+        <name>d_nout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="60" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a0a6d0f194f382e32c42f59c76b8a388f" prot="private" static="no" mutable="no">
+        <type>long</type>
+        <definition>long gr::lilacsat::satellite_channel_cc_impl::d_nsecond</definition>
+        <argsstring></argsstring>
+        <name>d_nsecond</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="61" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90e6bc2fb22acf136fbacf6ce303f1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::satellite_channel_cc_impl::satellite_channel_cc_impl</definition>
+        <argsstring>(float r_semi_long_axis, float alpha_aos, float fc, float samp_rate, float d0, bool doppler, bool link_loss, bool verbose)</argsstring>
+        <name>satellite_channel_cc_impl</name>
+        <param>
+          <type>float</type>
+          <declname>r_semi_long_axis</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>alpha_aos</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>samp_rate</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>d0</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>doppler</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>link_loss</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90d6c8edad84068a406fd12d911d720" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::satellite_channel_cc_impl::~satellite_channel_cc_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~satellite_channel_cc_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a147c691bb593386a95aac792a260a241" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::lilacsat::satellite_channel_cc_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="68" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="161">
+        <label>gr::lilacsat::satellite_channel_cc</label>
+        <link refid="classgr_1_1lilacsat_1_1satellite__channel__cc"/>
+        <childnode refid="162" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>sync_block</label>
+      </node>
+      <node id="160">
+        <label>gr::lilacsat::satellite_channel_cc_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl"/>
+        <childnode refid="161" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="164">
+        <label>gr::lilacsat::satellite_channel_cc</label>
+        <link refid="classgr_1_1lilacsat_1_1satellite__channel__cc"/>
+        <childnode refid="165" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>sync_block</label>
+      </node>
+      <node id="163">
+        <label>gr::lilacsat::satellite_channel_cc_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl"/>
+        <childnode refid="164" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/satellite_channel_cc_impl.h" bodystart="43" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a7f2f145f159a1afc0626a3520194439d" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_alpha_aos</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa16192c9cf9896a9690bd9fb8046a339" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_current_phase</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1acb9577b4396a046a173beeee85945040" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_d0</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ac559922aa3cbec0bbf1957d94c74bdbb" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_d_theta</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a4e23f9f4ff7724052294789a9841812f" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_doppler</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a056a47258d1738f2582f5a012c7396bb" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_fc</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ae07f5bb69b72b962e3be32b3a01d0309" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_link_loss</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a21d1a9eca9d8c949aba9ce4f691c776d" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_nout</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a0a6d0f194f382e32c42f59c76b8a388f" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_nsecond</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a59821c6dd7055d0f141957da3a9bf44e" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_omega</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a1ae4f85286b5504f572939d2c4dc201a" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_r_semi_long_axis</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a6f3a50c6dee88b756106341a547bad41" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_samp_rate</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a56cf3351d2df23ed3be44ffae824b242" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_theta</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa9a57a43d2e01c88cd7889197fa0e52f" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_theta0</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1afd78406a85de6d35709e1709bb7ed85e" prot="private" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>d_verbose</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc_1af74d6dfdfdf7b995eb712e9a90445608" prot="public" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90e6bc2fb22acf136fbacf6ce303f1f" prot="public" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>satellite_channel_cc_impl</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc_1ae7524bb1172b25c5157a2b5658a1382d" prot="public" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a147c691bb593386a95aac792a260a241" prot="public" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90d6c8edad84068a406fd12d911d720" prot="public" virt="non-virtual"><scope>gr::lilacsat::satellite_channel_cc_impl</scope><name>~satellite_channel_cc_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

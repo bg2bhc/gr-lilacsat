@@ -1,0 +1,15 @@
+<block>
+  <name>KISS Decode PDU</name>
+  <key>lilacsat_kiss_decode_pdu</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.kiss_decode_pdu()</make>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

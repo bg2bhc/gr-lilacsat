@@ -1,0 +1,94 @@
+<block>
+  <name>FEC Encode</name>
+  <key>lilacsat_fec_encode_b</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.fec_encode_b($frame_len, $preamble_len, $trailer_len, $continous, $padding_zero, $using_m, $using_convolutional_code)</make>
+  <param>
+    <name>Frame Length</name>
+    <key>frame_len</key>
+    <value>114</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Preamble Length</name>
+    <key>preamble_len</key>
+    <value>300</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Trailer Length</name>
+    <key>trailer_len</key>
+    <value>100</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Continous</name>
+    <key>continous</key>
+    <value>True</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Padding Zero</name>
+    <key>padding_zero</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Use M Code</name>
+    <key>using_m</key>
+    <value>True</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Use Convolutional Code</name>
+    <key>using_convolutional_code</key>
+    <value>True</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+  </source>
+  <source>
+    <name>ptt</name>
+    <type>message</type>
+    <optional>1</optional>
+  </source>
+</block>

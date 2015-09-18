@@ -1,0 +1,116 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1plan13__cc" kind="class" prot="public">
+    <compoundname>gr::lilacsat::plan13_cc</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_block</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1lilacsat_1_1plan13__cc__impl" prot="public" virt="non-virtual">gr::lilacsat::plan13_cc_impl</derivedcompoundref>
+    <includes refid="plan13__cc_8h" local="no">plan13_cc.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1lilacsat_1_1plan13__cc_1ab088b3aa4bd1a96632a8f0ce04852e3a" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1lilacsat_1_1plan13__cc" kindref="compound">plan13_cc</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;plan13_cc&gt; gr::lilacsat::plan13_cc::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/plan13_cc.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/plan13_cc.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1plan13__cc_1a48aea24e592ebb69a697bd1f5d35c8bb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1lilacsat_1_1plan13__cc_1ab088b3aa4bd1a96632a8f0ce04852e3a" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::lilacsat::plan13_cc::make</definition>
+        <argsstring>(bool enable, const std::string &amp;tle1, const std::string &amp;tle2, float lon, float lat, float height, float fc, float samp_rate, bool txrx, bool verbose)</argsstring>
+        <name>make</name>
+        <param>
+          <type>bool</type>
+          <declname>enable</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tle1</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>tle2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>fc</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>samp_rate</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>txrx</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>verbose</declname>
+        </param>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1lilacsat_1_1plan13__cc" kindref="compound">lilacsat::plan13_cc</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1lilacsat_1_1plan13__cc" kindref="compound">lilacsat::plan13_cc</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1lilacsat_1_1plan13__cc_1a48aea24e592ebb69a697bd1f5d35c8bb" kindref="member">lilacsat::plan13_cc::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/plan13_cc.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="146">
+        <label>gr::lilacsat::plan13_cc_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1plan13__cc__impl"/>
+        <childnode refid="144" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="145">
+        <label>sync_block</label>
+      </node>
+      <node id="144">
+        <label>gr::lilacsat::plan13_cc</label>
+        <link refid="classgr_1_1lilacsat_1_1plan13__cc"/>
+        <childnode refid="145" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="148">
+        <label>sync_block</label>
+      </node>
+      <node id="147">
+        <label>gr::lilacsat::plan13_cc</label>
+        <link refid="classgr_1_1lilacsat_1_1plan13__cc"/>
+        <childnode refid="148" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/plan13_cc.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/plan13_cc.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1plan13__cc_1a48aea24e592ebb69a697bd1f5d35c8bb" prot="public" virt="non-virtual"><scope>gr::lilacsat::plan13_cc</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1plan13__cc_1ab088b3aa4bd1a96632a8f0ce04852e3a" prot="public" virt="non-virtual"><scope>gr::lilacsat::plan13_cc</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

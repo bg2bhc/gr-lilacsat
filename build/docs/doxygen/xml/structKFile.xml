@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structKFile" kind="struct" prot="public">
+    <compoundname>KFile</compoundname>
+    <includes refid="kfile_8h" local="no">kfile.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structKFile_1a59c40071977f54354443ccdaada58e9e" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a3fe0b350689819452c2c5b973bd944f1" kindref="member">ReadFunc_t</ref></type>
+        <definition>ReadFunc_t KFile::read</definition>
+        <argsstring></argsstring>
+        <name>read</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="189" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1a7853cb74d6aaae6cd03f8ff3394aa93e" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a0b78084d423d1e90e680d7a1d0dc26ba" kindref="member">WriteFunc_t</ref></type>
+        <definition>WriteFunc_t KFile::write</definition>
+        <argsstring></argsstring>
+        <name>write</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="190" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1aecf782d02df9f46dcef3acaf9186042a" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a2cd2f400c6b4eecf7ee53886ae596f54" kindref="member">ReOpenFunc_t</ref></type>
+        <definition>ReOpenFunc_t KFile::reopen</definition>
+        <argsstring></argsstring>
+        <name>reopen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="191" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1ae01135f638b28e91689d663f4cfb1dfe" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1ada3a8e5d8c3b9c3c13cd6f240b04992d" kindref="member">CloseFunc_t</ref></type>
+        <definition>CloseFunc_t KFile::close</definition>
+        <argsstring></argsstring>
+        <name>close</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="192" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1a6ba0e29b8fbe625ddbece4200c8e477d" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a3505f08a364509144795a9d1601b0ead" kindref="member">SeekFunc_t</ref></type>
+        <definition>SeekFunc_t KFile::seek</definition>
+        <argsstring></argsstring>
+        <name>seek</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="193" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1a8b1b66fdd5f90759d3facac308ecd841" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a7ab35c0a62181a374d96957f14454d6e" kindref="member">FlushFunc_t</ref></type>
+        <definition>FlushFunc_t KFile::flush</definition>
+        <argsstring></argsstring>
+        <name>flush</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="194" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1a37efc22607c6b2f1e2b442d94046d335" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a190aad2c7706fa21ae066b36e350faf0" kindref="member">ErrorFunc_t</ref></type>
+        <definition>ErrorFunc_t KFile::error</definition>
+        <argsstring></argsstring>
+        <name>error</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="195" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1ad82e54700b42d2b8dfb0004306d60489" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a8d6715250d8ae8f0e18fbf26e1c75dd5" kindref="member">ClearErrFunc_t</ref></type>
+        <definition>ClearErrFunc_t KFile::clearerr</definition>
+        <argsstring></argsstring>
+        <name>clearerr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="196" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1a87e0a496b951df1c4c67df229be08acc" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kindref="member">kfile_off_t</ref></type>
+        <definition>kfile_off_t KFile::seek_pos</definition>
+        <argsstring></argsstring>
+        <name>seek_pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="200" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structKFile_1ad050960a2d334b4d722fcf0b5c24d131" prot="public" static="no" mutable="no">
+        <type><ref refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kindref="member">kfile_off_t</ref></type>
+        <definition>kfile_off_t KFile::size</definition>
+        <argsstring></argsstring>
+        <name>size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="201" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structKFile_1a450b10d9607b934fe15840e4b1fe0d66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>KFile::DB</definition>
+        <argsstring>(id_t _type)</argsstring>
+        <name>DB</name>
+        <param>
+          <type><ref refid="bertos_8h_1a513ee83176411bfc889c87bff2f5b6e4" kindref="member">id_t</ref></type>
+          <declname>_type</declname>
+        </param>
+        <briefdescription>
+<para>Used to keep track, at runtime, of the class type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="197" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Context data for callback functions which operate on pseudo files.</para><para><simplesect kind="note"><para>Remember to add the corresponding accessor functions when extending this interface. </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="106">
+        <label>KFile</label>
+        <link refid="structKFile"/>
+        <childnode refid="106" relation="usage">
+          <edgelabel>clearerr</edgelabel>
+          <edgelabel>error</edgelabel>
+          <edgelabel>close</edgelabel>
+          <edgelabel>read</edgelabel>
+          <edgelabel>seek</edgelabel>
+          <edgelabel>write</edgelabel>
+          <edgelabel>reopen</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/kfile.h" line="188" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kfile.h" bodystart="187" bodyend="202"/>
+    <listofallmembers>
+      <member refid="structKFile_1ad82e54700b42d2b8dfb0004306d60489" prot="public" virt="non-virtual"><scope>KFile</scope><name>clearerr</name></member>
+      <member refid="structKFile_1ae01135f638b28e91689d663f4cfb1dfe" prot="public" virt="non-virtual"><scope>KFile</scope><name>close</name></member>
+      <member refid="structKFile_1a450b10d9607b934fe15840e4b1fe0d66" prot="public" virt="non-virtual"><scope>KFile</scope><name>DB</name></member>
+      <member refid="structKFile_1a37efc22607c6b2f1e2b442d94046d335" prot="public" virt="non-virtual"><scope>KFile</scope><name>error</name></member>
+      <member refid="structKFile_1a8b1b66fdd5f90759d3facac308ecd841" prot="public" virt="non-virtual"><scope>KFile</scope><name>flush</name></member>
+      <member refid="structKFile_1a59c40071977f54354443ccdaada58e9e" prot="public" virt="non-virtual"><scope>KFile</scope><name>read</name></member>
+      <member refid="structKFile_1aecf782d02df9f46dcef3acaf9186042a" prot="public" virt="non-virtual"><scope>KFile</scope><name>reopen</name></member>
+      <member refid="structKFile_1a6ba0e29b8fbe625ddbece4200c8e477d" prot="public" virt="non-virtual"><scope>KFile</scope><name>seek</name></member>
+      <member refid="structKFile_1a87e0a496b951df1c4c67df229be08acc" prot="public" virt="non-virtual"><scope>KFile</scope><name>seek_pos</name></member>
+      <member refid="structKFile_1ad050960a2d334b4d722fcf0b5c24d131" prot="public" virt="non-virtual"><scope>KFile</scope><name>size</name></member>
+      <member refid="structKFile_1a7853cb74d6aaae6cd03f8ff3394aa93e" prot="public" virt="non-virtual"><scope>KFile</scope><name>write</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

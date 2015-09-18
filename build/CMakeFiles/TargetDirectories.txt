@@ -1,0 +1,12 @@
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/_lilacsat_swig.dir
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/_lilacsat_swig_doc_tag.dir
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/_lilacsat_swig_swig_tag.dir
+/home/lilac/gr-lilacsat/build/docs/doxygen/CMakeFiles/doxygen_target.dir
+/home/lilac/gr-lilacsat/build/lib/CMakeFiles/gnuradio-lilacsat.dir
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/lilacsat_swig_swig_2d0df.dir
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/lilacsat_swig_swig_doc.dir
+/home/lilac/gr-lilacsat/build/apps/CMakeFiles/pygen_apps_9a6dd.dir
+/home/lilac/gr-lilacsat/build/python/CMakeFiles/pygen_python_1f2c6.dir
+/home/lilac/gr-lilacsat/build/swig/CMakeFiles/pygen_swig_8a479.dir
+/home/lilac/gr-lilacsat/build/lib/CMakeFiles/test-lilacsat.dir
+/home/lilac/gr-lilacsat/build/CMakeFiles/uninstall.dir

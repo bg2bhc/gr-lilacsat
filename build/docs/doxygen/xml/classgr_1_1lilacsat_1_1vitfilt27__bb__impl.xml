@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1vitfilt27__bb__impl" kind="class" prot="public">
+    <compoundname>gr::lilacsat::vitfilt27_bb_impl</compoundname>
+    <basecompoundref refid="classgr_1_1lilacsat_1_1vitfilt27__bb" prot="public" virt="non-virtual">gr::lilacsat::vitfilt27_bb</basecompoundref>
+    <includes refid="vitfilt27__bb__impl_8h" local="no">vitfilt27_bb_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1add77fef1de93278ae9ef6f495248dbda" prot="private" static="no" mutable="no">
+        <type><ref refid="structv27" kindref="compound">v27</ref></type>
+        <definition>v27 gr::lilacsat::vitfilt27_bb_impl::vi</definition>
+        <argsstring></argsstring>
+        <name>vi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab371384470dceed4805bbd1fd4b33feb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::vitfilt27_bb_impl::vitfilt27_bb_impl</definition>
+        <argsstring>()</argsstring>
+        <name>vitfilt27_bb_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1a60d7a79dfe841c9463c921735d5d41ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::vitfilt27_bb_impl::~vitfilt27_bb_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~vitfilt27_bb_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab0dbb0a813d53bb0f2c441083c6f4586" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::lilacsat::vitfilt27_bb_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" line="51" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="184">
+        <label>gr::lilacsat::vitfilt27_bb_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl"/>
+        <childnode refid="185" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>sync_decimator</label>
+      </node>
+      <node id="185">
+        <label>gr::lilacsat::vitfilt27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb"/>
+        <childnode refid="186" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="187">
+        <label>gr::lilacsat::vitfilt27_bb_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl"/>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>sync_decimator</label>
+      </node>
+      <node id="188">
+        <label>gr::lilacsat::vitfilt27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb"/>
+        <childnode refid="189" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" line="42" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/vitfilt27_bb_impl.h" bodystart="41" bodyend="54"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1afef5a673ad2054e38de66d72fed69b4a" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1ac83d9bbf9b5fa3c52c156f5ec56b9cca" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1add77fef1de93278ae9ef6f495248dbda" prot="private" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>vi</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab371384470dceed4805bbd1fd4b33feb" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>vitfilt27_bb_impl</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab0dbb0a813d53bb0f2c441083c6f4586" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1a60d7a79dfe841c9463c921735d5d41ba" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb_impl</scope><name>~vitfilt27_bb_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

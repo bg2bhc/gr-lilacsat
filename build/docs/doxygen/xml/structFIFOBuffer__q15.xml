@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structFIFOBuffer__q15" kind="struct" prot="public">
+    <compoundname>FIFOBuffer_q15</compoundname>
+    <includes refid="fifobuf_8h" local="no">fifobuf.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structFIFOBuffer__q15_1a5abf16b6940de1379dac6568b9a8a87c" prot="public" static="no" mutable="no">
+        <type>int16_t *volatile</type>
+        <definition>int16_t* volatile FIFOBuffer_q15::head</definition>
+        <argsstring></argsstring>
+        <name>head</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fifobuf.h" line="88" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fifobuf.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFIFOBuffer__q15_1a0255fd9392d50ebf29928dafdc0e7906" prot="public" static="no" mutable="no">
+        <type>int16_t *volatile</type>
+        <definition>int16_t* volatile FIFOBuffer_q15::tail</definition>
+        <argsstring></argsstring>
+        <name>tail</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fifobuf.h" line="89" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fifobuf.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFIFOBuffer__q15_1ae83e039e2e9da65a245edce40966c1fa" prot="public" static="no" mutable="no">
+        <type>int16_t *</type>
+        <definition>int16_t* FIFOBuffer_q15::begin</definition>
+        <argsstring></argsstring>
+        <name>begin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fifobuf.h" line="90" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fifobuf.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structFIFOBuffer__q15_1abbd529d12a88c196a17a40d4493dd8b3" prot="public" static="no" mutable="no">
+        <type>int16_t *</type>
+        <definition>int16_t* FIFOBuffer_q15::end</definition>
+        <argsstring></argsstring>
+        <name>end</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fifobuf.h" line="91" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fifobuf.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/fifobuf.h" line="87" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fifobuf.h" bodystart="86" bodyend="92"/>
+    <listofallmembers>
+      <member refid="structFIFOBuffer__q15_1ae83e039e2e9da65a245edce40966c1fa" prot="public" virt="non-virtual"><scope>FIFOBuffer_q15</scope><name>begin</name></member>
+      <member refid="structFIFOBuffer__q15_1abbd529d12a88c196a17a40d4493dd8b3" prot="public" virt="non-virtual"><scope>FIFOBuffer_q15</scope><name>end</name></member>
+      <member refid="structFIFOBuffer__q15_1a5abf16b6940de1379dac6568b9a8a87c" prot="public" virt="non-virtual"><scope>FIFOBuffer_q15</scope><name>head</name></member>
+      <member refid="structFIFOBuffer__q15_1a0255fd9392d50ebf29928dafdc0e7906" prot="public" virt="non-virtual"><scope>FIFOBuffer_q15</scope><name>tail</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

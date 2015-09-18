@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1vitfilt27__bb" kind="class" prot="public">
+    <compoundname>gr::lilacsat::vitfilt27_bb</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_decimator</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl" prot="public" virt="non-virtual">gr::lilacsat::vitfilt27_bb_impl</derivedcompoundref>
+    <includes refid="vitfilt27__bb_8h" local="no">vitfilt27_bb.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1lilacsat_1_1vitfilt27__bb_1ac83d9bbf9b5fa3c52c156f5ec56b9cca" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1lilacsat_1_1vitfilt27__bb" kindref="compound">vitfilt27_bb</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;vitfilt27_bb&gt; gr::lilacsat::vitfilt27_bb::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/vitfilt27_bb.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/vitfilt27_bb.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1vitfilt27__bb_1afef5a673ad2054e38de66d72fed69b4a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1ac83d9bbf9b5fa3c52c156f5ec56b9cca" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::lilacsat::vitfilt27_bb::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1lilacsat_1_1vitfilt27__bb" kindref="compound">lilacsat::vitfilt27_bb</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1lilacsat_1_1vitfilt27__bb" kindref="compound">lilacsat::vitfilt27_bb</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1afef5a673ad2054e38de66d72fed69b4a" kindref="member">lilacsat::vitfilt27_bb::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/vitfilt27_bb.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="181">
+        <label>gr::lilacsat::vitfilt27_bb_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl"/>
+        <childnode refid="179" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>sync_decimator</label>
+      </node>
+      <node id="179">
+        <label>gr::lilacsat::vitfilt27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb"/>
+        <childnode refid="180" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="183">
+        <label>sync_decimator</label>
+      </node>
+      <node id="182">
+        <label>gr::lilacsat::vitfilt27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1vitfilt27__bb"/>
+        <childnode refid="183" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/vitfilt27_bb.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/vitfilt27_bb.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1afef5a673ad2054e38de66d72fed69b4a" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1ac83d9bbf9b5fa3c52c156f5ec56b9cca" prot="public" virt="non-virtual"><scope>gr::lilacsat::vitfilt27_bb</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

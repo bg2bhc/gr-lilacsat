@@ -1,0 +1,15 @@
+<block>
+  <name>AFSK1200 RX</name>
+  <key>lilacsat_afsk1200_rx_f</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.afsk1200_rx_f()</make>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

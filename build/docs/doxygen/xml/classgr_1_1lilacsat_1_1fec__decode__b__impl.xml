@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1fec__decode__b__impl" kind="class" prot="public">
+    <compoundname>gr::lilacsat::fec_decode_b_impl</compoundname>
+    <basecompoundref refid="classgr_1_1lilacsat_1_1fec__decode__b" prot="public" virt="non-virtual">gr::lilacsat::fec_decode_b</basecompoundref>
+    <includes refid="fec__decode__b__impl_8h" local="no">fec_decode_b_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1aa1067cc89f4070b7a2d4a32a17519b99" prot="private" static="no" mutable="no">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t gr::lilacsat::fec_decode_b_impl::d_out_port</definition>
+        <argsstring></argsstring>
+        <name>d_out_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="45" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a1149836e2cfc24353888fae8f39e56b0" prot="private" static="no" mutable="no">
+        <type><ref refid="structCcsds" kindref="compound">Ccsds</ref></type>
+        <definition>Ccsds gr::lilacsat::fec_decode_b_impl::cc</definition>
+        <argsstring></argsstring>
+        <name>cc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="46" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1adec9f024de736ef7858785717e1588e3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool gr::lilacsat::fec_decode_b_impl::d_pass_all</definition>
+        <argsstring></argsstring>
+        <name>d_pass_all</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="47" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a192a2820c1619152d8d1eb9c5d8996bc" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void gr::lilacsat::fec_decode_b_impl::callback</definition>
+        <argsstring>(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr)</argsstring>
+        <name>callback</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>unsigned short</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>byte_corr</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>obj_ptr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1ae51568fc71fb8e8bcc26e6f9d720f599" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::fec_decode_b_impl::fec_decode_b_impl</definition>
+        <argsstring>(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)</argsstring>
+        <name>fec_decode_b_impl</name>
+        <param>
+          <type>int</type>
+          <declname>frame_len</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>using_m</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>using_convolutional_code</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>pass_all</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a07e3d227169521893495e6c4657558b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::fec_decode_b_impl::~fec_decode_b_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~fec_decode_b_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a969a2a21f31bcb1589b7a2eec4eab2a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::lilacsat::fec_decode_b_impl::work</definition>
+        <argsstring>(int noutput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="55" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="82">
+        <label>gr::lilacsat::fec_decode_b_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1fec__decode__b__impl"/>
+        <childnode refid="83" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>sync_block</label>
+      </node>
+      <node id="83">
+        <label>gr::lilacsat::fec_decode_b</label>
+        <link refid="classgr_1_1lilacsat_1_1fec__decode__b"/>
+        <childnode refid="84" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="85">
+        <label>gr::lilacsat::fec_decode_b_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1fec__decode__b__impl"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="87">
+        <label>sync_block</label>
+      </node>
+      <node id="86">
+        <label>gr::lilacsat::fec_decode_b</label>
+        <link refid="classgr_1_1lilacsat_1_1fec__decode__b"/>
+        <childnode refid="87" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" line="43" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h" bodystart="42" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a192a2820c1619152d8d1eb9c5d8996bc" prot="private" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>callback</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a1149836e2cfc24353888fae8f39e56b0" prot="private" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>cc</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1aa1067cc89f4070b7a2d4a32a17519b99" prot="private" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>d_out_port</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1adec9f024de736ef7858785717e1588e3" prot="private" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>d_pass_all</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1ae51568fc71fb8e8bcc26e6f9d720f599" prot="public" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>fec_decode_b_impl</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b_1a1f8b50544e0999488d86de58ad3ac0c3" prot="public" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b_1ac05d1675ba0a6a36f00bff15acb0722b" prot="public" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a969a2a21f31bcb1589b7a2eec4eab2a4" prot="public" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>work</name></member>
+      <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a07e3d227169521893495e6c4657558b4" prot="public" virt="non-virtual"><scope>gr::lilacsat::fec_decode_b_impl</scope><name>~fec_decode_b_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="api_8h" kind="file">
+    <compoundname>api.h</compoundname>
+    <includes local="no">gnuradio/attributes.h</includes>
+    <includedby refid="afsk1200__rx__f_8h" local="no">afsk1200_rx_f.h</includedby>
+    <includedby refid="afsk1200__tx__f_8h" local="no">afsk1200_tx_f.h</includedby>
+    <includedby refid="angle__cf_8h" local="no">angle_cf.h</includedby>
+    <includedby refid="bpsk__demod__cb_8h" local="no">bpsk_demod_cb.h</includedby>
+    <includedby refid="encode27__bb_8h" local="no">encode27_bb.h</includedby>
+    <includedby refid="fec__decode__b_8h" local="no">fec_decode_b.h</includedby>
+    <includedby refid="fec__encode__b_8h" local="no">fec_encode_b.h</includedby>
+    <includedby refid="kiss__decode__pdu_8h" local="no">kiss_decode_pdu.h</includedby>
+    <includedby refid="kiss__encode__pdu_8h" local="no">kiss_encode_pdu.h</includedby>
+    <includedby refid="pipe__sink__pdu_8h" local="no">pipe_sink_pdu.h</includedby>
+    <includedby refid="plan13__cc_8h" local="no">plan13_cc.h</includedby>
+    <includedby refid="satellite__channel__cc_8h" local="no">satellite_channel_cc.h</includedby>
+    <includedby refid="serial__sink__pdu_8h" local="no">serial_sink_pdu.h</includedby>
+    <includedby refid="vitfilt27__bb_8h" local="no">vitfilt27_bb.h</includedby>
+    <includedby refid="vitfilt27__fb_8h" local="no">vitfilt27_fb.h</includedby>
+    <incdepgraph>
+      <node id="71">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="70">
+        <label>api.h</label>
+        <link refid="api.h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="89">
+        <label>kiss_encode_pdu.h</label>
+        <link refid="kiss__encode__pdu_8h"/>
+        <childnode refid="90" relation="include">
+        </childnode>
+      </node>
+      <node id="101">
+        <label>vitfilt27_fb.h</label>
+        <link refid="vitfilt27__fb_8h"/>
+        <childnode refid="102" relation="include">
+        </childnode>
+      </node>
+      <node id="93">
+        <label>plan13_cc.h</label>
+        <link refid="plan13__cc_8h"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+      <node id="94">
+        <label>plan13_cc_impl.h</label>
+        <link refid="plan13__cc__impl_8h"/>
+      </node>
+      <node id="85">
+        <label>fec_encode_b.h</label>
+        <link refid="fec__encode__b_8h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>satellite_channel_cc.h</label>
+        <link refid="satellite__channel__cc_8h"/>
+        <childnode refid="96" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>bpsk_demod_cb.h</label>
+        <link refid="bpsk__demod__cb_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>encode27_bb.h</label>
+        <link refid="encode27__bb_8h"/>
+        <childnode refid="82" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>fec_decode_b_impl.h</label>
+        <link refid="fec__decode__b__impl_8h"/>
+      </node>
+      <node id="72">
+        <label>api.h</label>
+        <link refid="api.h"/>
+        <childnode refid="73" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+        <childnode refid="85" relation="include">
+        </childnode>
+        <childnode refid="87" relation="include">
+        </childnode>
+        <childnode refid="89" relation="include">
+        </childnode>
+        <childnode refid="91" relation="include">
+        </childnode>
+        <childnode refid="93" relation="include">
+        </childnode>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+        <childnode refid="101" relation="include">
+        </childnode>
+      </node>
+      <node id="90">
+        <label>kiss_encode_pdu_impl.h</label>
+        <link refid="kiss__encode__pdu__impl_8h"/>
+      </node>
+      <node id="92">
+        <label>pipe_sink_pdu_impl.h</label>
+        <link refid="pipe__sink__pdu__impl_8h"/>
+      </node>
+      <node id="83">
+        <label>fec_decode_b.h</label>
+        <link refid="fec__decode__b_8h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>afsk1200_rx_f.h</label>
+        <link refid="afsk1200__rx__f_8h"/>
+        <childnode refid="74" relation="include">
+        </childnode>
+      </node>
+      <node id="88">
+        <label>kiss_decode_pdu_impl.h</label>
+        <link refid="kiss__decode__pdu__impl_8h"/>
+      </node>
+      <node id="87">
+        <label>kiss_decode_pdu.h</label>
+        <link refid="kiss__decode__pdu_8h"/>
+        <childnode refid="88" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>afsk1200_tx_f_impl.h</label>
+        <link refid="afsk1200__tx__f__impl_8h"/>
+      </node>
+      <node id="74">
+        <label>afsk1200_rx_f_impl.h</label>
+        <link refid="afsk1200__rx__f__impl_8h"/>
+      </node>
+      <node id="96">
+        <label>satellite_channel_cc_impl.h</label>
+        <link refid="satellite__channel__cc__impl_8h"/>
+      </node>
+      <node id="98">
+        <label>serial_sink_pdu_impl.h</label>
+        <link refid="serial__sink__pdu__impl_8h"/>
+      </node>
+      <node id="77">
+        <label>angle_cf.h</label>
+        <link refid="angle__cf_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="99">
+        <label>vitfilt27_bb.h</label>
+        <link refid="vitfilt27__bb_8h"/>
+        <childnode refid="100" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>angle_cf_impl.h</label>
+        <link refid="angle__cf__impl_8h"/>
+      </node>
+      <node id="102">
+        <label>vitfilt27_fb_impl.h</label>
+        <link refid="vitfilt27__fb__impl_8h"/>
+      </node>
+      <node id="100">
+        <label>vitfilt27_bb_impl.h</label>
+        <link refid="vitfilt27__bb__impl_8h"/>
+      </node>
+      <node id="82">
+        <label>encode27_bb_impl.h</label>
+        <link refid="encode27__bb__impl_8h"/>
+      </node>
+      <node id="86">
+        <label>fec_encode_b_impl.h</label>
+        <link refid="fec__encode__b__impl_8h"/>
+      </node>
+      <node id="80">
+        <label>bpsk_demod_cb_impl.h</label>
+        <link refid="bpsk__demod__cb__impl_8h"/>
+      </node>
+      <node id="75">
+        <label>afsk1200_tx_f.h</label>
+        <link refid="afsk1200__tx__f_8h"/>
+        <childnode refid="76" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>pipe_sink_pdu.h</label>
+        <link refid="pipe__sink__pdu_8h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
+        <label>serial_sink_pdu.h</label>
+        <link refid="serial__sink__pdu_8h"/>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="api_8h_1ad6d4e9a83df2bcd80a7c8a3fa208e39b" prot="public" static="no">
+        <name>LILACSAT_API</name>
+        <initializer>__GR_ATTR_IMPORT</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/api.h" line="30" column="12" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/api.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/api.h"/>
+  </compounddef>
+</doxygen>

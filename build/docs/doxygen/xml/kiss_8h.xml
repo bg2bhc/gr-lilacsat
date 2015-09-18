@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="kiss_8h" kind="file">
+    <compoundname>kiss.h</compoundname>
+    <includes local="no">inttypes.h</includes>
+    <includedby refid="kiss__decode__pdu__impl_8h" local="yes">kiss_decode_pdu_impl.h</includedby>
+    <includedby refid="kiss__encode__pdu__impl_8h" local="yes">kiss_encode_pdu_impl.h</includedby>
+    <incdepgraph>
+      <node id="266">
+        <label>kiss.h</label>
+        <link refid="kiss.h"/>
+        <childnode refid="267" relation="include">
+        </childnode>
+      </node>
+      <node id="267">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="270">
+        <label>kiss_encode_pdu_impl.h</label>
+        <link refid="kiss__encode__pdu__impl_8h"/>
+      </node>
+      <node id="269">
+        <label>kiss_decode_pdu_impl.h</label>
+        <link refid="kiss__decode__pdu__impl_8h"/>
+      </node>
+      <node id="268">
+        <label>kiss.h</label>
+        <link refid="kiss.h"/>
+        <childnode refid="269" relation="include">
+        </childnode>
+        <childnode refid="270" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structKiss" prot="public">Kiss</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="kiss_8h_1ace4f41c6d21b07afd94795d923f5286d" prot="public" static="no">
+        <name>LEN_KISS_BUFFER</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="32" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/kiss.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="kiss_8h_1ae8bc87364cbdc61f3dd791695e775250" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* kiss_hook_t)(void *obj_ptr, char *ptr, uint16_t len)</definition>
+        <argsstring>)(void *obj_ptr, char *ptr, uint16_t len)</argsstring>
+        <name>kiss_hook_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="34" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kiss.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kiss_8h_1a5e9598ca2df3205602fc0b48ca28f50a" prot="public" static="no">
+        <type>struct <ref refid="structKiss" kindref="compound">Kiss</ref></type>
+        <definition>typedef struct Kiss  Kiss</definition>
+        <argsstring></argsstring>
+        <name>Kiss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="43" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kiss_8h_1a063e2a56f09c5039da3428edd70496b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kiss_init</definition>
+        <argsstring>(Kiss *ki, void *obj_ptr, kiss_hook_t hook)</argsstring>
+        <name>kiss_init</name>
+        <param>
+          <type><ref refid="structKiss" kindref="compound">Kiss</ref> *</type>
+          <declname>ki</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>obj_ptr</declname>
+        </param>
+        <param>
+          <type><ref refid="kiss_8h_1ae8bc87364cbdc61f3dd791695e775250" kindref="member">kiss_hook_t</ref></type>
+          <declname>hook</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss_8h_1af8d80f9ceb24c7e55ae3457916418aca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kiss_rx_byte</definition>
+        <argsstring>(Kiss *ki, unsigned char input)</argsstring>
+        <name>kiss_rx_byte</name>
+        <param>
+          <type><ref refid="structKiss" kindref="compound">Kiss</ref> *</type>
+          <declname>ki</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss_8h_1af268f0d2374ef0183cb3ee5f7170f9e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint16_t</type>
+        <definition>uint16_t kiss_tx_packet</definition>
+        <argsstring>(unsigned char *packet_in, uint16_t len, unsigned char *packet_out)</argsstring>
+        <name>kiss_tx_packet</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>packet_in</declname>
+        </param>
+        <param>
+          <type>uint16_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>packet_out</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss.h" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/kiss.h"/>
+  </compounddef>
+</doxygen>
