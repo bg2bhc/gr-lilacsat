@@ -1,3 +1,15 @@
+/* 
+ *
+ * This file is a C port by Edson Pereira, PY2SDR 
+ * <http://www.qsl.net/n1vtn/>
+ *
+ * based on the Plan 13 keplerian propagator developed by James Miller, G3RUH
+ * <http://www.amsat.org/amsat/articles/g3ruh/111.html>
+ *
+ */
+
+
+
 #ifndef plan13_h
 #define plan13_h
 //#include "Arduino.h"
