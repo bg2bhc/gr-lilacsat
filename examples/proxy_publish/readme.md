@@ -7,6 +7,8 @@ Use this proxy with on-air receiving only.
  
 View http://lilacsat.hit.edu.cn/lilac_back/pages/newCon.html for contributors.
 
+icon.xpm, lilacsat_proxy.desktop may also be useful.
+
 ## To setup
 ----------------------------------------------------------------------------------
 $ sudo chmod 777 setup.sh
@@ -16,6 +18,3 @@ $ sudo ./setup.sh
 ----------------------------------------------------------------------------------
 $ python lilacsat_proxy.py
 
-
- 
-icon.xpm, lilacsat_proxy.desktop may also be useful.
