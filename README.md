@@ -17,7 +17,7 @@ demod_node\*_\*.grc in examples folder for different modulation and rate:
  
 Use frontend_rx_\*.grc, demod_node1_bpsk_9k6.grc and demod_node4_4k8.grc by default.
 
-proxy_public is also included in examples folder for upload telemetry for display.
+proxy_publish is also included in examples folder for upload telemetry for display.
 
 Visit http://lilacsat.hit.edu.cn/ for more information.
 
