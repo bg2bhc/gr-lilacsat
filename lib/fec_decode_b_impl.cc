@@ -32,6 +32,8 @@
 #include <gnuradio/io_signature.h>
 #include "fec_decode_b_impl.h"
 
+#include <time.h>
+
 namespace gr {
   namespace lilacsat {
 
@@ -70,7 +72,14 @@ namespace gr {
 
     void fec_decode_b_impl::callback(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr)
     {
+	static time_t time_curr;
+	static struct tm *tblock_curr;
 	fec_decode_b_impl *obj_ptr_loc = (fec_decode_b_impl *)obj_ptr;
+	
+	time_curr = time(NULL);
+	tblock_curr =  gmtime(&time_curr);
+	
+	fprintf(stdout, "%02d:%02d:%02d ", tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec);
 	fprintf(stdout, "\n****byte_corr = %d\n", byte_corr);
 
 	if (byte_corr != -1)
