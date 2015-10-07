@@ -280,7 +280,7 @@ class MyForm(QtGui.QMainWindow):
         self.ChannelBLog.write(str(self.Lon) +"\n")
         self.ChannelBLog.write(str(self.Lat) +"\n")
         log = " ".join(["%02X"%ord(i) for i in data]) + "\n"
-        self.ChannelALog.write(log)
+        self.ChannelBLog.write(log)
         print log
         self.ChannelBLog.flush()
     
