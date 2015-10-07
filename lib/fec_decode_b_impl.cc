@@ -79,8 +79,7 @@ namespace gr {
 	time_curr = time(NULL);
 	tblock_curr =  gmtime(&time_curr);
 	
-	fprintf(stdout, "%02d:%02d:%02d ", tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec);
-	fprintf(stdout, "\n****byte_corr = %d\n", byte_corr);
+	fprintf(stdout, "\n****%02d:%02d:%02d byte_corr = %d\n", tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec, byte_corr);
 
 	if (byte_corr != -1)
 	{
