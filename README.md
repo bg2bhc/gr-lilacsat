@@ -20,6 +20,7 @@ Use frontend_rx_\*.grc, demod_node1_bpsk_9k6.grc and demod_node4_4k8.grc by defa
 proxy_publish is also included in examples folder for upload telemetry for display.
 
 A Live CD is also provided: http://lilacsat.hit.edu.cn/?page_id=257
+
 Manual: http://lilacsat.hit.edu.cn/wp-content/uploads/2015/09/LilacSat-2_Live_CD_User_Manual.pdf
 
 Visit http://lilacsat.hit.edu.cn/ for more information.
