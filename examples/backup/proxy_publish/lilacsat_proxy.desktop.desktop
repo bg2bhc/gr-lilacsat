@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LilacProxy
+Exec=/home/lilac/proxy_publish/lilacsat_proxy.py
+Icon=/home/lilac/proxy_publish/icon.xpm
+Terminal=false
+Type=Application
+Name[en_US]=lilacsat_proxy.desktop

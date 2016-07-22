@@ -1,0 +1,31 @@
+<block>
+  <name>Sync det b</name>
+  <key>lilacsat_sync_det_b</key>
+  <category>LILACSAT</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.sync_det_b($sync_word, $len, $nrz, $descrambling)</make>
+  <param>
+    <name>Sync_word</name>
+    <key>sync_word</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Len</name>
+    <key>len</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Nrz</name>
+    <key>nrz</key>
+    <type>raw</type>
+  </param>
+  <param>
+    <name>Descrambling</name>
+    <key>descrambling</key>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+</block>
