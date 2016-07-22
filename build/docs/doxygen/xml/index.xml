@@ -1,0 +1,1375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.6">
+  <compound refid="structAfsk" kind="struct"><name>Afsk</name>
+    <member refid="structAfsk_1a400e243f28952b2b2f887a7f783dbe41" kind="variable"><name>fd</name></member>
+    <member refid="structAfsk_1a8f44f065777e87c39a166cb35cb65423" kind="variable"><name>sample_count</name></member>
+    <member refid="structAfsk_1aab381825bf84dfbd8dd257668afe6f87" kind="variable"><name>curr_out</name></member>
+    <member refid="structAfsk_1a52749b0074acb4796cee6f42cd973d32" kind="variable"><name>tx_bit</name></member>
+    <member refid="structAfsk_1a0aa86a2b90706f920162093a573e08f8" kind="variable"><name>bit_stuff</name></member>
+    <member refid="structAfsk_1ac00a531d67d24264b3562d1734d73dc8" kind="variable"><name>stuff_cnt</name></member>
+    <member refid="structAfsk_1a4d41b4801cd66792aeb5138c8161b7ed" kind="variable"><name>phase_acc</name></member>
+    <member refid="structAfsk_1a7f5dfd46245eae82247bac8318dde2ce" kind="variable"><name>phase_inc</name></member>
+    <member refid="structAfsk_1a476cd2e052313a684f13b9ca3fda7cf6" kind="variable"><name>delay_fifo</name></member>
+    <member refid="structAfsk_1a0464ee1bd1c56210b111133b52fbad53" kind="variable"><name>delay_buf</name></member>
+    <member refid="structAfsk_1ab25b3bb05ad0a3a7c596ab024ebb09d8" kind="variable"><name>rx_fifo</name></member>
+    <member refid="structAfsk_1a512a4e4393c8c84e226e77867a159e94" kind="variable"><name>rx_buf</name></member>
+    <member refid="structAfsk_1a0db16217ec44719e2fd9fd77a5732892" kind="variable"><name>tx_fifo</name></member>
+    <member refid="structAfsk_1a289a5ac353f6510ae2f5c9cad498490e" kind="variable"><name>tx_buf</name></member>
+    <member refid="structAfsk_1a44656264ec9f5700eb1af025c6c1eb87" kind="variable"><name>iir_x</name></member>
+    <member refid="structAfsk_1a035955ba9b91b56a1c9e8dc47742fcd9" kind="variable"><name>iir_y</name></member>
+    <member refid="structAfsk_1a61024d1d2383df2eec0118324cfa1a05" kind="variable"><name>sampled_bits</name></member>
+    <member refid="structAfsk_1ac60905ae0ab33501bb597b7c66b9331b" kind="variable"><name>curr_phase</name></member>
+    <member refid="structAfsk_1a705350e2701cb501e6520c427f002d52" kind="variable"><name>found_bits</name></member>
+    <member refid="structAfsk_1aea4204b922aaf2c78708bacec08d7888" kind="variable"><name>sending</name></member>
+    <member refid="structAfsk_1a4b90678865e08c02384199c6b10aa5b5" kind="variable"><name>status</name></member>
+    <member refid="structAfsk_1a0f2cf84d5882a74b33b54828e4adda6d" kind="variable"><name>hdlc</name></member>
+    <member refid="structAfsk_1ae4e1603bf1a13861e017921e135ca3af" kind="variable"><name>preamble_len</name></member>
+    <member refid="structAfsk_1a1cffeb9e88165ac3689271b970b5aab3" kind="variable"><name>trailer_len</name></member>
+    <member refid="structAfsk_1afeddf5be032cb4025b6a8225e7e39c09" kind="variable"><name>cfg_padding_zero</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1afsk1200__rx__f" kind="class"><name>gr::lilacsat::afsk1200_rx_f</name>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f_1ac718087242526ce094818f8344e03018" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f_1ac3347268769323c2179a5439b80125bf" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl" kind="class"><name>gr::lilacsat::afsk1200_rx_f_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1a5f6f70ef7ab4af6802c90a18384b466d" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1af26f4e6dd91968adb62009b132321e40" kind="variable"><name>afsk</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1a559e9191b5a14f341a79fdd9eb335d55" kind="variable"><name>ax25</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1a584535bcc4d5c09132dbf72b070b1be4" kind="function"><name>AX25_MsgCallBack</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1ac4ebba2af083cdf322ada4ed47b118df" kind="function"><name>rx_init</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1aedaad5041a2ed05e22d30a52567bd0a0" kind="function"><name>afsk1200_rx_f_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1a9fcc64754de222a9846a93c5f60d7452" kind="function"><name>~afsk1200_rx_f_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__rx__f__impl_1a0f16087423a4d5475127bc30a1e1e07a" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1afsk1200__tx__f" kind="class"><name>gr::lilacsat::afsk1200_tx_f</name>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f_1a896e138ba2c43dbe80a5c961010710b3" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f_1a6574be8fdf0b659d9540736964f58cd4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl" kind="class"><name>gr::lilacsat::afsk1200_tx_f_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a47a2ed82d439f268c3b8ad0c241cdee5" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a1e60521afbd5b8361537fae398b820f4" kind="variable"><name>d_ptt_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1aba5541bd6f2105fc1034a18d5cb9aa11" kind="variable"><name>d_destination</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a410aa5bb86862c576132585b540acfa2" kind="variable"><name>d_source</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a67a18f722d8bc6c94f4ce11e4f8c2c7b" kind="variable"><name>d_repeater1</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a3675b6684032b8fa177d8197ee8f7581" kind="variable"><name>d_repeater2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a2e477d4d729606b3110dff81f214cb1a" kind="variable"><name>afsk</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a23089b5a3916798c279a7cec17575255" kind="variable"><name>ax25</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a935ea2c3e33ee1fb20efb15d580f0d2b" kind="variable"><name>path</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1aff8a1d30401eeb0cdf09ab2c35112b0f" kind="variable"><name>d_ptt</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1adcc62ca3d43f4a8e38ee5338cdba78f9" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a7861d03f1797d24eb9378aae6068bd8c" kind="function"><name>setcall</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a9576ccf976308668636ad8195d04aa8a" kind="function"><name>AX25_MsgCallBack</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1a0baa349ee6d74c863d00ff2211ab96a9" kind="function"><name>afsk1200_tx_f_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1af7021ffef1696e1080999c98f54838e0" kind="function"><name>~afsk1200_tx_f_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl_1afdb0471f42f86c218197454b6f62b891" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1angle__cf" kind="class"><name>gr::lilacsat::angle_cf</name>
+    <member refid="classgr_1_1lilacsat_1_1angle__cf_1af3a2c93273781189fc45b0863426114c" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1angle__cf_1abd60a3a1201d105814aeafe82d01096f" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1angle__cf__impl" kind="class"><name>gr::lilacsat::angle_cf_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1angle__cf__impl_1a68e1def6ed794ee375b41a41d10f124f" kind="function"><name>angle_cf_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1angle__cf__impl_1af86aebca0fbcc2568e608a896e2d2ecb" kind="function"><name>~angle_cf_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1angle__cf__impl_1a2ee59623efe76b12541e1d289f347efc" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structAX25Call" kind="struct"><name>AX25Call</name>
+    <member refid="structAX25Call_1a40822310cacc1cc2ca715d8475953152" kind="variable"><name>call</name></member>
+    <member refid="structAX25Call_1aab01f56f5e1cd0599dcf01f6a65b2415" kind="variable"><name>ssid</name></member>
+  </compound>
+  <compound refid="structAX25Ctx" kind="struct"><name>AX25Ctx</name>
+    <member refid="structAX25Ctx_1ab0ba422bb687dfaaecb7bcd704cd7b5c" kind="variable"><name>buf</name></member>
+    <member refid="structAX25Ctx_1a9eeed7428d5f20fe2b39d5ac70b09b44" kind="variable"><name>ch</name></member>
+    <member refid="structAX25Ctx_1a6847b51a0225aec20c8d871bb139560b" kind="variable"><name>frm_len</name></member>
+    <member refid="structAX25Ctx_1acba5c6c48b277cd5520a4060abac3a63" kind="variable"><name>crc_in</name></member>
+    <member refid="structAX25Ctx_1aea6a6b921e34e3ed514e4598a907adf1" kind="variable"><name>crc_out</name></member>
+    <member refid="structAX25Ctx_1aaf4149ca8e0ac15cb846f57b5a2056cd" kind="variable"><name>hook</name></member>
+    <member refid="structAX25Ctx_1a9ff9110cc05e86005aaab19c41aa3237" kind="variable"><name>sync</name></member>
+    <member refid="structAX25Ctx_1a2cf354b3ec66e851815667cf1ac43c06" kind="variable"><name>escape</name></member>
+    <member refid="structAX25Ctx_1aeefcea00b70daf3c32776b8992f1a96d" kind="variable"><name>obj_ptr</name></member>
+  </compound>
+  <compound refid="structAX25KISSMsg" kind="struct"><name>AX25KISSMsg</name>
+    <member refid="structAX25KISSMsg_1a534837f95ad3c4b9bdf8ff40c55aa490" kind="variable"><name>buf</name></member>
+    <member refid="structAX25KISSMsg_1a425e4959b90257d1b972690c0c9e3011" kind="variable"><name>pos</name></member>
+  </compound>
+  <compound refid="structAX25Msg" kind="struct"><name>AX25Msg</name>
+    <member refid="structAX25Msg_1a1f0571ab6f708e1725ad9a8be8e6b28a" kind="variable"><name>src</name></member>
+    <member refid="structAX25Msg_1a38dc18966290b4f8cb24651e9e75ef66" kind="variable"><name>dst</name></member>
+    <member refid="structAX25Msg_1a1c776202f543e8b34cb7673d97f8eebe" kind="variable"><name>rpt_lst</name></member>
+    <member refid="structAX25Msg_1aa340a6edb4bfedfb24b174a6b119dfb8" kind="variable"><name>rpt_cnt</name></member>
+    <member refid="structAX25Msg_1a375105fdcb83cb525082d8dbc22c2d33" kind="variable"><name>ctrl</name></member>
+    <member refid="structAX25Msg_1ae2e8532da38c1a6fac980377ab9b494b" kind="variable"><name>pid</name></member>
+    <member refid="structAX25Msg_1ac2aec986679b69baa42af40caf9a48bd" kind="variable"><name>info</name></member>
+    <member refid="structAX25Msg_1a8dcab6efd1334a05b7e1da979ee108a1" kind="variable"><name>len</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1bpsk__demod__cb" kind="class"><name>gr::lilacsat::bpsk_demod_cb</name>
+    <member refid="classgr_1_1lilacsat_1_1bpsk__demod__cb_1a6ebf1fefd0a47e29d3c040c710c3b794" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1bpsk__demod__cb_1aeb534635ccd488d2a134e5a902b18442" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1bpsk__demod__cb__impl" kind="class"><name>gr::lilacsat::bpsk_demod_cb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1bpsk__demod__cb__impl_1a794e83605d2f5d4d1d79e3c7fdc3ea93" kind="function"><name>bpsk_demod_cb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1bpsk__demod__cb__impl_1a96b3aea16b46acfce0dac1ffeba9f9e4" kind="function"><name>~bpsk_demod_cb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1bpsk__demod__cb__impl_1ad34e5fa59000b4bc3e8370725bef65fc" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structCc" kind="struct"><name>Cc</name>
+    <member refid="structCc_1a2ca8d9597e43df5a84bb0339a5542435" kind="variable"><name>tx_fifo</name></member>
+    <member refid="structCc_1a1d6539b4fe34d68cea37d552a175abef" kind="variable"><name>tx_buf</name></member>
+    <member refid="structCc_1ae30dd62c17c5c95303abeec6f6608b4c" kind="variable"><name>flag_ctcss</name></member>
+    <member refid="structCc_1a915d48747e91632952fb66cf03950e2a" kind="variable"><name>codec2_bits</name></member>
+    <member refid="structCc_1ab1a9b78a51e5895e2c86c6497e4c958a" kind="variable"><name>i_byte_in_frame</name></member>
+    <member refid="structCc_1aea3563eed4dd95e243a31a1f381ac8a4" kind="variable"><name>n_preamble</name></member>
+    <member refid="structCc_1ad3ca267545529b4e65dd82d21195e429" kind="variable"><name>tx_bit_state</name></member>
+    <member refid="structCc_1a5ba54c1db3afe027033ed38bdd1bab40" kind="variable"><name>encstate</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1cc__decode__bb" kind="class"><name>gr::lilacsat::cc_decode_bb</name>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb_1a46e0a41ee988d728236dd284b2fcc82f" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb_1aac57dd965c83184168b32c1cf59cb82a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl" kind="class"><name>gr::lilacsat::cc_decode_bb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a5b5d530191d3a8839f38309d3235fefd" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a935ea3cabaca7fe541dae4fb4607e96a" kind="variable"><name>d_rx_bit_state</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1af42cc80b175d0e9dd49740ac38b72e61" kind="variable"><name>d_mask_bit_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a660c763cd02b85de3fb44ffb9c5831d7" kind="variable"><name>d_syncing</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a850b41000eedb7201351f172170d15ac" kind="variable"><name>d_buffer_sync_det</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1ad60946cb104817f4c620f443cb8eadb4" kind="variable"><name>d_n_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1adb042ac5d2c315a9d81857a5c28dfbf7" kind="variable"><name>d_buf_sync_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1aacdaa7716eb383aa831b618e733877c3" kind="variable"><name>d_ki</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1addab0273ddce70e83cda7b40e970072e" kind="function"><name>kiss_msg_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1aad536c464091e2fc68d9828d1c79fc69" kind="function"><name>cc_decode_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a59e1c750cd2800a18a1f10641fd66594" kind="function"><name>~cc_decode_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a58db3e15b2f0758a35c58879550c722c" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1cc__decode__bb__impl_1a71a60f95837aa69935e5ccdd82bbc160" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="structCcRx" kind="struct"><name>CcRx</name>
+    <member refid="structCcRx_1aa0880231cd46a0377aa97f27be6334e5" kind="variable"><name>d_rx_bit_state</name></member>
+    <member refid="structCcRx_1a48624e9190f2d2c15bdb1b71d07f1fcf" kind="variable"><name>d_n_out</name></member>
+    <member refid="structCcRx_1a6115e3b14c34a80e465b2e596d73ff32" kind="variable"><name>d_mask_bit_out</name></member>
+    <member refid="structCcRx_1aa7b77d7f08ffa8dd15e09596786ecd86" kind="variable"><name>d_buf_sync_out</name></member>
+  </compound>
+  <compound refid="structCcsds" kind="struct"><name>Ccsds</name>
+    <member refid="structCcsds_1a215ca14508e10bea16295b62a5a928b3" kind="variable"><name>tx_fifo</name></member>
+    <member refid="structCcsds_1ac1e67a3bee277daf23e9782383275ef4" kind="variable"><name>tx_buf</name></member>
+    <member refid="structCcsds_1aa56a9908820a2a75a767bd64bbe1cc56" kind="variable"><name>encstate</name></member>
+    <member refid="structCcsds_1a65aaace84e3a6b60f650bf8536872b83" kind="variable"><name>sending</name></member>
+    <member refid="structCcsds_1a43c9440c75d5af9ba18a9988deaf102b" kind="variable"><name>preamble_len</name></member>
+    <member refid="structCcsds_1a14af8836679c0a603f080c6dac372dd9" kind="variable"><name>trailer_len</name></member>
+    <member refid="structCcsds_1af5ec0ab7bb84a691ecd17d6e3f962d67" kind="variable"><name>rx_fifo</name></member>
+    <member refid="structCcsds_1a7497e32fcd3b0c0be0451d35f90d8a39" kind="variable"><name>rx_buf</name></member>
+    <member refid="structCcsds_1a4462d15ed498301caa99d9ca2db80172" kind="variable"><name>vi</name></member>
+    <member refid="structCcsds_1a634fcb0ba052a06c1cf3a98a3384b1bb" kind="variable"><name>sync_word</name></member>
+    <member refid="structCcsds_1a544c285a5693b39f1ed8de4e4d779e23" kind="variable"><name>len_frame</name></member>
+    <member refid="structCcsds_1a82d405368d5caf66acca1b346d75d196" kind="variable"><name>syncing</name></member>
+    <member refid="structCcsds_1ae7f960309857c18836e4efbe8e7ce7d3" kind="variable"><name>buffer_sync_det</name></member>
+    <member refid="structCcsds_1a388ca22fcfa94eb18e69df9ab3ecf6ab" kind="variable"><name>n_out</name></member>
+    <member refid="structCcsds_1ab1f79bfd46d9d8e99a8d879079209418" kind="variable"><name>mask_bit_out</name></member>
+    <member refid="structCcsds_1afef09b19b85cd95e1ab5ad88b8e4771e" kind="variable"><name>buf_sync_out</name></member>
+    <member refid="structCcsds_1a1d2f71289c2923ebe080ded2cbeb7d5d" kind="variable"><name>rx_bit_state</name></member>
+    <member refid="structCcsds_1a2cc67a7bbb8e943900b74c05e5f3a330" kind="variable"><name>tx_bit_state</name></member>
+    <member refid="structCcsds_1a33407816f33e749039c757c9cef5b6fe" kind="variable"><name>obj_ptr</name></member>
+    <member refid="structCcsds_1a283c5862825900bdd05ec9ad16ba2c8a" kind="variable"><name>hook</name></member>
+    <member refid="structCcsds_1ac1ddab04a32e948a44bfa4f9e222c274" kind="variable"><name>cfg_preamble_len</name></member>
+    <member refid="structCcsds_1adcf0cba43beba7cf55b68b803f5bed7e" kind="variable"><name>cfg_trailer_len</name></member>
+    <member refid="structCcsds_1a010594583f45ccf2753e3d248d9d95bc" kind="variable"><name>cfg_continous</name></member>
+    <member refid="structCcsds_1a3305f9d8808621f0b8928c0bcda69ae2" kind="variable"><name>cfg_padding_zero</name></member>
+    <member refid="structCcsds_1a41eded3eaa367b8e76f3135170e5af2a" kind="variable"><name>cfg_using_m</name></member>
+    <member refid="structCcsds_1a36907706f1ba0cffc57fe32ab8d0fac7" kind="variable"><name>cfg_using_convolutional_code</name></member>
+  </compound>
+  <compound refid="structCODEC2" kind="struct"><name>CODEC2</name>
+    <member refid="structCODEC2_1a2c54eae11a671618d2f5491869a7362c" kind="variable"><name>mode</name></member>
+    <member refid="structCODEC2_1a401a530dc94bdffd3c78097def0c8687" kind="variable"><name>fft_fwd_cfg</name></member>
+    <member refid="structCODEC2_1ae35aa6e0ed2c51587399c7d46a7f4cfd" kind="variable"><name>w</name></member>
+    <member refid="structCODEC2_1acd39f81c9cbe95f445e71ce46b906ebb" kind="variable"><name>W</name></member>
+    <member refid="structCODEC2_1a515dd383285a5863ef53e7991c40356f" kind="variable"><name>Pn</name></member>
+    <member refid="structCODEC2_1a1dfac03fee3e98eca2f961d3a3835064" kind="variable"><name>bpf_buf</name></member>
+    <member refid="structCODEC2_1a01173089b0922ba8a1fa97b166a44c07" kind="variable"><name>Sn</name></member>
+    <member refid="structCODEC2_1a712eb0d13efbe8ae7108f93f1fb785d0" kind="variable"><name>hpf_states</name></member>
+    <member refid="structCODEC2_1abcb055f551f3d72344c7d534a48ead54" kind="variable"><name>nlp</name></member>
+    <member refid="structCODEC2_1a178369e61e9bed85de581417f55c57bd" kind="variable"><name>gray</name></member>
+    <member refid="structCODEC2_1a30591356e1fb7b3579c3528542b0b655" kind="variable"><name>fft_inv_cfg</name></member>
+    <member refid="structCODEC2_1a5cb0415565e3bf98617802bb3552652a" kind="variable"><name>Sn_</name></member>
+    <member refid="structCODEC2_1aedad4717cab5a7738c41774b72f7f10e" kind="variable"><name>ex_phase</name></member>
+    <member refid="structCODEC2_1ad3d4074892c052d76047965394e1e0c4" kind="variable"><name>bg_est</name></member>
+    <member refid="structCODEC2_1a7a48c3f726f2e32bf91d6f9eb9ce4db3" kind="variable"><name>prev_Wo_enc</name></member>
+    <member refid="structCODEC2_1a683e5e2aa55e59b75604c47e6bc75b5d" kind="variable"><name>prev_model_dec</name></member>
+    <member refid="structCODEC2_1a2ae4ab599298dac1bd111c10a85ad7c7" kind="variable"><name>prev_lsps_dec</name></member>
+    <member refid="structCODEC2_1a7349ac698910f60b2829885edd33d512" kind="variable"><name>prev_e_dec</name></member>
+    <member refid="structCODEC2_1a69db6d887f6674945e40c5a0c5680d35" kind="variable"><name>lpc_pf</name></member>
+    <member refid="structCODEC2_1ac43201db5ebc0285db5b3cf9e16e392a" kind="variable"><name>bass_boost</name></member>
+    <member refid="structCODEC2_1af71336f131e116f1e882f1e9b1e770c6" kind="variable"><name>beta</name></member>
+    <member refid="structCODEC2_1a0b7cb4448460a70a56ea82746df7cb9a" kind="variable"><name>gamma</name></member>
+    <member refid="structCODEC2_1ad1dcf780ab2b66528a525c278d39abc5" kind="variable"><name>xq_enc</name></member>
+    <member refid="structCODEC2_1a0959f9dd11b0130feac26f24d33dfe3e" kind="variable"><name>xq_dec</name></member>
+    <member refid="structCODEC2_1abd03d04f65276fd6cb028d2ef829e3ca" kind="variable"><name>smoothing</name></member>
+    <member refid="structCODEC2_1a981f0b27ea57f8de5dfc646e28c75764" kind="variable"><name>softdec</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1codec2__decode__bf" kind="class"><name>gr::lilacsat::codec2_decode_bf</name>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf_1a9ec5b6bd7323c0f05d2c69835a2ddf50" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf_1aa14a2bd179d392e5eb090e5215429bb7" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl" kind="class"><name>gr::lilacsat::codec2_decode_bf_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl_1a8ba60d81de5513aea17c53825b4aa157" kind="variable"><name>codec2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl_1a473b9783141a512306eb9e942966b42b" kind="function"><name>codec2_decode_bf_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl_1a2ff6c6c787698d5cd6e9600b21f2593d" kind="function"><name>~codec2_decode_bf_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl_1a3cd433a88bbdd7fa5079dab497e4943e" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1codec2__encode__fb" kind="class"><name>gr::lilacsat::codec2_encode_fb</name>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb_1aa4ca90a9ec06dbba5b825628a6e64b49" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb_1aa7bd3049610a82dc97c1b7f834576e6a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1codec2__encode__fb__impl" kind="class"><name>gr::lilacsat::codec2_encode_fb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb__impl_1a616a27aceb362546b135aa5518644e0b" kind="variable"><name>codec2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb__impl_1a327a4497b1d797c38782f44bd607a4cd" kind="function"><name>codec2_encode_fb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb__impl_1a46760394d6023fd6e3ea297da8ba05b7" kind="function"><name>~codec2_encode_fb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1codec2__encode__fb__impl_1a4ffc25471a2e7433ddbce1809b30929d" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structCOMP" kind="struct"><name>COMP</name>
+    <member refid="structCOMP_1aab5da66c35473e59242b301dafdfaf7e" kind="variable"><name>real</name></member>
+    <member refid="structCOMP_1a8c292c732f8928c23921da6512699bba" kind="variable"><name>imag</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1encode27__bb" kind="class"><name>gr::lilacsat::encode27_bb</name>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb_1a5c89a0d8648a7bb8fe3be4e6fcca3e4d" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb_1a54aee083d1274568a1d01b330fb60c8f" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1encode27__bb__impl" kind="class"><name>gr::lilacsat::encode27_bb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb__impl_1a31fbb93a78239bc166a0dd6f8d58de07" kind="variable"><name>encstate</name></member>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb__impl_1acaa4447fce8d19aee2e01642fbe1f7e9" kind="function"><name>encode27_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb__impl_1a610b6e0889227190d6b2360aa17f67be" kind="function"><name>~encode27_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1encode27__bb__impl_1a279f8123ec95c31bc525ca86d0e84928" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1fec__decode__b" kind="class"><name>gr::lilacsat::fec_decode_b</name>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b_1ac05d1675ba0a6a36f00bff15acb0722b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b_1a1f8b50544e0999488d86de58ad3ac0c3" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1fec__decode__b__impl" kind="class"><name>gr::lilacsat::fec_decode_b_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1aa1067cc89f4070b7a2d4a32a17519b99" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a1149836e2cfc24353888fae8f39e56b0" kind="variable"><name>cc</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1adec9f024de736ef7858785717e1588e3" kind="variable"><name>d_pass_all</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a192a2820c1619152d8d1eb9c5d8996bc" kind="function"><name>callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1ae51568fc71fb8e8bcc26e6f9d720f599" kind="function"><name>fec_decode_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a07e3d227169521893495e6c4657558b4" kind="function"><name>~fec_decode_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__decode__b__impl_1a969a2a21f31bcb1589b7a2eec4eab2a4" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1fec__encode__b" kind="class"><name>gr::lilacsat::fec_encode_b</name>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b_1a049445b3314725d515f0cb5bcc37bf59" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b_1a368ef0fcb3c29dfa558669721da36ac4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1fec__encode__b__impl" kind="class"><name>gr::lilacsat::fec_encode_b_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1af491c6d4b9e9406b3fed1114d5b2ae1e" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1a37e7f6707cadd321a5287f967f7a1730" kind="variable"><name>d_ptt_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1aeee1ce7944fa211cdc2f5512ce778b1e" kind="variable"><name>cc</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1a2f152a10c990b43ca8d26577f2c1168b" kind="variable"><name>d_ptt</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1a5f49229b4bd5fe84b0f957a16ddfe4fb" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1ae9e1151abc787752de91650076f14722" kind="function"><name>fec_encode_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1ab36de7c524a98ee20f57f7e4ab38bf4c" kind="function"><name>~fec_encode_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1fec__encode__b__impl_1aff5f790b7c4325e28b903f26835bf64a" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structFIFOBuffer" kind="struct"><name>FIFOBuffer</name>
+    <member refid="structFIFOBuffer_1a5c28bb45789016ae0dcf355453ebf116" kind="variable"><name>head</name></member>
+    <member refid="structFIFOBuffer_1a47d3fe1e057e44a108ea92b59b67e71a" kind="variable"><name>tail</name></member>
+    <member refid="structFIFOBuffer_1a88e585d52d3bce5764d78ddd25d6b053" kind="variable"><name>begin</name></member>
+    <member refid="structFIFOBuffer_1a1e404b7d86d0e1c46008cf0f71981b37" kind="variable"><name>end</name></member>
+  </compound>
+  <compound refid="structFIFOBuffer__q15" kind="struct"><name>FIFOBuffer_q15</name>
+    <member refid="structFIFOBuffer__q15_1a5abf16b6940de1379dac6568b9a8a87c" kind="variable"><name>head</name></member>
+    <member refid="structFIFOBuffer__q15_1a0255fd9392d50ebf29928dafdc0e7906" kind="variable"><name>tail</name></member>
+    <member refid="structFIFOBuffer__q15_1ae83e039e2e9da65a245edce40966c1fa" kind="variable"><name>begin</name></member>
+    <member refid="structFIFOBuffer__q15_1abbd529d12a88c196a17a40d4493dd8b3" kind="variable"><name>end</name></member>
+  </compound>
+  <compound refid="structfir__instance__f" kind="struct"><name>fir_instance_f</name>
+    <member refid="structfir__instance__f_1ac751f7e27d0ff51c87c81e0e2e8b9328" kind="variable"><name>numTaps</name></member>
+    <member refid="structfir__instance__f_1a76d6062827e979a5fc5ebe88bec118eb" kind="variable"><name>pState</name></member>
+    <member refid="structfir__instance__f_1a35bf80b4dfa4d1fac1023196e2387833" kind="variable"><name>pCoeffs</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1gmsk__demod" kind="class"><name>gr::lilacsat::gmsk_demod</name>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod_1aa34193bf3f72dd6416f1dbd640363778" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod_1a9581672c7e9d853ae738bceeeedb235e" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1gmsk__demod__impl" kind="class"><name>gr::lilacsat::gmsk_demod_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac268c9caf96763df9081c6f58184823e" kind="variable"><name>d_dtll_gain</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad927bdad900847e7adc25e7cd1f889d7" kind="variable"><name>d_pd_N_avg</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae5ee8c9b1a8be8e2512d8eeca126c9b2" kind="variable"><name>d_pd_k1</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3d43dc0d943ee20cafdee85b00df390" kind="variable"><name>d_pd_k2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3c91ba56cddcb8ef9a31adbe9f86c72" kind="variable"><name>d_vco_gain</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a44235ae199d1ed8d7f0b2bbbe3f4d3e5" kind="variable"><name>d_vco_phase</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a032540edcbab5191143b3360e15a82cc" kind="variable"><name>d_buf_match_real</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1abc994df955ef2b4db21676221121d07f" kind="variable"><name>d_buf_match_imag</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aeaf66fa0fc0ea44c39c7a43df184eee4" kind="variable"><name>d_state_match_real</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad93659a74093cb558c32d1187cd718b0" kind="variable"><name>d_state_match_imag</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae734afd9d0bedf67590395929c8fef29" kind="variable"><name>d_buf_delay_real</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a3e6789952bea78fb4ce4c0de9c99eac1" kind="variable"><name>d_buf_delay_imag</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac9cf57b05e3653e4e72312ba63299c59" kind="variable"><name>d_dtll_phase</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a75b25f41cbc385e83fa812f3b7f1d612" kind="variable"><name>d_buf_avg</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aaa4cb1ccab1901c09e3129edeb2ade11" kind="variable"><name>d_lf_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ab62c4828acaee31073881523394f4f42" kind="variable"><name>d_mean_out_last</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a9bfb069546bd17baed61bebb8196c545" kind="function"><name>fir_filt_f</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a91388f44447a89ba53fd5715f1dbb3ef" kind="function"><name>gmsk_demod_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a2bcdfbb1e726c004294b977eb13a03bc" kind="function"><name>~gmsk_demod_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a5ddae3caeb13dc699815d43e60d31941" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a00e1c801c37bc313a6eb880a1cd1a1b0" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="structHdlc" kind="struct"><name>Hdlc</name>
+    <member refid="structHdlc_1af84ca3a42c17864225b7c01394b542d0" kind="variable"><name>demod_bits</name></member>
+    <member refid="structHdlc_1ae652585b47e13affcd4eafa4bf88c5da" kind="variable"><name>bit_idx</name></member>
+    <member refid="structHdlc_1a4ff60b1275a400e4d7644c77ebaf0558" kind="variable"><name>currchar</name></member>
+    <member refid="structHdlc_1ae875f34472fc23e17d4d9fd86f11e566" kind="variable"><name>rxstart</name></member>
+  </compound>
+  <compound refid="structKFile" kind="struct"><name>KFile</name>
+    <member refid="structKFile_1a59c40071977f54354443ccdaada58e9e" kind="variable"><name>read</name></member>
+    <member refid="structKFile_1a7853cb74d6aaae6cd03f8ff3394aa93e" kind="variable"><name>write</name></member>
+    <member refid="structKFile_1aecf782d02df9f46dcef3acaf9186042a" kind="variable"><name>reopen</name></member>
+    <member refid="structKFile_1ae01135f638b28e91689d663f4cfb1dfe" kind="variable"><name>close</name></member>
+    <member refid="structKFile_1a6ba0e29b8fbe625ddbece4200c8e477d" kind="variable"><name>seek</name></member>
+    <member refid="structKFile_1a8b1b66fdd5f90759d3facac308ecd841" kind="variable"><name>flush</name></member>
+    <member refid="structKFile_1a37efc22607c6b2f1e2b442d94046d335" kind="variable"><name>error</name></member>
+    <member refid="structKFile_1ad82e54700b42d2b8dfb0004306d60489" kind="variable"><name>clearerr</name></member>
+    <member refid="structKFile_1a87e0a496b951df1c4c67df229be08acc" kind="variable"><name>seek_pos</name></member>
+    <member refid="structKFile_1ad050960a2d334b4d722fcf0b5c24d131" kind="variable"><name>size</name></member>
+    <member refid="structKFile_1a450b10d9607b934fe15840e4b1fe0d66" kind="function"><name>DB</name></member>
+  </compound>
+  <compound refid="structKiss" kind="struct"><name>Kiss</name>
+    <member refid="structKiss_1aeb35f9946d07511a63ebfc2ce1d43fca" kind="variable"><name>escaping_rx</name></member>
+    <member refid="structKiss_1a13a4e4993c330a5629f007703aee420e" kind="variable"><name>buffer_rx</name></member>
+    <member refid="structKiss_1ab5f44c750fdd31064f0659405c81e2bd" kind="variable"><name>len_rx</name></member>
+    <member refid="structKiss_1ab926e577ba59eb61fbeb0252f6f41cf3" kind="variable"><name>obj_ptr</name></member>
+    <member refid="structKiss_1a54c1db3c389674cdaf42270ffb57c11a" kind="variable"><name>hook</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1kiss__decode__pdu" kind="class"><name>gr::lilacsat::kiss_decode_pdu</name>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu_1a63f91f1601b8924dba7d932fc88f8d51" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu_1a77fe4812cea9a560da5f53d9a21a61b1" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl" kind="class"><name>gr::lilacsat::kiss_decode_pdu_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1a7e26e812a4d266230c40a4f06b1e229e" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1a9008ccde7556ec4416fedf5444a70e08" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1a6dad5f4fb3d14a67efa590d8fe8fc4ed" kind="variable"><name>ki</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1ace53a3f954b43a772ee53992e6c23842" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1ac2846e2416e2804523bb77118a8f4add" kind="function"><name>kiss_msg_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1a047d95e88470411f2aba68241e6c4708" kind="function"><name>kiss_decode_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1aaff1fef84fb16afc21d96459254996b1" kind="function"><name>~kiss_decode_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1a3d440c59aae76123090e19e218f8ac0b" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__decode__pdu__impl_1adedd6926b82728097df6db8203724ed3" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1kiss__encode__pdu" kind="class"><name>gr::lilacsat::kiss_encode_pdu</name>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu_1a9848a1310898580206ef0074e473b8e8" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu_1a53be610744f8d23b8e04549897c3908c" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl" kind="class"><name>gr::lilacsat::kiss_encode_pdu_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1aee6581eec0b4f999150490e4156ff052" kind="variable"><name>d_const_length</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a87077d32d716e0f8f947dccc48485b09" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a69380e69e1067b2fe60286c793d10a52" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a5c6cf98e64f0574bf6440ac6fb1ca01f" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a165a20d253939ca09221108018821901" kind="function"><name>kiss_encode_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a9a46e222af7f7bb6b64775a70b34eab4" kind="function"><name>~kiss_encode_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a3f7bd9a4a0fbe7094862a7d221ed1c42" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a8fab9153161dd67e129ccaeebf999e65" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="structkiss__fft__cpx" kind="struct"><name>kiss_fft_cpx</name>
+    <member refid="structkiss__fft__cpx_1a686b6187e3e885de316908319c71ea8f" kind="variable"><name>r</name></member>
+    <member refid="structkiss__fft__cpx_1ac1e17add2ae6b815da29d7d67b03fa70" kind="variable"><name>i</name></member>
+  </compound>
+  <compound refid="structkiss__fft__state" kind="struct"><name>kiss_fft_state</name>
+    <member refid="structkiss__fft__state_1aa7446bded329a40e13aef0826e349791" kind="variable"><name>nfft</name></member>
+    <member refid="structkiss__fft__state_1a8faed935610ffb08bf7ad9ea8d6c81d2" kind="variable"><name>inverse</name></member>
+    <member refid="structkiss__fft__state_1a2d5d0897276dbac0674fae556f951d18" kind="variable"><name>factors</name></member>
+    <member refid="structkiss__fft__state_1aa7d1cab86ec03a8ecddfe0d91ef0bd20" kind="variable"><name>twiddles</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack" kind="class"><name>gr::lilacsat::lilacsat1_frame_depack</name>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack_1a5c6d2fc492f80ccdffdd1bc8e156c93c" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack_1a861e9f755a0d289f7f2966aad3af8290" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl" kind="class"><name>gr::lilacsat::lilacsat1_frame_depack_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1abe6349797d3500be2a1850a2cb2d9b40" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1aa19e5669acf69895da33f13de8a84d17" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a6f0707a5be2351e6529b9deaf4df205a" kind="variable"><name>d_ki</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a771eb8b76f1532af965d65c3d619db72" kind="variable"><name>d_buf</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a97753ec2f4e3b17155e7964d89ffc7d1" kind="variable"><name>d_fifo</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a1dda8b059b661a47c871794d693affff" kind="variable"><name>d_out_c2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1acfb383ca212bb72f77c02c1ce174282f" kind="variable"><name>d_term</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a96503f190869478735c4ec2a4d9ca07c" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a37e594a5f6ad618c437fd8d5d44895a2" kind="function"><name>kiss_msg_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a6c1c0489734aac74eb5a4d0416edc62b" kind="function"><name>lilacsat1_frame_depack_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1a21e77b2e4117308d65dbf00dc54fefa9" kind="function"><name>~lilacsat1_frame_depack_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1lilacsat1__frame__depack__impl_1ab0699712eb79649be70b26ebd8bbca28" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structlsp__codebook" kind="struct"><name>lsp_codebook</name>
+    <member refid="structlsp__codebook_1a8d4461c0bd9c39fa49b5c6af1ebbf6d4" kind="variable"><name>k</name></member>
+    <member refid="structlsp__codebook_1a28d800ad7c7233baeff95a781bedd0d5" kind="variable"><name>log2m</name></member>
+    <member refid="structlsp__codebook_1ae966bc6df831218c032ec43472e0e3f8" kind="variable"><name>m</name></member>
+    <member refid="structlsp__codebook_1a81e19676d332ae10fd0b206bdb8da0c6" kind="variable"><name>cb</name></member>
+  </compound>
+  <compound refid="structMODEL" kind="struct"><name>MODEL</name>
+    <member refid="structMODEL_1aa34e090e68d930b3cb65f0a55e9bad98" kind="variable"><name>Wo</name></member>
+    <member refid="structMODEL_1afa7d4a9d85cdc2f0344086ff3f47259f" kind="variable"><name>L</name></member>
+    <member refid="structMODEL_1a24fa719a3602aedc7eb9a78f27d64354" kind="variable"><name>A</name></member>
+    <member refid="structMODEL_1a6133a392fb2015bfe82f5fe745fc734c" kind="variable"><name>phi</name></member>
+    <member refid="structMODEL_1ad18d287cdeb165d1a4d0ac8ae5817713" kind="variable"><name>voiced</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1pipe__sink__pdu" kind="class"><name>gr::lilacsat::pipe_sink_pdu</name>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu_1af4db19091cdf17f2946ed96f216a850b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu_1a0908d476d2f31471ef750480a265ab27" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl" kind="class"><name>gr::lilacsat::pipe_sink_pdu_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a657a4f74bd4aaeeb537a978b5c89df52" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a299f522998f8964ee90126666475c17f" kind="variable"><name>d_label</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a5298dcb505d05f761ec9e646e08f1800" kind="variable"><name>d_path</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a269656019d5da497ea70288b17a2d15d" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a0a7c401786f77286e0b0e1e77f1655bf" kind="function"><name>pipe_sink_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1acc96f51e676cc4fa3653edda6ad6ceea" kind="function"><name>~pipe_sink_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1a94d2fe2e6e0e55b960178ff08e232465" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1pipe__sink__pdu__impl_1aa1cc30b7a1d43c4d1dd876eafe8c6be6" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classPlan13" kind="class"><name>Plan13</name>
+    <member refid="classPlan13_1a22cb44ef25d492211f4af1613762acec" kind="variable"><name>rx</name></member>
+    <member refid="classPlan13_1a70274a4d8076305704ce67fe06233e1e" kind="variable"><name>tx</name></member>
+    <member refid="classPlan13_1a4712a8aea2dfe07de7f925848453fa07" kind="variable"><name>observer_lon</name></member>
+    <member refid="classPlan13_1adad80790bc0517ddc1c4b6e8d21ee665" kind="variable"><name>observer_lat</name></member>
+    <member refid="classPlan13_1a5b42b1e34f70cb9a74e800d2781d92f3" kind="variable"><name>observer_height</name></member>
+    <member refid="classPlan13_1a8684064bdfb7fc359bcc1523e71a5e0f" kind="variable"><name>rxOutLong</name></member>
+    <member refid="classPlan13_1a3c7f81e4e2f5415ca9b2fe108755e75b" kind="variable"><name>txOutLong</name></member>
+    <member refid="classPlan13_1acf5a01ffd06d943574a678d84741a391" kind="variable"><name>rxFrequencyLong</name></member>
+    <member refid="classPlan13_1a6c59530175a94a5c872a012717597836" kind="variable"><name>txFrequencyLong</name></member>
+    <member refid="classPlan13_1ab030246db55cb0477a49b81e83b09233" kind="variable"><name>dopplerFactor</name></member>
+    <member refid="classPlan13_1a6c939808b688d0e9721ac9fa07797d97" kind="variable"><name>EL</name></member>
+    <member refid="classPlan13_1a25cb6fc31c7364dd6ad6eae5189f033a" kind="variable"><name>TN</name></member>
+    <member refid="classPlan13_1a45a76ba9ebc62ff736b2538e55d3c97b" kind="variable"><name>E</name></member>
+    <member refid="classPlan13_1a81e62fe904cb1a2d11d845cb4d0332d1" kind="variable"><name>N</name></member>
+    <member refid="classPlan13_1a39f590d46a3d764cfbdc3514e638bcdc" kind="variable"><name>AZ</name></member>
+    <member refid="classPlan13_1a23551f0f37864f59a7ba8bdda1dbaae7" kind="variable"><name>SLON</name></member>
+    <member refid="classPlan13_1a23081e32bcfa3749fb96639ee823c029" kind="variable"><name>SLAT</name></member>
+    <member refid="classPlan13_1a367beca2264899bc3b592ac31e614460" kind="variable"><name>RR</name></member>
+    <member refid="classPlan13_1a7043c00795b767f5db18c14c9356ba54" kind="variable"><name>CL</name></member>
+    <member refid="classPlan13_1a8b7d4a89f0d80eb982d02527d2d1d4c6" kind="variable"><name>CS</name></member>
+    <member refid="classPlan13_1ab2bd7bc7d3ef6c03698b34af71a5ce55" kind="variable"><name>SL</name></member>
+    <member refid="classPlan13_1a744512014b0cf309abe58ff3efd36e53" kind="variable"><name>CO</name></member>
+    <member refid="classPlan13_1ad2e9f19c2796e099082e8896b70b5d07" kind="variable"><name>SO</name></member>
+    <member refid="classPlan13_1a8b5b10a6fe65256c2f2be1254de22c69" kind="variable"><name>RE</name></member>
+    <member refid="classPlan13_1a238f9c4dfdccd02885c04c42680f8935" kind="variable"><name>FL</name></member>
+    <member refid="classPlan13_1ab47d65f86b88361de51fa25ca628a43b" kind="variable"><name>RP</name></member>
+    <member refid="classPlan13_1a48b05fbcc0f313c58b89d148f75932c2" kind="variable"><name>XX</name></member>
+    <member refid="classPlan13_1ae908afcd90c6bc7fbb7f587a874cffc5" kind="variable"><name>ZZ</name></member>
+    <member refid="classPlan13_1a7a42949ba37a18d807b07f9e62adeae5" kind="variable"><name>D</name></member>
+    <member refid="classPlan13_1a95616820b0c589481430242a0eb3ea02" kind="variable"><name>R</name></member>
+    <member refid="classPlan13_1a42d185ce87fa8cd8eb5873931ead327d" kind="variable"><name>Rx</name></member>
+    <member refid="classPlan13_1a4dc3524c4d499c1adcec90c946da87a4" kind="variable"><name>Ry</name></member>
+    <member refid="classPlan13_1a9d574e103d5fd909648db776ec3022af" kind="variable"><name>Rz</name></member>
+    <member refid="classPlan13_1aff2e8f5c368acdb9f438eb2fbb4309c2" kind="variable"><name>Ex</name></member>
+    <member refid="classPlan13_1ad017163696effef3e322144edc9f408f" kind="variable"><name>Ey</name></member>
+    <member refid="classPlan13_1ace92d1f6f51b5ab303058685f09bc650" kind="variable"><name>Ez</name></member>
+    <member refid="classPlan13_1af01502defc82251f11581cf448859108" kind="variable"><name>Ny</name></member>
+    <member refid="classPlan13_1a70eb702fd25ac16c478f3bb252aeacc7" kind="variable"><name>Nx</name></member>
+    <member refid="classPlan13_1a8c6558be65e1404cb75f4948fcb63027" kind="variable"><name>Nz</name></member>
+    <member refid="classPlan13_1ad344af35526b62d42191e432aa4bf7d6" kind="variable"><name>Ox</name></member>
+    <member refid="classPlan13_1a9583bf8f3c885a2a95e648247ffb74d4" kind="variable"><name>Oy</name></member>
+    <member refid="classPlan13_1a762dc3709179dc264def3c0b8025758b" kind="variable"><name>Oz</name></member>
+    <member refid="classPlan13_1adabec727151dfd728c664c6377ed05b0" kind="variable"><name>U</name></member>
+    <member refid="classPlan13_1a56f65a45a66a645202eb2073931d0868" kind="variable"><name>Ux</name></member>
+    <member refid="classPlan13_1ad69a4035a6fdcb36be17cfba44a1ab32" kind="variable"><name>Uy</name></member>
+    <member refid="classPlan13_1aac92de924f0f9837dbb5a9dd7d13cb11" kind="variable"><name>Uz</name></member>
+    <member refid="classPlan13_1a8e2d6ef1c716ec6bf00c101609bb3381" kind="variable"><name>WW</name></member>
+    <member refid="classPlan13_1af339dd42b1000420acf1b5e93d539b9f" kind="variable"><name>WE</name></member>
+    <member refid="classPlan13_1adc7521908243435103c36585219fcd51" kind="variable"><name>W0</name></member>
+    <member refid="classPlan13_1af45e4aa0a5ab7d99c002b6f0eacee269" kind="variable"><name>VOx</name></member>
+    <member refid="classPlan13_1a2abe31b84fa89979b8773ccfa1f44aaf" kind="variable"><name>VOy</name></member>
+    <member refid="classPlan13_1aaac7ac59f3b7a9e6ef0bd541da2457f8" kind="variable"><name>VOz</name></member>
+    <member refid="classPlan13_1a5b2b19f0432ef575fb344334fb35f63c" kind="variable"><name>DE</name></member>
+    <member refid="classPlan13_1adc17f100c108875ed2f9bcac41ba002c" kind="variable"><name>GM</name></member>
+    <member refid="classPlan13_1ad92f3443111b774a1a3a785b0eeb9208" kind="variable"><name>J2</name></member>
+    <member refid="classPlan13_1a1811c0af9215ebd6cfc906741ef37182" kind="variable"><name>N0</name></member>
+    <member refid="classPlan13_1acb080aa252f966bcd61658bc205fef8f" kind="variable"><name>A0</name></member>
+    <member refid="classPlan13_1a6ae789e403b5196420e4c0f8706bf331" kind="variable"><name>b0</name></member>
+    <member refid="classPlan13_1afe887879485a149bbda8256c2a64e802" kind="variable"><name>SI</name></member>
+    <member refid="classPlan13_1a5feca16ab700b74ff8787456ec9947b1" kind="variable"><name>CI</name></member>
+    <member refid="classPlan13_1a0f665255fa4775bfea4b5cc1a74b1d06" kind="variable"><name>PC</name></member>
+    <member refid="classPlan13_1a91818fcb23d2a7c7ca21645f4793060b" kind="variable"><name>QD</name></member>
+    <member refid="classPlan13_1a4785fa373cb368f3eac1e37cfb802691" kind="variable"><name>WD</name></member>
+    <member refid="classPlan13_1acd61d02a8b40ec1259674bf96464abc2" kind="variable"><name>DC</name></member>
+    <member refid="classPlan13_1a67fd65243a81ca10e0164409317d4516" kind="variable"><name>YG</name></member>
+    <member refid="classPlan13_1ae4f9dbe68fabd0c19b9513bccb3f986a" kind="variable"><name>G0</name></member>
+    <member refid="classPlan13_1a5f3ba588078049ee79408f3787046057" kind="variable"><name>MAS0</name></member>
+    <member refid="classPlan13_1a3b91be2bc919478693cf5c29ef1c2124" kind="variable"><name>MASD</name></member>
+    <member refid="classPlan13_1aa0deb223e38e4c9ff2407c19f60efad5" kind="variable"><name>INS</name></member>
+    <member refid="classPlan13_1aa39bfab719cd041946a4f6557904633d" kind="variable"><name>CNS</name></member>
+    <member refid="classPlan13_1afcf0e8b7ae96b007f6b156298e29bd38" kind="variable"><name>SNS</name></member>
+    <member refid="classPlan13_1a2c2fafaa772f83bb6c26e58f5b56a0fc" kind="variable"><name>EQC1</name></member>
+    <member refid="classPlan13_1a283e98475799143ea2d5e96efb7ae0d4" kind="variable"><name>EQC2</name></member>
+    <member refid="classPlan13_1ac369f95c4a991df1f17b6d1f62eb5775" kind="variable"><name>TEG</name></member>
+    <member refid="classPlan13_1adc883d0dfc2ee417990941ea0d941c7b" kind="variable"><name>GHAE</name></member>
+    <member refid="classPlan13_1ab0e09c798ba4b30df2e02018892a0a34" kind="variable"><name>MRSE</name></member>
+    <member refid="classPlan13_1a501ef3c4f0532c484864c0c7610229e6" kind="variable"><name>MASE</name></member>
+    <member refid="classPlan13_1a532f1cbfed6cf5e279c8e98e1a54b552" kind="variable"><name>ax</name></member>
+    <member refid="classPlan13_1a38051d2d371742a19e375aadca0a9164" kind="variable"><name>ay</name></member>
+    <member refid="classPlan13_1aa45aa05834d4d93bbcc43ecc4eceabe4" kind="variable"><name>az</name></member>
+    <member refid="classPlan13_1aa78e664441f237ecd59bf48cb9e9f536" kind="variable"><name>OLDRN</name></member>
+    <member refid="classPlan13_1a6d2ca3808f9603bdd91bd318c060bfd1" kind="variable"><name>T</name></member>
+    <member refid="classPlan13_1aaf491ef74b2dd5501df238d1d70d1ebe" kind="variable"><name>DT</name></member>
+    <member refid="classPlan13_1a2b005d041916541800832e04f6e120f9" kind="variable"><name>KD</name></member>
+    <member refid="classPlan13_1a97d6dc3c65a13fca78bc006a021930a7" kind="variable"><name>KDP</name></member>
+    <member refid="classPlan13_1a0b043dfd2c2dc2f0bd76bc6a47d75751" kind="variable"><name>M</name></member>
+    <member refid="classPlan13_1a42137196250ce82a94def6a75446ec39" kind="variable"><name>DR</name></member>
+    <member refid="classPlan13_1a21c0ed4ea3d29e7ca19fd5947f47e781" kind="variable"><name>RN</name></member>
+    <member refid="classPlan13_1a9fa693409e0e99ad169fb7a0ac58a801" kind="variable"><name>EA</name></member>
+    <member refid="classPlan13_1a732070c21a4164722fbc69430b95582e" kind="variable"><name>C</name></member>
+    <member refid="classPlan13_1a5eddc508ce233b4c1dc5d5f39b8b0334" kind="variable"><name>S</name></member>
+    <member refid="classPlan13_1a474d6bb6662fbbba5c3d040231c10619" kind="variable"><name>DNOM</name></member>
+    <member refid="classPlan13_1adb0db5b90ba605e46038f035550af7ed" kind="variable"><name>A</name></member>
+    <member refid="classPlan13_1a26a0036245f18d5cf2af9131ef15a639" kind="variable"><name>B</name></member>
+    <member refid="classPlan13_1a85e5c6656ca2be94003957b76f5d2a4d" kind="variable"><name>RS</name></member>
+    <member refid="classPlan13_1a97aa609028b21538c6089042e47104c2" kind="variable"><name>Sx</name></member>
+    <member refid="classPlan13_1ad5d954f5a16d3a2d4e7c1c42962f1581" kind="variable"><name>Sy</name></member>
+    <member refid="classPlan13_1a54a15bda3ab7521c246705fbc88d6788" kind="variable"><name>Vx</name></member>
+    <member refid="classPlan13_1a3e83cdc0810d35e9a3a35cbac9e9b4bc" kind="variable"><name>Vy</name></member>
+    <member refid="classPlan13_1ae964089e9c15f6035196a7c57da0d800" kind="variable"><name>Vz</name></member>
+    <member refid="classPlan13_1a839494d73db7628beafce94b1d48c17e" kind="variable"><name>AP</name></member>
+    <member refid="classPlan13_1a26c684da2d138ab82cc408532cde1014" kind="variable"><name>CW</name></member>
+    <member refid="classPlan13_1a49ff895fc08357904f5228967907cedf" kind="variable"><name>SW</name></member>
+    <member refid="classPlan13_1ad2de77c736c124a74e6e2ae65af07c3b" kind="variable"><name>RAAN</name></member>
+    <member refid="classPlan13_1a1eb93164e921d0fb4d25e8948e854bec" kind="variable"><name>CQ</name></member>
+    <member refid="classPlan13_1a23be10bb74b04ce4810037faa3f49a28" kind="variable"><name>SQ</name></member>
+    <member refid="classPlan13_1af3d719246cab37a895609040e841f411" kind="variable"><name>CXx</name></member>
+    <member refid="classPlan13_1ae67ef3f648588ed965ceaf5b6f65d4d6" kind="variable"><name>CXy</name></member>
+    <member refid="classPlan13_1a7e9dc74ac2e9f0bc52795d25b9090be2" kind="variable"><name>CXz</name></member>
+    <member refid="classPlan13_1af1c139e4c88aedeb4ce7f983c466ecaa" kind="variable"><name>CYx</name></member>
+    <member refid="classPlan13_1a784d75aa515d73c69c3dc850614b45f0" kind="variable"><name>CYy</name></member>
+    <member refid="classPlan13_1a9e81da151dc78133137559462f40b6ee" kind="variable"><name>CYz</name></member>
+    <member refid="classPlan13_1a3071b5a8bf054462f4967e594f16c4aa" kind="variable"><name>CZx</name></member>
+    <member refid="classPlan13_1aefd9fefdda7714d53ad9c9b64daddcf6" kind="variable"><name>CZy</name></member>
+    <member refid="classPlan13_1a65aea735850505e33c298ba5df2a6d2b" kind="variable"><name>CZz</name></member>
+    <member refid="classPlan13_1a0548db07c9093b250bd8ce9291c992fd" kind="variable"><name>SATx</name></member>
+    <member refid="classPlan13_1ac958d6e84d25ee86b41dab6591544352" kind="variable"><name>SATy</name></member>
+    <member refid="classPlan13_1a720f085e3b4d8508da35c8ed333692ef" kind="variable"><name>SATz</name></member>
+    <member refid="classPlan13_1a15b981b6c1878ed481fefa03eaed2dcc" kind="variable"><name>ANTx</name></member>
+    <member refid="classPlan13_1a7357af508c7a2582a9eef177bf30e31d" kind="variable"><name>ANTy</name></member>
+    <member refid="classPlan13_1aec1a68c40f137b01b5dd2246a6ac8bbd" kind="variable"><name>ANTz</name></member>
+    <member refid="classPlan13_1a04e43fff04ec580fd0e172d6f2cf6414" kind="variable"><name>VELx</name></member>
+    <member refid="classPlan13_1aed70a465ef8d5a9b3179e4d6909468a1" kind="variable"><name>VELy</name></member>
+    <member refid="classPlan13_1a4645f7a5e8cb8df73397b2078b60efb5" kind="variable"><name>VELz</name></member>
+    <member refid="classPlan13_1a592bcb82c1d2b43008e68abdeabe93cd" kind="variable"><name>Ax</name></member>
+    <member refid="classPlan13_1a7b14adf9f3c0a0dc2370d2ddfbe80221" kind="variable"><name>Ay</name></member>
+    <member refid="classPlan13_1a189edf3c14783642709c7d6fc3414d68" kind="variable"><name>Az</name></member>
+    <member refid="classPlan13_1a9c02002e2801c181759585b7f1fd4d7f" kind="variable"><name>Sz</name></member>
+    <member refid="classPlan13_1a1d460d4e26d4fc401ce98568c43daa3f" kind="variable"><name>GHAA</name></member>
+    <member refid="classPlan13_1a1be821ca34f16a43f91687b5a3db1917" kind="variable"><name>DS</name></member>
+    <member refid="classPlan13_1ab601a661eb5c7077ed46ebec6d3dcb81" kind="variable"><name>DF</name></member>
+    <member refid="classPlan13_1a2e3c692d47352648e5055c8b010cea15" kind="variable"><name>SAT</name></member>
+    <member refid="classPlan13_1ac0efb6de373ba7d9353d871f709a8d35" kind="variable"><name>SATNO</name></member>
+    <member refid="classPlan13_1a7f2588188d8c23eef39e22d01d7052f5" kind="variable"><name>YE</name></member>
+    <member refid="classPlan13_1aea1561b0e6678195a59a3ee0355f4d6f" kind="variable"><name>TE</name></member>
+    <member refid="classPlan13_1aaed92eaa8c57c913c38f987124ff7944" kind="variable"><name>IN</name></member>
+    <member refid="classPlan13_1aa894b85fe064edd8e2887d92cb5ee32d" kind="variable"><name>RA</name></member>
+    <member refid="classPlan13_1a963ed63bc5a6b911cbe36eb22d08ea63" kind="variable"><name>EC</name></member>
+    <member refid="classPlan13_1a21feb21bf99129b38208a91fc9b4f0d2" kind="variable"><name>WP</name></member>
+    <member refid="classPlan13_1a88506049a3f6900e08d2d7604de6f4ac" kind="variable"><name>MA</name></member>
+    <member refid="classPlan13_1aec7c2c474c7279ce4665ef4b2f4e60b4" kind="variable"><name>MM</name></member>
+    <member refid="classPlan13_1a9dad2fed475d45852b531ecc07c33156" kind="variable"><name>M2</name></member>
+    <member refid="classPlan13_1a6ff25cbb7fd4e983cf9cc1b9e06d2b4a" kind="variable"><name>RV</name></member>
+    <member refid="classPlan13_1a541e879564adb44c26a95be19159ae46" kind="variable"><name>ALON</name></member>
+    <member refid="classPlan13_1a7611756161fab7869adf44078cd37ae7" kind="variable"><name>ALAT</name></member>
+    <member refid="classPlan13_1a2c0b4931ffd9f023b586075961886c10" kind="variable"><name>rxOut</name></member>
+    <member refid="classPlan13_1aadbe353b5e41f5a404b7225375e2d7f4" kind="variable"><name>txOut</name></member>
+    <member refid="classPlan13_1a8f4fa2166fac83346a487eaf50cad20d" kind="variable"><name>LOC</name></member>
+    <member refid="classPlan13_1ad81c7920ea7ecb59fe6d067ab30a17b8" kind="variable"><name>LA</name></member>
+    <member refid="classPlan13_1a78d4cbdf64cb5a8a38f4a3e596cab6a7" kind="variable"><name>LO</name></member>
+    <member refid="classPlan13_1abb9f5f12ae47fbe66a6b5cf07097a97e" kind="variable"><name>HT</name></member>
+    <member refid="classPlan13_1ac233f306eb3f840389ca74adffec0e1e" kind="variable"><name>HR</name></member>
+    <member refid="classPlan13_1a030a195a1a736a750a71ebf2098a4b09" kind="variable"><name>DN</name></member>
+    <member refid="classPlan13_1a7ff5b06fb6899f0e01660302a7fbd103" kind="variable"><name>YM</name></member>
+    <member refid="classPlan13_1aee4e13e4f83a694c3b4009b3638c6f2d" kind="variable"><name>YT</name></member>
+    <member refid="classPlan13_1abc1d714a682b444b2d8bc0aaaabec3a1" kind="function"><name>rad</name></member>
+    <member refid="classPlan13_1a7e10d5436444b883e8a4c232e27ca935" kind="function"><name>deg</name></member>
+    <member refid="classPlan13_1ad9930e6036f600ac149c03817f4127b4" kind="function"><name>FNatn</name></member>
+    <member refid="classPlan13_1a8842d99bbcf54c71bb3591fcf263d65e" kind="function"><name>FNday</name></member>
+    <member refid="classPlan13_1af105339ba4aa81bdf416645d6f28f78d" kind="function"><name>myFNday</name></member>
+    <member refid="classPlan13_1a4f2eec7d16771cad05e477debbc09e65" kind="function"><name>getElement</name></member>
+    <member refid="classPlan13_1a057b6ee09ce8cb290a6f8791b8712dc7" kind="function"><name>readElements</name></member>
+    <member refid="classPlan13_1a3140717cea173c00e9b425697246ff1e" kind="function"><name>initSat</name></member>
+    <member refid="classPlan13_1ad6e3ea44c28bdabd1aaa2da6de519ccc" kind="function"><name>satvec</name></member>
+    <member refid="classPlan13_1afc4576ee67dbc84b29115422f0548367" kind="function"><name>rangevec</name></member>
+    <member refid="classPlan13_1a17cb4c9994c4ca1bdc10686a3edee0bf" kind="function"><name>sunvec</name></member>
+    <member refid="classPlan13_1aaf4f6eec26717ad6a46840d16b22fc7e" kind="function"><name>calculate</name></member>
+    <member refid="classPlan13_1ab1a180300383ec27fbcc316cdb3cdab0" kind="function"><name>footprintOctagon</name></member>
+    <member refid="classPlan13_1a30ca5ed2c09350080c00bdf7a4cf75ec" kind="function"><name>printdata</name></member>
+    <member refid="classPlan13_1ab5ba8aebf2f1f4aa9617b3412dbfc68c" kind="function"><name>setFrequency</name></member>
+    <member refid="classPlan13_1a60a80156616e9f2f04fd1a952c0b5c28" kind="function"><name>setLocation</name></member>
+    <member refid="classPlan13_1a2444215a4daf6038d74d3255160def0c" kind="function"><name>setTime</name></member>
+    <member refid="classPlan13_1aef9103a8a22213cb9d9a3d352d68d39e" kind="function"><name>setElements</name></member>
+    <member refid="classPlan13_1ab6cbf48b8c78a639b0a49b929a83f99e" kind="function"><name>getDoppler</name></member>
+    <member refid="classPlan13_1aab5166b2877258a1b65576a6880c86bc" kind="function"><name>getDoppler64</name></member>
+    <member refid="classPlan13_1adcfb4ffcda958f5301403873c4880a57" kind="function"><name>foo</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1plan13__cc" kind="class"><name>gr::lilacsat::plan13_cc</name>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc_1ab088b3aa4bd1a96632a8f0ce04852e3a" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc_1a48aea24e592ebb69a697bd1f5d35c8bb" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1plan13__cc__impl" kind="class"><name>gr::lilacsat::plan13_cc_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a11ee441d53296faef08b5df88f4ea688" kind="variable"><name>d_enable</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ad502824b805d644496ea38a68099f0a0" kind="variable"><name>d_tle1</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a72a56ce474bbfc84672a4d32bc0e8f9c" kind="variable"><name>d_tle2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a09f6569430a5c8f1d0b4cee66e107d7e" kind="variable"><name>d_lon</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a1848973460112f2a7b8a118250a0de85" kind="variable"><name>d_lat</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a65074b822dcd0555dc412a7664da4857" kind="variable"><name>d_height</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1adbd5b7b1c0b3d0034c625c09766517e3" kind="variable"><name>d_fc</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1aad77601aa7bd3986d8a6e3d68518765e" kind="variable"><name>d_samp_rate</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a3bcce5b01fd206c1fa8313942a04b912" kind="variable"><name>d_txrx</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a8fa8a98988d85991d7111a99c3d979e0" kind="variable"><name>d_verbose</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1afc2c9811797b29d81c630d8f03a28875" kind="variable"><name>p13</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ae02607a8f023372e78945bdd33fb656f" kind="variable"><name>d_YE</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a26e1852f88d97f2d6f217cfeeec16f8e" kind="variable"><name>d_TE</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ae10a5196734c00f41c174012bc2fbb3e" kind="variable"><name>d_IN</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ae1587324a641319b8f2b001b45090b2c" kind="variable"><name>d_RA</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a86b6276ac2fbab246aa135716055b825" kind="variable"><name>d_EC</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a7e6366e0bb7e5dafd82287b59bbd7659" kind="variable"><name>d_WP</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a18aa512e675ca1d30125611230f65086" kind="variable"><name>d_MA</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a118b3dabb7a5e06533fe4d8ea2bd4caf" kind="variable"><name>d_MM</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a9193aa8db28362f8affe808a485ac6a2" kind="variable"><name>d_M2</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a2f5b56ef833254e16af199511f07f1be" kind="variable"><name>d_RV</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a733ed5843a7224df63ce8d46a99a1aff" kind="variable"><name>d_ALON</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1aa55136e9ce5269ce5e8a389012047638" kind="variable"><name>d_freq_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ad4d4ca5777d7943f804640f99240ea06" kind="variable"><name>d_rotator_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a9da31e69d9f7aac3f0159fb412288ec1" kind="function"><name>ssplit</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a08b9299eb99c405b775554bac3826575" kind="function"><name>freq_cmd_gen</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1ae03ae05f0ee49dc063e633e6b549f968" kind="function"><name>plan13_cc_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1a7263fbabc5e5a6c1974e8d7848caa895" kind="function"><name>~plan13_cc_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1plan13__cc__impl_1acb7a0a0cf98035c72661b1b07ff4ae44" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1print__to__file__b" kind="class"><name>gr::lilacsat::print_to_file_b</name>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b_1aadeb3503cf5c30e1de0325ef76388cf8" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b_1a8f0f4e38af3a3aaa6cac8c06fce99b3e" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1print__to__file__b__impl" kind="class"><name>gr::lilacsat::print_to_file_b_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b__impl_1a392906cff446428055b2225916c0f87b" kind="variable"><name>fp</name></member>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b__impl_1a3decc80967743d9f721b373208249519" kind="variable"><name>format</name></member>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b__impl_1a09b19c8e82fbb02fbb70f5d4220a480b" kind="function"><name>print_to_file_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b__impl_1a1c953fa494aa012e9187457bdeb97658" kind="function"><name>~print_to_file_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1print__to__file__b__impl_1af3b4c63b831bdbef23a056aacb78bce4" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1satellite__channel__cc" kind="class"><name>gr::lilacsat::satellite_channel_cc</name>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc_1ae7524bb1172b25c5157a2b5658a1382d" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc_1af74d6dfdfdf7b995eb712e9a90445608" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl" kind="class"><name>gr::lilacsat::satellite_channel_cc_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a56cf3351d2df23ed3be44ffae824b242" kind="variable"><name>d_theta</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa9a57a43d2e01c88cd7889197fa0e52f" kind="variable"><name>d_theta0</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ac559922aa3cbec0bbf1957d94c74bdbb" kind="variable"><name>d_d_theta</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a59821c6dd7055d0f141957da3a9bf44e" kind="variable"><name>d_omega</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1aa16192c9cf9896a9690bd9fb8046a339" kind="variable"><name>d_current_phase</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a1ae4f85286b5504f572939d2c4dc201a" kind="variable"><name>d_r_semi_long_axis</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a7f2f145f159a1afc0626a3520194439d" kind="variable"><name>d_alpha_aos</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a056a47258d1738f2582f5a012c7396bb" kind="variable"><name>d_fc</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a6f3a50c6dee88b756106341a547bad41" kind="variable"><name>d_samp_rate</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1acb9577b4396a046a173beeee85945040" kind="variable"><name>d_d0</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a4e23f9f4ff7724052294789a9841812f" kind="variable"><name>d_doppler</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ae07f5bb69b72b962e3be32b3a01d0309" kind="variable"><name>d_link_loss</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1afd78406a85de6d35709e1709bb7ed85e" kind="variable"><name>d_verbose</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a21d1a9eca9d8c949aba9ce4f691c776d" kind="variable"><name>d_nout</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a0a6d0f194f382e32c42f59c76b8a388f" kind="variable"><name>d_nsecond</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90e6bc2fb22acf136fbacf6ce303f1f" kind="function"><name>satellite_channel_cc_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1ab90d6c8edad84068a406fd12d911d720" kind="function"><name>~satellite_channel_cc_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1satellite__channel__cc__impl_1a147c691bb593386a95aac792a260a241" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1serial__sink__pdu" kind="class"><name>gr::lilacsat::serial_sink_pdu</name>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu_1a384ac2638b40a5452700a4fb3e8a5322" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu_1a5d952b505cb70592d50f8c4f2024ee17" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl" kind="class"><name>gr::lilacsat::serial_sink_pdu_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a3c76ab15f7174eca0d3c53d9f7e0089c" kind="variable"><name>d_path</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a5a5b70ed8dedf6a2b63a37dca753b42f" kind="variable"><name>d_baudrate</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1ac8f62b2f21f6698a82361aea7c8408c2" kind="variable"><name>d_in_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a2ffd20d35dd54c30c03ec6dd9107d6c6" kind="variable"><name>fd</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a54daa8764ca0bb1baa5d0e8ee24ee984" kind="function"><name>pmt_in_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a49f572921d53d14d66b3e9674486a4ab" kind="function"><name>serial_sink_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a08152ad11a8b3f9ca0c48875c69621b6" kind="function"><name>~serial_sink_pdu_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a35a33a9318ab073fc92bbc0c15579187" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1lilacsat_1_1serial__sink__pdu__impl_1a4fe995672cf2f104f9ac5019769d4107" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1sync__det__b" kind="class"><name>gr::lilacsat::sync_det_b</name>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b_1a3d2ce8fab7a09c8335e1a38131be6ec2" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b_1a93fc200a194502a75a51e489021897c0" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1sync__det__b__impl" kind="class"><name>gr::lilacsat::sync_det_b_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1ac07d50ca5adb2c4ef9e1ecc062b359cb" kind="variable"><name>d_out_port</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a4e6256bb65088cc7b53c06f5b6bc2e31" kind="variable"><name>d_sync_word</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a6a4dbf2c01186e4fec5db1ae616bf552" kind="variable"><name>d_frame_length</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a52c779b8b42f6554f4d577bb76a3eee3" kind="variable"><name>d_nrz</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a62fe52bc39f6ea670379b7a9cc2f6ef0" kind="variable"><name>d_descrambling</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a94331aab1bf372b1e5f8795eec25be9c" kind="variable"><name>d_rx_bit_state</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a833f54a82c834c2e9d90e623b2fb89bd" kind="variable"><name>d_mask_bit_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a670c98971fe9a964a02c8ac129c0a5b5" kind="variable"><name>d_syncing</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1ad6478104d844eca1643fd9338a0e50ef" kind="variable"><name>d_buffer_sync_det</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a4e2a859e3ffb03b9be28b9e91357145f" kind="variable"><name>d_n_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1acec0e3c66acfaf482d806de2a9c5499a" kind="variable"><name>d_buf_sync_out</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a8521b03d2dc66389e491c37564318479" kind="function"><name>kiss_msg_callback</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1a29dc31de02526c84dfe70c290b47fa27" kind="function"><name>sync_det_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1ab9c3adecdaa5418dd769e98afc71ede2" kind="function"><name>~sync_det_b_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1sync__det__b__impl_1afc03ff00290790622761130dff4208e0" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="structv27" kind="struct"><name>v27</name>
+    <member refid="structv27_1a5a8c4c1e9043cd6f0186fe5d82870431" kind="variable"><name>cmetric</name></member>
+    <member refid="structv27_1a02f7647c93ed7b19485ec323a9476cb1" kind="variable"><name>nmetric</name></member>
+    <member refid="structv27_1a1bbdce7d7ec501527781bc668fcbc6c4" kind="variable"><name>paths</name></member>
+    <member refid="structv27_1a9d231c18c5b4b8dd3dac90dd4c34728f" kind="variable"><name>pi</name></member>
+    <member refid="structv27_1a9460d34644481c6bb4f73b2b0b3f634d" kind="variable"><name>dec</name></member>
+    <member refid="structv27_1a357521d5852d76eefea6dea607ad94c9" kind="variable"><name>mets</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1vitfilt27__bb" kind="class"><name>gr::lilacsat::vitfilt27_bb</name>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1ac83d9bbf9b5fa3c52c156f5ec56b9cca" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb_1afef5a673ad2054e38de66d72fed69b4a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl" kind="class"><name>gr::lilacsat::vitfilt27_bb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1add77fef1de93278ae9ef6f495248dbda" kind="variable"><name>vi</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab371384470dceed4805bbd1fd4b33feb" kind="function"><name>vitfilt27_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1a60d7a79dfe841c9463c921735d5d41ba" kind="function"><name>~vitfilt27_bb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__bb__impl_1ab0dbb0a813d53bb0f2c441083c6f4586" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1vitfilt27__fb" kind="class"><name>gr::lilacsat::vitfilt27_fb</name>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb_1a435b21e27709d43ccc29d26d9fbab2ae" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb_1a4ee5ccf041456f733693c637bc54c2b4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1lilacsat_1_1vitfilt27__fb__impl" kind="class"><name>gr::lilacsat::vitfilt27_fb_impl</name>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb__impl_1af8bacdbe22563b3fbf13dd898a88cf91" kind="variable"><name>vi</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb__impl_1a34af5eefdc8325f3569616374df7183b" kind="function"><name>vitfilt27_fb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb__impl_1af174d35844427f7b25e0adccc308a378" kind="function"><name>~vitfilt27_fb_impl</name></member>
+    <member refid="classgr_1_1lilacsat_1_1vitfilt27__fb__impl_1a6256b18b10b9e382806384574e2bcaca" kind="function"><name>work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1lilacsat" kind="namespace"><name>gr::lilacsat</name>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="__kiss__fft__guts_8h" kind="file"><name>_kiss_fft_guts.h</name>
+    <member refid="__kiss__fft__guts_8h_1af176a125e008eb443996cf0f83cc135c" kind="define"><name>MAXFACTORS</name></member>
+    <member refid="__kiss__fft__guts_8h_1a944e08f3916c56a9697bbfed458eaa94" kind="define"><name>S_MUL</name></member>
+    <member refid="__kiss__fft__guts_8h_1ab5092aa032092f1057feca5fbea40758" kind="define"><name>C_MUL</name></member>
+    <member refid="__kiss__fft__guts_8h_1a05e11bb1e8e815dd7bdd199060b7555a" kind="define"><name>C_FIXDIV</name></member>
+    <member refid="__kiss__fft__guts_8h_1a958da96ff02cad6be35cafa3019804b5" kind="define"><name>C_MULBYSCALAR</name></member>
+    <member refid="__kiss__fft__guts_8h_1a664c056b2a7093f88391d7db3558aa24" kind="define"><name>CHECK_OVERFLOW_OP</name></member>
+    <member refid="__kiss__fft__guts_8h_1a1f70747639c855259a0965de768e030a" kind="define"><name>C_ADD</name></member>
+    <member refid="__kiss__fft__guts_8h_1a8c00bd9702f25a8514402a3779b3bdda" kind="define"><name>C_SUB</name></member>
+    <member refid="__kiss__fft__guts_8h_1a2042ee8c6fb9306eb20d62e6506446aa" kind="define"><name>C_ADDTO</name></member>
+    <member refid="__kiss__fft__guts_8h_1aa3f448e1963492dfc145fc391cbedd27" kind="define"><name>C_SUBFROM</name></member>
+    <member refid="__kiss__fft__guts_8h_1a2e780e8fe86d9c3e7b6a469f61aaf5d1" kind="define"><name>KISS_FFT_COS</name></member>
+    <member refid="__kiss__fft__guts_8h_1a2d4fc93cde15512f1946f364d5271dd3" kind="define"><name>KISS_FFT_SIN</name></member>
+    <member refid="__kiss__fft__guts_8h_1a0b812a30fdb0c530a90a18d1692fab6c" kind="define"><name>HALF_OF</name></member>
+    <member refid="__kiss__fft__guts_8h_1ac7852abdf2dc5ed4538551be6d1dd20b" kind="define"><name>kf_cexp</name></member>
+    <member refid="__kiss__fft__guts_8h_1ac1abb41ecdedd05dda5d1ce83b67a704" kind="define"><name>pcpx</name></member>
+    <member refid="__kiss__fft__guts_8h_1abd992e9886fb74f97bf0b6e057fe08a5" kind="define"><name>KISS_FFT_TMP_ALLOC</name></member>
+    <member refid="__kiss__fft__guts_8h_1ab915c572fe96a51a3528b7419248b655" kind="define"><name>KISS_FFT_TMP_FREE</name></member>
+  </compound>
+  <compound refid="afsk_8h" kind="file"><name>afsk.h</name>
+    <member refid="afsk_8h_1a538e0cad3acb787a49e16b1e53787610" kind="define"><name>SAMPLERATE</name></member>
+    <member refid="afsk_8h_1a17468d10f0c67a4ee7b38aab09d9e096" kind="define"><name>BITRATE</name></member>
+    <member refid="afsk_8h_1aa09544a3fd5b9747570c27fe99f1c36c" kind="define"><name>SAMPLEPERBIT</name></member>
+    <member refid="afsk_8h_1abc27e633a81969b007bf9c4ebd71c380" kind="define"><name>AFSK_RXFIFO_OVERRUN</name></member>
+    <member refid="afsk_8h_1aced36453d31a6e7787d45537ddc7beda" kind="define"><name>KFT_AFSK</name></member>
+    <member refid="afsk_8h_1a4201c4addae6fc512a3eb8091714d477" kind="typedef"><name>Hdlc</name></member>
+    <member refid="afsk_8h_1a9c78d604c519643aecce1701bbdb2e5a" kind="typedef"><name>Afsk</name></member>
+    <member refid="afsk_8h_1a2ffbb7fff001c3ecc17a972bacc01e93" kind="function"><name>afsk_rx_proc</name></member>
+    <member refid="afsk_8h_1a7aed5c71291cd11914f4250c2637ff12" kind="function"><name>afsk_tx_proc</name></member>
+    <member refid="afsk_8h_1adcaec614dc621e3e6394b43b0078c378" kind="function"><name>afsk_init</name></member>
+  </compound>
+  <compound refid="afsk1200__rx__f_8h" kind="file"><name>afsk1200_rx_f.h</name>
+  </compound>
+  <compound refid="afsk1200__rx__f__impl_8h" kind="file"><name>afsk1200_rx_f_impl.h</name>
+  </compound>
+  <compound refid="afsk1200__tx__f_8h" kind="file"><name>afsk1200_tx_f.h</name>
+  </compound>
+  <compound refid="afsk1200__tx__f__impl_8h" kind="file"><name>afsk1200_tx_f_impl.h</name>
+  </compound>
+  <compound refid="angle__cf_8h" kind="file"><name>angle_cf.h</name>
+  </compound>
+  <compound refid="angle__cf__impl_8h" kind="file"><name>angle_cf_impl.h</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1ad6d4e9a83df2bcd80a7c8a3fa208e39b" kind="define"><name>LILACSAT_API</name></member>
+  </compound>
+  <compound refid="aprs_8h" kind="file"><name>aprs.h</name>
+    <member refid="aprs_8h_1ae951ea5239bc5acec426493a71933097" kind="variable"><name>ax25</name></member>
+    <member refid="aprs_8h_1a674800bb75f13b7d82a8ab7b2a4ecbc6" kind="variable"><name>afsk</name></member>
+    <member refid="aprs_8h_1a87d5e9a9ebe7b805212a3136f389f045" kind="function"><name>aprs_init</name></member>
+  </compound>
+  <compound refid="ax25_8h" kind="file"><name>ax25.h</name>
+    <member refid="ax25_8h_1a7dfaac00ac4dc67fd47f2cbdf51d5c72" kind="define"><name>HDLC_FLAG</name></member>
+    <member refid="ax25_8h_1a69a2c8271c865acf4cfa1c1d8ee9443e" kind="define"><name>HDLC_RESET</name></member>
+    <member refid="ax25_8h_1ae1d8d5447af97b18578d75c6d69ac46a" kind="define"><name>AX25_ESC</name></member>
+    <member refid="ax25_8h_1a4dc6bc53a35714e315e64780885500d5" kind="define"><name>AX25_MIN_FRAME_LEN</name></member>
+    <member refid="ax25_8h_1ae8a60e641e91e4c15b901fdefa6809cf" kind="define"><name>AX25_CRC_CORRECT</name></member>
+    <member refid="ax25_8h_1a5327edd4421eb544c6ef1a6b6b57c3d5" kind="define"><name>AX25_CALL</name></member>
+    <member refid="ax25_8h_1aca2813d00ec3666b450f4de16c225d38" kind="define"><name>AX25_MAX_RPT</name></member>
+    <member refid="ax25_8h_1a814fed3e2218ff674eb8866493379c66" kind="define"><name>AX25_CTRL_UI</name></member>
+    <member refid="ax25_8h_1a88892802325a651f80dcc1c7947ad2eb" kind="define"><name>AX25_PID_NOLAYER3</name></member>
+    <member refid="ax25_8h_1a46f680eba52bb13a331f9821bbdccf43" kind="define"><name>AX25_PATH</name></member>
+    <member refid="ax25_8h_1a239dd54aca232c9713d7cfbde19f547e" kind="define"><name>ax25_send</name></member>
+    <member refid="ax25_8h_1a3a1fe0d63aa2e8a1de251791fd49cae9" kind="typedef"><name>ax25_callback_t</name></member>
+    <member refid="ax25_8h_1a0f29015c88788eb20f3497203589a626" kind="typedef"><name>AX25Ctx</name></member>
+    <member refid="ax25_8h_1a196ef314b4bcf0843eb623093c5f2867" kind="typedef"><name>AX25Call</name></member>
+    <member refid="ax25_8h_1a468b20dd26d34134d407145b7bd550ec" kind="typedef"><name>AX25Msg</name></member>
+    <member refid="ax25_8h_1a9bb22de3f9495e4c3bb05cf74d8c0a15" kind="typedef"><name>AX25KISSMsg</name></member>
+    <member refid="ax25_8h_1a852682ef0f0f2764ea1dbacebfa2a4e7" kind="function"><name>ax25_poll</name></member>
+    <member refid="ax25_8h_1addb46cddaff0ee3cb23b3bce8b263485" kind="function"><name>ax25_sendVia</name></member>
+    <member refid="ax25_8h_1a6df81fbea257b39a245f0f657e6b9138" kind="function"><name>ax25_init</name></member>
+    <member refid="ax25_8h_1a90563f3e3c197ea55f024dfaf7891aeb" kind="function"><name>ax25_print</name></member>
+    <member refid="ax25_8h_1aec1ef4a9bffaf048459715f89e884af8" kind="function"><name>ax25_testSetup</name></member>
+    <member refid="ax25_8h_1af822693d96f974019aad0eca1d7a722c" kind="function"><name>ax25_testTearDown</name></member>
+    <member refid="ax25_8h_1a9c30bcaf757327154e1923f8612e9bb5" kind="function"><name>ax25_testRun</name></member>
+  </compound>
+  <compound refid="bertos_8h" kind="file"><name>bertos.h</name>
+    <member refid="bertos_8h_1a41f9c5fb8b08eb5dc3edce4dcb37fee7" kind="define"><name>true</name></member>
+    <member refid="bertos_8h_1a65e9886d74aaee76545e83dd09011727" kind="define"><name>false</name></member>
+    <member refid="bertos_8h_1a59adc4c82490d23754cd39c2fb99b0da" kind="define"><name>EOF</name></member>
+    <member refid="bertos_8h_1a2eb6f9e0395b47b8d5e3eeae4fe0c116" kind="define"><name>INLINE</name></member>
+    <member refid="bertos_8h_1a5ae59b9945c3ef623af1719976ef3a1f" kind="define"><name>DB</name></member>
+    <member refid="bertos_8h_1a663d8c125655d41622b1e6bc96e5d63d" kind="define"><name>BV</name></member>
+    <member refid="bertos_8h_1affde14445f49f65ff4f5b592e44ee71a" kind="define"><name>LIKELY</name></member>
+    <member refid="bertos_8h_1ab10d0a221f4d7a706701b806c8135fd7" kind="define"><name>UNLIKELY</name></member>
+    <member refid="bertos_8h_1aeee21601d8bd4d8089df7b44fa296c23" kind="define"><name>PGM_FUNC</name></member>
+    <member refid="bertos_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" kind="define"><name>MIN</name></member>
+    <member refid="bertos_8h_1a1ddec5826f8a1f9010183107bb77c06d" kind="define"><name>DIV_ROUND</name></member>
+    <member refid="bertos_8h_1a648d090bf791904e2b6fe26e058275a2" kind="define"><name>MAKE_ID</name></member>
+    <member refid="bertos_8h_1a3c5cd622462bb50b6dab4c189e219eb9" kind="define"><name>countof</name></member>
+    <member refid="bertos_8h_1a513ee83176411bfc889c87bff2f5b6e4" kind="typedef"><name>id_t</name></member>
+  </compound>
+  <compound refid="bpf_8h" kind="file"><name>bpf.h</name>
+    <member refid="bpf_8h_1a592ba332592f7dc221558475e7c0597e" kind="define"><name>BPF_N</name></member>
+    <member refid="bpf_8h_1ab1385739d5f3c616b086b24bb42f241a" kind="variable"><name>bpf</name></member>
+  </compound>
+  <compound refid="bpfb_8h" kind="file"><name>bpfb.h</name>
+    <member refid="bpfb_8h_1a788c1efd7397f723a04cfc4fb42f2d59" kind="define"><name>BPFB_N</name></member>
+    <member refid="bpfb_8h_1a86f8180b066c601cedc115e3add12a75" kind="variable"><name>bpfb</name></member>
+  </compound>
+  <compound refid="bpsk__demod__cb_8h" kind="file"><name>bpsk_demod_cb.h</name>
+  </compound>
+  <compound refid="bpsk__demod__cb__impl_8h" kind="file"><name>bpsk_demod_cb_impl.h</name>
+  </compound>
+  <compound refid="cc_8h" kind="file"><name>cc.h</name>
+    <member refid="cc_8h_1ac0dffcb15a812528abec53b1b48db2f8" kind="define"><name>CONFIG_CCSDS_TX_BUFLEN</name></member>
+    <member refid="cc_8h_1a99f5c4aca37909c6d1c59332f61bd3b1" kind="define"><name>CONFIG_TIMEOUT_TX_WRITE</name></member>
+    <member refid="cc_8h_1ade67658b4bc39c2f270aa230dcbcd158" kind="define"><name>CONFIG_LEN_PREAMBLE</name></member>
+    <member refid="cc_8h_1abc221cb5b86671dc840a6e8ea6c5e039" kind="define"><name>FLAG_TLM_PRI_L_TX</name></member>
+    <member refid="cc_8h_1a21d1d721fb2cd8ff59bd5568eee5879b" kind="define"><name>FLAG_TLM_PRI_H_TX</name></member>
+    <member refid="cc_8h_1a1db08ff9f5463224814247bf5fe24e1e" kind="define"><name>FLAG_CODEC2_TX</name></member>
+    <member refid="cc_8h_1afacab829a24d8094b29376450063c7bc" kind="typedef"><name>Cc</name></member>
+    <member refid="cc_8h_1a6cdc31c8beb64ec21fb816cf9d590259" kind="function"><name>cc_init</name></member>
+    <member refid="cc_8h_1a333dd453c34126952978bd114a6bdf97" kind="function"><name>cc_tx_proc</name></member>
+    <member refid="cc_8h_1a23a951ccdab37d2dbd3e5b05bcacedbb" kind="function"><name>cc_send</name></member>
+  </compound>
+  <compound refid="cc__decode__bb_8h" kind="file"><name>cc_decode_bb.h</name>
+  </compound>
+  <compound refid="cc__decode__bb__impl_8h" kind="file"><name>cc_decode_bb_impl.h</name>
+    <member refid="cc__decode__bb__impl_8h_1aa0b1a1eb9fbe2b5212a7e1ee3ef7052f" kind="define"><name>LENTH_BUF_SYNC_OUT</name></member>
+  </compound>
+  <compound refid="ccrx_8h" kind="file"><name>ccrx.h</name>
+    <member refid="ccrx_8h_1aa0b1a1eb9fbe2b5212a7e1ee3ef7052f" kind="define"><name>LENTH_BUF_SYNC_OUT</name></member>
+    <member refid="ccrx_8h_1a8d1f4e055053309134143e0e65e30433" kind="typedef"><name>sync_hook_t</name></member>
+    <member refid="ccrx_8h_1ae265f4d82ed70c2047952d1385bb09e1" kind="typedef"><name>CcRx</name></member>
+  </compound>
+  <compound refid="ccsds_8h" kind="file"><name>ccsds.h</name>
+    <member refid="ccsds_8h_1aa0b1a1eb9fbe2b5212a7e1ee3ef7052f" kind="define"><name>LENTH_BUF_SYNC_OUT</name></member>
+    <member refid="ccsds_8h_1aec143b14698e0d20f52eb6b709d85eba" kind="define"><name>VITERBI_RATE</name></member>
+    <member refid="ccsds_8h_1ae65f985e386f37c52c8ea93030d472d2" kind="define"><name>VITERBI_TAIL</name></member>
+    <member refid="ccsds_8h_1a5ebf7df1dd26a1694f5e89da649f1443" kind="define"><name>VITERBI_CONSTRAINT</name></member>
+    <member refid="ccsds_8h_1a369ecd38b3ab077fc235f892354bb46f" kind="define"><name>BITS_PER_BYTE</name></member>
+    <member refid="ccsds_8h_1a6e823b191a09c7e9f59cfc6e0969b7fa" kind="define"><name>MAX_FEC_LENGTH</name></member>
+    <member refid="ccsds_8h_1a452ddbdd87aacd2f3ab2f572d84f2e37" kind="define"><name>RS_LENGTH</name></member>
+    <member refid="ccsds_8h_1af6910a283c226c8c28bf3347db013b53" kind="define"><name>RS_BLOCK_LENGTH</name></member>
+    <member refid="ccsds_8h_1af09b64f369b27803e9b840ebde07a532" kind="define"><name>PACKET_LENGTH</name></member>
+    <member refid="ccsds_8h_1abe5698d0b31ab53f08806c1eebc4cde5" kind="define"><name>LENGTH_SYNC_WORD</name></member>
+    <member refid="ccsds_8h_1a04bd85bb9c6f1b61e3fb7b1f0bb32625" kind="define"><name>CONFIG_CCSDS_PREAMBLE_LEN</name></member>
+    <member refid="ccsds_8h_1a2879dc399899fa7ea66b409a2b72e08e" kind="define"><name>CONFIG_CCSDS_TRAILER_LEN</name></member>
+    <member refid="ccsds_8h_1ac0dffcb15a812528abec53b1b48db2f8" kind="define"><name>CONFIG_CCSDS_TX_BUFLEN</name></member>
+    <member refid="ccsds_8h_1a1a3588419f76c9f86d49cf1879421a7b" kind="define"><name>CONFIG_CCSDS_RX_BUFLEN</name></member>
+    <member refid="ccsds_8h_1a8d1f4e055053309134143e0e65e30433" kind="typedef"><name>sync_hook_t</name></member>
+    <member refid="ccsds_8h_1a61ca2cd0cf48bd87737f866949640d40" kind="typedef"><name>Ccsds</name></member>
+    <member refid="ccsds_8h_1abb8018835436fe33a9b8cde5dbd91e4c" kind="function"><name>ccsds_init</name></member>
+    <member refid="ccsds_8h_1a160ec7066fd874e60686ffc82837db88" kind="function"><name>ccsds_send</name></member>
+    <member refid="ccsds_8h_1aff8674e09197d7850a7055134770e5ab" kind="function"><name>ccsds_pull</name></member>
+    <member refid="ccsds_8h_1a0efd86ca709e6a37d749603968f0c17a" kind="function"><name>ccsds_tx_proc</name></member>
+    <member refid="ccsds_8h_1aaaa75a0bf97e8cd90dfb6edd23f3191b" kind="function"><name>ccsds_rx_proc</name></member>
+  </compound>
+  <compound refid="cfg__afsk_8h" kind="file"><name>cfg_afsk.h</name>
+    <member refid="cfg__afsk_8h_1abf955dd152370192f137bcb50e1d36ed" kind="define"><name>AFSK_LOG_LEVEL</name></member>
+    <member refid="cfg__afsk_8h_1a151ef3314573cbdddd68724eef4a3b65" kind="define"><name>AFSK_LOG_FORMAT</name></member>
+    <member refid="cfg__afsk_8h_1adb056877043b2fcf1477cf3a69bb89a6" kind="define"><name>CONFIG_AFSK_RX_BUFLEN</name></member>
+    <member refid="cfg__afsk_8h_1adc5f6ad59595e8b2c14827f5012c6f4f" kind="define"><name>CONFIG_AFSK_TX_BUFLEN</name></member>
+    <member refid="cfg__afsk_8h_1a9e83bcb5c8fb1fd1712fc7c454546da9" kind="define"><name>CONFIG_AFSK_DAC_SAMPLERATE</name></member>
+    <member refid="cfg__afsk_8h_1ae95b2addbd781be7d1dde09e75908a0d" kind="define"><name>CONFIG_AFSK_RXTIMEOUT</name></member>
+    <member refid="cfg__afsk_8h_1a7e4779383e6235749b7a72fffc601fa2" kind="define"><name>CONFIG_AFSK_PREAMBLE_LEN</name></member>
+    <member refid="cfg__afsk_8h_1a438c5dd5041a940e200ab24f209e323e" kind="define"><name>CONFIG_AFSK_TRAILER_LEN</name></member>
+  </compound>
+  <compound refid="cfg__ax25_8h" kind="file"><name>cfg_ax25.h</name>
+    <member refid="cfg__ax25_8h_1a2efa774c308131f608c246f887e4d422" kind="define"><name>AX25_LOG_LEVEL</name></member>
+    <member refid="cfg__ax25_8h_1ac15d562f66b4293e29ea47b61b222dee" kind="define"><name>AX25_LOG_FORMAT</name></member>
+    <member refid="cfg__ax25_8h_1a7814a5985786c36227869bfc41932ac5" kind="define"><name>CONFIG_AX25_FRAME_BUF_LEN</name></member>
+    <member refid="cfg__ax25_8h_1a50a6a1f5849a9aaffc10a3689951436d" kind="define"><name>CONFIG_AX25_RPT_LST</name></member>
+  </compound>
+  <compound refid="codec2_8h" kind="file"><name>codec2.h</name>
+    <member refid="codec2_8h_1a4121d7cbdf0f01f09e7bc41db9335670" kind="define"><name>__CODEC2__</name></member>
+    <member refid="codec2_8h_1a17c77c9c7b963f3c3b645549be9ab15c" kind="define"><name>CODEC2_MODE_3200</name></member>
+    <member refid="codec2_8h_1a44f549a82809d152786771a2fec32042" kind="define"><name>CODEC2_MODE_2400</name></member>
+    <member refid="codec2_8h_1a2351af3f786b3e12c54b7adf14265d8c" kind="define"><name>CODEC2_MODE_1600</name></member>
+    <member refid="codec2_8h_1adf7c88220e48ffe3188458c80bcb2f26" kind="define"><name>CODEC2_MODE_1400</name></member>
+    <member refid="codec2_8h_1ae8a0a1d5579cf5a943fee8457af950ed" kind="define"><name>CODEC2_MODE_1300</name></member>
+    <member refid="codec2_8h_1a817fc1a574446844f28217de0df69d9b" kind="define"><name>CODEC2_MODE_1200</name></member>
+    <member refid="codec2_8h_1ade3b0b5e25399925b18184b6b544fa9d" kind="define"><name>CODEC2_MODE_700</name></member>
+    <member refid="codec2_8h_1abd4dbf5c87c374e1b963ee0983be10f9" kind="define"><name>CODEC2_MODE_700B</name></member>
+    <member refid="codec2_8h_1a897500402ce2de063067a95c0a2c39bd" kind="function"><name>codec2_create</name></member>
+    <member refid="codec2_8h_1a38884e1cdce67fa76709b9698cab9c45" kind="function"><name>codec2_destroy</name></member>
+    <member refid="codec2_8h_1a7ae23a3e6515c7c8de7dfc59b767899d" kind="function"><name>codec2_encode</name></member>
+    <member refid="codec2_8h_1ab0d4242f8e77a2d739c2d40878935502" kind="function"><name>codec2_decode</name></member>
+    <member refid="codec2_8h_1a387cc188c679cc69a40932938be315e0" kind="function"><name>codec2_decode_ber</name></member>
+    <member refid="codec2_8h_1aa00f6c0934cdba545451162cdc7dccde" kind="function"><name>codec2_samples_per_frame</name></member>
+    <member refid="codec2_8h_1a2d5410e37af0a0c2bf891c4b9bd0ab2c" kind="function"><name>codec2_bits_per_frame</name></member>
+    <member refid="codec2_8h_1a0a7d6da106ba2b9aa6c41e8d5ada4df0" kind="function"><name>codec2_set_lpc_post_filter</name></member>
+    <member refid="codec2_8h_1a2c57b1726d32825156c021afd61ffa8b" kind="function"><name>codec2_get_spare_bit_index</name></member>
+    <member refid="codec2_8h_1a1428aba892a1c53743c94dd54b5a3ea9" kind="function"><name>codec2_rebuild_spare_bit</name></member>
+    <member refid="codec2_8h_1a091f8263c8f2d317047e8ba5f0372f67" kind="function"><name>codec2_set_natural_or_gray</name></member>
+    <member refid="codec2_8h_1a79ec52cfa65b6152c8c674dd4ce45d88" kind="function"><name>codec2_set_softdec</name></member>
+  </compound>
+  <compound refid="codec2__decode__bf_8h" kind="file"><name>codec2_decode_bf.h</name>
+  </compound>
+  <compound refid="codec2__decode__bf__impl_8h" kind="file"><name>codec2_decode_bf_impl.h</name>
+  </compound>
+  <compound refid="codec2__encode__fb_8h" kind="file"><name>codec2_encode_fb.h</name>
+  </compound>
+  <compound refid="codec2__encode__fb__impl_8h" kind="file"><name>codec2_encode_fb_impl.h</name>
+  </compound>
+  <compound refid="codec2__internal_8h" kind="file"><name>codec2_internal.h</name>
+  </compound>
+  <compound refid="comp_8h" kind="file"><name>comp.h</name>
+  </compound>
+  <compound refid="config_8h" kind="file"><name>config.h</name>
+    <member refid="config_8h_1a44184cf844a916eee78598ab35fc966b" kind="define"><name>SIZEOF_INT</name></member>
+    <member refid="config_8h_1a9e0e434ec1a6ddbd97db12b5a32905e0" kind="define"><name>HAVE_STDLIB_H</name></member>
+    <member refid="config_8h_1ad4c234dd1625255dc626a15886306e7d" kind="define"><name>HAVE_STRING_H</name></member>
+    <member refid="config_8h_1ab452be2c7cc8652644e7782380300b8b" kind="define"><name>HAVE_FLOOR</name></member>
+    <member refid="config_8h_1afb1ce161af1df3c2c55a629ea0d4bb6c" kind="define"><name>HAVE_CEIL</name></member>
+    <member refid="config_8h_1a9d17c48138de7e59ce0ef00b33ed05cb" kind="define"><name>HAVE_POW</name></member>
+    <member refid="config_8h_1a04f983617a16d562f9a6df2e34a6a41c" kind="define"><name>HAVE_SQRT</name></member>
+    <member refid="config_8h_1a561075a6afb23894833fc887a1552928" kind="define"><name>HAVE_SIN</name></member>
+    <member refid="config_8h_1a14b60a4af99d03305d834018299c97c4" kind="define"><name>HAVE_COS</name></member>
+    <member refid="config_8h_1a52de22f2e81bce94222ff968b2b3c8c1" kind="define"><name>HAVE_ATAN2</name></member>
+    <member refid="config_8h_1a3f7e8b5e13d96d1de1a0848f7aa80157" kind="define"><name>HAVE_LOG10</name></member>
+    <member refid="config_8h_1af79e3ccb09ebc4ef1a87bf506f07cd79" kind="define"><name>HAVE_ROUND</name></member>
+    <member refid="config_8h_1aa3fb147cded6017f7a95a8a090e2eeab" kind="define"><name>HAVE_GETOPT</name></member>
+  </compound>
+  <compound refid="crc__ccitt_8h" kind="file"><name>crc_ccitt.h</name>
+    <member refid="crc__ccitt_8h_1a4fc816f60939b5a504de4106680b111c" kind="define"><name>CRC_CCITT_INIT_VAL</name></member>
+    <member refid="crc__ccitt_8h_1ad8684c47b885bcccd1cdb36f0bb39117" kind="variable"><name>crc_ccitt_tab</name></member>
+    <member refid="crc__ccitt_8h_1a02d1ffc2b83acd5dd0f80d44336a754b" kind="function"><name>updcrc_ccitt</name></member>
+  </compound>
+  <compound refid="defines_8h" kind="file"><name>defines.h</name>
+    <member refid="defines_8h_1a0240ac851181b84ac374872dc5434ee4" kind="define"><name>N</name></member>
+    <member refid="defines_8h_1ad72f813021f638189aa4a416fe607b20" kind="define"><name>MAX_AMP</name></member>
+    <member refid="defines_8h_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
+    <member refid="defines_8h_1a3b947f4b635461030ff2d87833e5049e" kind="define"><name>TWO_PI</name></member>
+    <member refid="defines_8h_1a30588c5eca7c9cb6ebba02a0236f0119" kind="define"><name>FS</name></member>
+    <member refid="defines_8h_1a8b6d77865140befe3a9bc16132d2e696" kind="define"><name>MAX_STR</name></member>
+    <member refid="defines_8h_1af9cccf331f045b89a9f12366df5f7687" kind="define"><name>NW</name></member>
+    <member refid="defines_8h_1a6be56a1628df40717b4df02c923eca65" kind="define"><name>FFT_ENC</name></member>
+    <member refid="defines_8h_1a947bacc9a58067290836b097cbfff0ce" kind="define"><name>FFT_DEC</name></member>
+    <member refid="defines_8h_1a051c83d6554c006261a198d0682d84e4" kind="define"><name>TW</name></member>
+    <member refid="defines_8h_1a22f0811318f51a256d3247a6915d2d0e" kind="define"><name>V_THRESH</name></member>
+    <member refid="defines_8h_1a226d8bf0dbba817c89954c6651a23420" kind="define"><name>LPC_ORD</name></member>
+    <member refid="defines_8h_1a192e7137386dec0be2251d38140de4e2" kind="define"><name>LPC_ORD_LOW</name></member>
+    <member refid="defines_8h_1a52037c938e3c1b126c6277da5ca689d0" kind="define"><name>M</name></member>
+    <member refid="defines_8h_1adc6568b52529df9d20dd786cc39c7a67" kind="define"><name>P_MIN</name></member>
+    <member refid="defines_8h_1a9b6e05ef78c1f96674f7131c13093e38" kind="define"><name>P_MAX</name></member>
+    <member refid="defines_8h_1a9a119410ff8e7ebd37bced40b3d03830" kind="variable"><name>lsp_cb</name></member>
+    <member refid="defines_8h_1a2f0b8e7104661505328a2820008b2ad0" kind="variable"><name>lsp_cbd</name></member>
+    <member refid="defines_8h_1a174f7468f0d0f847d29031831d4aab95" kind="variable"><name>lsp_cbvq</name></member>
+    <member refid="defines_8h_1a2085a5bc33df0d6a7d33910f80ea181b" kind="variable"><name>lsp_cbjnd</name></member>
+    <member refid="defines_8h_1ab56de3422a37154c846c0ed5cdd6567c" kind="variable"><name>lsp_cbdt</name></member>
+    <member refid="defines_8h_1a82fe8d72f7c858d3cc3d0af9799d1bb0" kind="variable"><name>lsp_cbjvm</name></member>
+    <member refid="defines_8h_1ab6461179cce68791a6af7f3ac348f163" kind="variable"><name>lsp_cbvqanssi</name></member>
+    <member refid="defines_8h_1a61da7354b777cf1e600bd28ec949a5c2" kind="variable"><name>mel_cb</name></member>
+    <member refid="defines_8h_1a43caa9b7e771edd0b2ea733cd9f15557" kind="variable"><name>ge_cb</name></member>
+    <member refid="defines_8h_1a01e35e091f33e3f30b3f86e1b1334400" kind="variable"><name>lspmelvq_cb</name></member>
+  </compound>
+  <compound refid="dump_8h" kind="file"><name>dump.h</name>
+    <member refid="dump_8h_1a77c522b3ccf68cf1bce49d1b1c0afbdd" kind="function"><name>dump_on</name></member>
+    <member refid="dump_8h_1a6711b540fed88bd990476addbc0cce3b" kind="function"><name>dump_off</name></member>
+    <member refid="dump_8h_1a6b3b22bccc7dc70d021d8bb6768f3fa1" kind="function"><name>dump_Sn</name></member>
+    <member refid="dump_8h_1aaf16d7111fca607a342b378a662553ac" kind="function"><name>dump_Sw</name></member>
+    <member refid="dump_8h_1a509ff9a4bdbfe1b57f8d6d78d98512ad" kind="function"><name>dump_Sw_</name></member>
+    <member refid="dump_8h_1a83dda246b4f24217002baff54c10d653" kind="function"><name>dump_Ew</name></member>
+    <member refid="dump_8h_1a3b85dce27fd257c32bdd5e66bdfacd28" kind="function"><name>dump_softdec</name></member>
+    <member refid="dump_8h_1afed5e2a7e9c8fde158719e426f4075b1" kind="function"><name>dump_model</name></member>
+    <member refid="dump_8h_1a8457e1b5739ee1ea0aacd0d9ae0286b8" kind="function"><name>dump_quantised_model</name></member>
+    <member refid="dump_8h_1ab7af7e95ff083e1c6cf0e54f40cff146" kind="function"><name>dump_Pwn</name></member>
+    <member refid="dump_8h_1af9d93c550ca9f94d9508e5dc8c565399" kind="function"><name>dump_Pw</name></member>
+    <member refid="dump_8h_1aacf5440cba2134c8aa6922b21466cd22" kind="function"><name>dump_Rw</name></member>
+    <member refid="dump_8h_1a83ef2e051293897a7e638fbd2ad19e63" kind="function"><name>dump_lsp</name></member>
+    <member refid="dump_8h_1abc5e85dcb81fc273db8e5983b7549c2e" kind="function"><name>dump_weights</name></member>
+    <member refid="dump_8h_1a3634d7524fe7194714acecaf9162a569" kind="function"><name>dump_lsp_</name></member>
+    <member refid="dump_8h_1afb3cc7e3b2defd951bcf50fafe8b3a44" kind="function"><name>dump_mel</name></member>
+    <member refid="dump_8h_1a71b9fa9565556490c7730a404f2126af" kind="function"><name>dump_mel_indexes</name></member>
+    <member refid="dump_8h_1ab752be7a460639fd05882e94e93e3247" kind="function"><name>dump_ak</name></member>
+    <member refid="dump_8h_1a21213b333b3238b55d7ec133599a83d9" kind="function"><name>dump_ak_</name></member>
+    <member refid="dump_8h_1aa8745e158c253fb2fb67bfb9a8a87682" kind="function"><name>dump_E</name></member>
+    <member refid="dump_8h_1a83cc9bd89f88906e90dbd7212adbaef1" kind="function"><name>dump_lpc_snr</name></member>
+    <member refid="dump_8h_1a6360ffc3a9fc4f032eb4eb7630c99902" kind="function"><name>dump_snr</name></member>
+    <member refid="dump_8h_1afb3f36bfe6d12d57a5b2a6d505c68570" kind="function"><name>dump_phase</name></member>
+    <member refid="dump_8h_1a55c6cdc63679ff2efc83659e5f5743c0" kind="function"><name>dump_phase_</name></member>
+    <member refid="dump_8h_1a78808d6ecb1cc6c3773e723fa0635b6e" kind="function"><name>dump_hephase</name></member>
+    <member refid="dump_8h_1a79d8fab9e29b44f53e1a35355111dafe" kind="function"><name>dump_sq</name></member>
+    <member refid="dump_8h_1a856934965ae01000a22e13905fc605ef" kind="function"><name>dump_dec</name></member>
+    <member refid="dump_8h_1af30a5c2cec1ea4fc781350be5f1753ee" kind="function"><name>dump_Fw</name></member>
+    <member refid="dump_8h_1ac3960fba4259d2bbb7aa69eabcce2678" kind="function"><name>dump_e</name></member>
+    <member refid="dump_8h_1a6f0d82189cbbece2dd3d871a235338f0" kind="function"><name>dump_Rk</name></member>
+    <member refid="dump_8h_1a3d40a706e73a46ceee53c89bd93ca503" kind="function"><name>dump_bg</name></member>
+    <member refid="dump_8h_1a890221fdc2e16bec4c33ee852fd502fc" kind="function"><name>dump_Pwb</name></member>
+  </compound>
+  <compound refid="encode27__bb_8h" kind="file"><name>encode27_bb.h</name>
+  </compound>
+  <compound refid="encode27__bb__impl_8h" kind="file"><name>encode27_bb_impl.h</name>
+  </compound>
+  <compound refid="fec__decode__b_8h" kind="file"><name>fec_decode_b.h</name>
+  </compound>
+  <compound refid="fec__decode__b__impl_8h" kind="file"><name>fec_decode_b_impl.h</name>
+  </compound>
+  <compound refid="fec__encode__b_8h" kind="file"><name>fec_encode_b.h</name>
+  </compound>
+  <compound refid="fec__encode__b__impl_8h" kind="file"><name>fec_encode_b_impl.h</name>
+  </compound>
+  <compound refid="fifobuf_8h" kind="file"><name>fifobuf.h</name>
+    <member refid="fifobuf_8h_1affde14445f49f65ff4f5b592e44ee71a" kind="define"><name>LIKELY</name></member>
+    <member refid="fifobuf_8h_1ab10d0a221f4d7a706701b806c8135fd7" kind="define"><name>UNLIKELY</name></member>
+    <member refid="fifobuf_8h_1a8dc599f454f12cd307ce42d98d7afeca" kind="define"><name>ASSERT_VALID_FIFO</name></member>
+    <member refid="fifobuf_8h_1ab3a2d313ac9252a9ce492b50e6f1e9e2" kind="typedef"><name>FIFOBuffer</name></member>
+    <member refid="fifobuf_8h_1ac585c090de7e75d6deb7c8c7f69fe59e" kind="typedef"><name>FIFOBuffer_q15</name></member>
+    <member refid="fifobuf_8h_1a0e994927c90f3db3a6df6877e948b77a" kind="function"><name>fifo_isempty</name></member>
+    <member refid="fifobuf_8h_1a5512b0cb79c0e6ce6c56207e4e5fb153" kind="function"><name>fifo_isempty_q15</name></member>
+    <member refid="fifobuf_8h_1a5dc5785260c19521eb0988068cfbc2ae" kind="function"><name>fifo_isfull</name></member>
+    <member refid="fifobuf_8h_1afa93c0d02bb62cba8064b7a468445c82" kind="function"><name>fifo_isfull_q15</name></member>
+    <member refid="fifobuf_8h_1a01378d7898645377242f0540b2df6a33" kind="function"><name>fifo_room</name></member>
+    <member refid="fifobuf_8h_1aa90a12236437f4c2c3205cd1f991a322" kind="function"><name>fifo_push</name></member>
+    <member refid="fifobuf_8h_1af282e506f8038d4a40b42aca8ebe411b" kind="function"><name>fifo_push_q15</name></member>
+    <member refid="fifobuf_8h_1a10b23a805dd320d7767e99087fa7df84" kind="function"><name>fifo_pop</name></member>
+    <member refid="fifobuf_8h_1a70ac220207fde0bc85c4af61cb7acf92" kind="function"><name>fifo_pop_q15</name></member>
+    <member refid="fifobuf_8h_1a1fe72631d7832d6eb42cfdf839f9e66b" kind="function"><name>fifo_flush</name></member>
+    <member refid="fifobuf_8h_1ad010f560b4b625222f02cdb46857e46a" kind="function"><name>fifo_init</name></member>
+    <member refid="fifobuf_8h_1a05882230a660efa97e59e733d517970e" kind="function"><name>fifo_init_q15</name></member>
+    <member refid="fifobuf_8h_1a2679eb1394ca1c0db57e697730b2e28b" kind="function"><name>fifo_len</name></member>
+  </compound>
+  <compound refid="gmsk__demod_8h" kind="file"><name>gmsk_demod.h</name>
+  </compound>
+  <compound refid="gmsk__demod__impl_8h" kind="file"><name>gmsk_demod_impl.h</name>
+    <member refid="gmsk__demod__impl_8h_1af8a0fdbe0497b33831577e33850d4fa8" kind="define"><name>Tb</name></member>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="interp_8h" kind="file"><name>interp.h</name>
+    <member refid="interp_8h_1afc9e2524b4f0ab70157ba1452d4f53ad" kind="function"><name>interpolate</name></member>
+    <member refid="interp_8h_1aad448ffe1cf874f2f370869e39f2a44b" kind="function"><name>interpolate_lsp</name></member>
+    <member refid="interp_8h_1a1b2a8f9f7852ffcb883a6a9e6b5e5a32" kind="function"><name>interp_Wo</name></member>
+    <member refid="interp_8h_1a5c6d385cb42dcb64b455e1ce370c538b" kind="function"><name>interp_Wo2</name></member>
+    <member refid="interp_8h_1a0b3b9ad37a1641836d9e20f08ee457c9" kind="function"><name>interp_energy</name></member>
+    <member refid="interp_8h_1a779f5e5af98739c9c733b77029a0feff" kind="function"><name>interp_energy2</name></member>
+    <member refid="interp_8h_1a78138f007a1c852eb263ffbad74a06b3" kind="function"><name>interpolate_lsp_ver2</name></member>
+  </compound>
+  <compound refid="kfile_8h" kind="file"><name>kfile.h</name>
+    <member refid="kfile_8h_1a3fe0b350689819452c2c5b973bd944f1" kind="typedef"><name>ReadFunc_t</name></member>
+    <member refid="kfile_8h_1a0b78084d423d1e90e680d7a1d0dc26ba" kind="typedef"><name>WriteFunc_t</name></member>
+    <member refid="kfile_8h_1a3505f08a364509144795a9d1601b0ead" kind="typedef"><name>SeekFunc_t</name></member>
+    <member refid="kfile_8h_1a2cd2f400c6b4eecf7ee53886ae596f54" kind="typedef"><name>ReOpenFunc_t</name></member>
+    <member refid="kfile_8h_1ada3a8e5d8c3b9c3c13cd6f240b04992d" kind="typedef"><name>CloseFunc_t</name></member>
+    <member refid="kfile_8h_1a7ab35c0a62181a374d96957f14454d6e" kind="typedef"><name>FlushFunc_t</name></member>
+    <member refid="kfile_8h_1a190aad2c7706fa21ae066b36e350faf0" kind="typedef"><name>ErrorFunc_t</name></member>
+    <member refid="kfile_8h_1a8d6715250d8ae8f0e18fbf26e1c75dd5" kind="typedef"><name>ClearErrFunc_t</name></member>
+    <member refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00" kind="enum"><name>KSeekMode</name></member>
+    <member refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00aad38c62dd35ece8c8aa9c609f4f59b2e" kind="enumvalue"><name>KSM_SEEK_SET</name></member>
+    <member refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00a3740314166f470d8abef3b9cbe8c3ce7" kind="enumvalue"><name>KSM_SEEK_CUR</name></member>
+    <member refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00aa091a159fb371f5e63f0fa8087904e1a" kind="enumvalue"><name>KSM_SEEK_END</name></member>
+    <member refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kind="typedef"><name>kfile_off_t</name></member>
+    <member refid="kfile_8h_1a4e7f0c0711ae47d39c6843c0a6e2d5bc" kind="typedef"><name>KSeekMode</name></member>
+    <member refid="kfile_8h_1aa92a6e896c812fb0d76d0e7824e6551a" kind="typedef"><name>KFile</name></member>
+    <member refid="kfile_8h_1acac5698d355a3750f4b07415090ed7a4" kind="function"><name>kfile_genericSeek</name></member>
+    <member refid="kfile_8h_1a1f1f5efe44ff91c5bea49f88f356059a" kind="function"><name>kfile_genericReopen</name></member>
+    <member refid="kfile_8h_1a32306b8d90302fa70007aff8c1189bc5" kind="function"><name>kfile_genericClose</name></member>
+    <member refid="kfile_8h_1a480c14426dc77cdfd786c3b5b9a9adf2" kind="function"><name>kfile_putc</name></member>
+    <member refid="kfile_8h_1a09cca6f02dc337ddff2b36b66a3fdd1c" kind="function"><name>kfile_getc</name></member>
+    <member refid="kfile_8h_1aaba6667da830aba35851b4c70d8783dd" kind="function"><name>kfile_print</name></member>
+    <member refid="kfile_8h_1af33cb00f56adefabb98d534d526525eb" kind="function"><name>kfile_gets</name></member>
+    <member refid="kfile_8h_1a146ed5c09d27f419f4c44344d8845330" kind="function"><name>kfile_gets_echo</name></member>
+    <member refid="kfile_8h_1ada2185b090d77fbb33ab01da3f22a8a9" kind="function"><name>kfile_init</name></member>
+    <member refid="kfile_8h_1a9638c7d7f76976a58ceb670c28e13c39" kind="function"><name>kfile_error</name></member>
+    <member refid="kfile_8h_1a40a4b4a6c5b44f6377e51e7484650324" kind="function"><name>kfile_clearerr</name></member>
+  </compound>
+  <compound refid="kiss_8h" kind="file"><name>kiss.h</name>
+    <member refid="kiss_8h_1ace4f41c6d21b07afd94795d923f5286d" kind="define"><name>LEN_KISS_BUFFER</name></member>
+    <member refid="kiss_8h_1ae8bc87364cbdc61f3dd791695e775250" kind="typedef"><name>kiss_hook_t</name></member>
+    <member refid="kiss_8h_1a5e9598ca2df3205602fc0b48ca28f50a" kind="typedef"><name>Kiss</name></member>
+    <member refid="kiss_8h_1a063e2a56f09c5039da3428edd70496b9" kind="function"><name>kiss_init</name></member>
+    <member refid="kiss_8h_1af8d80f9ceb24c7e55ae3457916418aca" kind="function"><name>kiss_rx_byte</name></member>
+    <member refid="kiss_8h_1af268f0d2374ef0183cb3ee5f7170f9e0" kind="function"><name>kiss_tx_packet</name></member>
+  </compound>
+  <compound refid="kiss__decode__pdu_8h" kind="file"><name>kiss_decode_pdu.h</name>
+  </compound>
+  <compound refid="kiss__decode__pdu__impl_8h" kind="file"><name>kiss_decode_pdu_impl.h</name>
+  </compound>
+  <compound refid="kiss__encode__pdu_8h" kind="file"><name>kiss_encode_pdu.h</name>
+  </compound>
+  <compound refid="kiss__encode__pdu__impl_8h" kind="file"><name>kiss_encode_pdu_impl.h</name>
+  </compound>
+  <compound refid="kiss__fft_8h" kind="file"><name>kiss_fft.h</name>
+    <member refid="kiss__fft_8h_1aa6e24524bfa0247ac606c950e43a9a4d" kind="define"><name>KISS_FFT_MALLOC</name></member>
+    <member refid="kiss__fft_8h_1a167bff53d1f15bc13289353390b7faae" kind="define"><name>KISS_FFT_FREE</name></member>
+    <member refid="kiss__fft_8h_1a4d9bf2d6a2ce1b061545a16faf77d337" kind="define"><name>kiss_fft_scalar</name></member>
+    <member refid="kiss__fft_8h_1a62e86236e852945b8e120d0228377d71" kind="define"><name>kiss_fft_free</name></member>
+    <member refid="kiss__fft_8h_1ad5d759d8e80434375e61c6a7de9aee79" kind="define"><name>kiss_fftr_next_fast_size_real</name></member>
+    <member refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kind="typedef"><name>kiss_fft_cfg</name></member>
+    <member refid="kiss__fft_8h_1ab5ad1560b58375ec071da45401911358" kind="function"><name>kiss_fft_alloc</name></member>
+    <member refid="kiss__fft_8h_1ab36e2bb33b74c1a7eabe3271d0916030" kind="function"><name>kiss_fft</name></member>
+    <member refid="kiss__fft_8h_1a240e0a77bb991890d609f498f9c75ec8" kind="function"><name>kiss_fft_stride</name></member>
+    <member refid="kiss__fft_8h_1aab7972365fc8f30a13eed91fa29172ba" kind="function"><name>kiss_fft_cleanup</name></member>
+    <member refid="kiss__fft_8h_1a26b8ac31a43a356943061318831508e9" kind="function"><name>kiss_fft_next_fast_size</name></member>
+  </compound>
+  <compound refid="lilacsat1__frame__depack_8h" kind="file"><name>lilacsat1_frame_depack.h</name>
+  </compound>
+  <compound refid="lilacsat1__frame__depack__impl_8h" kind="file"><name>lilacsat1_frame_depack_impl.h</name>
+    <member refid="lilacsat1__frame__depack__impl_8h_1ad5f469c4d232a44854bd58fce281b8e0" kind="define"><name>LENTH_BUF_CODEC2</name></member>
+  </compound>
+  <compound refid="lpc_8h" kind="file"><name>lpc.h</name>
+    <member refid="lpc_8h_1ae6920c2ed5c865fc3d841e04087659f3" kind="define"><name>LPC_MAX_ORDER</name></member>
+    <member refid="lpc_8h_1afd3b31d6d6dada05fe833d51297ccae1" kind="function"><name>pre_emp</name></member>
+    <member refid="lpc_8h_1ac38de1857d235f8545b3eba62deebdc7" kind="function"><name>de_emp</name></member>
+    <member refid="lpc_8h_1a7dd907489a064afc2d82b3a69b5b8a13" kind="function"><name>hanning_window</name></member>
+    <member refid="lpc_8h_1a0f27f05563b2a28b97259c3409310db3" kind="function"><name>autocorrelate</name></member>
+    <member refid="lpc_8h_1ae8d19e386bdfb719dc8681927a501688" kind="function"><name>levinson_durbin</name></member>
+    <member refid="lpc_8h_1a967cdfdcf069e9aba5577f569e86bf5b" kind="function"><name>inverse_filter</name></member>
+    <member refid="lpc_8h_1a27e5ac0de1c3e3640322648a6c75b5d9" kind="function"><name>synthesis_filter</name></member>
+    <member refid="lpc_8h_1ab80286244b85da515e9da5cbcc99ef99" kind="function"><name>find_aks</name></member>
+    <member refid="lpc_8h_1ae4471b94aa2f0a7b043f338f4c6410d7" kind="function"><name>weight</name></member>
+  </compound>
+  <compound refid="lsp_8h" kind="file"><name>lsp.h</name>
+    <member refid="lsp_8h_1a215f83233ef7ab82bf51a8c074760da0" kind="function"><name>lpc_to_lsp</name></member>
+    <member refid="lsp_8h_1a27556b38cd4cafb48328fcba273c531a" kind="function"><name>lsp_to_lpc</name></member>
+  </compound>
+  <compound refid="machdep_8h" kind="file"><name>machdep.h</name>
+    <member refid="machdep_8h_1a2b686b484e8d4bcd989018fafd541ddf" kind="define"><name>PROFILE_VAR</name></member>
+    <member refid="machdep_8h_1a04fc58368aec974119906e152c4d9638" kind="define"><name>PROFILE_SAMPLE</name></member>
+    <member refid="machdep_8h_1afd44a0eb09808d0edcc51a0af736759b" kind="define"><name>PROFILE_SAMPLE_AND_LOG</name></member>
+    <member refid="machdep_8h_1aaab38ee42171728fba11ff32057627a5" kind="define"><name>PROFILE_SAMPLE_AND_LOG2</name></member>
+    <member refid="machdep_8h_1a796ef6cd507af36cdbead2398b6ef409" kind="function"><name>machdep_profile_init</name></member>
+    <member refid="machdep_8h_1a882378eef2cc62fcd2ea3049b709add3" kind="function"><name>machdep_profile_reset</name></member>
+    <member refid="machdep_8h_1ae0766090e12a86ea10d5e6945902b676" kind="function"><name>machdep_profile_sample</name></member>
+    <member refid="machdep_8h_1a683ac3c0eedbc57456e7a51bf48340b3" kind="function"><name>machdep_profile_sample_and_log</name></member>
+    <member refid="machdep_8h_1a9b953f8cfe03d1b99639a0af85f896cb" kind="function"><name>machdep_profile_print_logged_samples</name></member>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="nlp_8h" kind="file"><name>nlp.h</name>
+    <member refid="nlp_8h_1a839dce5641def0f5388f3dadfdd5f1fa" kind="function"><name>nlp_create</name></member>
+    <member refid="nlp_8h_1aa1e01208eb414cfdcb0bc9d7701c6fa5" kind="function"><name>nlp_destroy</name></member>
+    <member refid="nlp_8h_1a3c71f31ee20bf2e3df50ed0ee5a70db3" kind="function"><name>nlp</name></member>
+  </compound>
+  <compound refid="phase_8h" kind="file"><name>phase.h</name>
+    <member refid="phase_8h_1a0d1f94de5298eee649097cdf6b7b12d5" kind="function"><name>phase_synth_zero_order</name></member>
+  </compound>
+  <compound refid="pipe__sink__pdu_8h" kind="file"><name>pipe_sink_pdu.h</name>
+  </compound>
+  <compound refid="pipe__sink__pdu__impl_8h" kind="file"><name>pipe_sink_pdu_impl.h</name>
+  </compound>
+  <compound refid="Plan13_8h" kind="file"><name>Plan13.h</name>
+  </compound>
+  <compound refid="plan13__cc_8h" kind="file"><name>plan13_cc.h</name>
+  </compound>
+  <compound refid="plan13__cc__impl_8h" kind="file"><name>plan13_cc_impl.h</name>
+  </compound>
+  <compound refid="postfilter_8h" kind="file"><name>postfilter.h</name>
+    <member refid="postfilter_8h_1ab7500b15f343dd0c7fc333bd6c252f8f" kind="function"><name>postfilter</name></member>
+  </compound>
+  <compound refid="print__to__file__b_8h" kind="file"><name>print_to_file_b.h</name>
+  </compound>
+  <compound refid="print__to__file__b__impl_8h" kind="file"><name>print_to_file_b_impl.h</name>
+  </compound>
+  <compound refid="quantise_8h" kind="file"><name>quantise.h</name>
+    <member refid="quantise_8h_1a35e21391e1b7e4df6bb383c552d5541e" kind="define"><name>WO_BITS</name></member>
+    <member refid="quantise_8h_1a7e06332d7ea01ed08f8f455df41272bb" kind="define"><name>WO_LEVELS</name></member>
+    <member refid="quantise_8h_1a94293d6c877d211eb617806e4e67265f" kind="define"><name>WO_DT_BITS</name></member>
+    <member refid="quantise_8h_1a4ef43416c3082b95dfc7b9b4b37ed4a7" kind="define"><name>E_BITS</name></member>
+    <member refid="quantise_8h_1a1e2787c64ea7b91af74449ba708a2d7c" kind="define"><name>E_LEVELS</name></member>
+    <member refid="quantise_8h_1a336e320775d3defe71d7a90942bfdd00" kind="define"><name>E_MIN_DB</name></member>
+    <member refid="quantise_8h_1a79d8b57a521ce507705a0f750c5f8a58" kind="define"><name>E_MAX_DB</name></member>
+    <member refid="quantise_8h_1a94ec9c9dd8434fa0d6d31d8a858074ab" kind="define"><name>LSP_SCALAR_INDEXES</name></member>
+    <member refid="quantise_8h_1ae72835b7272cb29cce1106ed4e4d74a0" kind="define"><name>LSPD_SCALAR_INDEXES</name></member>
+    <member refid="quantise_8h_1ad24924d7af39c0ff808b2d157968acb3" kind="define"><name>LSP_PRED_VQ_INDEXES</name></member>
+    <member refid="quantise_8h_1afc59f8c94bb16003f520ca1c7c85aab4" kind="define"><name>LSP_DIFF_FREQ_INDEXES</name></member>
+    <member refid="quantise_8h_1a187d5976f76a12dc57a0550f9c659107" kind="define"><name>LSP_DIFF_TIME_BITS</name></member>
+    <member refid="quantise_8h_1af6b24896eb9e6e4cccace58a733abc70" kind="define"><name>LSPDT_ALL</name></member>
+    <member refid="quantise_8h_1abf838d0e0511cd4af4d7b1a433a7c22f" kind="define"><name>LSPDT_LOW</name></member>
+    <member refid="quantise_8h_1a780db4b91a43818eb7215d5da46b3941" kind="define"><name>LSPDT_HIGH</name></member>
+    <member refid="quantise_8h_1a962907266645607a468910e82ef39a16" kind="define"><name>WO_E_BITS</name></member>
+    <member refid="quantise_8h_1a33b33dd99827b89ed8bd6f98933ed637" kind="define"><name>LPCPF_GAMMA</name></member>
+    <member refid="quantise_8h_1af3ebf91bfae7e8836ed982d35d5f5b8a" kind="define"><name>LPCPF_BETA</name></member>
+    <member refid="quantise_8h_1ac5e5ac486c99c05b4643a32ffffa1342" kind="function"><name>quantise_init</name></member>
+    <member refid="quantise_8h_1af0766dffc5fb1af4991d3244bdec1901" kind="function"><name>lpc_model_amplitudes</name></member>
+    <member refid="quantise_8h_1a1b6ed8f64992c27d912d6e9dd06a7678" kind="function"><name>aks_to_M2</name></member>
+    <member refid="quantise_8h_1a44b907be165428ea81f82bcfda9a55e6" kind="function"><name>encode_Wo</name></member>
+    <member refid="quantise_8h_1af5c3b5973e551322f6afebfd262084de" kind="function"><name>decode_Wo</name></member>
+    <member refid="quantise_8h_1ac5dfe0cba29f5c11551507909ab2f158" kind="function"><name>encode_log_Wo</name></member>
+    <member refid="quantise_8h_1a104d1df4bf9562d24261b9a9c2d87836" kind="function"><name>decode_log_Wo</name></member>
+    <member refid="quantise_8h_1af0a34d6dacefb0c3090696b47403e372" kind="function"><name>encode_Wo_dt</name></member>
+    <member refid="quantise_8h_1a1117f8b39e81113d91d60aaf1426ef78" kind="function"><name>decode_Wo_dt</name></member>
+    <member refid="quantise_8h_1a3a2d85e03605ed971c9b7b4ef310c0d2" kind="function"><name>encode_lsps_scalar</name></member>
+    <member refid="quantise_8h_1ad1b528ecf907581c4df321b66c89814f" kind="function"><name>decode_lsps_scalar</name></member>
+    <member refid="quantise_8h_1a587f9aa714af2a4e74c89db0909f7610" kind="function"><name>encode_lspds_scalar</name></member>
+    <member refid="quantise_8h_1a48809b69db3ebaa8ddf998ddcc356ff5" kind="function"><name>decode_lspds_scalar</name></member>
+    <member refid="quantise_8h_1a55f9b6ebbfb43f671a45dcd4ea7890c2" kind="function"><name>encode_lsps_diff_freq_vq</name></member>
+    <member refid="quantise_8h_1aeb5ead4624f1e00b9f4863b96ba6f844" kind="function"><name>decode_lsps_diff_freq_vq</name></member>
+    <member refid="quantise_8h_1ab7a2f5452856e255f1328050fd720cec" kind="function"><name>encode_lsps_diff_time</name></member>
+    <member refid="quantise_8h_1aa7885dcc1a5b2e90aa1f50d025b98c57" kind="function"><name>decode_lsps_diff_time</name></member>
+    <member refid="quantise_8h_1af9d6c6a49cfd0c438d6d3b5a2e09f2d1" kind="function"><name>encode_lsps_vq</name></member>
+    <member refid="quantise_8h_1a4dfe424d557278a325d6e85bd83f4198" kind="function"><name>decode_lsps_vq</name></member>
+    <member refid="quantise_8h_1a3baa3b7ddb469e49c0884967e98920e9" kind="function"><name>quantise</name></member>
+    <member refid="quantise_8h_1aa190f1d8a02ba74387789b25a066cf29" kind="function"><name>lspvq_quantise</name></member>
+    <member refid="quantise_8h_1a2949318d08729237696a65af54ca58b6" kind="function"><name>lspjnd_quantise</name></member>
+    <member refid="quantise_8h_1ab6551961696a884990d9ba9a78bbc746" kind="function"><name>lspdt_quantise</name></member>
+    <member refid="quantise_8h_1a5193390317a7a954bdd1e8c530ab6bad" kind="function"><name>lspjvm_quantise</name></member>
+    <member refid="quantise_8h_1abfdab7fb1730fb70153f6b58cc6efc81" kind="function"><name>lspanssi_quantise</name></member>
+    <member refid="quantise_8h_1ae8df9be4bece7c89d4d3c64958ce4834" kind="function"><name>lspmelvq_quantise</name></member>
+    <member refid="quantise_8h_1a785a8ccff4de0427ade5cd65511f4f6c" kind="function"><name>lspmelvq_mbest_encode</name></member>
+    <member refid="quantise_8h_1a57728c6f42d68e0334037f3fdf077bb9" kind="function"><name>lspmelvq_decode</name></member>
+    <member refid="quantise_8h_1ada10e6a64405c539cdbcdc905638118c" kind="function"><name>encode_mels_scalar</name></member>
+    <member refid="quantise_8h_1a531f3ca79c4e398acbe64b8f7b4400ea" kind="function"><name>decode_mels_scalar</name></member>
+    <member refid="quantise_8h_1a41e0a212fded713e9daee921ca2b07fa" kind="function"><name>quantise_WoE</name></member>
+    <member refid="quantise_8h_1a1edb55d851e28f6e958d5c13132c30b4" kind="function"><name>encode_WoE</name></member>
+    <member refid="quantise_8h_1aac9a876016ad2a2e6522975bc26e2704" kind="function"><name>decode_WoE</name></member>
+    <member refid="quantise_8h_1a69ca919952c231704ebd7bd789465b9d" kind="function"><name>encode_energy</name></member>
+    <member refid="quantise_8h_1a6731c1a0e404f337ef9faab9ee1b8be4" kind="function"><name>decode_energy</name></member>
+    <member refid="quantise_8h_1a9a1318571a086d065b560c8d4b9d3fc1" kind="function"><name>pack</name></member>
+    <member refid="quantise_8h_1a18a9e1c6fbad96303218daef5edac253" kind="function"><name>pack_natural_or_gray</name></member>
+    <member refid="quantise_8h_1ad731359873cd1088d5682bd4b22d5d67" kind="function"><name>unpack</name></member>
+    <member refid="quantise_8h_1ad9e97f1ca7cca4e83ca88010ac1de52d" kind="function"><name>unpack_natural_or_gray</name></member>
+    <member refid="quantise_8h_1a2fd39afc92b410f515b02bc57e4e8fda" kind="function"><name>lsp_bits</name></member>
+    <member refid="quantise_8h_1ad916791ac939bdf2365ff452f5eb152d" kind="function"><name>lspd_bits</name></member>
+    <member refid="quantise_8h_1a5aa25f700f5454e98431574d9140452f" kind="function"><name>lspdt_bits</name></member>
+    <member refid="quantise_8h_1a88b34f84f4291e4fa075abe8c5684657" kind="function"><name>lsp_pred_vq_bits</name></member>
+    <member refid="quantise_8h_1ab6fc626f5f4475231ee46458d5f5f828" kind="function"><name>mel_bits</name></member>
+    <member refid="quantise_8h_1af6d25dd2ec6d570e783b3e6686497093" kind="function"><name>lspmelvq_cb_bits</name></member>
+    <member refid="quantise_8h_1a597b6feeb13fa196bcf928ebed184812" kind="function"><name>apply_lpc_correction</name></member>
+    <member refid="quantise_8h_1ad66489db602e697a830dec136588b160" kind="function"><name>speech_to_uq_lsps</name></member>
+    <member refid="quantise_8h_1ae50e8325ea877a362727c969fc3cfcc7" kind="function"><name>check_lsp_order</name></member>
+    <member refid="quantise_8h_1abe1b07f4ac455706c0ffaad746670ae9" kind="function"><name>bw_expand_lsps</name></member>
+    <member refid="quantise_8h_1a705060053a0a19c2c86a5c6090195a4a" kind="function"><name>bw_expand_lsps2</name></member>
+    <member refid="quantise_8h_1a96cf607006cfdeec347b00fb1abfab6f" kind="function"><name>locate_lsps_jnd_steps</name></member>
+    <member refid="quantise_8h_1a3288a3863ed9c579b7b92fb76bdc36d2" kind="function"><name>decode_amplitudes</name></member>
+  </compound>
+  <compound refid="randomizer_8h" kind="file"><name>randomizer.h</name>
+    <member refid="randomizer_8h_1aabaa21c02c14c84326c9cc87c0c27e06" kind="function"><name>ccsds_generate_sequence</name></member>
+    <member refid="randomizer_8h_1a278b0faf9760205fef8ef39f428a873f" kind="function"><name>ccsds_xor_sequence</name></member>
+  </compound>
+  <compound refid="rs_8h" kind="file"><name>rs.h</name>
+    <member refid="rs_8h_1a3ed9b2483e4d6616a203769ad381c97c" kind="define"><name>MODNN</name></member>
+    <member refid="rs_8h_1afdc383f8992f4a960bb22998f57b6d37" kind="define"><name>MM</name></member>
+    <member refid="rs_8h_1a170755e30c36be4904106b7bb279b1ec" kind="define"><name>NN</name></member>
+    <member refid="rs_8h_1afae14aea58e6520b2057147833c699de" kind="define"><name>ALPHA_TO</name></member>
+    <member refid="rs_8h_1a690b4c8564b1cb507383e7a78f4cd6dc" kind="define"><name>INDEX_OF</name></member>
+    <member refid="rs_8h_1a90fbc87e4b99a54543c8f37087cb4f03" kind="define"><name>GENPOLY</name></member>
+    <member refid="rs_8h_1a5f5b4d84f10e6a71bef7c65548a8e317" kind="define"><name>NROOTS</name></member>
+    <member refid="rs_8h_1a264b36b13386e3f62fe69e04711bc006" kind="define"><name>FCR</name></member>
+    <member refid="rs_8h_1a6dd0302d2b9ced6e396b9182a6287b9e" kind="define"><name>PRIM</name></member>
+    <member refid="rs_8h_1a8487c20a46e1e08f7aeabec7cef80945" kind="define"><name>IPRIM</name></member>
+    <member refid="rs_8h_1a323d60150d94a9f5f599bb97726ac384" kind="define"><name>PAD</name></member>
+    <member refid="rs_8h_1a3acffbd305ee72dcd4593c0d8af64a4f" kind="define"><name>MIN</name></member>
+    <member refid="rs_8h_1a0d158f1e3af2ab523eb8423db3e5bd6e" kind="define"><name>A0</name></member>
+    <member refid="rs_8h_1a6d14e0dd4c3d1a2cfba41c9164c6cd1a" kind="variable"><name>CCSDS_alpha_to</name></member>
+    <member refid="rs_8h_1a7e7101e94cda0862e619f826ee8d0639" kind="variable"><name>CCSDS_index_of</name></member>
+    <member refid="rs_8h_1a8e3a5ea6caeb323816f6d2e3f2065702" kind="variable"><name>CCSDS_poly</name></member>
+    <member refid="rs_8h_1aa185022967929586fd5824ec159594af" kind="function"><name>mod255</name></member>
+    <member refid="rs_8h_1a097cea39dcec1819bf3c95aeb1025784" kind="function"><name>encode_rs</name></member>
+    <member refid="rs_8h_1a0a8a4e6b89e2e4d064e3714b7fb6bdb0" kind="function"><name>decode_rs</name></member>
+  </compound>
+  <compound refid="satellite__channel__cc_8h" kind="file"><name>satellite_channel_cc.h</name>
+  </compound>
+  <compound refid="satellite__channel__cc__impl_8h" kind="file"><name>satellite_channel_cc_impl.h</name>
+    <member refid="satellite__channel__cc__impl_8h_1a55624cdefd577b889593ee5edbd6200f" kind="define"><name>r_earth</name></member>
+    <member refid="satellite__channel__cc__impl_8h_1a225f033481a4247d0a2853d327cc6f65" kind="define"><name>GM</name></member>
+    <member refid="satellite__channel__cc__impl_8h_1a598a3330b3c21701223ee0ca14316eca" kind="define"><name>PI</name></member>
+    <member refid="satellite__channel__cc__impl_8h_1aafc737ea9ef91f59cf9acd287fb8d085" kind="define"><name>c</name></member>
+  </compound>
+  <compound refid="serial_8h" kind="file"><name>serial.h</name>
+    <member refid="serial_8h_1acdf721774c51e08c6609e6fa8cf82cc9" kind="define"><name>XON</name></member>
+    <member refid="serial_8h_1a67fd78ae15d2b67c10d44d69a49ab1c5" kind="define"><name>XOFF</name></member>
+    <member refid="serial_8h_1a129e782209cb45803638bd4338b3bce3" kind="define"><name>SEARCH</name></member>
+    <member refid="serial_8h_1a45ba202b05caf39795aeca91b0ae547e" kind="define"><name>TIMEOUT</name></member>
+    <member refid="serial_8h_1a3f8feb56e4b40b3b419dc1b66b7cc168" kind="function"><name>serialOpen</name></member>
+    <member refid="serial_8h_1a64b4c1674e3a9db468017abc142c0db0" kind="function"><name>serialClose</name></member>
+    <member refid="serial_8h_1a3c88c12db5f6cca8878210088dd0db43" kind="function"><name>getSerialPorts</name></member>
+    <member refid="serial_8h_1a7bac10cc9e1661b8a32e6a42ff184976" kind="function"><name>serialReadRaw</name></member>
+    <member refid="serial_8h_1af7c80f2e330148bc70a7c6f65d4dbcd1" kind="function"><name>serialWriteRaw</name></member>
+    <member refid="serial_8h_1a40c6e9edd47717bbd8a51964a6142f3a" kind="function"><name>serialWaitUntilSent</name></member>
+    <member refid="serial_8h_1a43d467194685601a8b5698279d17f605" kind="function"><name>serialHasChar</name></member>
+    <member refid="serial_8h_1ad834bf2cfb9d52e43b09359fdab599cf" kind="function"><name>serialReadChar</name></member>
+    <member refid="serial_8h_1a5e1abc8648071608e1097927ffe83fdf" kind="function"><name>serialWriteChar</name></member>
+    <member refid="serial_8h_1a09bde2c37e429cc293aa524be520e225" kind="function"><name>serialWriteString</name></member>
+  </compound>
+  <compound refid="serial__sink__pdu_8h" kind="file"><name>serial_sink_pdu.h</name>
+  </compound>
+  <compound refid="serial__sink__pdu__impl_8h" kind="file"><name>serial_sink_pdu_impl.h</name>
+  </compound>
+  <compound refid="sine_8h" kind="file"><name>sine.h</name>
+    <member refid="sine_8h_1a883048d8bc598ddfa47436987f1c02ab" kind="define"><name>CODEC2_RAND_MAX</name></member>
+    <member refid="sine_8h_1a5d4f5cfdbb548aca01bf2997fc964d8b" kind="function"><name>make_analysis_window</name></member>
+    <member refid="sine_8h_1ab6f0f7421171e2299873760ab8d2ee8e" kind="function"><name>hpf</name></member>
+    <member refid="sine_8h_1a9e44b10203116eb461823b7ad6fb2f19" kind="function"><name>dft_speech</name></member>
+    <member refid="sine_8h_1af4e6db03abb54b1af21e2a69a2e97bb3" kind="function"><name>two_stage_pitch_refinement</name></member>
+    <member refid="sine_8h_1a78cca15d9438f3832663936daa30025e" kind="function"><name>estimate_amplitudes</name></member>
+    <member refid="sine_8h_1a690426588f320883e178d0169dbb83eb" kind="function"><name>est_voicing_mbe</name></member>
+    <member refid="sine_8h_1a575701996e8c48484e47e1aec38c8418" kind="function"><name>make_synthesis_window</name></member>
+    <member refid="sine_8h_1a7e598dac74556c2896facf8cd8041974" kind="function"><name>synthesise</name></member>
+    <member refid="sine_8h_1a173bb55e39b3e8492f4c1e719f6c5d94" kind="function"><name>codec2_rand</name></member>
+  </compound>
+  <compound refid="sync__det__b_8h" kind="file"><name>sync_det_b.h</name>
+  </compound>
+  <compound refid="sync__det__b__impl_8h" kind="file"><name>sync_det_b_impl.h</name>
+    <member refid="sync__det__b__impl_8h_1aa0b1a1eb9fbe2b5212a7e1ee3ef7052f" kind="define"><name>LENTH_BUF_SYNC_OUT</name></member>
+  </compound>
+  <compound refid="tab_8h" kind="file"><name>tab.h</name>
+    <member refid="tab_8h_1a3d6b5a7d7aa6fd8063a3972049b5d477" kind="define"><name>VITERBI_AMP</name></member>
+    <member refid="tab_8h_1aa228752f3d68fd4fdc8f52e339e7f769" kind="variable"><name>Partab</name></member>
+  </compound>
+  <compound refid="viterbi27_8h" kind="file"><name>viterbi27.h</name>
+    <member refid="viterbi27_8h_1a386872031d986684a61f8d4d957acb0f" kind="define"><name>POLYA</name></member>
+    <member refid="viterbi27_8h_1a6ce48c8b7ba8db648679576c90233169" kind="define"><name>POLYB</name></member>
+    <member refid="viterbi27_8h_1a5ac70b2cb8e167349a202b53f70ca308" kind="define"><name>PATHMEM</name></member>
+    <member refid="viterbi27_8h_1a081db42bb0db660e6a33c044263dc283" kind="define"><name>MERGEDIST</name></member>
+    <member refid="viterbi27_8h_1a498e41945ef925ed4a420d5aaa769645" kind="define"><name>TRACECHUNK</name></member>
+    <member refid="viterbi27_8h_1a9c690360ea4f78bbfbdc708fdbff2a65" kind="define"><name>RENORMALIZE</name></member>
+    <member refid="viterbi27_8h_1a7de0a420f4292aa0614e612d68115d51" kind="typedef"><name>v27</name></member>
+    <member refid="viterbi27_8h_1adc752143a1d6ece87bbc12dacd8601e8" kind="function"><name>encode27</name></member>
+    <member refid="viterbi27_8h_1a4285f3d25813c9a04d5de9b8d58ba1d4" kind="function"><name>vitfilt27_init</name></member>
+    <member refid="viterbi27_8h_1af8f66b8b1e7a5c6a431ba6f1cbb9f505" kind="function"><name>vitfilt27_decode</name></member>
+  </compound>
+  <compound refid="vitfilt27__bb_8h" kind="file"><name>vitfilt27_bb.h</name>
+  </compound>
+  <compound refid="vitfilt27__bb__impl_8h" kind="file"><name>vitfilt27_bb_impl.h</name>
+  </compound>
+  <compound refid="vitfilt27__fb_8h" kind="file"><name>vitfilt27_fb.h</name>
+  </compound>
+  <compound refid="vitfilt27__fb__impl_8h" kind="file"><name>vitfilt27_fb_impl.h</name>
+  </compound>
+  <compound refid="wavegen_8h" kind="file"><name>wavegen.h</name>
+    <member refid="wavegen_8h_1aa905e754cc59c8a38f5c75127514e77a" kind="define"><name>SIN_LEN</name></member>
+    <member refid="wavegen_8h_1acb7173e27b3645ece1daa12d4c8bbd8b" kind="variable"><name>sinetable</name></member>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_265e3f39e0ef762bb9dfff4f90016e8d" kind="dir"><name>afsk</name>
+  </compound>
+  <compound refid="dir_06f077f2b4b004a0b68c90c961bda4ef" kind="dir"><name>ccsds</name>
+  </compound>
+  <compound refid="dir_813fbd1a322c3c66687e885fdc0cb9a0" kind="dir"><name>codec2</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_615ff8166f28f9385b714092d061e68b" kind="dir"><name>kiss</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_add5e5896e7cb74b12365b537606391e" kind="dir"><name>lilacsat</name>
+  </compound>
+  <compound refid="dir_cffae217b92341ffd06b32123db26f71" kind="dir"><name>plan13</name>
+  </compound>
+  <compound refid="dir_2e1c68a09e20a71264e55dd48c888547" kind="dir"><name>serial</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

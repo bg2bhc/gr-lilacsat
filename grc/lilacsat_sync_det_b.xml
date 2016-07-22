@@ -12,17 +12,33 @@
   <param>
     <name>Frame Length</name>
     <key>len</key>
-    <type>raw</type>
+    <type>int</type>
   </param>
   <param>
     <name>NRZ</name>
     <key>nrz</key>
-    <type>raw</type>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
   </param>
   <param>
     <name>Descrambling</name>
     <key>descrambling</key>
-    <type>raw</type>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
   </param>
   <sink>
     <name>in</name>

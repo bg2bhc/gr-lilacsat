@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="codec2__internal_8h" kind="file">
+    <compoundname>codec2_internal.h</compoundname>
+    <includedby refid="dump_8h" local="yes">dump.h</includedby>
+    <invincdepgraph>
+      <node id="255">
+        <label>dump.h</label>
+        <link refid="dump_8h"/>
+      </node>
+      <node id="254">
+        <label>codec2_internal.h</label>
+        <link refid="codec2_internal.h"/>
+        <childnode refid="255" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structCODEC2" prot="public">CODEC2</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h"/>
+  </compounddef>
+</doxygen>

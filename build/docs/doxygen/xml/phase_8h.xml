@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="phase_8h" kind="file">
+    <compoundname>phase.h</compoundname>
+    <includes refid="kiss__fft_8h" local="yes">kiss_fft.h</includes>
+    <includes refid="comp_8h" local="yes">comp.h</includes>
+    <incdepgraph>
+      <node id="461">
+        <label>stdlib.h</label>
+      </node>
+      <node id="459">
+        <label>phase.h</label>
+        <link refid="phase.h"/>
+        <childnode refid="460" relation="include">
+        </childnode>
+        <childnode refid="465" relation="include">
+        </childnode>
+      </node>
+      <node id="464">
+        <label>string.h</label>
+      </node>
+      <node id="465">
+        <label>comp.h</label>
+        <link refid="comp_8h"/>
+      </node>
+      <node id="463">
+        <label>math.h</label>
+      </node>
+      <node id="460">
+        <label>kiss_fft.h</label>
+        <link refid="kiss__fft_8h"/>
+        <childnode refid="461" relation="include">
+        </childnode>
+        <childnode refid="462" relation="include">
+        </childnode>
+        <childnode refid="463" relation="include">
+        </childnode>
+        <childnode refid="464" relation="include">
+        </childnode>
+      </node>
+      <node id="462">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="phase_8h_1a0d1f94de5298eee649097cdf6b7b12d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void phase_synth_zero_order</definition>
+        <argsstring>(kiss_fft_cfg fft_dec_cfg, MODEL *model, float *ex_phase, COMP A[])</argsstring>
+        <name>phase_synth_zero_order</name>
+        <param>
+          <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+          <declname>fft_dec_cfg</declname>
+        </param>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ex_phase</declname>
+        </param>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>A</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/phase.h" line="34" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/phase.h"/>
+  </compounddef>
+</doxygen>

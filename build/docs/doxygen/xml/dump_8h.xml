@@ -1,0 +1,675 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dump_8h" kind="file">
+    <compoundname>dump.h</compoundname>
+    <includes refid="defines_8h" local="yes">defines.h</includes>
+    <includes refid="comp_8h" local="yes">comp.h</includes>
+    <includes refid="kiss__fft_8h" local="yes">kiss_fft.h</includes>
+    <includes refid="codec2__internal_8h" local="yes">codec2_internal.h</includes>
+    <incdepgraph>
+      <node id="275">
+        <label>defines.h</label>
+        <link refid="defines_8h"/>
+      </node>
+      <node id="278">
+        <label>stdlib.h</label>
+      </node>
+      <node id="274">
+        <label>dump.h</label>
+        <link refid="dump.h"/>
+        <childnode refid="275" relation="include">
+        </childnode>
+        <childnode refid="276" relation="include">
+        </childnode>
+        <childnode refid="277" relation="include">
+        </childnode>
+        <childnode refid="282" relation="include">
+        </childnode>
+      </node>
+      <node id="281">
+        <label>string.h</label>
+      </node>
+      <node id="276">
+        <label>comp.h</label>
+        <link refid="comp_8h"/>
+      </node>
+      <node id="280">
+        <label>math.h</label>
+      </node>
+      <node id="277">
+        <label>kiss_fft.h</label>
+        <link refid="kiss__fft_8h"/>
+        <childnode refid="278" relation="include">
+        </childnode>
+        <childnode refid="279" relation="include">
+        </childnode>
+        <childnode refid="280" relation="include">
+        </childnode>
+        <childnode refid="281" relation="include">
+        </childnode>
+      </node>
+      <node id="279">
+        <label>stdio.h</label>
+      </node>
+      <node id="282">
+        <label>codec2_internal.h</label>
+        <link refid="codec2__internal_8h"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dump_8h_1a77c522b3ccf68cf1bce49d1b1c0afbdd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_on</definition>
+        <argsstring>(char filename_prefix[])</argsstring>
+        <name>dump_on</name>
+        <param>
+          <type>char</type>
+          <declname>filename_prefix</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6711b540fed88bd990476addbc0cce3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_off</definition>
+        <argsstring>()</argsstring>
+        <name>dump_off</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6b3b22bccc7dc70d021d8bb6768f3fa1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Sn</definition>
+        <argsstring>(float Sn[])</argsstring>
+        <name>dump_Sn</name>
+        <param>
+          <type>float</type>
+          <declname>Sn</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1aaf16d7111fca607a342b378a662553ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Sw</definition>
+        <argsstring>(COMP Sw[])</argsstring>
+        <name>dump_Sw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="38" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a509ff9a4bdbfe1b57f8d6d78d98512ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Sw_</definition>
+        <argsstring>(COMP Sw_[])</argsstring>
+        <name>dump_Sw_</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Sw_</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a83dda246b4f24217002baff54c10d653" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Ew</definition>
+        <argsstring>(COMP Ew[])</argsstring>
+        <name>dump_Ew</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Ew</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a3b85dce27fd257c32bdd5e66bdfacd28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_softdec</definition>
+        <argsstring>(float *softdec, int n)</argsstring>
+        <name>dump_softdec</name>
+        <param>
+          <type>float *</type>
+          <declname>softdec</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="41" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1afed5e2a7e9c8fde158719e426f4075b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_model</definition>
+        <argsstring>(MODEL *m)</argsstring>
+        <name>dump_model</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="45" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a8457e1b5739ee1ea0aacd0d9ae0286b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_quantised_model</definition>
+        <argsstring>(MODEL *m)</argsstring>
+        <name>dump_quantised_model</name>
+        <param>
+          <type><ref refid="structMODEL" kindref="compound">MODEL</ref> *</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1ab7af7e95ff083e1c6cf0e54f40cff146" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Pwn</definition>
+        <argsstring>(COMP Pw[])</argsstring>
+        <name>dump_Pwn</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Pw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1af9d93c550ca9f94d9508e5dc8c565399" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Pw</definition>
+        <argsstring>(COMP Pw[])</argsstring>
+        <name>dump_Pw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Pw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1aacf5440cba2134c8aa6922b21466cd22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Rw</definition>
+        <argsstring>(float Rw[])</argsstring>
+        <name>dump_Rw</name>
+        <param>
+          <type>float</type>
+          <declname>Rw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a83ef2e051293897a7e638fbd2ad19e63" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_lsp</definition>
+        <argsstring>(float lsp[])</argsstring>
+        <name>dump_lsp</name>
+        <param>
+          <type>float</type>
+          <declname>lsp</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1abc5e85dcb81fc273db8e5983b7549c2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_weights</definition>
+        <argsstring>(float w[], int ndim)</argsstring>
+        <name>dump_weights</name>
+        <param>
+          <type>float</type>
+          <declname>w</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ndim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a3634d7524fe7194714acecaf9162a569" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_lsp_</definition>
+        <argsstring>(float lsp_[])</argsstring>
+        <name>dump_lsp_</name>
+        <param>
+          <type>float</type>
+          <declname>lsp_</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1afb3cc7e3b2defd951bcf50fafe8b3a44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_mel</definition>
+        <argsstring>(float mel[], int order)</argsstring>
+        <name>dump_mel</name>
+        <param>
+          <type>float</type>
+          <declname>mel</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a71b9fa9565556490c7730a404f2126af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_mel_indexes</definition>
+        <argsstring>(int mel_indexes[], int order)</argsstring>
+        <name>dump_mel_indexes</name>
+        <param>
+          <type>int</type>
+          <declname>mel_indexes</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1ab752be7a460639fd05882e94e93e3247" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_ak</definition>
+        <argsstring>(float ak[], int order)</argsstring>
+        <name>dump_ak</name>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a21213b333b3238b55d7ec133599a83d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_ak_</definition>
+        <argsstring>(float ak[], int order)</argsstring>
+        <name>dump_ak_</name>
+        <param>
+          <type>float</type>
+          <declname>ak</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>order</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1aa8745e158c253fb2fb67bfb9a8a87682" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_E</definition>
+        <argsstring>(float E)</argsstring>
+        <name>dump_E</name>
+        <param>
+          <type>float</type>
+          <declname>E</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a83cc9bd89f88906e90dbd7212adbaef1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_lpc_snr</definition>
+        <argsstring>(float snr)</argsstring>
+        <name>dump_lpc_snr</name>
+        <param>
+          <type>float</type>
+          <declname>snr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6360ffc3a9fc4f032eb4eb7630c99902" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_snr</definition>
+        <argsstring>(float snr)</argsstring>
+        <name>dump_snr</name>
+        <param>
+          <type>float</type>
+          <declname>snr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1afb3f36bfe6d12d57a5b2a6d505c68570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_phase</definition>
+        <argsstring>(float phase[], int L)</argsstring>
+        <name>dump_phase</name>
+        <param>
+          <type>float</type>
+          <declname>phase</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a55c6cdc63679ff2efc83659e5f5743c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_phase_</definition>
+        <argsstring>(float phase[], int L)</argsstring>
+        <name>dump_phase_</name>
+        <param>
+          <type>float</type>
+          <declname>phase</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>L</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="64" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a78808d6ecb1cc6c3773e723fa0635b6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_hephase</definition>
+        <argsstring>(int ind[], int dim)</argsstring>
+        <name>dump_hephase</name>
+        <param>
+          <type>int</type>
+          <declname>ind</declname>
+          <array>[]</array>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dim</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a79d8fab9e29b44f53e1a35355111dafe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_sq</definition>
+        <argsstring>(float sq[])</argsstring>
+        <name>dump_sq</name>
+        <param>
+          <type>float</type>
+          <declname>sq</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a856934965ae01000a22e13905fc605ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_dec</definition>
+        <argsstring>(COMP Fw[])</argsstring>
+        <name>dump_dec</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Fw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1af30a5c2cec1ea4fc781350be5f1753ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Fw</definition>
+        <argsstring>(COMP Fw[])</argsstring>
+        <name>dump_Fw</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Fw</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1ac3960fba4259d2bbb7aa69eabcce2678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_e</definition>
+        <argsstring>(float e_hz[])</argsstring>
+        <name>dump_e</name>
+        <param>
+          <type>float</type>
+          <declname>e_hz</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a6f0d82189cbbece2dd3d871a235338f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Rk</definition>
+        <argsstring>(float Rk[])</argsstring>
+        <name>dump_Rk</name>
+        <param>
+          <type>float</type>
+          <declname>Rk</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a3d40a706e73a46ceee53c89bd93ca503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_bg</definition>
+        <argsstring>(float e, float bg_est, float percent_uv)</argsstring>
+        <name>dump_bg</name>
+        <param>
+          <type>float</type>
+          <declname>e</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>bg_est</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>percent_uv</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="dump_8h_1a890221fdc2e16bec4c33ee852fd502fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void dump_Pwb</definition>
+        <argsstring>(COMP Pwb[])</argsstring>
+        <name>dump_Pwb</name>
+        <param>
+          <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+          <declname>Pwb</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h" line="78" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/dump.h"/>
+  </compounddef>
+</doxygen>

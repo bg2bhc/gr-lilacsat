@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structlsp__codebook" kind="struct" prot="public">
+    <compoundname>lsp_codebook</compoundname>
+    <includes refid="defines_8h" local="no">defines.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structlsp__codebook_1a8d4461c0bd9c39fa49b5c6af1ebbf6d4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lsp_codebook::k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="79" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsp__codebook_1a28d800ad7c7233baeff95a781bedd0d5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lsp_codebook::log2m</definition>
+        <argsstring></argsstring>
+        <name>log2m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="80" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsp__codebook_1ae966bc6df831218c032ec43472e0e3f8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int lsp_codebook::m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="81" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structlsp__codebook_1a81e19676d332ae10fd0b206bdb8da0c6" prot="public" static="no" mutable="no">
+        <type>const float *</type>
+        <definition>const float* lsp_codebook::cb</definition>
+        <argsstring></argsstring>
+        <name>cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="82" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="78" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="78" bodyend="83"/>
+    <listofallmembers>
+      <member refid="structlsp__codebook_1a81e19676d332ae10fd0b206bdb8da0c6" prot="public" virt="non-virtual"><scope>lsp_codebook</scope><name>cb</name></member>
+      <member refid="structlsp__codebook_1a8d4461c0bd9c39fa49b5c6af1ebbf6d4" prot="public" virt="non-virtual"><scope>lsp_codebook</scope><name>k</name></member>
+      <member refid="structlsp__codebook_1a28d800ad7c7233baeff95a781bedd0d5" prot="public" virt="non-virtual"><scope>lsp_codebook</scope><name>log2m</name></member>
+      <member refid="structlsp__codebook_1ae966bc6df831218c032ec43472e0e3f8" prot="public" virt="non-virtual"><scope>lsp_codebook</scope><name>m</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

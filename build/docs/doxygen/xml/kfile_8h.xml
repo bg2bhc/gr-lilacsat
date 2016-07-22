@@ -1,0 +1,516 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="kfile_8h" kind="file">
+    <compoundname>kfile.h</compoundname>
+    <includes refid="bertos_8h" local="yes">bertos.h</includes>
+    <includedby refid="afsk_8h" local="yes">afsk.h</includedby>
+    <includedby refid="ax25_8h" local="yes">ax25.h</includedby>
+    <incdepgraph>
+      <node id="376">
+        <label>stdbool.h</label>
+      </node>
+      <node id="375">
+        <label>bertos.h</label>
+        <link refid="bertos_8h"/>
+        <childnode refid="376" relation="include">
+        </childnode>
+        <childnode refid="377" relation="include">
+        </childnode>
+      </node>
+      <node id="377">
+        <label>stdint.h</label>
+      </node>
+      <node id="374">
+        <label>kfile.h</label>
+        <link refid="kfile.h"/>
+        <childnode refid="375" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="379">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+      </node>
+      <node id="378">
+        <label>kfile.h</label>
+        <link refid="kfile.h"/>
+        <childnode refid="379" relation="include">
+        </childnode>
+        <childnode refid="383" relation="include">
+        </childnode>
+      </node>
+      <node id="381">
+        <label>afsk1200_tx_f_impl.h</label>
+        <link refid="afsk1200__tx__f__impl_8h"/>
+      </node>
+      <node id="382">
+        <label>afsk1200_rx_f_impl.h</label>
+        <link refid="afsk1200__rx__f__impl_8h"/>
+      </node>
+      <node id="380">
+        <label>aprs.h</label>
+        <link refid="aprs_8h"/>
+        <childnode refid="381" relation="include">
+        </childnode>
+      </node>
+      <node id="383">
+        <label>ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="380" relation="include">
+        </childnode>
+        <childnode refid="382" relation="include">
+        </childnode>
+        <childnode refid="381" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structKFile" prot="public">KFile</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="kfile_8h_1a3fe0b350689819452c2c5b973bd944f1" prot="public" static="no">
+        <type>uint32_t(*</type>
+        <definition>typedef uint32_t(* ReadFunc_t)(struct KFile *fd, void *buf, uint32_t size)</definition>
+        <argsstring>)(struct KFile *fd, void *buf, uint32_t size)</argsstring>
+        <name>ReadFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Prototypes for <ref refid="structKFile" kindref="compound">KFile</ref> access functions. I/O file functions must be ANSI compliant. <simplesect kind="note"><para>A <ref refid="structKFile" kindref="compound">KFile</ref> user can choose which function subset to implement, but has to set to NULL unimplemented features. Read from file. </para></simplesect>
+<simplesect kind="return"><para>the number of bytes read. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="136" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a0b78084d423d1e90e680d7a1d0dc26ba" prot="public" static="no">
+        <type>uint32_t(*</type>
+        <definition>typedef uint32_t(* WriteFunc_t)(struct KFile *fd, const void *buf, uint32_t size)</definition>
+        <argsstring>)(struct KFile *fd, const void *buf, uint32_t size)</argsstring>
+        <name>WriteFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Write to file. <simplesect kind="return"><para>the number of bytes written. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="142" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a3505f08a364509144795a9d1601b0ead" prot="public" static="no">
+        <type><ref refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kindref="member">kfile_off_t</ref>(*</type>
+        <definition>typedef kfile_off_t(* SeekFunc_t)(struct KFile *fd, kfile_off_t offset, KSeekMode whence)</definition>
+        <argsstring>)(struct KFile *fd, kfile_off_t offset, KSeekMode whence)</argsstring>
+        <name>SeekFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Seek into file (if seekable). <simplesect kind="return"><para>the new file offset or EOF on errors. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="148" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a2cd2f400c6b4eecf7ee53886ae596f54" prot="public" static="no">
+        <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *(*</type>
+        <definition>typedef struct KFile*(* ReOpenFunc_t)(struct KFile *fd)</definition>
+        <argsstring>)(struct KFile *fd)</argsstring>
+        <name>ReOpenFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close and reopen file <emphasis>fd</emphasis>. The reopening is done with the former file parameters and access modes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="148" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1ada3a8e5d8c3b9c3c13cd6f240b04992d" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* CloseFunc_t)(struct KFile *fd)</definition>
+        <argsstring>)(struct KFile *fd)</argsstring>
+        <name>CloseFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Close file. <simplesect kind="return"><para>0 on success, EOF on errors. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="160" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a7ab35c0a62181a374d96957f14454d6e" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* FlushFunc_t)(struct KFile *fd)</definition>
+        <argsstring>)(struct KFile *fd)</argsstring>
+        <name>FlushFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flush file I/O. <simplesect kind="return"><para>0 on success, EOF on errors. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="166" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a190aad2c7706fa21ae066b36e350faf0" prot="public" static="no">
+        <type>int(*</type>
+        <definition>typedef int(* ErrorFunc_t)(struct KFile *fd)</definition>
+        <argsstring>)(struct KFile *fd)</argsstring>
+        <name>ErrorFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get file error mask. <simplesect kind="return"><para>0 on success or file error code, device specific. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="172" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a8d6715250d8ae8f0e18fbf26e1c75dd5" prot="public" static="no">
+        <type>void(*</type>
+        <definition>typedef void(* ClearErrFunc_t)(struct KFile *fd)</definition>
+        <argsstring>)(struct KFile *fd)</argsstring>
+        <name>ClearErrFunc_t</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Clear errors. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="177" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="kfile_8h_1a8f7714669a9397929a467e1d0d458e00" prot="public" static="no">
+        <name>KSeekMode</name>
+        <enumvalue id="kfile_8h_1a8f7714669a9397929a467e1d0d458e00aad38c62dd35ece8c8aa9c609f4f59b2e" prot="public">
+          <name>KSM_SEEK_SET</name>
+          <briefdescription>
+<para>Seek from file beginning. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kfile_8h_1a8f7714669a9397929a467e1d0d458e00a3740314166f470d8abef3b9cbe8c3ce7" prot="public">
+          <name>KSM_SEEK_CUR</name>
+          <briefdescription>
+<para>Seek from file current position. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="kfile_8h_1a8f7714669a9397929a467e1d0d458e00aa091a159fb371f5e63f0fa8087904e1a" prot="public">
+          <name>KSM_SEEK_END</name>
+          <briefdescription>
+<para>Seek from file end. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Costants for repositioning read/write file offset. These are needed because on some embedded platforms ANSI I/O library may not be present. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="118" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="117" bodyend="122"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" prot="public" static="no">
+        <type>int32_t</type>
+        <definition>typedef int32_t kfile_off_t</definition>
+        <argsstring></argsstring>
+        <name>kfile_off_t</name>
+        <briefdescription>
+<para><ref refid="structKFile" kindref="compound">KFile</ref> offset type, used by kfile_seek(). </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="110" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1a4e7f0c0711ae47d39c6843c0a6e2d5bc" prot="public" static="no">
+        <type>enum <ref refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00" kindref="member">KSeekMode</ref></type>
+        <definition>typedef enum KSeekMode  KSeekMode</definition>
+        <argsstring></argsstring>
+        <name>KSeekMode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Costants for repositioning read/write file offset. These are needed because on some embedded platforms ANSI I/O library may not be present. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="122" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="kfile_8h_1aa92a6e896c812fb0d76d0e7824e6551a" prot="public" static="no">
+        <type>struct <ref refid="structKFile" kindref="compound">KFile</ref></type>
+        <definition>typedef struct KFile  KFile</definition>
+        <argsstring></argsstring>
+        <name>KFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Context data for callback functions which operate on pseudo files.</para><para><simplesect kind="note"><para>Remember to add the corresponding accessor functions when extending this interface. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="202" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kfile_8h_1acac5698d355a3750f4b07415090ed7a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kindref="member">kfile_off_t</ref></type>
+        <definition>kfile_off_t kfile_genericSeek</definition>
+        <argsstring>(struct KFile *fd, kfile_off_t offset, KSeekMode whence)</argsstring>
+        <name>kfile_genericSeek</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type><ref refid="kfile_8h_1a5137f80da20dbbbb731a84c9671612cd" kindref="member">kfile_off_t</ref></type>
+          <declname>offset</declname>
+        </param>
+        <param>
+          <type><ref refid="kfile_8h_1a8f7714669a9397929a467e1d0d458e00" kindref="member">KSeekMode</ref></type>
+          <declname>whence</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generic implementation of kfile_seek. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="207" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a1f1f5efe44ff91c5bea49f88f356059a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+        <definition>struct KFile* kfile_genericReopen</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_genericReopen</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Generic implementation of kfile_reopen. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="212" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a32306b8d90302fa70007aff8c1189bc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_genericClose</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_genericClose</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a480c14426dc77cdfd786c3b5b9a9adf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_putc</definition>
+        <argsstring>(int c, struct KFile *fd)</argsstring>
+        <name>kfile_putc</name>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Generic putc implementation using kfile_write. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="216" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a09cca6f02dc337ddff2b36b66a3fdd1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_getc</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_getc</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+<para>Generic getc implementation using kfile_read. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="217" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1aaba6667da830aba35851b4c70d8783dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_print</definition>
+        <argsstring>(struct KFile *fd, const char *s)</argsstring>
+        <name>kfile_print</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="219" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1af33cb00f56adefabb98d534d526525eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_gets</definition>
+        <argsstring>(struct KFile *fd, char *buf, int size)</argsstring>
+        <name>kfile_gets</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a146ed5c09d27f419f4c44344d8845330" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_gets_echo</definition>
+        <argsstring>(struct KFile *fd, char *buf, int size, bool echo)</argsstring>
+        <name>kfile_gets_echo</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>echo</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1ada2185b090d77fbb33ab01da3f22a8a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kfile_init</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_init</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="223" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a9638c7d7f76976a58ceb670c28e13c39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int kfile_error</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_error</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kfile_8h_1a40a4b4a6c5b44f6377e51e7484650324" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void kfile_clearerr</definition>
+        <argsstring>(struct KFile *fd)</argsstring>
+        <name>kfile_clearerr</name>
+        <param>
+          <type>struct <ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+          <declname>fd</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h" line="225" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Virtual <ref refid="structKFile" kindref="compound">KFile</ref> I/O interface. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="structKFile" kindref="compound">KFile</ref> is a simple, generic interface for file I/O. It uses an object-oriented model to supply a device-neutral interface to communicate with drivers.</para><para>This module contains only definitions, the instance structure and the common API. Each <ref refid="structKFile" kindref="compound">KFile</ref> subclass can override one or more methods of the interface, and can extend the base <ref refid="structKFile" kindref="compound">KFile</ref> structure with its own private data. For instance, a serial driver might implement the <ref refid="structKFile" kindref="compound">KFile</ref> interface by declaring a context structure like this:</para><para><programlisting><codeline><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">Serial</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>base<sp/>class<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structKFile" kindref="compound">KFile</ref><sp/>fd;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>private<sp/>instance<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref><sp/>txfifo,<sp/>rxfifo;</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>Serial;</highlight></codeline>
+</programlisting></para><para>You should also supply a macro for casting <ref refid="structKFile" kindref="compound">KFile</ref> to Serial:</para><para><programlisting><codeline><highlight class="normal"><ref refid="bertos_8h_1a2eb6f9e0395b47b8d5e3eeae4fe0c116" kindref="member">INLINE</ref><sp/>Serial<sp/>*<sp/>SERIAL_CAST(<ref refid="structKFile" kindref="compound">KFile</ref><sp/>*fd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ASSERT(fd-&gt;_type<sp/>==<sp/>KFT_SERIAL);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(Serial<sp/>*)fd;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Then you can implement as many interface functions as needed and leave the rest to NULL.</para><para>Example implementation of the close <ref refid="structKFile" kindref="compound">KFile</ref> method for Serial:</para><para><programlisting><codeline><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ser_kfile_close(</highlight><highlight class="keyword">struct</highlight><highlight class="normal"><sp/><ref refid="structKFile" kindref="compound">KFile</ref><sp/>*fd)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Serial<sp/>*fds<sp/>=<sp/>SERIAL_CAST(fd);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>[driver<sp/>specific<sp/>code<sp/>here]</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>The SERIAL_CAST() macro helps ensure that the passed object is really of type Serial.</para><para>The <ref refid="structKFile" kindref="compound">KFile</ref> interface does not supply an open function: this is deliberate, because in embedded systems each device has its own init parameters. For the same reason, specific device settings like, for example, the baudrate, are not part of interface and should be handled by the driver-specific API.</para><para><simplesect kind="version"><para></para></simplesect>
+<simplesect kind="rcs"><title>Id:</title><para><ref refid="kfile_8h" kindref="compound">kfile.h</ref> 2975 2009-09-27 13:21:27Z batt </para></simplesect>
+<simplesect kind="author"><para>Bernie Innocenti <ulink url="mailto:bernie@codewiz.org">bernie@codewiz.org</ulink> </para><simplesectsep/><para>Francesco Sacchi <ulink url="mailto:batt@develer.com">batt@develer.com</ulink> </para><simplesectsep/><para>Daniele Basile <ulink url="mailto:asterix@develer.com">asterix@develer.com</ulink></para></simplesect>
+$WIZ$ module_name = &quot;kfile&quot; $WIZ$ module_configuration = &quot;bertos/cfg/cfg_kfile.h&quot; $WIZ$ module_depends = &quot;timer&quot;, &quot;formatwr&quot; </para>    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/kfile.h"/>
+  </compounddef>
+</doxygen>

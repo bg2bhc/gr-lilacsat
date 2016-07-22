@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1encode27__bb" kind="class" prot="public">
+    <compoundname>gr::lilacsat::encode27_bb</compoundname>
+    <basecompoundref prot="public" virt="virtual">sync_interpolator</basecompoundref>
+    <derivedcompoundref refid="classgr_1_1lilacsat_1_1encode27__bb__impl" prot="public" virt="non-virtual">gr::lilacsat::encode27_bb_impl</derivedcompoundref>
+    <includes refid="encode27__bb_8h" local="no">encode27_bb.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classgr_1_1lilacsat_1_1encode27__bb_1a5c89a0d8648a7bb8fe3be4e6fcca3e4d" prot="public" static="no">
+        <type>boost::shared_ptr&lt; <ref refid="classgr_1_1lilacsat_1_1encode27__bb" kindref="compound">encode27_bb</ref> &gt;</type>
+        <definition>typedef boost::shared_ptr&lt;encode27_bb&gt; gr::lilacsat::encode27_bb::sptr</definition>
+        <argsstring></argsstring>
+        <name>sptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/encode27_bb.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/encode27_bb.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1encode27__bb_1a54aee083d1274568a1d01b330fb60c8f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classgr_1_1lilacsat_1_1encode27__bb_1a5c89a0d8648a7bb8fe3be4e6fcca3e4d" kindref="member">sptr</ref></type>
+        <definition>static sptr gr::lilacsat::encode27_bb::make</definition>
+        <argsstring>()</argsstring>
+        <name>make</name>
+        <briefdescription>
+<para>Return a shared_ptr to a new instance of <ref refid="classgr_1_1lilacsat_1_1encode27__bb" kindref="compound">lilacsat::encode27_bb</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para>To avoid accidental use of raw pointers, <ref refid="classgr_1_1lilacsat_1_1encode27__bb" kindref="compound">lilacsat::encode27_bb</ref>&apos;s constructor is in a private implementation class. <ref refid="classgr_1_1lilacsat_1_1encode27__bb_1a54aee083d1274568a1d01b330fb60c8f" kindref="member">lilacsat::encode27_bb::make</ref> is the public interface for creating new instances. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/include/lilacsat/encode27_bb.h" line="49" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>&lt;+description of block+&gt; </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="112">
+        <label>gr::lilacsat::encode27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1encode27__bb"/>
+        <childnode refid="113" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="113">
+        <label>gr::sync_interpolator</label>
+      </node>
+      <node id="114">
+        <label>gr::lilacsat::encode27_bb_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1encode27__bb__impl"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="115">
+        <label>gr::lilacsat::encode27_bb</label>
+        <link refid="classgr_1_1lilacsat_1_1encode27__bb"/>
+        <childnode refid="116" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="116">
+        <label>gr::sync_interpolator</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/include/lilacsat/encode27_bb.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/include/lilacsat/encode27_bb.h" bodystart="36" bodyend="50"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1encode27__bb_1a54aee083d1274568a1d01b330fb60c8f" prot="public" virt="non-virtual"><scope>gr::lilacsat::encode27_bb</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1encode27__bb_1a5c89a0d8648a7bb8fe3be4e6fcca3e4d" prot="public" virt="non-virtual"><scope>gr::lilacsat::encode27_bb</scope><name>sptr</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

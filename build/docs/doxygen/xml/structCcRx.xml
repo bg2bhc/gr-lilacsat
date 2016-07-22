@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structCcRx" kind="struct" prot="public">
+    <compoundname>CcRx</compoundname>
+    <includes refid="ccrx_8h" local="no">ccrx.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCcRx_1aa0880231cd46a0377aa97f27be6334e5" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CcRx::d_rx_bit_state</definition>
+        <argsstring></argsstring>
+        <name>d_rx_bit_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" line="10" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcRx_1a48624e9190f2d2c15bdb1b71d07f1fcf" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CcRx::d_n_out</definition>
+        <argsstring></argsstring>
+        <name>d_n_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" line="11" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcRx_1a6115e3b14c34a80e465b2e596d73ff32" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CcRx::d_mask_bit_out</definition>
+        <argsstring></argsstring>
+        <name>d_mask_bit_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" line="12" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCcRx_1aa7b77d7f08ffa8dd15e09596786ecd86" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t CcRx::d_buf_sync_out[LENTH_BUF_SYNC_OUT]</definition>
+        <argsstring>[LENTH_BUF_SYNC_OUT]</argsstring>
+        <name>d_buf_sync_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" line="13" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" line="9" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/ccrx.h" bodystart="8" bodyend="14"/>
+    <listofallmembers>
+      <member refid="structCcRx_1aa7b77d7f08ffa8dd15e09596786ecd86" prot="public" virt="non-virtual"><scope>CcRx</scope><name>d_buf_sync_out</name></member>
+      <member refid="structCcRx_1a6115e3b14c34a80e465b2e596d73ff32" prot="public" virt="non-virtual"><scope>CcRx</scope><name>d_mask_bit_out</name></member>
+      <member refid="structCcRx_1a48624e9190f2d2c15bdb1b71d07f1fcf" prot="public" virt="non-virtual"><scope>CcRx</scope><name>d_n_out</name></member>
+      <member refid="structCcRx_1aa0880231cd46a0377aa97f27be6334e5" prot="public" virt="non-virtual"><scope>CcRx</scope><name>d_rx_bit_state</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

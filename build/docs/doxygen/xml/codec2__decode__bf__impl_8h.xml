@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="codec2__decode__bf__impl_8h" kind="file">
+    <compoundname>codec2_decode_bf_impl.h</compoundname>
+    <includes refid="codec2__decode__bf_8h" local="no">lilacsat/codec2_decode_bf.h</includes>
+    <includes refid="codec2_8h" local="yes">codec2/codec2.h</includes>
+    <incdepgraph>
+      <node id="234">
+        <label>lilacsat/codec2_decode_bf.h</label>
+        <link refid="codec2__decode__bf_8h"/>
+        <childnode refid="235" relation="include">
+        </childnode>
+        <childnode refid="237" relation="include">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="235">
+        <label>lilacsat/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="233">
+        <label>codec2_decode_bf_impl.h</label>
+        <link refid="codec2_decode_bf_impl.h"/>
+        <childnode refid="234" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>codec2/codec2.h</label>
+        <link refid="codec2_8h"/>
+      </node>
+      <node id="237">
+        <label>gnuradio/sync_interpolator.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1lilacsat_1_1codec2__decode__bf__impl" prot="public">gr::lilacsat::codec2_decode_bf_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1lilacsat">gr::lilacsat</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2_decode_bf_impl.h"/>
+  </compounddef>
+</doxygen>

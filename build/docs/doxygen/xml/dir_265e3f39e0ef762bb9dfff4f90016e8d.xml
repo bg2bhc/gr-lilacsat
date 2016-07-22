@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_265e3f39e0ef762bb9dfff4f90016e8d" kind="dir">
+    <compoundname>afsk</compoundname>
+    <innerfile refid="afsk_8h">afsk.h</innerfile>
+    <innerfile refid="aprs_8h">aprs.h</innerfile>
+    <innerfile refid="ax25_8h">ax25.h</innerfile>
+    <innerfile refid="bertos_8h">bertos.h</innerfile>
+    <innerfile refid="cfg__afsk_8h">cfg_afsk.h</innerfile>
+    <innerfile refid="cfg__ax25_8h">cfg_ax25.h</innerfile>
+    <innerfile refid="crc__ccitt_8h">crc_ccitt.h</innerfile>
+    <innerfile refid="fifobuf_8h">fifobuf.h</innerfile>
+    <innerfile refid="kfile_8h">kfile.h</innerfile>
+    <innerfile refid="wavegen_8h">wavegen.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/"/>
+  </compounddef>
+</doxygen>

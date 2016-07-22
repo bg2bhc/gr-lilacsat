@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="defines_8h" kind="file">
+    <compoundname>defines.h</compoundname>
+    <includedby refid="dump_8h" local="yes">dump.h</includedby>
+    <includedby refid="sine_8h" local="yes">sine.h</includedby>
+    <invincdepgraph>
+      <node id="271">
+        <label>defines.h</label>
+        <link refid="defines.h"/>
+        <childnode refid="272" relation="include">
+        </childnode>
+        <childnode refid="273" relation="include">
+        </childnode>
+      </node>
+      <node id="272">
+        <label>dump.h</label>
+        <link refid="dump_8h"/>
+      </node>
+      <node id="273">
+        <label>sine.h</label>
+        <link refid="sine_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structMODEL" prot="public">MODEL</innerclass>
+    <innerclass refid="structlsp__codebook" prot="public">lsp_codebook</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="defines_8h_1a0240ac851181b84ac374872dc5434ee4" prot="public" static="no">
+        <name>N</name>
+        <initializer>80		/* number of samples per frame          */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="39" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1ad72f813021f638189aa4a416fe607b20" prot="public" static="no">
+        <name>MAX_AMP</name>
+        <initializer>80		/* maximum number of harmonics          */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="40" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a598a3330b3c21701223ee0ca14316eca" prot="public" static="no">
+        <name>PI</name>
+        <initializer>3.141592654	/* mathematical constant                */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="41" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a3b947f4b635461030ff2d87833e5049e" prot="public" static="no">
+        <name>TWO_PI</name>
+        <initializer>6.283185307	/* mathematical constant                */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="42" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a30588c5eca7c9cb6ebba02a0236f0119" prot="public" static="no">
+        <name>FS</name>
+        <initializer>8000		/* sample rate in Hz                    */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="43" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a8b6d77865140befe3a9bc16132d2e696" prot="public" static="no">
+        <name>MAX_STR</name>
+        <initializer>256          /* maximum string size                  */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="44" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1af9cccf331f045b89a9f12366df5f7687" prot="public" static="no">
+        <name>NW</name>
+        <initializer>279          /* analysis window size                 */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="46" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a6be56a1628df40717b4df02c923eca65" prot="public" static="no">
+        <name>FFT_ENC</name>
+        <initializer>512		/* size of FFT used for encoder         */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="47" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a947bacc9a58067290836b097cbfff0ce" prot="public" static="no">
+        <name>FFT_DEC</name>
+        <initializer>512	    	/* size of FFT used in decoder          */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="48" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a051c83d6554c006261a198d0682d84e4" prot="public" static="no">
+        <name>TW</name>
+        <initializer>40		/* Trapezoidal synthesis window overlap */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="49" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a22f0811318f51a256d3247a6915d2d0e" prot="public" static="no">
+        <name>V_THRESH</name>
+        <initializer>6.0          /* voicing threshold in dB              */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="50" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a226d8bf0dbba817c89954c6651a23420" prot="public" static="no">
+        <name>LPC_ORD</name>
+        <initializer>10		/* LPC order                            */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="51" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a192e7137386dec0be2251d38140de4e2" prot="public" static="no">
+        <name>LPC_ORD_LOW</name>
+        <initializer>6		/* LPC order for lower rates            */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="52" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a52037c938e3c1b126c6277da5ca689d0" prot="public" static="no">
+        <name>M</name>
+        <initializer>320		/* pitch analysis frame size            */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="56" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1adc6568b52529df9d20dd786cc39c7a67" prot="public" static="no">
+        <name>P_MIN</name>
+        <initializer>20		/* minimum pitch                        */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="57" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="defines_8h_1a9b6e05ef78c1f96674f7131c13093e38" prot="public" static="no">
+        <name>P_MAX</name>
+        <initializer>160		/* maximum pitch                        */</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="58" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="defines_8h_1a9a119410ff8e7ebd37bced40b3d03830" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cb[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a2f0b8e7104661505328a2820008b2ad0" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbd[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a174f7468f0d0f847d29031831d4aab95" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbvq[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbvq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a2085a5bc33df0d6a7d33910f80ea181b" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbjnd[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbjnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1ab56de3422a37154c846c0ed5cdd6567c" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbdt[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbdt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a82fe8d72f7c858d3cc3d0af9799d1bb0" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbjvm[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbjvm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1ab6461179cce68791a6af7f3ac348f163" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lsp_cbvqanssi[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lsp_cbvqanssi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a61da7354b777cf1e600bd28ec949a5c2" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook mel_cb[]</definition>
+        <argsstring>[]</argsstring>
+        <name>mel_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a43caa9b7e771edd0b2ea733cd9f15557" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook ge_cb[]</definition>
+        <argsstring>[]</argsstring>
+        <name>ge_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="defines_8h_1a01e35e091f33e3f30b3f86e1b1334400" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structlsp__codebook" kindref="compound">lsp_codebook</ref></type>
+        <definition>const struct lsp_codebook lspmelvq_cb[]</definition>
+        <argsstring>[]</argsstring>
+        <name>lspmelvq_cb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h"/>
+  </compounddef>
+</doxygen>

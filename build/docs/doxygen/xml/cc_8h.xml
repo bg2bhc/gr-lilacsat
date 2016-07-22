@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="cc_8h" kind="file">
+    <compoundname>cc.h</compoundname>
+    <includes local="no">stm32f4xx.h</includes>
+    <includes refid="viterbi27_8h" local="yes">viterbi27.h</includes>
+    <includes refid="randomizer_8h" local="yes">randomizer.h</includes>
+    <includes refid="rs_8h" local="yes">rs.h</includes>
+    <includes refid="tab_8h" local="yes">tab.h</includes>
+    <includes refid="fifobuf_8h" local="yes">fifobuf.h</includes>
+    <includes local="yes">FreeRTOS.h</includes>
+    <includes local="yes">timers.h</includes>
+    <incdepgraph>
+      <node id="178">
+        <label>stdbool.h</label>
+      </node>
+      <node id="179">
+        <label>stdint.h</label>
+      </node>
+      <node id="176">
+        <label>tab.h</label>
+        <link refid="tab_8h"/>
+      </node>
+      <node id="171">
+        <label>cc.h</label>
+        <link refid="cc.h"/>
+        <childnode refid="172" relation="include">
+        </childnode>
+        <childnode refid="173" relation="include">
+        </childnode>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="175" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>viterbi27.h</label>
+        <link refid="viterbi27_8h"/>
+      </node>
+      <node id="181">
+        <label>timers.h</label>
+      </node>
+      <node id="175">
+        <label>rs.h</label>
+        <link refid="rs_8h"/>
+      </node>
+      <node id="172">
+        <label>stm32f4xx.h</label>
+      </node>
+      <node id="177">
+        <label>fifobuf.h</label>
+        <link refid="fifobuf_8h"/>
+        <childnode refid="178" relation="include">
+        </childnode>
+        <childnode refid="179" relation="include">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>FreeRTOS.h</label>
+      </node>
+      <node id="174">
+        <label>randomizer.h</label>
+        <link refid="randomizer_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structCc" prot="public">Cc</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="cc_8h_1ac0dffcb15a812528abec53b1b48db2f8" prot="public" static="no">
+        <name>CONFIG_CCSDS_TX_BUFLEN</name>
+        <initializer>1024</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="14" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cc_8h_1a99f5c4aca37909c6d1c59332f61bd3b1" prot="public" static="no">
+        <name>CONFIG_TIMEOUT_TX_WRITE</name>
+        <initializer>1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="15" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cc_8h_1ade67658b4bc39c2f270aa230dcbcd158" prot="public" static="no">
+        <name>CONFIG_LEN_PREAMBLE</name>
+        <initializer>400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="16" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cc_8h_1abc221cb5b86671dc840a6e8ea6c5e039" prot="public" static="no">
+        <name>FLAG_TLM_PRI_L_TX</name>
+        <initializer>0x01</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="18" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cc_8h_1a21d1d721fb2cd8ff59bd5568eee5879b" prot="public" static="no">
+        <name>FLAG_TLM_PRI_H_TX</name>
+        <initializer>0x02</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="19" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="cc_8h_1a1db08ff9f5463224814247bf5fe24e1e" prot="public" static="no">
+        <name>FLAG_CODEC2_TX</name>
+        <initializer>0x04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="20" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="cc_8h_1afacab829a24d8094b29376450063c7bc" prot="public" static="no">
+        <type>struct <ref refid="structCc" kindref="compound">Cc</ref></type>
+        <definition>typedef struct Cc  Cc</definition>
+        <argsstring></argsstring>
+        <name>Cc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="33" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="cc_8h_1a6cdc31c8beb64ec21fb816cf9d590259" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cc_init</definition>
+        <argsstring>(Cc *cc)</argsstring>
+        <name>cc_init</name>
+        <param>
+          <type><ref refid="structCc" kindref="compound">Cc</ref> *</type>
+          <declname>cc</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cc_8h_1a333dd453c34126952978bd114a6bdf97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cc_tx_proc</definition>
+        <argsstring>(Cc *cc, unsigned char *symbols, unsigned int nbits)</argsstring>
+        <name>cc_tx_proc</name>
+        <param>
+          <type><ref refid="structCc" kindref="compound">Cc</ref> *</type>
+          <declname>cc</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>symbols</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>nbits</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="cc_8h_1a23a951ccdab37d2dbd3e5b05bcacedbb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void cc_send</definition>
+        <argsstring>(Cc *cc, uint8_t *message, int length, int pri)</argsstring>
+        <name>cc_send</name>
+        <param>
+          <type><ref refid="structCc" kindref="compound">Cc</ref> *</type>
+          <declname>cc</declname>
+        </param>
+        <param>
+          <type>uint8_t *</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="37" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h"/>
+  </compounddef>
+</doxygen>

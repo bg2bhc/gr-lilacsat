@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structkiss__fft__cpx" kind="struct" prot="public">
+    <compoundname>kiss_fft_cpx</compoundname>
+    <includes refid="kiss__fft_8h" local="no">kiss_fft.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkiss__fft__cpx_1a686b6187e3e885de316908319c71ea8f" prot="public" static="no" mutable="no">
+        <type><ref refid="kiss__fft_8h_1a4d9bf2d6a2ce1b061545a16faf77d337" kindref="member">kiss_fft_scalar</ref></type>
+        <definition>kiss_fft_scalar kiss_fft_cpx::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="52" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__fft__cpx_1ac1e17add2ae6b815da29d7d67b03fa70" prot="public" static="no" mutable="no">
+        <type><ref refid="kiss__fft_8h_1a4d9bf2d6a2ce1b061545a16faf77d337" kindref="member">kiss_fft_scalar</ref></type>
+        <definition>kiss_fft_scalar kiss_fft_cpx::i</definition>
+        <argsstring></argsstring>
+        <name>i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="51" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="51" bodyend="54"/>
+    <listofallmembers>
+      <member refid="structkiss__fft__cpx_1ac1e17add2ae6b815da29d7d67b03fa70" prot="public" virt="non-virtual"><scope>kiss_fft_cpx</scope><name>i</name></member>
+      <member refid="structkiss__fft__cpx_1a686b6187e3e885de316908319c71ea8f" prot="public" virt="non-virtual"><scope>kiss_fft_cpx</scope><name>r</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

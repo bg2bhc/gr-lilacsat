@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1gmsk__demod__impl" kind="class" prot="public">
+    <compoundname>gr::lilacsat::gmsk_demod_impl</compoundname>
+    <basecompoundref refid="classgr_1_1lilacsat_1_1gmsk__demod" prot="public" virt="non-virtual">gr::lilacsat::gmsk_demod</basecompoundref>
+    <includes refid="gmsk__demod__impl_8h" local="no">gmsk_demod_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac268c9caf96763df9081c6f58184823e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_dtll_gain</definition>
+        <argsstring></argsstring>
+        <name>d_dtll_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="41" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad927bdad900847e7adc25e7cd1f889d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::lilacsat::gmsk_demod_impl::d_pd_N_avg</definition>
+        <argsstring></argsstring>
+        <name>d_pd_N_avg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="42" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae5ee8c9b1a8be8e2512d8eeca126c9b2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_pd_k1</definition>
+        <argsstring></argsstring>
+        <name>d_pd_k1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="43" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3d43dc0d943ee20cafdee85b00df390" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_pd_k2</definition>
+        <argsstring></argsstring>
+        <name>d_pd_k2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3c91ba56cddcb8ef9a31adbe9f86c72" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_vco_gain</definition>
+        <argsstring></argsstring>
+        <name>d_vco_gain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="45" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a44235ae199d1ed8d7f0b2bbbe3f4d3e5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::gmsk_demod_impl::d_vco_phase</definition>
+        <argsstring></argsstring>
+        <name>d_vco_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="47" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a032540edcbab5191143b3360e15a82cc" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_buf_match_real[41]</definition>
+        <argsstring>[41]</argsstring>
+        <name>d_buf_match_real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="48" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1abc994df955ef2b4db21676221121d07f" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_buf_match_imag[41]</definition>
+        <argsstring>[41]</argsstring>
+        <name>d_buf_match_imag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="48" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aeaf66fa0fc0ea44c39c7a43df184eee4" prot="private" static="no" mutable="no">
+        <type><ref refid="structfir__instance__f" kindref="compound">fir_instance_f</ref></type>
+        <definition>fir_instance_f gr::lilacsat::gmsk_demod_impl::d_state_match_real</definition>
+        <argsstring></argsstring>
+        <name>d_state_match_real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="49" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad93659a74093cb558c32d1187cd718b0" prot="private" static="no" mutable="no">
+        <type><ref refid="structfir__instance__f" kindref="compound">fir_instance_f</ref></type>
+        <definition>fir_instance_f gr::lilacsat::gmsk_demod_impl::d_state_match_imag</definition>
+        <argsstring></argsstring>
+        <name>d_state_match_imag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="49" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae734afd9d0bedf67590395929c8fef29" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_buf_delay_real[Tb+2]</definition>
+        <argsstring>[Tb+2]</argsstring>
+        <name>d_buf_delay_real</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="50" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a3e6789952bea78fb4ce4c0de9c99eac1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_buf_delay_imag[Tb+2]</definition>
+        <argsstring>[Tb+2]</argsstring>
+        <name>d_buf_delay_imag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="50" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac9cf57b05e3653e4e72312ba63299c59" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_dtll_phase</definition>
+        <argsstring></argsstring>
+        <name>d_dtll_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="51" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a75b25f41cbc385e83fa812f3b7f1d612" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_buf_avg[50]</definition>
+        <argsstring>[50]</argsstring>
+        <name>d_buf_avg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="52" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aaa4cb1ccab1901c09e3129edeb2ade11" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double gr::lilacsat::gmsk_demod_impl::d_lf_out</definition>
+        <argsstring></argsstring>
+        <name>d_lf_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ab62c4828acaee31073881523394f4f42" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::lilacsat::gmsk_demod_impl::d_mean_out_last</definition>
+        <argsstring></argsstring>
+        <name>d_mean_out_last</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="54" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a9bfb069546bd17baed61bebb8196c545" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::lilacsat::gmsk_demod_impl::fir_filt_f</definition>
+        <argsstring>(fir_instance_f *instance, float *pSrc, float *pDst, uint32_t len)</argsstring>
+        <name>fir_filt_f</name>
+        <param>
+          <type><ref refid="structfir__instance__f" kindref="compound">fir_instance_f</ref> *</type>
+          <declname>instance</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pSrc</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>pDst</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="56" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a91388f44447a89ba53fd5715f1dbb3ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::gmsk_demod_impl::gmsk_demod_impl</definition>
+        <argsstring>(float dtll_gain, int pd_N_avg, float pd_k1, float pd_k2, float vco_gain)</argsstring>
+        <name>gmsk_demod_impl</name>
+        <param>
+          <type>float</type>
+          <declname>dtll_gain</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pd_N_avg</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pd_k1</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>pd_k2</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>vco_gain</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="59" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a2bcdfbb1e726c004294b977eb13a03bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::gmsk_demod_impl::~gmsk_demod_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~gmsk_demod_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a5ddae3caeb13dc699815d43e60d31941" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::lilacsat::gmsk_demod_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a00e1c801c37bc313a6eb880a1cd1a1b0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::lilacsat::gmsk_demod_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="65" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="157">
+        <label>gr::lilacsat::gmsk_demod</label>
+        <link refid="classgr_1_1lilacsat_1_1gmsk__demod"/>
+        <childnode refid="158" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>block</label>
+      </node>
+      <node id="156">
+        <label>gr::lilacsat::gmsk_demod_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1gmsk__demod__impl"/>
+        <childnode refid="157" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="160">
+        <label>gr::lilacsat::gmsk_demod</label>
+        <link refid="classgr_1_1lilacsat_1_1gmsk__demod"/>
+        <childnode refid="161" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="161">
+        <label>block</label>
+      </node>
+      <node id="159">
+        <label>gr::lilacsat::gmsk_demod_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1gmsk__demod__impl"/>
+        <childnode refid="160" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/gmsk_demod_impl.h" bodystart="38" bodyend="69"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a75b25f41cbc385e83fa812f3b7f1d612" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_buf_avg</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a3e6789952bea78fb4ce4c0de9c99eac1" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_buf_delay_imag</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae734afd9d0bedf67590395929c8fef29" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_buf_delay_real</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1abc994df955ef2b4db21676221121d07f" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_buf_match_imag</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a032540edcbab5191143b3360e15a82cc" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_buf_match_real</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac268c9caf96763df9081c6f58184823e" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_dtll_gain</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ac9cf57b05e3653e4e72312ba63299c59" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_dtll_phase</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aaa4cb1ccab1901c09e3129edeb2ade11" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_lf_out</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ab62c4828acaee31073881523394f4f42" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_mean_out_last</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ae5ee8c9b1a8be8e2512d8eeca126c9b2" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_pd_k1</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3d43dc0d943ee20cafdee85b00df390" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_pd_k2</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad927bdad900847e7adc25e7cd1f889d7" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_pd_N_avg</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1ad93659a74093cb558c32d1187cd718b0" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_state_match_imag</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1aeaf66fa0fc0ea44c39c7a43df184eee4" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_state_match_real</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1af3c91ba56cddcb8ef9a31adbe9f86c72" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_vco_gain</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a44235ae199d1ed8d7f0b2bbbe3f4d3e5" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>d_vco_phase</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a9bfb069546bd17baed61bebb8196c545" prot="private" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>fir_filt_f</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a5ddae3caeb13dc699815d43e60d31941" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a00e1c801c37bc313a6eb880a1cd1a1b0" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a91388f44447a89ba53fd5715f1dbb3ef" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>gmsk_demod_impl</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod_1a9581672c7e9d853ae738bceeeedb235e" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod_1aa34193bf3f72dd6416f1dbd640363778" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1lilacsat_1_1gmsk__demod__impl_1a2bcdfbb1e726c004294b977eb13a03bc" prot="public" virt="non-virtual"><scope>gr::lilacsat::gmsk_demod_impl</scope><name>~gmsk_demod_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structAX25KISSMsg" kind="struct" prot="public">
+    <compoundname>AX25KISSMsg</compoundname>
+    <includes refid="ax25_8h" local="no">ax25.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAX25KISSMsg_1a534837f95ad3c4b9bdf8ff40c55aa490" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AX25KISSMsg::buf[CONFIG_AX25_FRAME_BUF_LEN]</definition>
+        <argsstring>[CONFIG_AX25_FRAME_BUF_LEN]</argsstring>
+        <name>buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="92" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25KISSMsg_1a425e4959b90257d1b972690c0c9e3011" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AX25KISSMsg::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="93" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="91" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="90" bodyend="94"/>
+    <listofallmembers>
+      <member refid="structAX25KISSMsg_1a534837f95ad3c4b9bdf8ff40c55aa490" prot="public" virt="non-virtual"><scope>AX25KISSMsg</scope><name>buf</name></member>
+      <member refid="structAX25KISSMsg_1a425e4959b90257d1b972690c0c9e3011" prot="public" virt="non-virtual"><scope>AX25KISSMsg</scope><name>pos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="fec__decode__b__impl_8h" kind="file">
+    <compoundname>fec_decode_b_impl.h</compoundname>
+    <includes refid="fec__decode__b_8h" local="no">lilacsat/fec_decode_b.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes refid="ccsds_8h" local="yes">ccsds/ccsds.h</includes>
+    <incdepgraph>
+      <node id="316">
+        <label>stdbool.h</label>
+      </node>
+      <node id="317">
+        <label>stdint.h</label>
+      </node>
+      <node id="314">
+        <label>tab.h</label>
+        <link refid="tab_8h"/>
+      </node>
+      <node id="307">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="306">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="303">
+        <label>fec_decode_b_impl.h</label>
+        <link refid="fec_decode_b_impl.h"/>
+        <childnode refid="304" relation="include">
+        </childnode>
+        <childnode refid="308" relation="include">
+        </childnode>
+        <childnode refid="309" relation="include">
+        </childnode>
+      </node>
+      <node id="305">
+        <label>lilacsat/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="306" relation="include">
+        </childnode>
+      </node>
+      <node id="309">
+        <label>ccsds/ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="310" relation="include">
+        </childnode>
+        <childnode refid="311" relation="include">
+        </childnode>
+        <childnode refid="312" relation="include">
+        </childnode>
+        <childnode refid="313" relation="include">
+        </childnode>
+        <childnode refid="314" relation="include">
+        </childnode>
+        <childnode refid="315" relation="include">
+        </childnode>
+      </node>
+      <node id="304">
+        <label>lilacsat/fec_decode_b.h</label>
+        <link refid="fec__decode__b_8h"/>
+        <childnode refid="305" relation="include">
+        </childnode>
+        <childnode refid="307" relation="include">
+        </childnode>
+      </node>
+      <node id="311">
+        <label>viterbi27.h</label>
+        <link refid="viterbi27_8h"/>
+      </node>
+      <node id="313">
+        <label>rs.h</label>
+        <link refid="rs_8h"/>
+      </node>
+      <node id="315">
+        <label>afsk/fifobuf.h</label>
+        <link refid="fifobuf_8h"/>
+        <childnode refid="316" relation="include">
+        </childnode>
+        <childnode refid="317" relation="include">
+        </childnode>
+      </node>
+      <node id="308">
+        <label>stdio.h</label>
+      </node>
+      <node id="312">
+        <label>randomizer.h</label>
+        <link refid="randomizer_8h"/>
+      </node>
+      <node id="310">
+        <label>inttypes.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1lilacsat_1_1fec__decode__b__impl" prot="public">gr::lilacsat::fec_decode_b_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1lilacsat">gr::lilacsat</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/fec_decode_b_impl.h"/>
+  </compounddef>
+</doxygen>

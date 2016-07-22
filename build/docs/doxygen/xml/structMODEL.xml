@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structMODEL" kind="struct" prot="public">
+    <compoundname>MODEL</compoundname>
+    <includes refid="defines_8h" local="no">defines.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMODEL_1aa34e090e68d930b3cb65f0a55e9bad98" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MODEL::Wo</definition>
+        <argsstring></argsstring>
+        <name>Wo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="69" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMODEL_1afa7d4a9d85cdc2f0344086ff3f47259f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MODEL::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="70" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMODEL_1a24fa719a3602aedc7eb9a78f27d64354" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MODEL::A[MAX_AMP+1]</definition>
+        <argsstring>[MAX_AMP+1]</argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="71" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMODEL_1a6133a392fb2015bfe82f5fe745fc734c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float MODEL::phi[MAX_AMP+1]</definition>
+        <argsstring>[MAX_AMP+1]</argsstring>
+        <name>phi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="72" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMODEL_1ad18d287cdeb165d1a4d0ac8ae5817713" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MODEL::voiced</definition>
+        <argsstring></argsstring>
+        <name>voiced</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="73" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/defines.h" line="68" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/defines.h" bodystart="68" bodyend="74"/>
+    <listofallmembers>
+      <member refid="structMODEL_1a24fa719a3602aedc7eb9a78f27d64354" prot="public" virt="non-virtual"><scope>MODEL</scope><name>A</name></member>
+      <member refid="structMODEL_1afa7d4a9d85cdc2f0344086ff3f47259f" prot="public" virt="non-virtual"><scope>MODEL</scope><name>L</name></member>
+      <member refid="structMODEL_1a6133a392fb2015bfe82f5fe745fc734c" prot="public" virt="non-virtual"><scope>MODEL</scope><name>phi</name></member>
+      <member refid="structMODEL_1ad18d287cdeb165d1a4d0ac8ae5817713" prot="public" virt="non-virtual"><scope>MODEL</scope><name>voiced</name></member>
+      <member refid="structMODEL_1aa34e090e68d930b3cb65f0a55e9bad98" prot="public" virt="non-virtual"><scope>MODEL</scope><name>Wo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

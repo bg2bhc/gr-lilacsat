@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structAX25Msg" kind="struct" prot="public">
+    <compoundname>AX25Msg</compoundname>
+    <includes refid="ax25_8h" local="no">ax25.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAX25Msg_1a1f0571ab6f708e1725ad9a8be8e6b28a" prot="public" static="no" mutable="no">
+        <type><ref refid="structAX25Call" kindref="compound">AX25Call</ref></type>
+        <definition>AX25Call AX25Msg::src</definition>
+        <argsstring></argsstring>
+        <name>src</name>
+        <briefdescription>
+<para>Source adress. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="75" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1a38dc18966290b4f8cb24651e9e75ef66" prot="public" static="no" mutable="no">
+        <type><ref refid="structAX25Call" kindref="compound">AX25Call</ref></type>
+        <definition>AX25Call AX25Msg::dst</definition>
+        <argsstring></argsstring>
+        <name>dst</name>
+        <briefdescription>
+<para>Destination address. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="76" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1a1c776202f543e8b34cb7673d97f8eebe" prot="public" static="no" mutable="no">
+        <type><ref refid="structAX25Call" kindref="compound">AX25Call</ref></type>
+        <definition>AX25Call AX25Msg::rpt_lst[AX25_MAX_RPT]</definition>
+        <argsstring>[AX25_MAX_RPT]</argsstring>
+        <name>rpt_lst</name>
+        <briefdescription>
+<para>List of repeaters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="78" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1aa340a6edb4bfedfb24b174a6b119dfb8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AX25Msg::rpt_cnt</definition>
+        <argsstring></argsstring>
+        <name>rpt_cnt</name>
+        <briefdescription>
+<para>Number of repeaters in this message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="79" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1a375105fdcb83cb525082d8dbc22c2d33" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AX25Msg::ctrl</definition>
+        <argsstring></argsstring>
+        <name>ctrl</name>
+        <briefdescription>
+<para>AX25 control field. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="81" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1ae2e8532da38c1a6fac980377ab9b494b" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AX25Msg::pid</definition>
+        <argsstring></argsstring>
+        <name>pid</name>
+        <briefdescription>
+<para>AX25 PID field. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="82" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1ac2aec986679b69baa42af40caf9a48bd" prot="public" static="no" mutable="no">
+        <type>const uint8_t *</type>
+        <definition>const uint8_t* AX25Msg::info</definition>
+        <argsstring></argsstring>
+        <name>info</name>
+        <briefdescription>
+<para>Pointer to the info field (payload) of the message. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="83" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Msg_1a8dcab6efd1334a05b7e1da979ee108a1" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AX25Msg::len</definition>
+        <argsstring></argsstring>
+        <name>len</name>
+        <briefdescription>
+<para>Payload length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="84" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>AX25 Message. Used to handle AX25 sent/received messages. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="49">
+        <label>AX25Msg</label>
+        <link refid="structAX25Msg"/>
+        <childnode refid="50" relation="usage">
+          <edgelabel>rpt_lst</edgelabel>
+          <edgelabel>src</edgelabel>
+          <edgelabel>dst</edgelabel>
+        </childnode>
+      </node>
+      <node id="50">
+        <label>AX25Call</label>
+        <link refid="structAX25Call"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="74" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="73" bodyend="85"/>
+    <listofallmembers>
+      <member refid="structAX25Msg_1a375105fdcb83cb525082d8dbc22c2d33" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>ctrl</name></member>
+      <member refid="structAX25Msg_1a38dc18966290b4f8cb24651e9e75ef66" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>dst</name></member>
+      <member refid="structAX25Msg_1ac2aec986679b69baa42af40caf9a48bd" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>info</name></member>
+      <member refid="structAX25Msg_1a8dcab6efd1334a05b7e1da979ee108a1" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>len</name></member>
+      <member refid="structAX25Msg_1ae2e8532da38c1a6fac980377ab9b494b" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>pid</name></member>
+      <member refid="structAX25Msg_1aa340a6edb4bfedfb24b174a6b119dfb8" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>rpt_cnt</name></member>
+      <member refid="structAX25Msg_1a1c776202f543e8b34cb7673d97f8eebe" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>rpt_lst</name></member>
+      <member refid="structAX25Msg_1a1f0571ab6f708e1725ad9a8be8e6b28a" prot="public" virt="non-virtual"><scope>AX25Msg</scope><name>src</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

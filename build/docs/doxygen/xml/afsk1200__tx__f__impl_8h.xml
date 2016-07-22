@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="afsk1200__tx__f__impl_8h" kind="file">
+    <compoundname>afsk1200_tx_f_impl.h</compoundname>
+    <includes refid="afsk1200__tx__f_8h" local="no">lilacsat/afsk1200_tx_f.h</includes>
+    <includes refid="afsk_8h" local="yes">afsk/afsk.h</includes>
+    <includes refid="ax25_8h" local="yes">afsk/ax25.h</includes>
+    <includes refid="aprs_8h" local="yes">afsk/aprs.h</includes>
+    <incdepgraph>
+      <node id="54">
+        <label>stdbool.h</label>
+      </node>
+      <node id="57">
+        <label>bertos.h</label>
+        <link refid="bertos_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
+        <label>stdint.h</label>
+      </node>
+      <node id="52">
+        <label>afsk/afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>gnuradio/sync_block.h</label>
+      </node>
+      <node id="56">
+        <label>kfile.h</label>
+        <link refid="kfile_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+      </node>
+      <node id="60">
+        <label>cfg_ax25.h</label>
+        <link refid="cfg__ax25_8h"/>
+      </node>
+      <node id="50">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="49">
+        <label>lilacsat/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>afsk1200_tx_f_impl.h</label>
+        <link refid="afsk1200_tx_f_impl.h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+        <childnode refid="61" relation="include">
+        </childnode>
+      </node>
+      <node id="61">
+        <label>afsk/aprs.h</label>
+        <link refid="aprs_8h"/>
+        <childnode refid="52" relation="include">
+        </childnode>
+        <childnode refid="59" relation="include">
+        </childnode>
+      </node>
+      <node id="59">
+        <label>afsk/ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="60" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>lilacsat/afsk1200_tx_f.h</label>
+        <link refid="afsk1200__tx__f_8h"/>
+        <childnode refid="49" relation="include">
+        </childnode>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>fifobuf.h</label>
+        <link refid="fifobuf_8h"/>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+      </node>
+      <node id="58">
+        <label>cfg_afsk.h</label>
+        <link refid="cfg__afsk_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1lilacsat_1_1afsk1200__tx__f__impl" prot="public">gr::lilacsat::afsk1200_tx_f_impl</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1lilacsat">gr::lilacsat</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk1200_tx_f_impl.h"/>
+  </compounddef>
+</doxygen>

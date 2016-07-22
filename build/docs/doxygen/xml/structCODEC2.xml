@@ -1,0 +1,415 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structCODEC2" kind="struct" prot="public">
+    <compoundname>CODEC2</compoundname>
+    <includes refid="codec2__internal_8h" local="no">codec2_internal.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCODEC2_1a2c54eae11a671618d2f5491869a7362c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CODEC2::mode</definition>
+        <argsstring></argsstring>
+        <name>mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="33" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a401a530dc94bdffd3c78097def0c8687" prot="public" static="no" mutable="no">
+        <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+        <definition>kiss_fft_cfg CODEC2::fft_fwd_cfg</definition>
+        <argsstring></argsstring>
+        <name>fft_fwd_cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="34" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1ae35aa6e0ed2c51587399c7d46a7f4cfd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::w[M]</definition>
+        <argsstring>[M]</argsstring>
+        <name>w</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="35" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1acd39f81c9cbe95f445e71ce46b906ebb" prot="public" static="no" mutable="no">
+        <type><ref refid="structCOMP" kindref="compound">COMP</ref></type>
+        <definition>COMP CODEC2::W[FFT_ENC]</definition>
+        <argsstring>[FFT_ENC]</argsstring>
+        <name>W</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="36" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a515dd383285a5863ef53e7991c40356f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Pn[2 *N]</definition>
+        <argsstring>[2 *N]</argsstring>
+        <name>Pn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a1dfac03fee3e98eca2f961d3a3835064" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* CODEC2::bpf_buf</definition>
+        <argsstring></argsstring>
+        <name>bpf_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="38" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a01173089b0922ba8a1fa97b166a44c07" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Sn[M]</definition>
+        <argsstring>[M]</argsstring>
+        <name>Sn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a712eb0d13efbe8ae7108f93f1fb785d0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::hpf_states[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>hpf_states</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="40" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1abcb055f551f3d72344c7d534a48ead54" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* CODEC2::nlp</definition>
+        <argsstring></argsstring>
+        <name>nlp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="41" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a178369e61e9bed85de581417f55c57bd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CODEC2::gray</definition>
+        <argsstring></argsstring>
+        <name>gray</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="42" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a30591356e1fb7b3579c3528542b0b655" prot="public" static="no" mutable="no">
+        <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+        <definition>kiss_fft_cfg CODEC2::fft_inv_cfg</definition>
+        <argsstring></argsstring>
+        <name>fft_inv_cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a5cb0415565e3bf98617802bb3552652a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::Sn_[2 *N]</definition>
+        <argsstring>[2 *N]</argsstring>
+        <name>Sn_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="45" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1aedad4717cab5a7738c41774b72f7f10e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::ex_phase</definition>
+        <argsstring></argsstring>
+        <name>ex_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="46" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1ad3d4074892c052d76047965394e1e0c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::bg_est</definition>
+        <argsstring></argsstring>
+        <name>bg_est</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="47" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a7a48c3f726f2e32bf91d6f9eb9ce4db3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_Wo_enc</definition>
+        <argsstring></argsstring>
+        <name>prev_Wo_enc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="48" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a683e5e2aa55e59b75604c47e6bc75b5d" prot="public" static="no" mutable="no">
+        <type><ref refid="structMODEL" kindref="compound">MODEL</ref></type>
+        <definition>MODEL CODEC2::prev_model_dec</definition>
+        <argsstring></argsstring>
+        <name>prev_model_dec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="49" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a2ae4ab599298dac1bd111c10a85ad7c7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_lsps_dec[LPC_ORD]</definition>
+        <argsstring>[LPC_ORD]</argsstring>
+        <name>prev_lsps_dec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="50" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a7349ac698910f60b2829885edd33d512" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::prev_e_dec</definition>
+        <argsstring></argsstring>
+        <name>prev_e_dec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="51" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a69db6d887f6674945e40c5a0c5680d35" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CODEC2::lpc_pf</definition>
+        <argsstring></argsstring>
+        <name>lpc_pf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1ac43201db5ebc0285db5b3cf9e16e392a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CODEC2::bass_boost</definition>
+        <argsstring></argsstring>
+        <name>bass_boost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="54" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1af71336f131e116f1e882f1e9b1e770c6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::beta</definition>
+        <argsstring></argsstring>
+        <name>beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="55" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a0b7cb4448460a70a56ea82746df7cb9a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::gamma</definition>
+        <argsstring></argsstring>
+        <name>gamma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="56" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1ad1dcf780ab2b66528a525c278d39abc5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::xq_enc[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>xq_enc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="58" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a0959f9dd11b0130feac26f24d33dfe3e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CODEC2::xq_dec[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>xq_dec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="59" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1abd03d04f65276fd6cb028d2ef829e3ca" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CODEC2::smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="61" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCODEC2_1a981f0b27ea57f8de5dfc646e28c75764" prot="public" static="no" mutable="no">
+        <type>float *</type>
+        <definition>float* CODEC2::softdec</definition>
+        <argsstring></argsstring>
+        <name>softdec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="62" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="87">
+        <label>COMP</label>
+        <link refid="structCOMP"/>
+      </node>
+      <node id="84">
+        <label>MODEL</label>
+        <link refid="structMODEL"/>
+      </node>
+      <node id="83">
+        <label>CODEC2</label>
+        <link refid="structCODEC2"/>
+        <childnode refid="84" relation="usage">
+          <edgelabel>prev_model_dec</edgelabel>
+        </childnode>
+        <childnode refid="85" relation="usage">
+          <edgelabel>fft_fwd_cfg</edgelabel>
+          <edgelabel>fft_inv_cfg</edgelabel>
+        </childnode>
+        <childnode refid="87" relation="usage">
+          <edgelabel>W</edgelabel>
+        </childnode>
+      </node>
+      <node id="86">
+        <label>kiss_fft_cpx</label>
+        <link refid="structkiss__fft__cpx"/>
+      </node>
+      <node id="85">
+        <label>kiss_fft_state</label>
+        <link refid="structkiss__fft__state"/>
+        <childnode refid="86" relation="usage">
+          <edgelabel>twiddles</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" line="32" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/codec2_internal.h" bodystart="32" bodyend="63"/>
+    <listofallmembers>
+      <member refid="structCODEC2_1ac43201db5ebc0285db5b3cf9e16e392a" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>bass_boost</name></member>
+      <member refid="structCODEC2_1af71336f131e116f1e882f1e9b1e770c6" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>beta</name></member>
+      <member refid="structCODEC2_1ad3d4074892c052d76047965394e1e0c4" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>bg_est</name></member>
+      <member refid="structCODEC2_1a1dfac03fee3e98eca2f961d3a3835064" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>bpf_buf</name></member>
+      <member refid="structCODEC2_1aedad4717cab5a7738c41774b72f7f10e" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>ex_phase</name></member>
+      <member refid="structCODEC2_1a401a530dc94bdffd3c78097def0c8687" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>fft_fwd_cfg</name></member>
+      <member refid="structCODEC2_1a30591356e1fb7b3579c3528542b0b655" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>fft_inv_cfg</name></member>
+      <member refid="structCODEC2_1a0b7cb4448460a70a56ea82746df7cb9a" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>gamma</name></member>
+      <member refid="structCODEC2_1a178369e61e9bed85de581417f55c57bd" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>gray</name></member>
+      <member refid="structCODEC2_1a712eb0d13efbe8ae7108f93f1fb785d0" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>hpf_states</name></member>
+      <member refid="structCODEC2_1a69db6d887f6674945e40c5a0c5680d35" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>lpc_pf</name></member>
+      <member refid="structCODEC2_1a2c54eae11a671618d2f5491869a7362c" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>mode</name></member>
+      <member refid="structCODEC2_1abcb055f551f3d72344c7d534a48ead54" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>nlp</name></member>
+      <member refid="structCODEC2_1a515dd383285a5863ef53e7991c40356f" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Pn</name></member>
+      <member refid="structCODEC2_1a7349ac698910f60b2829885edd33d512" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_e_dec</name></member>
+      <member refid="structCODEC2_1a2ae4ab599298dac1bd111c10a85ad7c7" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_lsps_dec</name></member>
+      <member refid="structCODEC2_1a683e5e2aa55e59b75604c47e6bc75b5d" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_model_dec</name></member>
+      <member refid="structCODEC2_1a7a48c3f726f2e32bf91d6f9eb9ce4db3" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>prev_Wo_enc</name></member>
+      <member refid="structCODEC2_1abd03d04f65276fd6cb028d2ef829e3ca" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>smoothing</name></member>
+      <member refid="structCODEC2_1a01173089b0922ba8a1fa97b166a44c07" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Sn</name></member>
+      <member refid="structCODEC2_1a5cb0415565e3bf98617802bb3552652a" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>Sn_</name></member>
+      <member refid="structCODEC2_1a981f0b27ea57f8de5dfc646e28c75764" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>softdec</name></member>
+      <member refid="structCODEC2_1ae35aa6e0ed2c51587399c7d46a7f4cfd" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>w</name></member>
+      <member refid="structCODEC2_1acd39f81c9cbe95f445e71ce46b906ebb" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>W</name></member>
+      <member refid="structCODEC2_1a0959f9dd11b0130feac26f24d33dfe3e" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>xq_dec</name></member>
+      <member refid="structCODEC2_1ad1dcf780ab2b66528a525c278d39abc5" prot="public" virt="non-virtual"><scope>CODEC2</scope><name>xq_enc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

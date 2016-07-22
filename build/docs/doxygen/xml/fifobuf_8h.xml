@@ -1,0 +1,433 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="fifobuf_8h" kind="file">
+    <compoundname>fifobuf.h</compoundname>
+    <includes local="no">stdbool.h</includes>
+    <includes local="no">stdint.h</includes>
+    <includedby refid="afsk_8h" local="yes">afsk.h</includedby>
+    <includedby refid="cc_8h" local="yes">cc.h</includedby>
+    <includedby refid="ccsds_8h" local="yes">ccsds.h</includedby>
+    <includedby refid="lilacsat1__frame__depack__impl_8h" local="yes">lilacsat1_frame_depack_impl.h</includedby>
+    <incdepgraph>
+      <node id="341">
+        <label>stdbool.h</label>
+      </node>
+      <node id="342">
+        <label>stdint.h</label>
+      </node>
+      <node id="340">
+        <label>fifobuf.h</label>
+        <link refid="fifobuf.h"/>
+        <childnode refid="341" relation="include">
+        </childnode>
+        <childnode refid="342" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="344">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="345" relation="include">
+        </childnode>
+        <childnode refid="347" relation="include">
+        </childnode>
+        <childnode refid="346" relation="include">
+        </childnode>
+      </node>
+      <node id="350">
+        <label>fec_decode_b_impl.h</label>
+        <link refid="fec__decode__b__impl_8h"/>
+      </node>
+      <node id="349">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="350" relation="include">
+        </childnode>
+        <childnode refid="351" relation="include">
+        </childnode>
+      </node>
+      <node id="346">
+        <label>afsk1200_tx_f_impl.h</label>
+        <link refid="afsk1200__tx__f__impl_8h"/>
+      </node>
+      <node id="348">
+        <label>cc.h</label>
+        <link refid="cc_8h"/>
+      </node>
+      <node id="347">
+        <label>afsk1200_rx_f_impl.h</label>
+        <link refid="afsk1200__rx__f__impl_8h"/>
+      </node>
+      <node id="345">
+        <label>aprs.h</label>
+        <link refid="aprs_8h"/>
+        <childnode refid="346" relation="include">
+        </childnode>
+      </node>
+      <node id="351">
+        <label>fec_encode_b_impl.h</label>
+        <link refid="fec__encode__b__impl_8h"/>
+      </node>
+      <node id="352">
+        <label>lilacsat1_frame_depack_impl.h</label>
+        <link refid="lilacsat1__frame__depack__impl_8h"/>
+      </node>
+      <node id="343">
+        <label>fifobuf.h</label>
+        <link refid="fifobuf.h"/>
+        <childnode refid="344" relation="include">
+        </childnode>
+        <childnode refid="348" relation="include">
+        </childnode>
+        <childnode refid="349" relation="include">
+        </childnode>
+        <childnode refid="352" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structFIFOBuffer" prot="public">FIFOBuffer</innerclass>
+    <innerclass refid="structFIFOBuffer__q15" prot="public">FIFOBuffer_q15</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="fifobuf_8h_1affde14445f49f65ff4f5b592e44ee71a" prot="public" static="no">
+        <name>LIKELY</name>
+        <param><defname>x</defname></param>
+        <initializer>__builtin_expect(!!(x), 1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="78" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fifobuf_8h_1ab10d0a221f4d7a706701b806c8135fd7" prot="public" static="no">
+        <name>UNLIKELY</name>
+        <param><defname>x</defname></param>
+        <initializer>__builtin_expect(!!(x), 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="79" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="fifobuf_8h_1a8dc599f454f12cd307ce42d98d7afeca" prot="public" static="no">
+        <name>ASSERT_VALID_FIFO</name>
+        <param><defname>fifo</defname></param>
+        <initializer>ATOMIC( \
+		ASSERT((fifo)-&gt;head &gt;= (fifo)-&gt;begin); \
+		ASSERT((fifo)-&gt;head &lt;= (fifo)-&gt;end); \
+		ASSERT((fifo)-&gt;tail &gt;= (fifo)-&gt;begin); \
+		ASSERT((fifo)-&gt;tail &lt;= (fifo)-&gt;end); \
+	)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="97" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="fifobuf_8h_1ab3a2d313ac9252a9ce492b50e6f1e9e2" prot="public" static="no">
+        <type>struct <ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>typedef struct FIFOBuffer  FIFOBuffer</definition>
+        <argsstring></argsstring>
+        <name>FIFOBuffer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="87" column="1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="fifobuf_8h_1ac585c090de7e75d6deb7c8c7f69fe59e" prot="public" static="no">
+        <type>struct <ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref></type>
+        <definition>typedef struct FIFOBuffer_q15  FIFOBuffer_q15</definition>
+        <argsstring></argsstring>
+        <name>FIFOBuffer_q15</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="fifobuf_8h_1a0e994927c90f3db3a6df6877e948b77a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fifo_isempty</definition>
+        <argsstring>(const FIFOBuffer *fb)</argsstring>
+        <name>fifo_isempty</name>
+        <param>
+          <type>const <ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a5512b0cb79c0e6ce6c56207e4e5fb153" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fifo_isempty_q15</definition>
+        <argsstring>(const FIFOBuffer_q15 *fb)</argsstring>
+        <name>fifo_isempty_q15</name>
+        <param>
+          <type>const <ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="106" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a5dc5785260c19521eb0988068cfbc2ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fifo_isfull</definition>
+        <argsstring>(const FIFOBuffer *fb)</argsstring>
+        <name>fifo_isfull</name>
+        <param>
+          <type>const <ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1afa93c0d02bb62cba8064b7a468445c82" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool fifo_isfull_q15</definition>
+        <argsstring>(const FIFOBuffer_q15 *fb)</argsstring>
+        <name>fifo_isfull_q15</name>
+        <param>
+          <type>const <ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a01378d7898645377242f0540b2df6a33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t fifo_room</definition>
+        <argsstring>(FIFOBuffer *fb)</argsstring>
+        <name>fifo_room</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1aa90a12236437f4c2c3205cd1f991a322" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fifo_push</definition>
+        <argsstring>(FIFOBuffer *fb, unsigned char c)</argsstring>
+        <name>fifo_push</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1af282e506f8038d4a40b42aca8ebe411b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fifo_push_q15</definition>
+        <argsstring>(FIFOBuffer_q15 *fb, int16_t c)</argsstring>
+        <name>fifo_push_q15</name>
+        <param>
+          <type><ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <param>
+          <type>int16_t</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a10b23a805dd320d7767e99087fa7df84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char fifo_pop</definition>
+        <argsstring>(FIFOBuffer *fb)</argsstring>
+        <name>fifo_pop</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="112" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a70ac220207fde0bc85c4af61cb7acf92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int16_t</type>
+        <definition>int16_t fifo_pop_q15</definition>
+        <argsstring>(FIFOBuffer_q15 *fb)</argsstring>
+        <name>fifo_pop_q15</name>
+        <param>
+          <type><ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="113" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a1fe72631d7832d6eb42cfdf839f9e66b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fifo_flush</definition>
+        <argsstring>(FIFOBuffer *fb)</argsstring>
+        <name>fifo_flush</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1ad010f560b4b625222f02cdb46857e46a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fifo_init</definition>
+        <argsstring>(FIFOBuffer *fb, unsigned char *buf, uint32_t size)</argsstring>
+        <name>fifo_init</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <param>
+          <type>unsigned char *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a05882230a660efa97e59e733d517970e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void fifo_init_q15</definition>
+        <argsstring>(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size)</argsstring>
+        <name>fifo_init_q15</name>
+        <param>
+          <type><ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <param>
+          <type>int16_t *</type>
+          <declname>buf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="116" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="fifobuf_8h_1a2679eb1394ca1c0db57e697730b2e28b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t fifo_len</definition>
+        <argsstring>(FIFOBuffer *fb)</argsstring>
+        <name>fifo_len</name>
+        <param>
+          <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref> *</type>
+          <declname>fb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h" line="117" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>General pourpose FIFO buffer implemented with a ring buffer. </para>    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para><computeroutput>begin</computeroutput> points to the first buffer element; </para></listitem>
+<listitem><para><computeroutput>end</computeroutput> points to the last buffer element (unlike the STL convention); </para></listitem>
+<listitem><para><computeroutput>head</computeroutput> points to the element to be extracted next; </para></listitem>
+<listitem><para><computeroutput>tail</computeroutput> points to the location following the last insertion; </para></listitem>
+<listitem><para>when any of the pointers advances beyond <computeroutput>end</computeroutput>, it is reset back to <computeroutput>begin</computeroutput>.</para></listitem>
+</itemizedlist>
+<programlisting><codeline><highlight class="normal">+-----------------------------------+</highlight></codeline>
+<codeline><highlight class="normal">|<sp/><sp/>empty<sp/><sp/>|<sp/><sp/><sp/>valid<sp/>data<sp/><sp/><sp/>|<sp/><sp/>empty<sp/>|</highlight></codeline>
+<codeline><highlight class="normal">+-----------------------------------+</highlight></codeline>
+<codeline><highlight class="normal">^<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>^<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>^<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>^</highlight></codeline>
+<codeline><highlight class="normal">begin<sp/><sp/><sp/><sp/>head<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tail<sp/><sp/><sp/><sp/><sp/>end</highlight></codeline>
+</programlisting></para><para>The buffer is EMPTY when <computeroutput>head</computeroutput> and <computeroutput>tail</computeroutput> point to the same location: <programlisting><codeline><highlight class="normal">head<sp/>==<sp/>tail<sp/></highlight></codeline>
+</programlisting></para><para>The buffer is FULL when <computeroutput>tail</computeroutput> points to the location immediately after <computeroutput>head:</computeroutput> <programlisting><codeline><highlight class="normal">tail<sp/>==<sp/>head<sp/>-<sp/>1<sp/></highlight></codeline>
+</programlisting></para><para>The buffer is also FULL when <computeroutput>tail</computeroutput> points to the last buffer location and head points to the first one: <programlisting><codeline><highlight class="normal">head<sp/>==<sp/>begin<sp/>&amp;&amp;<sp/>tail<sp/>==<sp/>end<sp/></highlight></codeline>
+</programlisting></para><para><simplesect kind="version"><para></para></simplesect>
+<simplesect kind="rcs"><title>Id:</title><para><ref refid="fifobuf_8h" kindref="compound">fifobuf.h</ref> 2506 2009-04-15 08:29:07Z duplo </para></simplesect>
+<simplesect kind="author"><para>Bernie Innocenti <ulink url="mailto:bernie@codewiz.org">bernie@codewiz.org</ulink> </para></simplesect>
+</para>    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/fifobuf.h"/>
+  </compounddef>
+</doxygen>

@@ -1734,7 +1734,7 @@
     </param>
     <param>
       <key>descrambling</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1766,7 +1766,7 @@
     </param>
     <param>
       <key>nrz</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>sync_word</key>
@@ -1789,7 +1789,7 @@
     </param>
     <param>
       <key>descrambling</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1821,7 +1821,7 @@
     </param>
     <param>
       <key>nrz</key>
-      <value>1</value>
+      <value>True</value>
     </param>
     <param>
       <key>sync_word</key>

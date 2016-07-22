@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="comp_8h" kind="file">
+    <compoundname>comp.h</compoundname>
+    <includedby refid="dump_8h" local="yes">dump.h</includedby>
+    <includedby refid="nlp_8h" local="yes">nlp.h</includedby>
+    <includedby refid="phase_8h" local="yes">phase.h</includedby>
+    <includedby refid="quantise_8h" local="yes">quantise.h</includedby>
+    <includedby refid="sine_8h" local="yes">sine.h</includedby>
+    <invincdepgraph>
+      <node id="260">
+        <label>phase.h</label>
+        <link refid="phase_8h"/>
+      </node>
+      <node id="258">
+        <label>dump.h</label>
+        <link refid="dump_8h"/>
+      </node>
+      <node id="262">
+        <label>sine.h</label>
+        <link refid="sine_8h"/>
+      </node>
+      <node id="257">
+        <label>comp.h</label>
+        <link refid="comp.h"/>
+        <childnode refid="258" relation="include">
+        </childnode>
+        <childnode refid="259" relation="include">
+        </childnode>
+        <childnode refid="260" relation="include">
+        </childnode>
+        <childnode refid="261" relation="include">
+        </childnode>
+        <childnode refid="262" relation="include">
+        </childnode>
+      </node>
+      <node id="259">
+        <label>nlp.h</label>
+        <link refid="nlp_8h"/>
+      </node>
+      <node id="261">
+        <label>quantise.h</label>
+        <link refid="quantise_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structCOMP" prot="public">COMP</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/comp.h"/>
+  </compounddef>
+</doxygen>

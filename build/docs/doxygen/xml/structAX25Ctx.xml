@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structAX25Ctx" kind="struct" prot="public">
+    <compoundname>AX25Ctx</compoundname>
+    <includes refid="ax25_8h" local="no">ax25.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAX25Ctx_1ab0ba422bb687dfaaecb7bcd704cd7b5c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t AX25Ctx::buf[CONFIG_AX25_FRAME_BUF_LEN]</definition>
+        <argsstring>[CONFIG_AX25_FRAME_BUF_LEN]</argsstring>
+        <name>buf</name>
+        <briefdescription>
+<para>buffer for received chars </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="35" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1a9eeed7428d5f20fe2b39d5ac70b09b44" prot="public" static="no" mutable="no">
+        <type><ref refid="structKFile" kindref="compound">KFile</ref> *</type>
+        <definition>KFile* AX25Ctx::ch</definition>
+        <argsstring></argsstring>
+        <name>ch</name>
+        <briefdescription>
+<para><ref refid="structKFile" kindref="compound">KFile</ref> used to access the physical medium. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="36" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1a6847b51a0225aec20c8d871bb139560b" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t AX25Ctx::frm_len</definition>
+        <argsstring></argsstring>
+        <name>frm_len</name>
+        <briefdescription>
+<para>received frame length. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="37" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1acba5c6c48b277cd5520a4060abac3a63" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AX25Ctx::crc_in</definition>
+        <argsstring></argsstring>
+        <name>crc_in</name>
+        <briefdescription>
+<para>CRC for current received frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="38" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1aea6a6b921e34e3ed514e4598a907adf1" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t AX25Ctx::crc_out</definition>
+        <argsstring></argsstring>
+        <name>crc_out</name>
+        <briefdescription>
+<para>CRC of current sent frame. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="39" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1aaf4149ca8e0ac15cb846f57b5a2056cd" prot="public" static="no" mutable="no">
+        <type><ref refid="ax25_8h_1a3a1fe0d63aa2e8a1de251791fd49cae9" kindref="member">ax25_callback_t</ref></type>
+        <definition>ax25_callback_t AX25Ctx::hook</definition>
+        <argsstring></argsstring>
+        <name>hook</name>
+        <briefdescription>
+<para>Hook function to be called when a message is received. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="40" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1a9ff9110cc05e86005aaab19c41aa3237" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AX25Ctx::sync</definition>
+        <argsstring></argsstring>
+        <name>sync</name>
+        <briefdescription>
+<para>True if we have received a HDLC flag. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="41" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1a2cf354b3ec66e851815667cf1ac43c06" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool AX25Ctx::escape</definition>
+        <argsstring></argsstring>
+        <name>escape</name>
+        <briefdescription>
+<para>True when we have to escape the following char. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="42" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAX25Ctx_1aeefcea00b70daf3c32776b8992f1a96d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* AX25Ctx::obj_ptr</definition>
+        <argsstring></argsstring>
+        <name>obj_ptr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="43" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>AX25 Protocol context. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="44">
+        <label>AX25Msg</label>
+        <link refid="structAX25Msg"/>
+        <childnode refid="45" relation="usage">
+          <edgelabel>rpt_lst</edgelabel>
+          <edgelabel>src</edgelabel>
+          <edgelabel>dst</edgelabel>
+        </childnode>
+      </node>
+      <node id="45">
+        <label>AX25Call</label>
+        <link refid="structAX25Call"/>
+      </node>
+      <node id="42">
+        <label>AX25Ctx</label>
+        <link refid="structAX25Ctx"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>ch</edgelabel>
+        </childnode>
+        <childnode refid="44" relation="usage">
+          <edgelabel>hook</edgelabel>
+        </childnode>
+      </node>
+      <node id="43">
+        <label>KFile</label>
+        <link refid="structKFile"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>clearerr</edgelabel>
+          <edgelabel>error</edgelabel>
+          <edgelabel>close</edgelabel>
+          <edgelabel>read</edgelabel>
+          <edgelabel>seek</edgelabel>
+          <edgelabel>write</edgelabel>
+          <edgelabel>reopen</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" line="34" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/ax25.h" bodystart="33" bodyend="44"/>
+    <listofallmembers>
+      <member refid="structAX25Ctx_1ab0ba422bb687dfaaecb7bcd704cd7b5c" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>buf</name></member>
+      <member refid="structAX25Ctx_1a9eeed7428d5f20fe2b39d5ac70b09b44" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>ch</name></member>
+      <member refid="structAX25Ctx_1acba5c6c48b277cd5520a4060abac3a63" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>crc_in</name></member>
+      <member refid="structAX25Ctx_1aea6a6b921e34e3ed514e4598a907adf1" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>crc_out</name></member>
+      <member refid="structAX25Ctx_1a2cf354b3ec66e851815667cf1ac43c06" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>escape</name></member>
+      <member refid="structAX25Ctx_1a6847b51a0225aec20c8d871bb139560b" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>frm_len</name></member>
+      <member refid="structAX25Ctx_1aaf4149ca8e0ac15cb846f57b5a2056cd" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>hook</name></member>
+      <member refid="structAX25Ctx_1aeefcea00b70daf3c32776b8992f1a96d" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>obj_ptr</name></member>
+      <member refid="structAX25Ctx_1a9ff9110cc05e86005aaab19c41aa3237" prot="public" virt="non-virtual"><scope>AX25Ctx</scope><name>sync</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

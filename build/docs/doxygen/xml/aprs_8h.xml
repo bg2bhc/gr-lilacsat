@@ -1,0 +1,140 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="aprs_8h" kind="file">
+    <compoundname>aprs.h</compoundname>
+    <includes refid="afsk_8h" local="yes">afsk.h</includes>
+    <includes refid="ax25_8h" local="yes">ax25.h</includes>
+    <includedby refid="afsk1200__tx__f__impl_8h" local="yes">afsk1200_tx_f_impl.h</includedby>
+    <incdepgraph>
+      <node id="125">
+        <label>stdbool.h</label>
+      </node>
+      <node id="128">
+        <label>bertos.h</label>
+        <link refid="bertos_8h"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="126">
+        <label>stdint.h</label>
+      </node>
+      <node id="123">
+        <label>afsk.h</label>
+        <link refid="afsk_8h"/>
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="129" relation="include">
+        </childnode>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="127">
+        <label>kfile.h</label>
+        <link refid="kfile_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+      </node>
+      <node id="131">
+        <label>cfg_ax25.h</label>
+        <link refid="cfg__ax25_8h"/>
+      </node>
+      <node id="122">
+        <label>aprs.h</label>
+        <link refid="aprs.h"/>
+        <childnode refid="123" relation="include">
+        </childnode>
+        <childnode refid="130" relation="include">
+        </childnode>
+      </node>
+      <node id="130">
+        <label>ax25.h</label>
+        <link refid="ax25_8h"/>
+        <childnode refid="128" relation="include">
+        </childnode>
+        <childnode refid="127" relation="include">
+        </childnode>
+        <childnode refid="131" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
+        <label>fifobuf.h</label>
+        <link refid="fifobuf_8h"/>
+        <childnode refid="125" relation="include">
+        </childnode>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="129">
+        <label>cfg_afsk.h</label>
+        <link refid="cfg__afsk_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="133">
+        <label>afsk1200_tx_f_impl.h</label>
+        <link refid="afsk1200__tx__f__impl_8h"/>
+      </node>
+      <node id="132">
+        <label>aprs.h</label>
+        <link refid="aprs.h"/>
+        <childnode refid="133" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="aprs_8h_1ae951ea5239bc5acec426493a71933097" prot="public" static="no" mutable="no">
+        <type><ref refid="structAX25Ctx" kindref="compound">AX25Ctx</ref></type>
+        <definition>AX25Ctx ax25</definition>
+        <argsstring></argsstring>
+        <name>ax25</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/aprs.h" line="7" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="aprs_8h_1a674800bb75f13b7d82a8ab7b2a4ecbc6" prot="public" static="no" mutable="no">
+        <type><ref refid="structAfsk" kindref="compound">Afsk</ref></type>
+        <definition>Afsk afsk</definition>
+        <argsstring></argsstring>
+        <name>afsk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/aprs.h" line="8" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="aprs_8h_1a87d5e9a9ebe7b805212a3136f389f045" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void aprs_init</definition>
+        <argsstring>(void)</argsstring>
+        <name>aprs_init</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/aprs.h" line="6" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/aprs.h"/>
+  </compounddef>
+</doxygen>

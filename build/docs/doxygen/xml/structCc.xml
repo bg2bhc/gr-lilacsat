@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structCc" kind="struct" prot="public">
+    <compoundname>Cc</compoundname>
+    <includes refid="cc_8h" local="no">cc.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structCc_1a2ca8d9597e43df5a84bb0339a5542435" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>FIFOBuffer Cc::tx_fifo</definition>
+        <argsstring></argsstring>
+        <name>tx_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="25" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1a1d6539b4fe34d68cea37d552a175abef" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::tx_buf[CONFIG_CCSDS_TX_BUFLEN]</definition>
+        <argsstring>[CONFIG_CCSDS_TX_BUFLEN]</argsstring>
+        <name>tx_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="26" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1ae30dd62c17c5c95303abeec6f6608b4c" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::flag_ctcss</definition>
+        <argsstring></argsstring>
+        <name>flag_ctcss</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="27" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1a915d48747e91632952fb66cf03950e2a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::codec2_bits[7]</definition>
+        <argsstring>[7]</argsstring>
+        <name>codec2_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="28" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1ab1a9b78a51e5895e2c86c6497e4c958a" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::i_byte_in_frame</definition>
+        <argsstring></argsstring>
+        <name>i_byte_in_frame</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="29" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1aea3563eed4dd95e243a31a1f381ac8a4" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Cc::n_preamble</definition>
+        <argsstring></argsstring>
+        <name>n_preamble</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="30" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1ad3ca267545529b4e65dd82d21195e429" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::tx_bit_state</definition>
+        <argsstring></argsstring>
+        <name>tx_bit_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="31" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structCc_1a5ba54c1db3afe027033ed38bdd1bab40" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Cc::encstate</definition>
+        <argsstring></argsstring>
+        <name>encstate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="32" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="63">
+        <label>Cc</label>
+        <link refid="structCc"/>
+        <childnode refid="64" relation="usage">
+          <edgelabel>tx_fifo</edgelabel>
+        </childnode>
+      </node>
+      <node id="64">
+        <label>FIFOBuffer</label>
+        <link refid="structFIFOBuffer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" line="24" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/ccsds/cc.h" bodystart="23" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structCc_1a915d48747e91632952fb66cf03950e2a" prot="public" virt="non-virtual"><scope>Cc</scope><name>codec2_bits</name></member>
+      <member refid="structCc_1a5ba54c1db3afe027033ed38bdd1bab40" prot="public" virt="non-virtual"><scope>Cc</scope><name>encstate</name></member>
+      <member refid="structCc_1ae30dd62c17c5c95303abeec6f6608b4c" prot="public" virt="non-virtual"><scope>Cc</scope><name>flag_ctcss</name></member>
+      <member refid="structCc_1ab1a9b78a51e5895e2c86c6497e4c958a" prot="public" virt="non-virtual"><scope>Cc</scope><name>i_byte_in_frame</name></member>
+      <member refid="structCc_1aea3563eed4dd95e243a31a1f381ac8a4" prot="public" virt="non-virtual"><scope>Cc</scope><name>n_preamble</name></member>
+      <member refid="structCc_1ad3ca267545529b4e65dd82d21195e429" prot="public" virt="non-virtual"><scope>Cc</scope><name>tx_bit_state</name></member>
+      <member refid="structCc_1a1d6539b4fe34d68cea37d552a175abef" prot="public" virt="non-virtual"><scope>Cc</scope><name>tx_buf</name></member>
+      <member refid="structCc_1a2ca8d9597e43df5a84bb0339a5542435" prot="public" virt="non-virtual"><scope>Cc</scope><name>tx_fifo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

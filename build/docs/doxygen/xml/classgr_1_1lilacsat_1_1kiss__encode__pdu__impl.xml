@@ -1,0 +1,201 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl" kind="class" prot="public">
+    <compoundname>gr::lilacsat::kiss_encode_pdu_impl</compoundname>
+    <basecompoundref refid="classgr_1_1lilacsat_1_1kiss__encode__pdu" prot="public" virt="non-virtual">gr::lilacsat::kiss_encode_pdu</basecompoundref>
+    <includes refid="kiss__encode__pdu__impl_8h" local="no">kiss_encode_pdu_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1aee6581eec0b4f999150490e4156ff052" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::lilacsat::kiss_encode_pdu_impl::d_const_length</definition>
+        <argsstring></argsstring>
+        <name>d_const_length</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a87077d32d716e0f8f947dccc48485b09" prot="private" static="no" mutable="no">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t gr::lilacsat::kiss_encode_pdu_impl::d_in_port</definition>
+        <argsstring></argsstring>
+        <name>d_in_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="45" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a69380e69e1067b2fe60286c793d10a52" prot="private" static="no" mutable="no">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t gr::lilacsat::kiss_encode_pdu_impl::d_out_port</definition>
+        <argsstring></argsstring>
+        <name>d_out_port</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="46" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a5c6cf98e64f0574bf6440ac6fb1ca01f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::lilacsat::kiss_encode_pdu_impl::pmt_in_callback</definition>
+        <argsstring>(pmt::pmt_t msg)</argsstring>
+        <name>pmt_in_callback</name>
+        <param>
+          <type>pmt::pmt_t</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="48" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a165a20d253939ca09221108018821901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::kiss_encode_pdu_impl::kiss_encode_pdu_impl</definition>
+        <argsstring>(int const_length)</argsstring>
+        <name>kiss_encode_pdu_impl</name>
+        <param>
+          <type>int</type>
+          <declname>const_length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a9a46e222af7f7bb6b64775a70b34eab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::lilacsat::kiss_encode_pdu_impl::~kiss_encode_pdu_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~kiss_encode_pdu_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a3f7bd9a4a0fbe7094862a7d221ed1c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::lilacsat::kiss_encode_pdu_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a8fab9153161dd67e129ccaeebf999e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::lilacsat::kiss_encode_pdu_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="184">
+        <label>gr::lilacsat::kiss_encode_pdu_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl"/>
+        <childnode refid="185" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="186">
+        <label>block</label>
+      </node>
+      <node id="185">
+        <label>gr::lilacsat::kiss_encode_pdu</label>
+        <link refid="classgr_1_1lilacsat_1_1kiss__encode__pdu"/>
+        <childnode refid="186" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="187">
+        <label>gr::lilacsat::kiss_encode_pdu_impl</label>
+        <link refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl"/>
+        <childnode refid="188" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>block</label>
+      </node>
+      <node id="188">
+        <label>gr::lilacsat::kiss_encode_pdu</label>
+        <link refid="classgr_1_1lilacsat_1_1kiss__encode__pdu"/>
+        <childnode refid="189" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" line="42" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/kiss_encode_pdu_impl.h" bodystart="41" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1aee6581eec0b4f999150490e4156ff052" prot="private" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>d_const_length</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a87077d32d716e0f8f947dccc48485b09" prot="private" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>d_in_port</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a69380e69e1067b2fe60286c793d10a52" prot="private" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>d_out_port</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a3f7bd9a4a0fbe7094862a7d221ed1c42" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a8fab9153161dd67e129ccaeebf999e65" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a165a20d253939ca09221108018821901" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>kiss_encode_pdu_impl</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu_1a53be610744f8d23b8e04549897c3908c" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a5c6cf98e64f0574bf6440ac6fb1ca01f" prot="private" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>pmt_in_callback</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu_1a9848a1310898580206ef0074e473b8e8" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1lilacsat_1_1kiss__encode__pdu__impl_1a9a46e222af7f7bb6b64775a70b34eab4" prot="public" virt="non-virtual"><scope>gr::lilacsat::kiss_encode_pdu_impl</scope><name>~kiss_encode_pdu_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

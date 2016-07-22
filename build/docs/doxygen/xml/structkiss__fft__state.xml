@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structkiss__fft__state" kind="struct" prot="public">
+    <compoundname>kiss_fft_state</compoundname>
+    <includes refid="__kiss__fft__guts_8h" local="no">_kiss_fft_guts.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structkiss__fft__state_1aa7446bded329a40e13aef0826e349791" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int kiss_fft_state::nfft</definition>
+        <argsstring></argsstring>
+        <name>nfft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" line="29" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__fft__state_1a8faed935610ffb08bf7ad9ea8d6c81d2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int kiss_fft_state::inverse</definition>
+        <argsstring></argsstring>
+        <name>inverse</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" line="30" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__fft__state_1a2d5d0897276dbac0674fae556f951d18" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int kiss_fft_state::factors[2 *MAXFACTORS]</definition>
+        <argsstring>[2 *MAXFACTORS]</argsstring>
+        <name>factors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" line="31" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structkiss__fft__state_1aa7d1cab86ec03a8ecddfe0d91ef0bd20" prot="public" static="no" mutable="no">
+        <type><ref refid="structkiss__fft__cpx" kindref="compound">kiss_fft_cpx</ref></type>
+        <definition>kiss_fft_cpx kiss_fft_state::twiddles[1]</definition>
+        <argsstring>[1]</argsstring>
+        <name>twiddles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" line="32" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="194">
+        <label>kiss_fft_cpx</label>
+        <link refid="structkiss__fft__cpx"/>
+      </node>
+      <node id="193">
+        <label>kiss_fft_state</label>
+        <link refid="structkiss__fft__state"/>
+        <childnode refid="194" relation="usage">
+          <edgelabel>twiddles</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" line="28" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/_kiss_fft_guts.h" bodystart="28" bodyend="33"/>
+    <listofallmembers>
+      <member refid="structkiss__fft__state_1a2d5d0897276dbac0674fae556f951d18" prot="public" virt="non-virtual"><scope>kiss_fft_state</scope><name>factors</name></member>
+      <member refid="structkiss__fft__state_1a8faed935610ffb08bf7ad9ea8d6c81d2" prot="public" virt="non-virtual"><scope>kiss_fft_state</scope><name>inverse</name></member>
+      <member refid="structkiss__fft__state_1aa7446bded329a40e13aef0826e349791" prot="public" virt="non-virtual"><scope>kiss_fft_state</scope><name>nfft</name></member>
+      <member refid="structkiss__fft__state_1aa7d1cab86ec03a8ecddfe0d91ef0bd20" prot="public" virt="non-virtual"><scope>kiss_fft_state</scope><name>twiddles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

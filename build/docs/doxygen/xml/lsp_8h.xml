@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="lsp_8h" kind="file">
+    <compoundname>lsp.h</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lsp_8h_1a215f83233ef7ab82bf51a8c074760da0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lpc_to_lsp</definition>
+        <argsstring>(float *a, int lpcrdr, float *freq, int nb, float delta)</argsstring>
+        <name>lpc_to_lsp</name>
+        <param>
+          <type>float *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lpcrdr</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nb</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/lsp.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="lsp_8h_1a27556b38cd4cafb48328fcba273c531a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void lsp_to_lpc</definition>
+        <argsstring>(float *freq, float *ak, int lpcrdr)</argsstring>
+        <name>lsp_to_lpc</name>
+        <param>
+          <type>float *</type>
+          <declname>freq</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>ak</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lpcrdr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/lsp.h" line="35" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/lsp.h"/>
+  </compounddef>
+</doxygen>

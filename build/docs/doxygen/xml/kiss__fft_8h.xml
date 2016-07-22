@@ -1,0 +1,281 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="kiss__fft_8h" kind="file">
+    <compoundname>kiss_fft.h</compoundname>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">math.h</includes>
+    <includes local="no">string.h</includes>
+    <includedby refid="__kiss__fft__guts_8h" local="yes">_kiss_fft_guts.h</includedby>
+    <includedby refid="dump_8h" local="yes">dump.h</includedby>
+    <includedby refid="interp_8h" local="yes">interp.h</includedby>
+    <includedby refid="phase_8h" local="yes">phase.h</includedby>
+    <includedby refid="quantise_8h" local="yes">quantise.h</includedby>
+    <includedby refid="sine_8h" local="yes">sine.h</includedby>
+    <incdepgraph>
+      <node id="420">
+        <label>stdlib.h</label>
+      </node>
+      <node id="423">
+        <label>string.h</label>
+      </node>
+      <node id="422">
+        <label>math.h</label>
+      </node>
+      <node id="419">
+        <label>kiss_fft.h</label>
+        <link refid="kiss_fft.h"/>
+        <childnode refid="420" relation="include">
+        </childnode>
+        <childnode refid="421" relation="include">
+        </childnode>
+        <childnode refid="422" relation="include">
+        </childnode>
+        <childnode refid="423" relation="include">
+        </childnode>
+      </node>
+      <node id="421">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="428">
+        <label>phase.h</label>
+        <link refid="phase_8h"/>
+      </node>
+      <node id="426">
+        <label>dump.h</label>
+        <link refid="dump_8h"/>
+      </node>
+      <node id="430">
+        <label>sine.h</label>
+        <link refid="sine_8h"/>
+      </node>
+      <node id="425">
+        <label>_kiss_fft_guts.h</label>
+        <link refid="__kiss__fft__guts_8h"/>
+      </node>
+      <node id="424">
+        <label>kiss_fft.h</label>
+        <link refid="kiss_fft.h"/>
+        <childnode refid="425" relation="include">
+        </childnode>
+        <childnode refid="426" relation="include">
+        </childnode>
+        <childnode refid="427" relation="include">
+        </childnode>
+        <childnode refid="428" relation="include">
+        </childnode>
+        <childnode refid="429" relation="include">
+        </childnode>
+        <childnode refid="430" relation="include">
+        </childnode>
+      </node>
+      <node id="429">
+        <label>quantise.h</label>
+        <link refid="quantise_8h"/>
+      </node>
+      <node id="427">
+        <label>interp.h</label>
+        <link refid="interp_8h"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structkiss__fft__cpx" prot="public">kiss_fft_cpx</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="kiss__fft_8h_1aa6e24524bfa0247ac606c950e43a9a4d" prot="public" static="no">
+        <name>KISS_FFT_MALLOC</name>
+        <initializer>malloc</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="32" column="10" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__fft_8h_1a167bff53d1f15bc13289353390b7faae" prot="public" static="no">
+        <name>KISS_FFT_FREE</name>
+        <initializer>free</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="33" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__fft_8h_1a4d9bf2d6a2ce1b061545a16faf77d337" prot="public" static="no">
+        <name>kiss_fft_scalar</name>
+        <initializer>float</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="47" column="12" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__fft_8h_1a62e86236e852945b8e120d0228377d71" prot="public" static="no">
+        <name>kiss_fft_free</name>
+        <initializer>free</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="102" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="kiss__fft_8h_1ad5d759d8e80434375e61c6a7de9aee79" prot="public" static="no">
+        <name>kiss_fftr_next_fast_size_real</name>
+        <param><defname>n</defname></param>
+        <initializer>(<ref refid="kiss__fft_8h_1a26b8ac31a43a356943061318831508e9" kindref="member">kiss_fft_next_fast_size</ref>( ((n)+1)&gt;&gt;1)&lt;&lt;1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="117" column="9" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" prot="public" static="no">
+        <type>struct <ref refid="structkiss__fft__state" kindref="compound">kiss_fft_state</ref> *</type>
+        <definition>typedef struct kiss_fft_state* kiss_fft_cfg</definition>
+        <argsstring></argsstring>
+        <name>kiss_fft_cfg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="56" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="kiss__fft_8h_1ab5ad1560b58375ec071da45401911358" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+        <definition>kiss_fft_cfg kiss_fft_alloc</definition>
+        <argsstring>(int nfft, int inverse_fft, void *mem, size_t *lenmem)</argsstring>
+        <name>kiss_fft_alloc</name>
+        <param>
+          <type>int</type>
+          <declname>nfft</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>inverse_fft</declname>
+        </param>
+        <param>
+          <type>void *</type>
+          <declname>mem</declname>
+        </param>
+        <param>
+          <type>size_t *</type>
+          <declname>lenmem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="81" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__fft_8h_1ab36e2bb33b74c1a7eabe3271d0916030" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kiss_fft</definition>
+        <argsstring>(kiss_fft_cfg cfg, const kiss_fft_cpx *fin, kiss_fft_cpx *fout)</argsstring>
+        <name>kiss_fft</name>
+        <param>
+          <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkiss__fft__cpx" kindref="compound">kiss_fft_cpx</ref> *</type>
+          <declname>fin</declname>
+        </param>
+        <param>
+          <type><ref refid="structkiss__fft__cpx" kindref="compound">kiss_fft_cpx</ref> *</type>
+          <declname>fout</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__fft_8h_1a240e0a77bb991890d609f498f9c75ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kiss_fft_stride</definition>
+        <argsstring>(kiss_fft_cfg cfg, const kiss_fft_cpx *fin, kiss_fft_cpx *fout, int fin_stride)</argsstring>
+        <name>kiss_fft_stride</name>
+        <param>
+          <type><ref refid="kiss__fft_8h_1ab8c364e12d4cbde47dca54eb4bc3ce79" kindref="member">kiss_fft_cfg</ref></type>
+          <declname>cfg</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structkiss__fft__cpx" kindref="compound">kiss_fft_cpx</ref> *</type>
+          <declname>fin</declname>
+        </param>
+        <param>
+          <type><ref refid="structkiss__fft__cpx" kindref="compound">kiss_fft_cpx</ref> *</type>
+          <declname>fout</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fin_stride</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__fft_8h_1aab7972365fc8f30a13eed91fa29172ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void kiss_fft_cleanup</definition>
+        <argsstring>(void)</argsstring>
+        <name>kiss_fft_cleanup</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="108" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="kiss__fft_8h_1a26b8ac31a43a356943061318831508e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int kiss_fft_next_fast_size</definition>
+        <argsstring>(int n)</argsstring>
+        <name>kiss_fft_next_fast_size</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h" line="114" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/codec2/kiss_fft.h"/>
+  </compounddef>
+</doxygen>

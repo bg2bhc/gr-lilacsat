@@ -1,0 +1,2678 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="classPlan13" kind="class" prot="public">
+    <compoundname>Plan13</compoundname>
+    <includes refid="Plan13_8h" local="no">Plan13.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classPlan13_1a22cb44ef25d492211f4af1613762acec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::rx</definition>
+        <argsstring></argsstring>
+        <name>rx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="43" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a70274a4d8076305704ce67fe06233e1e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::tx</definition>
+        <argsstring></argsstring>
+        <name>tx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="43" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a4712a8aea2dfe07de7f925848453fa07" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::observer_lon</definition>
+        <argsstring></argsstring>
+        <name>observer_lon</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="44" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adad80790bc0517ddc1c4b6e8d21ee665" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::observer_lat</definition>
+        <argsstring></argsstring>
+        <name>observer_lat</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="45" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a5b42b1e34f70cb9a74e800d2781d92f3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Plan13::observer_height</definition>
+        <argsstring></argsstring>
+        <name>observer_height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="46" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8684064bdfb7fc359bcc1523e71a5e0f" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Plan13::rxOutLong</definition>
+        <argsstring></argsstring>
+        <name>rxOutLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="47" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a3c7f81e4e2f5415ca9b2fe108755e75b" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Plan13::txOutLong</definition>
+        <argsstring></argsstring>
+        <name>txOutLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="48" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1acf5a01ffd06d943574a678d84741a391" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Plan13::rxFrequencyLong</definition>
+        <argsstring></argsstring>
+        <name>rxFrequencyLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="49" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a6c59530175a94a5c872a012717597836" prot="public" static="no" mutable="no">
+        <type>unsigned long</type>
+        <definition>unsigned long Plan13::txFrequencyLong</definition>
+        <argsstring></argsstring>
+        <name>txFrequencyLong</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="50" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ab030246db55cb0477a49b81e83b09233" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Plan13::dopplerFactor</definition>
+        <argsstring></argsstring>
+        <name>dopplerFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="51" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a6c939808b688d0e9721ac9fa07797d97" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::EL</definition>
+        <argsstring></argsstring>
+        <name>EL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a25cb6fc31c7364dd6ad6eae5189f033a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::TN</definition>
+        <argsstring></argsstring>
+        <name>TN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="54" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a45a76ba9ebc62ff736b2538e55d3c97b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::E</definition>
+        <argsstring></argsstring>
+        <name>E</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="56" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a81e62fe904cb1a2d11d845cb4d0332d1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::N</definition>
+        <argsstring></argsstring>
+        <name>N</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="57" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a39f590d46a3d764cfbdc3514e638bcdc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::AZ</definition>
+        <argsstring></argsstring>
+        <name>AZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="58" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a23551f0f37864f59a7ba8bdda1dbaae7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SLON</definition>
+        <argsstring></argsstring>
+        <name>SLON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="59" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a23081e32bcfa3749fb96639ee823c029" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SLAT</definition>
+        <argsstring></argsstring>
+        <name>SLAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="60" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a367beca2264899bc3b592ac31e614460" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RR</definition>
+        <argsstring></argsstring>
+        <name>RR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="61" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7043c00795b767f5db18c14c9356ba54" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CL</definition>
+        <argsstring></argsstring>
+        <name>CL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="63" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8b7d4a89f0d80eb982d02527d2d1d4c6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CS</definition>
+        <argsstring></argsstring>
+        <name>CS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="64" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ab2bd7bc7d3ef6c03698b34af71a5ce55" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SL</definition>
+        <argsstring></argsstring>
+        <name>SL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="65" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a744512014b0cf309abe58ff3efd36e53" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CO</definition>
+        <argsstring></argsstring>
+        <name>CO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="66" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad2e9f19c2796e099082e8896b70b5d07" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SO</definition>
+        <argsstring></argsstring>
+        <name>SO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="67" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8b5b10a6fe65256c2f2be1254de22c69" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RE</definition>
+        <argsstring></argsstring>
+        <name>RE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="68" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a238f9c4dfdccd02885c04c42680f8935" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::FL</definition>
+        <argsstring></argsstring>
+        <name>FL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="69" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ab47d65f86b88361de51fa25ca628a43b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RP</definition>
+        <argsstring></argsstring>
+        <name>RP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="70" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a48b05fbcc0f313c58b89d148f75932c2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::XX</definition>
+        <argsstring></argsstring>
+        <name>XX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="71" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ae908afcd90c6bc7fbb7f587a874cffc5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ZZ</definition>
+        <argsstring></argsstring>
+        <name>ZZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="72" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7a42949ba37a18d807b07f9e62adeae5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::D</definition>
+        <argsstring></argsstring>
+        <name>D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="73" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a95616820b0c589481430242a0eb3ea02" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::R</definition>
+        <argsstring></argsstring>
+        <name>R</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="74" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a42d185ce87fa8cd8eb5873931ead327d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Rx</definition>
+        <argsstring></argsstring>
+        <name>Rx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="75" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a4dc3524c4d499c1adcec90c946da87a4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ry</definition>
+        <argsstring></argsstring>
+        <name>Ry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="76" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9d574e103d5fd909648db776ec3022af" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Rz</definition>
+        <argsstring></argsstring>
+        <name>Rz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="77" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aff2e8f5c368acdb9f438eb2fbb4309c2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ex</definition>
+        <argsstring></argsstring>
+        <name>Ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="78" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad017163696effef3e322144edc9f408f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ey</definition>
+        <argsstring></argsstring>
+        <name>Ey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="79" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ace92d1f6f51b5ab303058685f09bc650" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ez</definition>
+        <argsstring></argsstring>
+        <name>Ez</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="80" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1af01502defc82251f11581cf448859108" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ny</definition>
+        <argsstring></argsstring>
+        <name>Ny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="81" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a70eb702fd25ac16c478f3bb252aeacc7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Nx</definition>
+        <argsstring></argsstring>
+        <name>Nx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="82" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8c6558be65e1404cb75f4948fcb63027" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Nz</definition>
+        <argsstring></argsstring>
+        <name>Nz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="83" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad344af35526b62d42191e432aa4bf7d6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ox</definition>
+        <argsstring></argsstring>
+        <name>Ox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="84" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9583bf8f3c885a2a95e648247ffb74d4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Oy</definition>
+        <argsstring></argsstring>
+        <name>Oy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="85" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a762dc3709179dc264def3c0b8025758b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Oz</definition>
+        <argsstring></argsstring>
+        <name>Oz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="86" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adabec727151dfd728c664c6377ed05b0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="87" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a56f65a45a66a645202eb2073931d0868" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ux</definition>
+        <argsstring></argsstring>
+        <name>Ux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="88" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad69a4035a6fdcb36be17cfba44a1ab32" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Uy</definition>
+        <argsstring></argsstring>
+        <name>Uy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="89" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aac92de924f0f9837dbb5a9dd7d13cb11" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Uz</definition>
+        <argsstring></argsstring>
+        <name>Uz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="90" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8e2d6ef1c716ec6bf00c101609bb3381" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::WW</definition>
+        <argsstring></argsstring>
+        <name>WW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="92" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1af339dd42b1000420acf1b5e93d539b9f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::WE</definition>
+        <argsstring></argsstring>
+        <name>WE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="93" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adc7521908243435103c36585219fcd51" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::W0</definition>
+        <argsstring></argsstring>
+        <name>W0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="94" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1af45e4aa0a5ab7d99c002b6f0eacee269" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VOx</definition>
+        <argsstring></argsstring>
+        <name>VOx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="95" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a2abe31b84fa89979b8773ccfa1f44aaf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VOy</definition>
+        <argsstring></argsstring>
+        <name>VOy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="96" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aaac7ac59f3b7a9e6ef0bd541da2457f8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VOz</definition>
+        <argsstring></argsstring>
+        <name>VOz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="97" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a5b2b19f0432ef575fb344334fb35f63c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DE</definition>
+        <argsstring></argsstring>
+        <name>DE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="98" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adc17f100c108875ed2f9bcac41ba002c" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::GM</definition>
+        <argsstring></argsstring>
+        <name>GM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="99" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad92f3443111b774a1a3a785b0eeb9208" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::J2</definition>
+        <argsstring></argsstring>
+        <name>J2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="100" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a1811c0af9215ebd6cfc906741ef37182" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::N0</definition>
+        <argsstring></argsstring>
+        <name>N0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="101" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1acb080aa252f966bcd61658bc205fef8f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::A0</definition>
+        <argsstring></argsstring>
+        <name>A0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="102" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a6ae789e403b5196420e4c0f8706bf331" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::b0</definition>
+        <argsstring></argsstring>
+        <name>b0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="103" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1afe887879485a149bbda8256c2a64e802" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SI</definition>
+        <argsstring></argsstring>
+        <name>SI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="104" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a5feca16ab700b74ff8787456ec9947b1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CI</definition>
+        <argsstring></argsstring>
+        <name>CI</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="105" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a0f665255fa4775bfea4b5cc1a74b1d06" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::PC</definition>
+        <argsstring></argsstring>
+        <name>PC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="106" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a91818fcb23d2a7c7ca21645f4793060b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::QD</definition>
+        <argsstring></argsstring>
+        <name>QD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="107" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a4785fa373cb368f3eac1e37cfb802691" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::WD</definition>
+        <argsstring></argsstring>
+        <name>WD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="108" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1acd61d02a8b40ec1259674bf96464abc2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DC</definition>
+        <argsstring></argsstring>
+        <name>DC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="109" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a67fd65243a81ca10e0164409317d4516" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::YG</definition>
+        <argsstring></argsstring>
+        <name>YG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="110" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ae4f9dbe68fabd0c19b9513bccb3f986a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::G0</definition>
+        <argsstring></argsstring>
+        <name>G0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="111" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a5f3ba588078049ee79408f3787046057" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MAS0</definition>
+        <argsstring></argsstring>
+        <name>MAS0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="112" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a3b91be2bc919478693cf5c29ef1c2124" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MASD</definition>
+        <argsstring></argsstring>
+        <name>MASD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="113" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aa0deb223e38e4c9ff2407c19f60efad5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::INS</definition>
+        <argsstring></argsstring>
+        <name>INS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="114" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aa39bfab719cd041946a4f6557904633d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CNS</definition>
+        <argsstring></argsstring>
+        <name>CNS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="115" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1afcf0e8b7ae96b007f6b156298e29bd38" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SNS</definition>
+        <argsstring></argsstring>
+        <name>SNS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="116" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a2c2fafaa772f83bb6c26e58f5b56a0fc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::EQC1</definition>
+        <argsstring></argsstring>
+        <name>EQC1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="117" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a283e98475799143ea2d5e96efb7ae0d4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::EQC2</definition>
+        <argsstring></argsstring>
+        <name>EQC2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="118" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ac369f95c4a991df1f17b6d1f62eb5775" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::TEG</definition>
+        <argsstring></argsstring>
+        <name>TEG</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="119" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adc883d0dfc2ee417990941ea0d941c7b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::GHAE</definition>
+        <argsstring></argsstring>
+        <name>GHAE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="120" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ab0e09c798ba4b30df2e02018892a0a34" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MRSE</definition>
+        <argsstring></argsstring>
+        <name>MRSE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="121" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a501ef3c4f0532c484864c0c7610229e6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MASE</definition>
+        <argsstring></argsstring>
+        <name>MASE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="122" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a532f1cbfed6cf5e279c8e98e1a54b552" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ax</definition>
+        <argsstring></argsstring>
+        <name>ax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="123" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a38051d2d371742a19e375aadca0a9164" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ay</definition>
+        <argsstring></argsstring>
+        <name>ay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="124" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aa45aa05834d4d93bbcc43ecc4eceabe4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::az</definition>
+        <argsstring></argsstring>
+        <name>az</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="125" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aa78e664441f237ecd59bf48cb9e9f536" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Plan13::OLDRN</definition>
+        <argsstring></argsstring>
+        <name>OLDRN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="126" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a6d2ca3808f9603bdd91bd318c060bfd1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="128" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aaf491ef74b2dd5501df238d1d70d1ebe" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="129" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a2b005d041916541800832e04f6e120f9" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::KD</definition>
+        <argsstring></argsstring>
+        <name>KD</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="130" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a97d6dc3c65a13fca78bc006a021930a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::KDP</definition>
+        <argsstring></argsstring>
+        <name>KDP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="131" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a0b043dfd2c2dc2f0bd76bc6a47d75751" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::M</definition>
+        <argsstring></argsstring>
+        <name>M</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="132" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a42137196250ce82a94def6a75446ec39" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Plan13::DR</definition>
+        <argsstring></argsstring>
+        <name>DR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="133" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a21c0ed4ea3d29e7ca19fd5947f47e781" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Plan13::RN</definition>
+        <argsstring></argsstring>
+        <name>RN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="134" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9fa693409e0e99ad169fb7a0ac58a801" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::EA</definition>
+        <argsstring></argsstring>
+        <name>EA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="135" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a732070c21a4164722fbc69430b95582e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::C</definition>
+        <argsstring></argsstring>
+        <name>C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="136" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a5eddc508ce233b4c1dc5d5f39b8b0334" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::S</definition>
+        <argsstring></argsstring>
+        <name>S</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="137" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a474d6bb6662fbbba5c3d040231c10619" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DNOM</definition>
+        <argsstring></argsstring>
+        <name>DNOM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="138" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1adb0db5b90ba605e46038f035550af7ed" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="139" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a26a0036245f18d5cf2af9131ef15a639" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::B</definition>
+        <argsstring></argsstring>
+        <name>B</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="140" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a85e5c6656ca2be94003957b76f5d2a4d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RS</definition>
+        <argsstring></argsstring>
+        <name>RS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="141" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a97aa609028b21538c6089042e47104c2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Sx</definition>
+        <argsstring></argsstring>
+        <name>Sx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="142" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad5d954f5a16d3a2d4e7c1c42962f1581" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Sy</definition>
+        <argsstring></argsstring>
+        <name>Sy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="143" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a54a15bda3ab7521c246705fbc88d6788" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Vx</definition>
+        <argsstring></argsstring>
+        <name>Vx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="145" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a3e83cdc0810d35e9a3a35cbac9e9b4bc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Vy</definition>
+        <argsstring></argsstring>
+        <name>Vy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="146" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ae964089e9c15f6035196a7c57da0d800" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Vz</definition>
+        <argsstring></argsstring>
+        <name>Vz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="147" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a839494d73db7628beafce94b1d48c17e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::AP</definition>
+        <argsstring></argsstring>
+        <name>AP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="148" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a26c684da2d138ab82cc408532cde1014" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CW</definition>
+        <argsstring></argsstring>
+        <name>CW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="149" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a49ff895fc08357904f5228967907cedf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SW</definition>
+        <argsstring></argsstring>
+        <name>SW</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="150" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad2de77c736c124a74e6e2ae65af07c3b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RAAN</definition>
+        <argsstring></argsstring>
+        <name>RAAN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="151" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a1eb93164e921d0fb4d25e8948e854bec" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CQ</definition>
+        <argsstring></argsstring>
+        <name>CQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="152" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a23be10bb74b04ce4810037faa3f49a28" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SQ</definition>
+        <argsstring></argsstring>
+        <name>SQ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="153" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1af3d719246cab37a895609040e841f411" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CXx</definition>
+        <argsstring></argsstring>
+        <name>CXx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="154" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ae67ef3f648588ed965ceaf5b6f65d4d6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CXy</definition>
+        <argsstring></argsstring>
+        <name>CXy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="155" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7e9dc74ac2e9f0bc52795d25b9090be2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CXz</definition>
+        <argsstring></argsstring>
+        <name>CXz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="156" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1af1c139e4c88aedeb4ce7f983c466ecaa" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CYx</definition>
+        <argsstring></argsstring>
+        <name>CYx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="157" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a784d75aa515d73c69c3dc850614b45f0" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CYy</definition>
+        <argsstring></argsstring>
+        <name>CYy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="158" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9e81da151dc78133137559462f40b6ee" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CYz</definition>
+        <argsstring></argsstring>
+        <name>CYz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="159" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a3071b5a8bf054462f4967e594f16c4aa" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CZx</definition>
+        <argsstring></argsstring>
+        <name>CZx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="160" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aefd9fefdda7714d53ad9c9b64daddcf6" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CZy</definition>
+        <argsstring></argsstring>
+        <name>CZy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="161" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a65aea735850505e33c298ba5df2a6d2b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::CZz</definition>
+        <argsstring></argsstring>
+        <name>CZz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="162" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a0548db07c9093b250bd8ce9291c992fd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SATx</definition>
+        <argsstring></argsstring>
+        <name>SATx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="163" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ac958d6e84d25ee86b41dab6591544352" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SATy</definition>
+        <argsstring></argsstring>
+        <name>SATy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="164" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a720f085e3b4d8508da35c8ed333692ef" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::SATz</definition>
+        <argsstring></argsstring>
+        <name>SATz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="165" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a15b981b6c1878ed481fefa03eaed2dcc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ANTx</definition>
+        <argsstring></argsstring>
+        <name>ANTx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="166" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7357af508c7a2582a9eef177bf30e31d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ANTy</definition>
+        <argsstring></argsstring>
+        <name>ANTy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="167" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aec1a68c40f137b01b5dd2246a6ac8bbd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ANTz</definition>
+        <argsstring></argsstring>
+        <name>ANTz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="168" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a04e43fff04ec580fd0e172d6f2cf6414" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VELx</definition>
+        <argsstring></argsstring>
+        <name>VELx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="169" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aed70a465ef8d5a9b3179e4d6909468a1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VELy</definition>
+        <argsstring></argsstring>
+        <name>VELy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="170" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a4645f7a5e8cb8df73397b2078b60efb5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::VELz</definition>
+        <argsstring></argsstring>
+        <name>VELz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="171" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a592bcb82c1d2b43008e68abdeabe93cd" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ax</definition>
+        <argsstring></argsstring>
+        <name>Ax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="172" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7b14adf9f3c0a0dc2370d2ddfbe80221" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Ay</definition>
+        <argsstring></argsstring>
+        <name>Ay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="173" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a189edf3c14783642709c7d6fc3414d68" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Az</definition>
+        <argsstring></argsstring>
+        <name>Az</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="174" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9c02002e2801c181759585b7f1fd4d7f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::Sz</definition>
+        <argsstring></argsstring>
+        <name>Sz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="175" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a1d460d4e26d4fc401ce98568c43daa3f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::GHAA</definition>
+        <argsstring></argsstring>
+        <name>GHAA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="177" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a1be821ca34f16a43f91687b5a3db1917" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DS</definition>
+        <argsstring></argsstring>
+        <name>DS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="179" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ab601a661eb5c7077ed46ebec6d3dcb81" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DF</definition>
+        <argsstring></argsstring>
+        <name>DF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="180" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a2e3c692d47352648e5055c8b010cea15" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Plan13::SAT[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>SAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="184" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ac0efb6de373ba7d9353d871f709a8d35" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Plan13::SATNO</definition>
+        <argsstring></argsstring>
+        <name>SATNO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="185" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7f2588188d8c23eef39e22d01d7052f5" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::YE</definition>
+        <argsstring></argsstring>
+        <name>YE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="186" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aea1561b0e6678195a59a3ee0355f4d6f" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::TE</definition>
+        <argsstring></argsstring>
+        <name>TE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="187" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aaed92eaa8c57c913c38f987124ff7944" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::IN</definition>
+        <argsstring></argsstring>
+        <name>IN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="188" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aa894b85fe064edd8e2887d92cb5ee32d" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::RA</definition>
+        <argsstring></argsstring>
+        <name>RA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="189" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a963ed63bc5a6b911cbe36eb22d08ea63" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::EC</definition>
+        <argsstring></argsstring>
+        <name>EC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="190" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a21feb21bf99129b38208a91fc9b4f0d2" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::WP</definition>
+        <argsstring></argsstring>
+        <name>WP</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="191" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a88506049a3f6900e08d2d7604de6f4ac" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MA</definition>
+        <argsstring></argsstring>
+        <name>MA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="192" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aec7c2c474c7279ce4665ef4b2f4e60b4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::MM</definition>
+        <argsstring></argsstring>
+        <name>MM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="193" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a9dad2fed475d45852b531ecc07c33156" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::M2</definition>
+        <argsstring></argsstring>
+        <name>M2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="194" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a6ff25cbb7fd4e983cf9cc1b9e06d2b4a" prot="public" static="no" mutable="no">
+        <type>long</type>
+        <definition>long Plan13::RV</definition>
+        <argsstring></argsstring>
+        <name>RV</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="195" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a541e879564adb44c26a95be19159ae46" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ALON</definition>
+        <argsstring></argsstring>
+        <name>ALON</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="196" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a7611756161fab7869adf44078cd37ae7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::ALAT</definition>
+        <argsstring></argsstring>
+        <name>ALAT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="197" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a2c0b4931ffd9f023b586075961886c10" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::rxOut</definition>
+        <argsstring></argsstring>
+        <name>rxOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="198" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aadbe353b5e41f5a404b7225375e2d7f4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::txOut</definition>
+        <argsstring></argsstring>
+        <name>txOut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="199" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a8f4fa2166fac83346a487eaf50cad20d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Plan13::LOC[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>LOC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="202" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ad81c7920ea7ecb59fe6d067ab30a17b8" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::LA</definition>
+        <argsstring></argsstring>
+        <name>LA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="203" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a78d4cbdf64cb5a8a38f4a3e596cab6a7" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::LO</definition>
+        <argsstring></argsstring>
+        <name>LO</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="204" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1abb9f5f12ae47fbe66a6b5cf07097a97e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::HT</definition>
+        <argsstring></argsstring>
+        <name>HT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="205" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1ac233f306eb3f840389ca74adffec0e1e" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::HR</definition>
+        <argsstring></argsstring>
+        <name>HR</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="207" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1a030a195a1a736a750a71ebf2098a4b09" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double Plan13::DN</definition>
+        <argsstring></argsstring>
+        <name>DN</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="208" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classPlan13_1a7ff5b06fb6899f0e01660302a7fbd103" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double Plan13::YM</definition>
+        <argsstring></argsstring>
+        <name>YM</name>
+        <initializer>= 365.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="52" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlan13_1aee4e13e4f83a694c3b4009b3638c6f2d" prot="public" static="yes" mutable="no">
+        <type>const double</type>
+        <definition>const double Plan13::YT</definition>
+        <argsstring></argsstring>
+        <name>YT</name>
+        <initializer>= 365.2421970</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="91" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPlan13_1abc1d714a682b444b2d8bc0aaaabec3a1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::rad</definition>
+        <argsstring>(double deg)</argsstring>
+        <name>rad</name>
+        <param>
+          <type>double</type>
+          <declname>deg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a7e10d5436444b883e8a4c232e27ca935" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::deg</definition>
+        <argsstring>(double rad)</argsstring>
+        <name>deg</name>
+        <param>
+          <type>double</type>
+          <declname>rad</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1ad9930e6036f600ac149c03817f4127b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::FNatn</definition>
+        <argsstring>(double y, double x)</argsstring>
+        <name>FNatn</name>
+        <param>
+          <type>double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a8842d99bbcf54c71bb3591fcf263d65e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::FNday</definition>
+        <argsstring>(int year, int month, int day)</argsstring>
+        <name>FNday</name>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="23" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1af105339ba4aa81bdf416645d6f28f78d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::myFNday</definition>
+        <argsstring>(int year, int month, int day, int uh, int um, int us)</argsstring>
+        <name>myFNday</name>
+        <param>
+          <type>int</type>
+          <declname>year</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>month</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>day</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>uh</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>um</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>us</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a4f2eec7d16771cad05e477debbc09e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Plan13::getElement</definition>
+        <argsstring>(char *gstr, int gstart, int gstop)</argsstring>
+        <name>getElement</name>
+        <param>
+          <type>char *</type>
+          <declname>gstr</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gstart</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>gstop</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="25" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a057b6ee09ce8cb290a6f8791b8712dc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::readElements</definition>
+        <argsstring>(char *satellite)</argsstring>
+        <name>readElements</name>
+        <param>
+          <type>char *</type>
+          <declname>satellite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a3140717cea173c00e9b425697246ff1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::initSat</definition>
+        <argsstring>(void)</argsstring>
+        <name>initSat</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1ad6e3ea44c28bdabd1aaa2da6de519ccc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::satvec</definition>
+        <argsstring>(void)</argsstring>
+        <name>satvec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="28" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1afc4576ee67dbc84b29115422f0548367" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::rangevec</definition>
+        <argsstring>(void)</argsstring>
+        <name>rangevec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a17cb4c9994c4ca1bdc10686a3edee0bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::sunvec</definition>
+        <argsstring>(void)</argsstring>
+        <name>sunvec</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1aaf4f6eec26717ad6a46840d16b22fc7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::calculate</definition>
+        <argsstring>(void)</argsstring>
+        <name>calculate</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="31" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1ab1a180300383ec27fbcc316cdb3cdab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float *</type>
+        <definition>float* Plan13::footprintOctagon</definition>
+        <argsstring>(float slat, float slon)</argsstring>
+        <name>footprintOctagon</name>
+        <param>
+          <type>float</type>
+          <declname>slat</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>slon</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a30ca5ed2c09350080c00bdf7a4cf75ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::printdata</definition>
+        <argsstring>(void)</argsstring>
+        <name>printdata</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="33" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1ab5ba8aebf2f1f4aa9617b3412dbfc68c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::setFrequency</definition>
+        <argsstring>(unsigned long rx_frequency, unsigned long tx_frequency)</argsstring>
+        <name>setFrequency</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>rx_frequency</declname>
+        </param>
+        <param>
+          <type>unsigned long</type>
+          <declname>tx_frequency</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a60a80156616e9f2f04fd1a952c0b5c28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::setLocation</definition>
+        <argsstring>(double lon, double lat, int height)</argsstring>
+        <name>setLocation</name>
+        <param>
+          <type>double</type>
+          <declname>lon</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>lat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>height</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="35" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1a2444215a4daf6038d74d3255160def0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::setTime</definition>
+        <argsstring>(int yearIn, int monthIn, int mDayIn, int hourIn, int minIn, int secIn)</argsstring>
+        <name>setTime</name>
+        <param>
+          <type>int</type>
+          <declname>yearIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>monthIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mDayIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>hourIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>minIn</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>secIn</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="36" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1aef9103a8a22213cb9d9a3d352d68d39e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::setElements</definition>
+        <argsstring>(double YE_in, double TE_in, double IN_in, double RA_in, double EC_in, double WP_in, double MA_in, double MM_in, double M2_in, double RV_in, double ALON_in)</argsstring>
+        <name>setElements</name>
+        <param>
+          <type>double</type>
+          <declname>YE_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>TE_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>IN_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RA_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>EC_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>WP_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>MA_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>MM_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>M2_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>RV_in</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ALON_in</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="37" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1ab6cbf48b8c78a639b0a49b929a83f99e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Plan13::getDoppler</definition>
+        <argsstring>(unsigned long freq)</argsstring>
+        <name>getDoppler</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="40" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlan13_1aab5166b2877258a1b65576a6880c86bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Plan13::getDoppler64</definition>
+        <argsstring>(unsigned long freq)</argsstring>
+        <name>getDoppler64</name>
+        <param>
+          <type>unsigned long</type>
+          <declname>freq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="41" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classPlan13_1adcfb4ffcda958f5301403873c4880a57" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Plan13::foo</definition>
+        <argsstring>()</argsstring>
+        <name>foo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="210" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" line="17" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/plan13/Plan13.h" bodystart="17" bodyend="211"/>
+    <listofallmembers>
+      <member refid="classPlan13_1adb0db5b90ba605e46038f035550af7ed" prot="public" virt="non-virtual"><scope>Plan13</scope><name>A</name></member>
+      <member refid="classPlan13_1acb080aa252f966bcd61658bc205fef8f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>A0</name></member>
+      <member refid="classPlan13_1a7611756161fab7869adf44078cd37ae7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ALAT</name></member>
+      <member refid="classPlan13_1a541e879564adb44c26a95be19159ae46" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ALON</name></member>
+      <member refid="classPlan13_1a15b981b6c1878ed481fefa03eaed2dcc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ANTx</name></member>
+      <member refid="classPlan13_1a7357af508c7a2582a9eef177bf30e31d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ANTy</name></member>
+      <member refid="classPlan13_1aec1a68c40f137b01b5dd2246a6ac8bbd" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ANTz</name></member>
+      <member refid="classPlan13_1a839494d73db7628beafce94b1d48c17e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>AP</name></member>
+      <member refid="classPlan13_1a532f1cbfed6cf5e279c8e98e1a54b552" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ax</name></member>
+      <member refid="classPlan13_1a592bcb82c1d2b43008e68abdeabe93cd" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ax</name></member>
+      <member refid="classPlan13_1a7b14adf9f3c0a0dc2370d2ddfbe80221" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ay</name></member>
+      <member refid="classPlan13_1a38051d2d371742a19e375aadca0a9164" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ay</name></member>
+      <member refid="classPlan13_1a189edf3c14783642709c7d6fc3414d68" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Az</name></member>
+      <member refid="classPlan13_1aa45aa05834d4d93bbcc43ecc4eceabe4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>az</name></member>
+      <member refid="classPlan13_1a39f590d46a3d764cfbdc3514e638bcdc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>AZ</name></member>
+      <member refid="classPlan13_1a26a0036245f18d5cf2af9131ef15a639" prot="public" virt="non-virtual"><scope>Plan13</scope><name>B</name></member>
+      <member refid="classPlan13_1a6ae789e403b5196420e4c0f8706bf331" prot="public" virt="non-virtual"><scope>Plan13</scope><name>b0</name></member>
+      <member refid="classPlan13_1a732070c21a4164722fbc69430b95582e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>C</name></member>
+      <member refid="classPlan13_1aaf4f6eec26717ad6a46840d16b22fc7e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>calculate</name></member>
+      <member refid="classPlan13_1a5feca16ab700b74ff8787456ec9947b1" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CI</name></member>
+      <member refid="classPlan13_1a7043c00795b767f5db18c14c9356ba54" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CL</name></member>
+      <member refid="classPlan13_1aa39bfab719cd041946a4f6557904633d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CNS</name></member>
+      <member refid="classPlan13_1a744512014b0cf309abe58ff3efd36e53" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CO</name></member>
+      <member refid="classPlan13_1a1eb93164e921d0fb4d25e8948e854bec" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CQ</name></member>
+      <member refid="classPlan13_1a8b7d4a89f0d80eb982d02527d2d1d4c6" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CS</name></member>
+      <member refid="classPlan13_1a26c684da2d138ab82cc408532cde1014" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CW</name></member>
+      <member refid="classPlan13_1af3d719246cab37a895609040e841f411" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CXx</name></member>
+      <member refid="classPlan13_1ae67ef3f648588ed965ceaf5b6f65d4d6" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CXy</name></member>
+      <member refid="classPlan13_1a7e9dc74ac2e9f0bc52795d25b9090be2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CXz</name></member>
+      <member refid="classPlan13_1af1c139e4c88aedeb4ce7f983c466ecaa" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CYx</name></member>
+      <member refid="classPlan13_1a784d75aa515d73c69c3dc850614b45f0" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CYy</name></member>
+      <member refid="classPlan13_1a9e81da151dc78133137559462f40b6ee" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CYz</name></member>
+      <member refid="classPlan13_1a3071b5a8bf054462f4967e594f16c4aa" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CZx</name></member>
+      <member refid="classPlan13_1aefd9fefdda7714d53ad9c9b64daddcf6" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CZy</name></member>
+      <member refid="classPlan13_1a65aea735850505e33c298ba5df2a6d2b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>CZz</name></member>
+      <member refid="classPlan13_1a7a42949ba37a18d807b07f9e62adeae5" prot="public" virt="non-virtual"><scope>Plan13</scope><name>D</name></member>
+      <member refid="classPlan13_1acd61d02a8b40ec1259674bf96464abc2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DC</name></member>
+      <member refid="classPlan13_1a5b2b19f0432ef575fb344334fb35f63c" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DE</name></member>
+      <member refid="classPlan13_1a7e10d5436444b883e8a4c232e27ca935" prot="public" virt="non-virtual"><scope>Plan13</scope><name>deg</name></member>
+      <member refid="classPlan13_1ab601a661eb5c7077ed46ebec6d3dcb81" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DF</name></member>
+      <member refid="classPlan13_1a030a195a1a736a750a71ebf2098a4b09" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DN</name></member>
+      <member refid="classPlan13_1a474d6bb6662fbbba5c3d040231c10619" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DNOM</name></member>
+      <member refid="classPlan13_1ab030246db55cb0477a49b81e83b09233" prot="public" virt="non-virtual"><scope>Plan13</scope><name>dopplerFactor</name></member>
+      <member refid="classPlan13_1a42137196250ce82a94def6a75446ec39" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DR</name></member>
+      <member refid="classPlan13_1a1be821ca34f16a43f91687b5a3db1917" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DS</name></member>
+      <member refid="classPlan13_1aaf491ef74b2dd5501df238d1d70d1ebe" prot="public" virt="non-virtual"><scope>Plan13</scope><name>DT</name></member>
+      <member refid="classPlan13_1a45a76ba9ebc62ff736b2538e55d3c97b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>E</name></member>
+      <member refid="classPlan13_1a9fa693409e0e99ad169fb7a0ac58a801" prot="public" virt="non-virtual"><scope>Plan13</scope><name>EA</name></member>
+      <member refid="classPlan13_1a963ed63bc5a6b911cbe36eb22d08ea63" prot="public" virt="non-virtual"><scope>Plan13</scope><name>EC</name></member>
+      <member refid="classPlan13_1a6c939808b688d0e9721ac9fa07797d97" prot="public" virt="non-virtual"><scope>Plan13</scope><name>EL</name></member>
+      <member refid="classPlan13_1a2c2fafaa772f83bb6c26e58f5b56a0fc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>EQC1</name></member>
+      <member refid="classPlan13_1a283e98475799143ea2d5e96efb7ae0d4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>EQC2</name></member>
+      <member refid="classPlan13_1aff2e8f5c368acdb9f438eb2fbb4309c2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ex</name></member>
+      <member refid="classPlan13_1ad017163696effef3e322144edc9f408f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ey</name></member>
+      <member refid="classPlan13_1ace92d1f6f51b5ab303058685f09bc650" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ez</name></member>
+      <member refid="classPlan13_1a238f9c4dfdccd02885c04c42680f8935" prot="public" virt="non-virtual"><scope>Plan13</scope><name>FL</name></member>
+      <member refid="classPlan13_1ad9930e6036f600ac149c03817f4127b4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>FNatn</name></member>
+      <member refid="classPlan13_1a8842d99bbcf54c71bb3591fcf263d65e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>FNday</name></member>
+      <member refid="classPlan13_1adcfb4ffcda958f5301403873c4880a57" prot="private" virt="non-virtual"><scope>Plan13</scope><name>foo</name></member>
+      <member refid="classPlan13_1ab1a180300383ec27fbcc316cdb3cdab0" prot="public" virt="non-virtual"><scope>Plan13</scope><name>footprintOctagon</name></member>
+      <member refid="classPlan13_1ae4f9dbe68fabd0c19b9513bccb3f986a" prot="public" virt="non-virtual"><scope>Plan13</scope><name>G0</name></member>
+      <member refid="classPlan13_1ab6cbf48b8c78a639b0a49b929a83f99e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>getDoppler</name></member>
+      <member refid="classPlan13_1aab5166b2877258a1b65576a6880c86bc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>getDoppler64</name></member>
+      <member refid="classPlan13_1a4f2eec7d16771cad05e477debbc09e65" prot="public" virt="non-virtual"><scope>Plan13</scope><name>getElement</name></member>
+      <member refid="classPlan13_1a1d460d4e26d4fc401ce98568c43daa3f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>GHAA</name></member>
+      <member refid="classPlan13_1adc883d0dfc2ee417990941ea0d941c7b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>GHAE</name></member>
+      <member refid="classPlan13_1adc17f100c108875ed2f9bcac41ba002c" prot="public" virt="non-virtual"><scope>Plan13</scope><name>GM</name></member>
+      <member refid="classPlan13_1ac233f306eb3f840389ca74adffec0e1e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>HR</name></member>
+      <member refid="classPlan13_1abb9f5f12ae47fbe66a6b5cf07097a97e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>HT</name></member>
+      <member refid="classPlan13_1aaed92eaa8c57c913c38f987124ff7944" prot="public" virt="non-virtual"><scope>Plan13</scope><name>IN</name></member>
+      <member refid="classPlan13_1a3140717cea173c00e9b425697246ff1e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>initSat</name></member>
+      <member refid="classPlan13_1aa0deb223e38e4c9ff2407c19f60efad5" prot="public" virt="non-virtual"><scope>Plan13</scope><name>INS</name></member>
+      <member refid="classPlan13_1ad92f3443111b774a1a3a785b0eeb9208" prot="public" virt="non-virtual"><scope>Plan13</scope><name>J2</name></member>
+      <member refid="classPlan13_1a2b005d041916541800832e04f6e120f9" prot="public" virt="non-virtual"><scope>Plan13</scope><name>KD</name></member>
+      <member refid="classPlan13_1a97d6dc3c65a13fca78bc006a021930a7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>KDP</name></member>
+      <member refid="classPlan13_1ad81c7920ea7ecb59fe6d067ab30a17b8" prot="public" virt="non-virtual"><scope>Plan13</scope><name>LA</name></member>
+      <member refid="classPlan13_1a78d4cbdf64cb5a8a38f4a3e596cab6a7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>LO</name></member>
+      <member refid="classPlan13_1a8f4fa2166fac83346a487eaf50cad20d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>LOC</name></member>
+      <member refid="classPlan13_1a0b043dfd2c2dc2f0bd76bc6a47d75751" prot="public" virt="non-virtual"><scope>Plan13</scope><name>M</name></member>
+      <member refid="classPlan13_1a9dad2fed475d45852b531ecc07c33156" prot="public" virt="non-virtual"><scope>Plan13</scope><name>M2</name></member>
+      <member refid="classPlan13_1a88506049a3f6900e08d2d7604de6f4ac" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MA</name></member>
+      <member refid="classPlan13_1a5f3ba588078049ee79408f3787046057" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MAS0</name></member>
+      <member refid="classPlan13_1a3b91be2bc919478693cf5c29ef1c2124" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MASD</name></member>
+      <member refid="classPlan13_1a501ef3c4f0532c484864c0c7610229e6" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MASE</name></member>
+      <member refid="classPlan13_1aec7c2c474c7279ce4665ef4b2f4e60b4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MM</name></member>
+      <member refid="classPlan13_1ab0e09c798ba4b30df2e02018892a0a34" prot="public" virt="non-virtual"><scope>Plan13</scope><name>MRSE</name></member>
+      <member refid="classPlan13_1af105339ba4aa81bdf416645d6f28f78d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>myFNday</name></member>
+      <member refid="classPlan13_1a81e62fe904cb1a2d11d845cb4d0332d1" prot="public" virt="non-virtual"><scope>Plan13</scope><name>N</name></member>
+      <member refid="classPlan13_1a1811c0af9215ebd6cfc906741ef37182" prot="public" virt="non-virtual"><scope>Plan13</scope><name>N0</name></member>
+      <member refid="classPlan13_1a70eb702fd25ac16c478f3bb252aeacc7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Nx</name></member>
+      <member refid="classPlan13_1af01502defc82251f11581cf448859108" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ny</name></member>
+      <member refid="classPlan13_1a8c6558be65e1404cb75f4948fcb63027" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Nz</name></member>
+      <member refid="classPlan13_1a5b42b1e34f70cb9a74e800d2781d92f3" prot="public" virt="non-virtual"><scope>Plan13</scope><name>observer_height</name></member>
+      <member refid="classPlan13_1adad80790bc0517ddc1c4b6e8d21ee665" prot="public" virt="non-virtual"><scope>Plan13</scope><name>observer_lat</name></member>
+      <member refid="classPlan13_1a4712a8aea2dfe07de7f925848453fa07" prot="public" virt="non-virtual"><scope>Plan13</scope><name>observer_lon</name></member>
+      <member refid="classPlan13_1aa78e664441f237ecd59bf48cb9e9f536" prot="public" virt="non-virtual"><scope>Plan13</scope><name>OLDRN</name></member>
+      <member refid="classPlan13_1ad344af35526b62d42191e432aa4bf7d6" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ox</name></member>
+      <member refid="classPlan13_1a9583bf8f3c885a2a95e648247ffb74d4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Oy</name></member>
+      <member refid="classPlan13_1a762dc3709179dc264def3c0b8025758b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Oz</name></member>
+      <member refid="classPlan13_1a0f665255fa4775bfea4b5cc1a74b1d06" prot="public" virt="non-virtual"><scope>Plan13</scope><name>PC</name></member>
+      <member refid="classPlan13_1a30ca5ed2c09350080c00bdf7a4cf75ec" prot="public" virt="non-virtual"><scope>Plan13</scope><name>printdata</name></member>
+      <member refid="classPlan13_1a91818fcb23d2a7c7ca21645f4793060b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>QD</name></member>
+      <member refid="classPlan13_1a95616820b0c589481430242a0eb3ea02" prot="public" virt="non-virtual"><scope>Plan13</scope><name>R</name></member>
+      <member refid="classPlan13_1aa894b85fe064edd8e2887d92cb5ee32d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RA</name></member>
+      <member refid="classPlan13_1ad2de77c736c124a74e6e2ae65af07c3b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RAAN</name></member>
+      <member refid="classPlan13_1abc1d714a682b444b2d8bc0aaaabec3a1" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rad</name></member>
+      <member refid="classPlan13_1afc4576ee67dbc84b29115422f0548367" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rangevec</name></member>
+      <member refid="classPlan13_1a8b5b10a6fe65256c2f2be1254de22c69" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RE</name></member>
+      <member refid="classPlan13_1a057b6ee09ce8cb290a6f8791b8712dc7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>readElements</name></member>
+      <member refid="classPlan13_1a21c0ed4ea3d29e7ca19fd5947f47e781" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RN</name></member>
+      <member refid="classPlan13_1ab47d65f86b88361de51fa25ca628a43b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RP</name></member>
+      <member refid="classPlan13_1a367beca2264899bc3b592ac31e614460" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RR</name></member>
+      <member refid="classPlan13_1a85e5c6656ca2be94003957b76f5d2a4d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RS</name></member>
+      <member refid="classPlan13_1a6ff25cbb7fd4e983cf9cc1b9e06d2b4a" prot="public" virt="non-virtual"><scope>Plan13</scope><name>RV</name></member>
+      <member refid="classPlan13_1a42d185ce87fa8cd8eb5873931ead327d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Rx</name></member>
+      <member refid="classPlan13_1a22cb44ef25d492211f4af1613762acec" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rx</name></member>
+      <member refid="classPlan13_1acf5a01ffd06d943574a678d84741a391" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rxFrequencyLong</name></member>
+      <member refid="classPlan13_1a2c0b4931ffd9f023b586075961886c10" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rxOut</name></member>
+      <member refid="classPlan13_1a8684064bdfb7fc359bcc1523e71a5e0f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>rxOutLong</name></member>
+      <member refid="classPlan13_1a4dc3524c4d499c1adcec90c946da87a4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ry</name></member>
+      <member refid="classPlan13_1a9d574e103d5fd909648db776ec3022af" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Rz</name></member>
+      <member refid="classPlan13_1a5eddc508ce233b4c1dc5d5f39b8b0334" prot="public" virt="non-virtual"><scope>Plan13</scope><name>S</name></member>
+      <member refid="classPlan13_1a2e3c692d47352648e5055c8b010cea15" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SAT</name></member>
+      <member refid="classPlan13_1ac0efb6de373ba7d9353d871f709a8d35" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SATNO</name></member>
+      <member refid="classPlan13_1ad6e3ea44c28bdabd1aaa2da6de519ccc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>satvec</name></member>
+      <member refid="classPlan13_1a0548db07c9093b250bd8ce9291c992fd" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SATx</name></member>
+      <member refid="classPlan13_1ac958d6e84d25ee86b41dab6591544352" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SATy</name></member>
+      <member refid="classPlan13_1a720f085e3b4d8508da35c8ed333692ef" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SATz</name></member>
+      <member refid="classPlan13_1aef9103a8a22213cb9d9a3d352d68d39e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>setElements</name></member>
+      <member refid="classPlan13_1ab5ba8aebf2f1f4aa9617b3412dbfc68c" prot="public" virt="non-virtual"><scope>Plan13</scope><name>setFrequency</name></member>
+      <member refid="classPlan13_1a60a80156616e9f2f04fd1a952c0b5c28" prot="public" virt="non-virtual"><scope>Plan13</scope><name>setLocation</name></member>
+      <member refid="classPlan13_1a2444215a4daf6038d74d3255160def0c" prot="public" virt="non-virtual"><scope>Plan13</scope><name>setTime</name></member>
+      <member refid="classPlan13_1afe887879485a149bbda8256c2a64e802" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SI</name></member>
+      <member refid="classPlan13_1ab2bd7bc7d3ef6c03698b34af71a5ce55" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SL</name></member>
+      <member refid="classPlan13_1a23081e32bcfa3749fb96639ee823c029" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SLAT</name></member>
+      <member refid="classPlan13_1a23551f0f37864f59a7ba8bdda1dbaae7" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SLON</name></member>
+      <member refid="classPlan13_1afcf0e8b7ae96b007f6b156298e29bd38" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SNS</name></member>
+      <member refid="classPlan13_1ad2e9f19c2796e099082e8896b70b5d07" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SO</name></member>
+      <member refid="classPlan13_1a23be10bb74b04ce4810037faa3f49a28" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SQ</name></member>
+      <member refid="classPlan13_1a17cb4c9994c4ca1bdc10686a3edee0bf" prot="public" virt="non-virtual"><scope>Plan13</scope><name>sunvec</name></member>
+      <member refid="classPlan13_1a49ff895fc08357904f5228967907cedf" prot="public" virt="non-virtual"><scope>Plan13</scope><name>SW</name></member>
+      <member refid="classPlan13_1a97aa609028b21538c6089042e47104c2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Sx</name></member>
+      <member refid="classPlan13_1ad5d954f5a16d3a2d4e7c1c42962f1581" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Sy</name></member>
+      <member refid="classPlan13_1a9c02002e2801c181759585b7f1fd4d7f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Sz</name></member>
+      <member refid="classPlan13_1a6d2ca3808f9603bdd91bd318c060bfd1" prot="public" virt="non-virtual"><scope>Plan13</scope><name>T</name></member>
+      <member refid="classPlan13_1aea1561b0e6678195a59a3ee0355f4d6f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>TE</name></member>
+      <member refid="classPlan13_1ac369f95c4a991df1f17b6d1f62eb5775" prot="public" virt="non-virtual"><scope>Plan13</scope><name>TEG</name></member>
+      <member refid="classPlan13_1a25cb6fc31c7364dd6ad6eae5189f033a" prot="public" virt="non-virtual"><scope>Plan13</scope><name>TN</name></member>
+      <member refid="classPlan13_1a70274a4d8076305704ce67fe06233e1e" prot="public" virt="non-virtual"><scope>Plan13</scope><name>tx</name></member>
+      <member refid="classPlan13_1a6c59530175a94a5c872a012717597836" prot="public" virt="non-virtual"><scope>Plan13</scope><name>txFrequencyLong</name></member>
+      <member refid="classPlan13_1aadbe353b5e41f5a404b7225375e2d7f4" prot="public" virt="non-virtual"><scope>Plan13</scope><name>txOut</name></member>
+      <member refid="classPlan13_1a3c7f81e4e2f5415ca9b2fe108755e75b" prot="public" virt="non-virtual"><scope>Plan13</scope><name>txOutLong</name></member>
+      <member refid="classPlan13_1adabec727151dfd728c664c6377ed05b0" prot="public" virt="non-virtual"><scope>Plan13</scope><name>U</name></member>
+      <member refid="classPlan13_1a56f65a45a66a645202eb2073931d0868" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Ux</name></member>
+      <member refid="classPlan13_1ad69a4035a6fdcb36be17cfba44a1ab32" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Uy</name></member>
+      <member refid="classPlan13_1aac92de924f0f9837dbb5a9dd7d13cb11" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Uz</name></member>
+      <member refid="classPlan13_1a04e43fff04ec580fd0e172d6f2cf6414" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VELx</name></member>
+      <member refid="classPlan13_1aed70a465ef8d5a9b3179e4d6909468a1" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VELy</name></member>
+      <member refid="classPlan13_1a4645f7a5e8cb8df73397b2078b60efb5" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VELz</name></member>
+      <member refid="classPlan13_1af45e4aa0a5ab7d99c002b6f0eacee269" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VOx</name></member>
+      <member refid="classPlan13_1a2abe31b84fa89979b8773ccfa1f44aaf" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VOy</name></member>
+      <member refid="classPlan13_1aaac7ac59f3b7a9e6ef0bd541da2457f8" prot="public" virt="non-virtual"><scope>Plan13</scope><name>VOz</name></member>
+      <member refid="classPlan13_1a54a15bda3ab7521c246705fbc88d6788" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Vx</name></member>
+      <member refid="classPlan13_1a3e83cdc0810d35e9a3a35cbac9e9b4bc" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Vy</name></member>
+      <member refid="classPlan13_1ae964089e9c15f6035196a7c57da0d800" prot="public" virt="non-virtual"><scope>Plan13</scope><name>Vz</name></member>
+      <member refid="classPlan13_1adc7521908243435103c36585219fcd51" prot="public" virt="non-virtual"><scope>Plan13</scope><name>W0</name></member>
+      <member refid="classPlan13_1a4785fa373cb368f3eac1e37cfb802691" prot="public" virt="non-virtual"><scope>Plan13</scope><name>WD</name></member>
+      <member refid="classPlan13_1af339dd42b1000420acf1b5e93d539b9f" prot="public" virt="non-virtual"><scope>Plan13</scope><name>WE</name></member>
+      <member refid="classPlan13_1a21feb21bf99129b38208a91fc9b4f0d2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>WP</name></member>
+      <member refid="classPlan13_1a8e2d6ef1c716ec6bf00c101609bb3381" prot="public" virt="non-virtual"><scope>Plan13</scope><name>WW</name></member>
+      <member refid="classPlan13_1a48b05fbcc0f313c58b89d148f75932c2" prot="public" virt="non-virtual"><scope>Plan13</scope><name>XX</name></member>
+      <member refid="classPlan13_1a7f2588188d8c23eef39e22d01d7052f5" prot="public" virt="non-virtual"><scope>Plan13</scope><name>YE</name></member>
+      <member refid="classPlan13_1a67fd65243a81ca10e0164409317d4516" prot="public" virt="non-virtual"><scope>Plan13</scope><name>YG</name></member>
+      <member refid="classPlan13_1a7ff5b06fb6899f0e01660302a7fbd103" prot="public" virt="non-virtual"><scope>Plan13</scope><name>YM</name></member>
+      <member refid="classPlan13_1aee4e13e4f83a694c3b4009b3638c6f2d" prot="public" virt="non-virtual"><scope>Plan13</scope><name>YT</name></member>
+      <member refid="classPlan13_1ae908afcd90c6bc7fbb7f587a874cffc5" prot="public" virt="non-virtual"><scope>Plan13</scope><name>ZZ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

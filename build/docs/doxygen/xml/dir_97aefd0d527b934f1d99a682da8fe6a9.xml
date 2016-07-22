@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerdir refid="dir_265e3f39e0ef762bb9dfff4f90016e8d">afsk</innerdir>
+    <innerdir refid="dir_06f077f2b4b004a0b68c90c961bda4ef">ccsds</innerdir>
+    <innerdir refid="dir_813fbd1a322c3c66687e885fdc0cb9a0">codec2</innerdir>
+    <innerdir refid="dir_615ff8166f28f9385b714092d061e68b">kiss</innerdir>
+    <innerdir refid="dir_cffae217b92341ffd06b32123db26f71">plan13</innerdir>
+    <innerdir refid="dir_2e1c68a09e20a71264e55dd48c888547">serial</innerdir>
+    <innerfile refid="afsk1200__rx__f__impl_8h">afsk1200_rx_f_impl.h</innerfile>
+    <innerfile refid="afsk1200__tx__f__impl_8h">afsk1200_tx_f_impl.h</innerfile>
+    <innerfile refid="angle__cf__impl_8h">angle_cf_impl.h</innerfile>
+    <innerfile refid="bpsk__demod__cb__impl_8h">bpsk_demod_cb_impl.h</innerfile>
+    <innerfile refid="cc__decode__bb__impl_8h">cc_decode_bb_impl.h</innerfile>
+    <innerfile refid="codec2__decode__bf__impl_8h">codec2_decode_bf_impl.h</innerfile>
+    <innerfile refid="codec2__encode__fb__impl_8h">codec2_encode_fb_impl.h</innerfile>
+    <innerfile refid="encode27__bb__impl_8h">encode27_bb_impl.h</innerfile>
+    <innerfile refid="fec__decode__b__impl_8h">fec_decode_b_impl.h</innerfile>
+    <innerfile refid="fec__encode__b__impl_8h">fec_encode_b_impl.h</innerfile>
+    <innerfile refid="gmsk__demod__impl_8h">gmsk_demod_impl.h</innerfile>
+    <innerfile refid="kiss__decode__pdu__impl_8h">kiss_decode_pdu_impl.h</innerfile>
+    <innerfile refid="kiss__encode__pdu__impl_8h">kiss_encode_pdu_impl.h</innerfile>
+    <innerfile refid="lilacsat1__frame__depack__impl_8h">lilacsat1_frame_depack_impl.h</innerfile>
+    <innerfile refid="pipe__sink__pdu__impl_8h">pipe_sink_pdu_impl.h</innerfile>
+    <innerfile refid="plan13__cc__impl_8h">plan13_cc_impl.h</innerfile>
+    <innerfile refid="print__to__file__b__impl_8h">print_to_file_b_impl.h</innerfile>
+    <innerfile refid="satellite__channel__cc__impl_8h">satellite_channel_cc_impl.h</innerfile>
+    <innerfile refid="serial__sink__pdu__impl_8h">serial_sink_pdu_impl.h</innerfile>
+    <innerfile refid="sync__det__b__impl_8h">sync_det_b_impl.h</innerfile>
+    <innerfile refid="vitfilt27__bb__impl_8h">vitfilt27_bb_impl.h</innerfile>
+    <innerfile refid="vitfilt27__fb__impl_8h">vitfilt27_fb_impl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/"/>
+  </compounddef>
+</doxygen>

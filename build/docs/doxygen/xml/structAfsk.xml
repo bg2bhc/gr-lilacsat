@@ -1,0 +1,411 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="structAfsk" kind="struct" prot="public">
+    <compoundname>Afsk</compoundname>
+    <includes refid="afsk_8h" local="no">afsk.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structAfsk_1a400e243f28952b2b2f887a7f783dbe41" prot="public" static="no" mutable="no">
+        <type><ref refid="structKFile" kindref="compound">KFile</ref></type>
+        <definition>KFile Afsk::fd</definition>
+        <argsstring></argsstring>
+        <name>fd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Base &quot;class&quot; </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="53" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a8f44f065777e87c39a166cb35cb65423" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::sample_count</definition>
+        <argsstring></argsstring>
+        <name>sample_count</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current sample of bit for output data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="56" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1aab381825bf84dfbd8dd257668afe6f87" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::curr_out</definition>
+        <argsstring></argsstring>
+        <name>curr_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current character to be modulated </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="59" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a52749b0074acb4796cee6f42cd973d32" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::tx_bit</definition>
+        <argsstring></argsstring>
+        <name>tx_bit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Mask of current modulated bit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="62" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a0aa86a2b90706f920162093a573e08f8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Afsk::bit_stuff</definition>
+        <argsstring></argsstring>
+        <name>bit_stuff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True if bit stuff is allowed, false otherwise </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="65" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1ac00a531d67d24264b3562d1734d73dc8" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::stuff_cnt</definition>
+        <argsstring></argsstring>
+        <name>stuff_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Counter for bit stuffing </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="68" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a4d41b4801cd66792aeb5138c8161b7ed" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Afsk::phase_acc</definition>
+        <argsstring></argsstring>
+        <name>phase_acc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>DDS phase accumulator for generating modulated data. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="72" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a7f5dfd46245eae82247bac8318dde2ce" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Afsk::phase_inc</definition>
+        <argsstring></argsstring>
+        <name>phase_inc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current phase increment for current modulated bit </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="75" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a476cd2e052313a684f13b9ca3fda7cf6" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer__q15" kindref="compound">FIFOBuffer_q15</ref></type>
+        <definition>FIFOBuffer_q15 Afsk::delay_fifo</definition>
+        <argsstring></argsstring>
+        <name>delay_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Delay line used to delay samples by (SAMPLEPERBIT / 2) </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="78" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a0464ee1bd1c56210b111133b52fbad53" prot="public" static="no" mutable="no">
+        <type>int16_t</type>
+        <definition>int16_t Afsk::delay_buf[SAMPLEPERBIT/2+1]</definition>
+        <argsstring>[SAMPLEPERBIT/2+1]</argsstring>
+        <name>delay_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Buffer for delay FIFO. The 1 is added because the FIFO macros need 1 byte more to handle a buffer (SAMPLEPERBIT / 2) bytes long. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="85" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1ab25b3bb05ad0a3a7c596ab024ebb09d8" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>FIFOBuffer Afsk::rx_fifo</definition>
+        <argsstring></argsstring>
+        <name>rx_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO for received data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="88" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a512a4e4393c8c84e226e77867a159e94" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::rx_buf[CONFIG_AFSK_RX_BUFLEN]</definition>
+        <argsstring>[CONFIG_AFSK_RX_BUFLEN]</argsstring>
+        <name>rx_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO rx buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="91" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a0db16217ec44719e2fd9fd77a5732892" prot="public" static="no" mutable="no">
+        <type><ref refid="structFIFOBuffer" kindref="compound">FIFOBuffer</ref></type>
+        <definition>FIFOBuffer Afsk::tx_fifo</definition>
+        <argsstring></argsstring>
+        <name>tx_fifo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO for transmitted data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="94" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a289a5ac353f6510ae2f5c9cad498490e" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::tx_buf[CONFIG_AFSK_TX_BUFLEN]</definition>
+        <argsstring>[CONFIG_AFSK_TX_BUFLEN]</argsstring>
+        <name>tx_buf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>FIFO tx buffer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="97" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a44656264ec9f5700eb1af025c6c1eb87" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Afsk::iir_x[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>iir_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IIR filter X cells, used to filter sampled data by the demodulator </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="100" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a035955ba9b91b56a1c9e8dc47742fcd9" prot="public" static="no" mutable="no">
+        <type>int32_t</type>
+        <definition>int32_t Afsk::iir_y[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>iir_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>IIR filter Y cells, used to filter sampled data by the demodulator </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="103" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a61024d1d2383df2eec0118324cfa1a05" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::sampled_bits</definition>
+        <argsstring></argsstring>
+        <name>sampled_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bits sampled by the demodulator are here. Since ADC samplerate is higher than the bitrate, the bits here are SAMPLEPERBIT times the bitrate. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="110" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1ac60905ae0ab33501bb597b7c66b9331b" prot="public" static="no" mutable="no">
+        <type>int8_t</type>
+        <definition>int8_t Afsk::curr_phase</definition>
+        <argsstring></argsstring>
+        <name>curr_phase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Current phase, needed to know when the bitstream at ADC speed should be sampled. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="116" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a705350e2701cb501e6520c427f002d52" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::found_bits</definition>
+        <argsstring></argsstring>
+        <name>found_bits</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bits found by the demodulator at the correct bitrate speed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="119" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1aea4204b922aaf2c78708bacec08d7888" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>volatile bool Afsk::sending</definition>
+        <argsstring></argsstring>
+        <name>sending</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>True while modem sends data </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="122" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a4b90678865e08c02384199c6b10aa5b5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>volatile int Afsk::status</definition>
+        <argsstring></argsstring>
+        <name>status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>AFSK modem status. If 0 all is ok, otherwise errors are present. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="128" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a0f2cf84d5882a74b33b54828e4adda6d" prot="public" static="no" mutable="no">
+        <type><ref refid="structHdlc" kindref="compound">Hdlc</ref></type>
+        <definition>Hdlc Afsk::hdlc</definition>
+        <argsstring></argsstring>
+        <name>hdlc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="structHdlc" kindref="compound">Hdlc</ref> context </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="131" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1ae4e1603bf1a13861e017921e135ca3af" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Afsk::preamble_len</definition>
+        <argsstring></argsstring>
+        <name>preamble_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Preamble length. When the AFSK modem wants to send data, before sending the actual data, shifts out preamble_len HDLC_FLAG characters. This helps to synchronize the demodulator filters on the receiver side. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="139" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1a1cffeb9e88165ac3689271b970b5aab3" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t Afsk::trailer_len</definition>
+        <argsstring></argsstring>
+        <name>trailer_len</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Trailer length. After sending the actual data, the AFSK shifts out trailer_len HDLC_FLAG characters. This helps to synchronize the demodulator filters on the receiver side. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="147" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structAfsk_1afeddf5be032cb4025b6a8225e7e39c09" prot="public" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t Afsk::cfg_padding_zero</definition>
+        <argsstring></argsstring>
+        <name>cfg_padding_zero</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="149" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>AFSK1200 modem context. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>Hdlc</label>
+        <link refid="structHdlc"/>
+      </node>
+      <node id="4">
+        <label>FIFOBuffer_q15</label>
+        <link refid="structFIFOBuffer__q15"/>
+      </node>
+      <node id="1">
+        <label>Afsk</label>
+        <link refid="structAfsk"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>fd</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>hdlc</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>delay_fifo</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>rx_fifo</edgelabel>
+          <edgelabel>tx_fifo</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>FIFOBuffer</label>
+        <link refid="structFIFOBuffer"/>
+      </node>
+      <node id="2">
+        <label>KFile</label>
+        <link refid="structKFile"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>clearerr</edgelabel>
+          <edgelabel>error</edgelabel>
+          <edgelabel>close</edgelabel>
+          <edgelabel>read</edgelabel>
+          <edgelabel>seek</edgelabel>
+          <edgelabel>write</edgelabel>
+          <edgelabel>reopen</edgelabel>
+          <edgelabel>flush</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" line="51" column="1" bodyfile="/home/lilac/gr-lilacsat/lib/afsk/afsk.h" bodystart="50" bodyend="150"/>
+    <listofallmembers>
+      <member refid="structAfsk_1a0aa86a2b90706f920162093a573e08f8" prot="public" virt="non-virtual"><scope>Afsk</scope><name>bit_stuff</name></member>
+      <member refid="structAfsk_1afeddf5be032cb4025b6a8225e7e39c09" prot="public" virt="non-virtual"><scope>Afsk</scope><name>cfg_padding_zero</name></member>
+      <member refid="structAfsk_1aab381825bf84dfbd8dd257668afe6f87" prot="public" virt="non-virtual"><scope>Afsk</scope><name>curr_out</name></member>
+      <member refid="structAfsk_1ac60905ae0ab33501bb597b7c66b9331b" prot="public" virt="non-virtual"><scope>Afsk</scope><name>curr_phase</name></member>
+      <member refid="structAfsk_1a0464ee1bd1c56210b111133b52fbad53" prot="public" virt="non-virtual"><scope>Afsk</scope><name>delay_buf</name></member>
+      <member refid="structAfsk_1a476cd2e052313a684f13b9ca3fda7cf6" prot="public" virt="non-virtual"><scope>Afsk</scope><name>delay_fifo</name></member>
+      <member refid="structAfsk_1a400e243f28952b2b2f887a7f783dbe41" prot="public" virt="non-virtual"><scope>Afsk</scope><name>fd</name></member>
+      <member refid="structAfsk_1a705350e2701cb501e6520c427f002d52" prot="public" virt="non-virtual"><scope>Afsk</scope><name>found_bits</name></member>
+      <member refid="structAfsk_1a0f2cf84d5882a74b33b54828e4adda6d" prot="public" virt="non-virtual"><scope>Afsk</scope><name>hdlc</name></member>
+      <member refid="structAfsk_1a44656264ec9f5700eb1af025c6c1eb87" prot="public" virt="non-virtual"><scope>Afsk</scope><name>iir_x</name></member>
+      <member refid="structAfsk_1a035955ba9b91b56a1c9e8dc47742fcd9" prot="public" virt="non-virtual"><scope>Afsk</scope><name>iir_y</name></member>
+      <member refid="structAfsk_1a4d41b4801cd66792aeb5138c8161b7ed" prot="public" virt="non-virtual"><scope>Afsk</scope><name>phase_acc</name></member>
+      <member refid="structAfsk_1a7f5dfd46245eae82247bac8318dde2ce" prot="public" virt="non-virtual"><scope>Afsk</scope><name>phase_inc</name></member>
+      <member refid="structAfsk_1ae4e1603bf1a13861e017921e135ca3af" prot="public" virt="non-virtual"><scope>Afsk</scope><name>preamble_len</name></member>
+      <member refid="structAfsk_1a512a4e4393c8c84e226e77867a159e94" prot="public" virt="non-virtual"><scope>Afsk</scope><name>rx_buf</name></member>
+      <member refid="structAfsk_1ab25b3bb05ad0a3a7c596ab024ebb09d8" prot="public" virt="non-virtual"><scope>Afsk</scope><name>rx_fifo</name></member>
+      <member refid="structAfsk_1a8f44f065777e87c39a166cb35cb65423" prot="public" virt="non-virtual"><scope>Afsk</scope><name>sample_count</name></member>
+      <member refid="structAfsk_1a61024d1d2383df2eec0118324cfa1a05" prot="public" virt="non-virtual"><scope>Afsk</scope><name>sampled_bits</name></member>
+      <member refid="structAfsk_1aea4204b922aaf2c78708bacec08d7888" prot="public" virt="non-virtual"><scope>Afsk</scope><name>sending</name></member>
+      <member refid="structAfsk_1a4b90678865e08c02384199c6b10aa5b5" prot="public" virt="non-virtual"><scope>Afsk</scope><name>status</name></member>
+      <member refid="structAfsk_1ac00a531d67d24264b3562d1734d73dc8" prot="public" virt="non-virtual"><scope>Afsk</scope><name>stuff_cnt</name></member>
+      <member refid="structAfsk_1a1cffeb9e88165ac3689271b970b5aab3" prot="public" virt="non-virtual"><scope>Afsk</scope><name>trailer_len</name></member>
+      <member refid="structAfsk_1a52749b0074acb4796cee6f42cd973d32" prot="public" virt="non-virtual"><scope>Afsk</scope><name>tx_bit</name></member>
+      <member refid="structAfsk_1a289a5ac353f6510ae2f5c9cad498490e" prot="public" virt="non-virtual"><scope>Afsk</scope><name>tx_buf</name></member>
+      <member refid="structAfsk_1a0db16217ec44719e2fd9fd77a5732892" prot="public" virt="non-virtual"><scope>Afsk</scope><name>tx_fifo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.6">
+  <compounddef id="randomizer_8h" kind="file">
+    <compoundname>randomizer.h</compoundname>
+    <includedby refid="cc_8h" local="yes">cc.h</includedby>
+    <includedby refid="ccsds_8h" local="yes">ccsds.h</includedby>
+    <invincdepgraph>
+      <node id="522">
+        <label>fec_decode_b_impl.h</label>
+        <link refid="fec__decode__b__impl_8h"/>
+      </node>
+      <node id="521">
+        <label>ccsds.h</label>
+        <link refid="ccsds_8h"/>
+        <childnode refid="522" relation="include">
+        </childnode>
+        <childnode refid="523" relation="include">
+        </childnode>
+      </node>
+      <node id="520">
+        <label>cc.h</label>
+        <link refid="cc_8h"/>
+      </node>
+      <node id="523">
+        <label>fec_encode_b_impl.h</label>
+        <link refid="fec__encode__b__impl_8h"/>
+      </node>
+      <node id="519">
+        <label>randomizer.h</label>
+        <link refid="randomizer.h"/>
+        <childnode refid="520" relation="include">
+        </childnode>
+        <childnode refid="521" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="randomizer_8h_1aabaa21c02c14c84326c9cc87c0c27e06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ccsds_generate_sequence</definition>
+        <argsstring>(char *sequence, int length)</argsstring>
+        <name>ccsds_generate_sequence</name>
+        <param>
+          <type>char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/randomizer.h" line="27" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="randomizer_8h_1a278b0faf9760205fef8ef39f428a873f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ccsds_xor_sequence</definition>
+        <argsstring>(unsigned char *data, char *sequence, int length)</argsstring>
+        <name>ccsds_xor_sequence</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>char *</type>
+          <declname>sequence</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/lilac/gr-lilacsat/lib/ccsds/randomizer.h" line="28" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/lilac/gr-lilacsat/lib/ccsds/randomizer.h"/>
+  </compounddef>
+</doxygen>
