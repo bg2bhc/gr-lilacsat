@@ -32,7 +32,7 @@
 
 extern "C"
 {
-    #include "kiss/kiss.h"
+    #include "kiss.h"
 }
 
 namespace gr {

@@ -23,13 +23,6 @@
 #include "lilacsat/pipe_sink_pdu.h"
 #include "lilacsat/serial_sink_pdu.h"
 #include "lilacsat/plan13_cc.h"
-#include "lilacsat/print_to_file_b.h"
-#include "lilacsat/codec2_decode_bf.h"
-#include "lilacsat/codec2_encode_fb.h"
-#include "lilacsat/cc_decode_bb.h"
-#include "lilacsat/sync_det_b.h"
-#include "lilacsat/lilacsat1_frame_depack.h"
-#include "lilacsat/gmsk_demod.h"
 %}
 
 
@@ -68,23 +61,3 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, pipe_sink_pdu);
 GR_SWIG_BLOCK_MAGIC2(lilacsat, serial_sink_pdu);
 %include "lilacsat/plan13_cc.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, plan13_cc);
-%include "lilacsat/print_to_file_b.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, print_to_file_b);
-
-
-%include "lilacsat/codec2_decode_bf.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, codec2_decode_bf);
-%include "lilacsat/codec2_encode_fb.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, codec2_encode_fb);
-%include "lilacsat/cc_decode_bb.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, cc_decode_bb);
-
-
-%include "lilacsat/sync_det_b.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, sync_det_b);
-
-%include "lilacsat/lilacsat1_frame_depack.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, lilacsat1_frame_depack);
-
-%include "lilacsat/gmsk_demod.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, gmsk_demod);

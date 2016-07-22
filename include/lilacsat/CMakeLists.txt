@@ -36,13 +36,5 @@ install(FILES
     angle_cf.h
     pipe_sink_pdu.h
     serial_sink_pdu.h
-    plan13_cc.h
-    print_to_file_b.h
-    codec2_decode_bf.h
-    codec2_encode_fb.h
-    cc_decode_bb.h
-    sync_det_b.h
-    sync_det_b.h
-    lilacsat1_frame_depack.h
-    gmsk_demod.h DESTINATION include/lilacsat
+    plan13_cc.h DESTINATION include/lilacsat
 )
