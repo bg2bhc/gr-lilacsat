@@ -1,12 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
- *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
+ * Copyright 2016 <+YOU OR YOUR COMPANY+>.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,10 +18,10 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_LILACSAT_CODEC2_ENCODE_FB_IMPL_H
-#define INCLUDED_LILACSAT_CODEC2_ENCODE_FB_IMPL_H
+#ifndef INCLUDED_LILACSAT_CODEC2_DECODE_BF_IMPL_H
+#define INCLUDED_LILACSAT_CODEC2_DECODE_BF_IMPL_H
 
-#include <lilacsat/codec2_encode_fb.h>
+#include <lilacsat/codec2_decode_bf.h>
 
 extern "C"
 {
@@ -37,14 +31,14 @@ extern "C"
 namespace gr {
   namespace lilacsat {
 
-    class codec2_encode_fb_impl : public codec2_encode_fb
+    class codec2_decode_bf_impl : public codec2_decode_bf
     {
      private:
       struct CODEC2 *codec2;
 
      public:
-      codec2_encode_fb_impl(int mode);
-      ~codec2_encode_fb_impl();
+      codec2_decode_bf_impl(int mode);
+      ~codec2_decode_bf_impl();
 
       // Where all the action really happens
       int work(int noutput_items,
@@ -55,5 +49,5 @@ namespace gr {
   } // namespace lilacsat
 } // namespace gr
 
-#endif /* INCLUDED_LILACSAT_CODEC2_ENCODE_FB_IMPL_H */
+#endif /* INCLUDED_LILACSAT_CODEC2_DECODE_BF_IMPL_H */
 

@@ -1,12 +1,6 @@
 /* -*- c++ -*- */
 /* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
- *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
+ * Copyright 2016 <+YOU OR YOUR COMPANY+>.
  * 
  * This is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,33 +23,34 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "sync_det_b_impl.h"
+#include "cc_decode_bb_impl.h"
+
+#include <stdio.h>
 
 extern char sequence[255];
 extern unsigned char m_decode_tab[];
 
+#define	LEN_FRAME	116
+#define	SYNC_WORD	0x1ACFFC1D
+
 namespace gr {
   namespace lilacsat {
 
-    sync_det_b::sptr
-    sync_det_b::make(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling)
+    cc_decode_bb::sptr
+    cc_decode_bb::make()
     {
       return gnuradio::get_initial_sptr
-        (new sync_det_b_impl(sync_word, len, nrz, descrambling));
+        (new cc_decode_bb_impl());
     }
 
     /*
      * The private constructor
      */
-    sync_det_b_impl::sync_det_b_impl(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling)
-      : gr::sync_block("sync_det_b",
+    cc_decode_bb_impl::cc_decode_bb_impl()
+      : gr::block("cc_decode_bb",
               gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(0, 0, 0))
+              gr::io_signature::make(1, 1, 7*sizeof(char)))
     {
-		d_sync_word = sync_word;
-		d_frame_length = len;
-		d_nrz = nrz;
-		d_descrambling = descrambling;
 		d_rx_bit_state = 0;
 	  	d_mask_bit_out = 0x80;
 	  	d_syncing = 0;
@@ -64,25 +59,45 @@ namespace gr {
 
 		d_out_port = pmt::mp("out");	      
       	message_port_register_out(d_out_port);
+
+		kiss_init(&d_ki, (void *)this, &cc_decode_bb_impl::kiss_msg_callback);
 	}
 
     /*
      * Our virtual destructor.
      */
-    sync_det_b_impl::~sync_det_b_impl()
+    cc_decode_bb_impl::~cc_decode_bb_impl()
     {
     }
 
+    void
+    cc_decode_bb_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
+    {
+        /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
+    }
+
+    void cc_decode_bb_impl::kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len)
+    {
+		cc_decode_bb_impl *obj_ptr_loc = (cc_decode_bb_impl *)obj_ptr;
+		//obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(len, (const uint8_t *)ptr)));
+    }
+
     int
-    sync_det_b_impl::work(int noutput_items,
-			  gr_vector_const_void_star &input_items,
-			  gr_vector_void_star &output_items)
+    cc_decode_bb_impl::general_work (int noutput_items,
+                       gr_vector_int &ninput_items,
+                       gr_vector_const_void_star &input_items,
+                       gr_vector_void_star &output_items)
     {
         const char *in = (const char *) input_items[0];
-		int i, j;
+        char *out = (char *) output_items[0];
+		int i, j, n_codec2_out = 0;
 		uint8_t mask_bit_in, current_in;
 
         // Do <+signal processing+>
+        // Tell runtime system how many input items we consumed on
+        // each input stream.
+		fprintf(stdout, "%d\n", *in);
+
 		for (i = 0; i < noutput_items/8; i++)
 		{
 			for(j=0; j<8; j++)
@@ -91,18 +106,15 @@ namespace gr {
                 current_in += (*(in++))?1:0;
             }
 
-			if(d_nrz == 1)
+			if(d_rx_bit_state)
 			{
-				if(d_rx_bit_state)
-				{
-					d_rx_bit_state = current_in&0x01;
-					current_in = m_decode_tab[0xFF-current_in];
-				}
-				else
-				{
-					d_rx_bit_state = current_in&0x01;
-					current_in = m_decode_tab[current_in];
-				}
+			    d_rx_bit_state = current_in&0x01;
+			    current_in = m_decode_tab[0xFF-current_in];
+			}
+			else
+			{
+			    d_rx_bit_state = current_in&0x01;
+			    current_in = m_decode_tab[current_in];
 			}
 
 			for(mask_bit_in = 0x80; mask_bit_in; mask_bit_in >>= 1)
@@ -111,27 +123,50 @@ namespace gr {
 				{
 					if(current_in & mask_bit_in)
 					{
-						d_buf_sync_out[d_n_out] |= d_mask_bit_out;
+					    d_buf_sync_out[d_n_out] |= d_mask_bit_out;
 					}
 					else
 					{
-						d_buf_sync_out[d_n_out] &= (~d_mask_bit_out);
+					    d_buf_sync_out[d_n_out] &= (~d_mask_bit_out);
 					}
 
 					d_mask_bit_out >>= 1;
 
 					if(d_mask_bit_out == 0x00)
 					{
-						if(d_descrambling) d_buf_sync_out[d_n_out] ^= sequence[d_n_out];
+					    uint8_t di = (d_n_out + 4) % 24;
+
+						d_buf_sync_out[d_n_out] ^= sequence[d_n_out];
+
+						if(di >= 17)
+						{
+							out[di-17] = d_buf_sync_out[d_n_out];
+
+							if(di == 23)
+							{
+								if(out[di-17] & 0x01)
+								{
+									out[di-17] &= 0xf0;
+									n_codec2_out++;
+									out += 7;
+								}
+							}
+						}
+						else
+						{
+							kiss_rx_byte(&d_ki, d_buf_sync_out[d_n_out]);
+						}
 
 						d_mask_bit_out = 0x80;
-						d_n_out++;
+					    d_n_out++;
 
-						if(d_n_out == d_frame_length)
-						{
-						    d_syncing = 0;
-							message_port_pub(d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(d_frame_length, (const uint8_t *)d_buf_sync_out)));
-						}
+					    if(d_n_out == LEN_FRAME)
+					    {
+					        d_syncing = 0;
+					        // byte_corr = decode_rs(d_buf_sync_out, (int *)0, 0, RS_BLOCK_LENGTH-d_len_frame-RS_LENGTH);
+					        // d_hook(d_buf_sync_out, d_len_frame, byte_corr, d_obj_ptr);
+message_port_pub(d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(LEN_FRAME, (const uint8_t *)d_buf_sync_out)));
+					    }
 					}
 				}
 				else
@@ -140,12 +175,12 @@ namespace gr {
 
 					if(current_in & mask_bit_in)
 					{
-						d_buffer_sync_det += 1;
+					    d_buffer_sync_det += 1;
 					}
 					/* Allow no error in sync word */
 					/* if(d_buffer_sync_det == d_sync_word) */
 					/* Allow 1 error in sync word */
-					switch(d_buffer_sync_det ^ d_sync_word)
+					switch(d_buffer_sync_det ^ SYNC_WORD)
 					{
 						case 0x00000000:
 						case 0x00000001:
@@ -185,6 +220,7 @@ namespace gr {
 							d_buffer_sync_det = 0;
 							d_mask_bit_out = 0x80;
 							d_n_out = 0;
+							fprintf(stdout, "sync\n");
 						}
 					}
 
@@ -192,8 +228,10 @@ namespace gr {
 			}
 		}
 
+        consume_each (noutput_items);
+
         // Tell runtime system how many output items we produced.
-        return noutput_items;
+        return n_codec2_out;
     }
 
   } /* namespace lilacsat */
