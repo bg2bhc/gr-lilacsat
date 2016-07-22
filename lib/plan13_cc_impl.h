@@ -30,7 +30,7 @@
 
 #include <lilacsat/plan13_cc.h>
 
-#include "Plan13.h"
+#include "plan13/Plan13.h"
 
 namespace gr {
   namespace lilacsat {

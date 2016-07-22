@@ -26,19 +26,19 @@ include_directories(${Boost_INCLUDE_DIR})
 link_directories(${Boost_LIBRARY_DIRS})
 list(APPEND lilacsat_sources
   #  satellite_channel_cc_impl.cc
-    afsk.c
-    ax25.c
-    crc_ccitt.c
-    fifobuf.c
-    kfile.c
-    wavegen.c
-    rs.c
-    ccsds.c
-    tab.c
-    metrics.c
-    randomizer.c
-    kiss.c
-    viterbi27.c
+    afsk/afsk.c
+    afsk/ax25.c
+    afsk/crc_ccitt.c
+    afsk/fifobuf.c
+    afsk/kfile.c
+    afsk/wavegen.c
+    ccsds/rs.c
+    ccsds/ccsds.c
+    ccsds/tab.c
+    ccsds/metrics.c
+    ccsds/randomizer.c
+    kiss/kiss.c
+    ccsds/viterbi27.c
     afsk1200_rx_f_impl.cc
     afsk1200_tx_f_impl.cc
     fec_decode_b_impl.cc
@@ -52,10 +52,40 @@ list(APPEND lilacsat_sources
     vitfilt27_fb_impl.cc
     angle_cf_impl.cc
     pipe_sink_pdu_impl.cc
-    Plan13.cpp
-    serial.c
+    plan13/Plan13.cpp
+    serial/serial.c
     serial_sink_pdu_impl.cc
-    plan13_cc_impl.cc )
+    plan13_cc_impl.cc
+    print_to_file_b_impl.cc
+    codec2/codebook.c
+    codec2/codebookd.c
+    codec2/codebookdt.c
+    codec2/codebookge.c
+    codec2/codebookjnd.c
+    codec2/codebookjvm.c
+    codec2/codebooklspmelvq.c
+    codec2/codebookmel.c
+    codec2/codebookres.c
+    codec2/codebookvq.c
+    codec2/codebookvqanssi.c
+    codec2/codec2.c
+    codec2/dump.c
+    codec2/interp.c
+    codec2/kiss_fft.c
+    codec2/lpc.c
+    codec2/lsp.c
+    codec2/nlp.c
+    codec2/pack.c
+    codec2/phase.c
+    codec2/postfilter.c
+    codec2/quantise.c
+    codec2/sine.c
+    codec2_decode_bf_impl.cc
+    codec2_encode_fb_impl.cc
+    cc_decode_bb_impl.cc
+    sync_det_b_impl.cc
+    lilacsat1_frame_depack_impl.cc
+    gmsk_demod_impl.cc )
 
 set(lilacsat_sources "${lilacsat_sources}" PARENT_SCOPE)
 if(NOT lilacsat_sources)

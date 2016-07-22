@@ -1,0 +1,40 @@
+<block>
+  <name>Gmsk demod</name>
+  <key>lilacsat_gmsk_demod</key>
+  <category>LILACSAT</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.gmsk_demod($dtll_gain, $pd_N_avg, $pd_k1, $pd_k2, $vco_gain)</make>
+  <param>
+    <name>Dtll_gain</name>
+    <key>dtll_gain</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Pd_n_avg</name>
+    <key>pd_N_avg</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Pd_k1</name>
+    <key>pd_k1</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Pd_k2</name>
+    <key>pd_k2</key>
+    <type>float</type>
+  </param>
+  <param>
+    <name>Vco_gain</name>
+    <key>vco_gain</key>
+    <type>float</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>complex</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>

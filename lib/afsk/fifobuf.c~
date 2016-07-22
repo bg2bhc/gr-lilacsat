@@ -78,12 +78,17 @@
  *
  * \sa fifo_isempty_locked
  */
-inline bool fifo_isempty(const FIFOBuffer *fb)
+bool fifo_isempty(const FIFOBuffer *fb)
 {
 	//ASSERT_VALID_FIFO(fb);
 	return fb->head == fb->tail;
 }
 
+bool fifo_isempty_q15(const FIFOBuffer_q15 *fb)
+{
+	//ASSERT_VALID_FIFO(fb);
+	return fb->head == fb->tail;
+}
 
 /**
  * Check whether the fifo is full
@@ -98,12 +103,32 @@ inline bool fifo_isempty(const FIFOBuffer *fb)
  *       fifo_isfull() and fifo_push() are usually called
  *       in the producer context.
  */
-inline bool fifo_isfull(const FIFOBuffer *fb)
+bool fifo_isfull(const FIFOBuffer *fb)
 {
 	//ASSERT_VALID_FIFO(fb);
 	return
 		((fb->head == fb->begin) && (fb->tail == fb->end))
 		|| (fb->tail == fb->head - 1);
+}
+
+bool fifo_isfull_q15(const FIFOBuffer_q15 *fb)
+{
+	//ASSERT_VALID_FIFO(fb);
+	return
+		((fb->head == fb->begin) && (fb->tail == fb->end))
+		|| (fb->tail == fb->head - 1);
+}
+
+uint32_t fifo_room(FIFOBuffer *fb)
+{
+	if( fb->tail < fb->head)
+	{
+		return fb->head - fb->tail - 1;
+	}
+	else
+	{
+		return (fb->head - fb->tail + fb->end - fb->begin);
+	}
 }
 
 
@@ -121,7 +146,7 @@ inline bool fifo_isfull(const FIFOBuffer *fb)
  *
  * \sa fifo_push_locked
  */
-inline void fifo_push(FIFOBuffer *fb, unsigned char c)
+void fifo_push(FIFOBuffer *fb, unsigned char c)
 {
 #ifdef __MWERKS__
 #pragma interrupt called
@@ -139,7 +164,7 @@ inline void fifo_push(FIFOBuffer *fb, unsigned char c)
 		fb->tail++;
 }
 
-inline void fifo_push_q15(FIFOBuffer_q15 *fb, int16_t c)
+void fifo_push_q15(FIFOBuffer_q15 *fb, int16_t c)
 {
 #ifdef __MWERKS__
 #pragma interrupt called
@@ -167,7 +192,7 @@ inline void fifo_push_q15(FIFOBuffer_q15 *fb, int16_t c)
  * \note It is safe to call fifo_pop() and fifo_push() from
  *       concurrent contexts.
  */
-inline unsigned char fifo_pop(FIFOBuffer *fb)
+unsigned char fifo_pop(FIFOBuffer *fb)
 {
 #ifdef __MWERKS__
 #pragma interrupt called
@@ -185,7 +210,7 @@ inline unsigned char fifo_pop(FIFOBuffer *fb)
 		return *(fb->head++);
 }
 
-inline int16_t fifo_pop_q15(FIFOBuffer_q15 *fb)
+int16_t fifo_pop_q15(FIFOBuffer_q15 *fb)
 {
 #ifdef __MWERKS__
 #pragma interrupt called
@@ -218,7 +243,7 @@ inline void fifo_flush(FIFOBuffer *fb)
 /**
  * FIFO Initialization.
  */
-inline void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size)
+void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size)
 {
 	/* FIFO buffers have a known bug with 1-byte buffers. */
 	//ASSERT(size > 1);
@@ -227,9 +252,9 @@ inline void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size)
 	fb->end = buf + size - 1;
 }
 
-inline void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size)
+void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size)
 {
-	/* FIFO buffers have a known bug with 1-byte buffers. */
+	// FIFO buffers have a known bug with 1-byte buffers. 
 //	ASSERT(size > 1);
 
 	fb->head = fb->tail = fb->begin = buf;
@@ -239,7 +264,7 @@ inline void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size)
 /**
  * \return Lenght of the FIFOBuffer \a fb.
  */
-inline uint32_t fifo_len(FIFOBuffer *fb)
+uint32_t fifo_len(FIFOBuffer *fb)
 {
 	return fb->end - fb->begin;
 }

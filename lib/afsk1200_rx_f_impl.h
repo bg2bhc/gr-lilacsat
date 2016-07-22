@@ -33,8 +33,8 @@
 
 extern "C"
 {
-	#include "afsk.h"
-	#include "ax25.h"
+	#include "afsk/afsk.h"
+	#include "afsk/ax25.h"
 }
 
 namespace gr {

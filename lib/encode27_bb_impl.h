@@ -32,7 +32,7 @@
 
 extern "C"
 {
-	#include "viterbi27.h"
+	#include "ccsds/viterbi27.h"
 }
 
 namespace gr {

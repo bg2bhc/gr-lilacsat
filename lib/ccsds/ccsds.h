@@ -33,7 +33,7 @@
 #include "randomizer.h"
 #include "rs.h"
 #include "tab.h"
-#include "fifobuf.h"
+#include "afsk/fifobuf.h"
 
 #define LENTH_BUF_SYNC_OUT 1024
 

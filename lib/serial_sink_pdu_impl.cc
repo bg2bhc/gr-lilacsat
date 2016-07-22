@@ -37,7 +37,7 @@
 
 extern "C"
 {
-	#include "serial.h"
+	#include "serial/serial.h"
 }
 
 namespace gr {

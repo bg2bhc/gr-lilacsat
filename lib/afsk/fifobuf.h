@@ -67,13 +67,16 @@
 #ifndef STRUCT_FIFO_H
 #define STRUCT_FIFO_H
 
-#include "bertos.h"
+//#include "bertos.h"
 
-#include <inttypes.h>
+#include <stdbool.h>
+#include <stdint.h>
 
 //#include <cpu/irq.h>
 //#incsude <cfg/debug.h>
 
+#define LIKELY(x)               __builtin_expect(!!(x), 1)
+#define UNLIKELY(x)             __builtin_expect(!!(x), 0)
 
 typedef struct FIFOBuffer
 {
@@ -99,16 +102,19 @@ typedef struct FIFOBuffer_q15
 		ASSERT((fifo)->tail <= (fifo)->end); \
 	)
 
-inline bool fifo_isempty(const FIFOBuffer *fb);
-inline bool fifo_isfull(const FIFOBuffer *fb);
-inline void fifo_push(FIFOBuffer *fb, unsigned char c);
-inline void fifo_push_q15(FIFOBuffer_q15 *fb, int16_t c);
-inline unsigned char fifo_pop(FIFOBuffer *fb);
-inline int16_t fifo_pop_q15(FIFOBuffer_q15 *fb);
-inline void fifo_flush(FIFOBuffer *fb);
-inline void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size);
-inline void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size);
-inline uint32_t fifo_len(FIFOBuffer *fb);
+bool fifo_isempty(const FIFOBuffer *fb);
+bool fifo_isempty_q15(const FIFOBuffer_q15 *fb);
+bool fifo_isfull(const FIFOBuffer *fb);
+bool fifo_isfull_q15(const FIFOBuffer_q15 *fb);
+uint32_t fifo_room(FIFOBuffer *fb);
+void fifo_push(FIFOBuffer *fb, unsigned char c);
+void fifo_push_q15(FIFOBuffer_q15 *fb, int16_t c);
+unsigned char fifo_pop(FIFOBuffer *fb);
+int16_t fifo_pop_q15(FIFOBuffer_q15 *fb);
+void fifo_flush(FIFOBuffer *fb);
+void fifo_init(FIFOBuffer *fb, unsigned char *buf, uint32_t size);
+void fifo_init_q15(FIFOBuffer_q15 *fb, int16_t *buf, uint32_t size);
+uint32_t fifo_len(FIFOBuffer *fb);
 
 
 #endif /* STRUCT_FIFO_H */

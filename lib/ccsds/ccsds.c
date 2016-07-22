@@ -410,45 +410,45 @@ void ccsds_pull(Ccsds *cc)
             /* Allow 1 error in sync word */
             switch(cc->buffer_sync_det ^ cc->sync_word)
             {
-            case 0x00000000:
-            case 0x00000001:
-            case 0x00000002:
-            case 0x00000004:
-            case 0x00000008:
-            case 0x00000010:
-            case 0x00000020:
-            case 0x00000040:
-            case 0x00000080:
-            case 0x00000100:
-            case 0x00000200:
-            case 0x00000400:
-            case 0x00000800:
-            case 0x00001000:
-            case 0x00002000:
-            case 0x00004000:
-            case 0x00008000:
-            case 0x00010000:
-            case 0x00020000:
-            case 0x00040000:
-            case 0x00080000:
-            case 0x00100000:
-            case 0x00200000:
-            case 0x00400000:
-            case 0x00800000:
-            case 0x01000000:
-            case 0x02000000:
-            case 0x04000000:
-            case 0x08000000:
-            case 0x10000000:
-            case 0x20000000:
-            case 0x40000000:
-            case 0x80000000:
-            {
-                cc->syncing = 1;
-                cc->buffer_sync_det = 0;
-                cc->mask_bit_out = 0x80;
-                cc->n_out = 0;
-            }
+		        case 0x00000000:
+		        case 0x00000001:
+		        case 0x00000002:
+		        case 0x00000004:
+		        case 0x00000008:
+		        case 0x00000010:
+		        case 0x00000020:
+		        case 0x00000040:
+		        case 0x00000080:
+		        case 0x00000100:
+		        case 0x00000200:
+		        case 0x00000400:
+		        case 0x00000800:
+		        case 0x00001000:
+		        case 0x00002000:
+		        case 0x00004000:
+		        case 0x00008000:
+		        case 0x00010000:
+		        case 0x00020000:
+		        case 0x00040000:
+		        case 0x00080000:
+		        case 0x00100000:
+		        case 0x00200000:
+		        case 0x00400000:
+		        case 0x00800000:
+		        case 0x01000000:
+		        case 0x02000000:
+		        case 0x04000000:
+		        case 0x08000000:
+		        case 0x10000000:
+		        case 0x20000000:
+		        case 0x40000000:
+		        case 0x80000000:
+			    {
+			        cc->syncing = 1;
+			        cc->buffer_sync_det = 0;
+			        cc->mask_bit_out = 0x80;
+			        cc->n_out = 0;
+			    }
             }
 
         }

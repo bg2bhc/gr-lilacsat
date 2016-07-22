@@ -1,0 +1,20 @@
+<block>
+  <name>CC Decode</name>
+  <key>lilacsat_cc_decode_bb</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.cc_decode_bb()</make>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>byte</type>
+    <vlen>7</vlen>
+  </source>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

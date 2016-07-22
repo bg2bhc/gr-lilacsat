@@ -33,7 +33,7 @@
 
 extern "C"
 {
-	#include "ccsds.h"
+	#include "ccsds/ccsds.h"
 }
 
 namespace gr {

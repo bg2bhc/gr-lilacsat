@@ -31,5 +31,13 @@ install(FILES
     lilacsat_angle_cf.xml
     lilacsat_pipe_sink_pdu.xml
     lilacsat_serial_sink_pdu.xml
-    lilacsat_plan13_cc.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_plan13_cc.xml
+    lilacsat_print_to_file_b.xml
+    lilacsat_codec2_decode_bf.xml
+    lilacsat_codec2_encode_fb.xml
+    lilacsat_cc_decode_bb.xml
+    lilacsat_sync_det_b.xml
+    lilacsat_sync_det_b.xml
+    lilacsat_lilacsat1_frame_depack.xml
+    lilacsat_gmsk_demod.xml DESTINATION share/gnuradio/grc/blocks
 )

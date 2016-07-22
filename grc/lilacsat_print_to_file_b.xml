@@ -1,0 +1,21 @@
+<block>
+  <name>Print to File</name>
+  <key>lilacsat_print_to_file_b</key>
+  <category>LilacSat</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.print_to_file_b($path, $format)</make>
+  <param>
+    <name>Path</name>
+    <key>path</key>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Format</name>
+    <key>format</key>
+    <type>raw</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>byte</type>
+  </sink>
+</block>
