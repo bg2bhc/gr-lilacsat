@@ -1,6 +1,6 @@
 # gr-lilacsat
 ---------------------------------------
-OOT Module for Harbin Institute of Technology LilacSat-2 satellite telemetry decoding.
+OOT Module for Harbin Institute of Technology LilacSat-1 & LilacSat-2 satellite telemetry decoding.
 
 Tested on GRC 3.7.8.
 
