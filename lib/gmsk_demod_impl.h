@@ -59,6 +59,8 @@ namespace gr {
       double d_lf_out;
       float d_mean_out_last;
 
+      uint64_t count;
+
       void fir_filt_f(fir_instance_f *instance, float *pSrc, float *pDst, uint32_t len);
 
      public:

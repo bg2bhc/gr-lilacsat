@@ -161,8 +161,8 @@ namespace gr {
         // each input stream.
 	for(i=0; i<noutput_items; i++)
 	{
-		vco_real = cos(d_vco_phase * PI);
-		vco_imag = sin(d_vco_phase * PI);
+		vco_real = cos(-d_vco_phase * PI);
+		vco_imag = sin(-d_vco_phase * PI);
 
 		mix_out_real = vco_real * *((float*)input_items[0]+2*i) - vco_imag * *((float*)input_items[0]+2*i+1);
 		mix_out_imag = vco_real * *((float*)input_items[0]+2*i+1) + vco_imag * *((float*)input_items[0]+2*i);
@@ -214,7 +214,8 @@ namespace gr {
 			d_dtll_phase = d_dtll_phase + 16.0;
 		}
 
-		if( round(d_dtll_phase) == 9 )
+		// if( count%16 == 10 )
+		if( round(d_dtll_phase) == 8.0 )
 		{
 			pd_out = -tanh(d_buf_delay_real[0]) * d_buf_delay_imag[0] + tanh(d_buf_delay_imag[Tb]) * d_buf_delay_real[Tb];
 
@@ -227,20 +228,22 @@ namespace gr {
 			d_buf_avg[0] = pd_out;
 			mean_out = mean_out + pd_out;
 
-			mean_out = mean_out/d_pd_N_avg;
+			mean_out = mean_out/(float)d_pd_N_avg;
 
-			d_lf_out = d_lf_out + (d_pd_k1 + d_pd_k2) * mean_out - d_pd_k1 * d_mean_out_last;
+			d_lf_out = d_lf_out + (double)(d_pd_k1 + d_pd_k2) * (double)mean_out - (double)d_pd_k1 * (double)d_mean_out_last;
 			d_mean_out_last = mean_out;
 			
 			nout++;
-			//*((float*)out) = d_vco_phase;
+			//*((float*)out) = mean_out;
 			//*(((float*)out)+1) = d_lf_out*d_vco_gain*2048/2;
-			*((float*)out) = mix_out_real;
-			*(((float*)out)+1) = mix_out_imag;
+			*((float*)out) = d_buf_delay_real[Tb];
+			*(((float*)out)+1) = d_buf_delay_imag[0];
 			out++;
 		}
 
-		d_vco_phase = d_vco_phase + d_lf_out * d_vco_gain;
+		count++;
+
+		d_vco_phase = d_vco_phase + d_lf_out * (double)d_vco_gain;
 
 		if(d_vco_phase>=1.0)
 		{
