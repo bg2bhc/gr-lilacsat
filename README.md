@@ -29,3 +29,8 @@ A Live CD is also provided: http://lilacsat.hit.edu.cn/?page_id=257
 
 Manual: http://lilacsat.hit.edu.cn/wp-content/uploads/2015/09/LilacSat-2_Live_CD_User_Manual.pdf
 
+## LilacSat-1 Downlink IQ Record
+---------------------------------------
+A IQ record of LilacSat-1 downlink: https://drive.google.com/open?id=0B_j7kp3QtCNaejVlWDFEVGxiR2M
+
+It can be used for a evaluation of the FM uplink codec2 downlink repeater.
