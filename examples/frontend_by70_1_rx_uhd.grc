@@ -6,33 +6,6 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>250000</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(16, 107)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
       <value>audio_rate</value>
     </param>
     <param>
@@ -50,6 +23,33 @@
     <param>
       <key>_coordinate</key>
       <value>(112, 107)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>250000</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(16, 107)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1988,7 +1988,7 @@
     <key>options</key>
     <param>
       <key>id</key>
-      <value>frontend_rx_by70_1_UHD</value>
+      <value>frontend_by70_1_rx_UHD</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -1996,7 +1996,7 @@
     </param>
     <param>
       <key>title</key>
-      <value>Frontend RX BY70-1 UHD</value>
+      <value>Frontend BY70-1 RX UHD</value>
     </param>
     <param>
       <key>author</key>
