@@ -1,6 +1,6 @@
 # gr-lilacsat
 ---------------------------------------
-OOT Module for LilacSat-1, LilacSat-2 and BY70-1 satellite telemetry decoding.
+OOT Module for LilacSat-1, LilacSat-2 and BY70-1 satellites telemetry decoding.
 
 Tested on GRC 3.7.8 and 3.7.10.1, and ubuntu 14.04 LTS. Currently this OOT module does not work on ubuntu 16.04 LTS!!!
 
