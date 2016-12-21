@@ -38,3 +38,9 @@ Manual: http://lilacsat.hit.edu.cn/wp-content/uploads/2015/09/LilacSat-2_Live_CD
 A IQ record of LilacSat-1 downlink: https://drive.google.com/open?id=0B_j7kp3QtCNaejVlWDFEVGxiR2M
 
 It can be used for a evaluation of the FM uplink codec2 downlink repeater.
+
+## BY70-1 Downlink Bit Steam Record
+---------------------------------------
+A bit stream record of BY70-1 downlink: https://drive.google.com/open?id=0B_j7kp3QtCNaa0I3Nng4b3Z5QTA
+
+It can be used for a evaluation of the telemetry downlink and image downlink.
