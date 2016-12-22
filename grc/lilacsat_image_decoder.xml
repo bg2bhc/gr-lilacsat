@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<block>
+  <name>Image decoder</name>
+  <key>lilacsat_image_decoder</key>
+  <category>[lilacsat]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.image_decoder($path)</make>
+  <param>
+    <name>Path</name>
+    <key>path</key>
+    <type>string</type>
+  </param>
+
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+
+</block>
