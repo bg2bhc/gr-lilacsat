@@ -4,13 +4,29 @@
   <key>lilacsat_image_decoder</key>
   <category>[lilacsat]</category>
   <import>import lilacsat</import>
-  <make>lilacsat.image_decoder($path)</make>
+  <make>lilacsat.image_decoder($path, $display)</make>
   <param>
     <name>Path</name>
     <key>path</key>
     <type>string</type>
   </param>
+  <param>
+    <name>Display</name>
+    <key>display</key>
+    <value>True</value>
+    <type>bool</type>
+    <option>
+      <name>Yes</name>
+      <key>True</key>
+    </option>
+    <option>
+      <name>No</name>
+      <key>False</key>
+    </option>
+  </param>
 
+
+  
   <sink>
     <name>in</name>
     <type>message</type>

@@ -22,6 +22,7 @@
 import struct
 import os.path
 import binascii
+import subprocess
 
 from csp.csp_header import CSP
 
@@ -41,7 +42,7 @@ class image_decoder(gr.basic_block):
     """
     docstring for block image_decoder
     """
-    def __init__(self, path='/tmp'):
+    def __init__(self, path='/tmp', display=False):
         gr.basic_block.__init__(self,
             name="image_decoder",
             in_sig=[],
@@ -52,6 +53,8 @@ class image_decoder(gr.basic_block):
         self.set_msg_handler(pmt.intern('in'), self.handle_msg)
         self.files = dict()
         self.remaining = dict()
+        self.display = display
+        self.displaying = list()
                 
     def handle_msg(self, msg_pmt):
         msg = pmt.cdr(msg_pmt)
@@ -86,6 +89,12 @@ class image_decoder(gr.basic_block):
         f.write(data)
 
         self.remaining[image_id] = self.remaining[image_id] - len(data)
+
+        if image_id not in self.displaying and \
+          length - self.remaining[image_id] >= 64*10:
+            self.displaying.append(image_id)
+            subprocess.Popen(['feh', '-R 1', filename])
+        
         if self.remaining[image_id] <= 0:
             # image finished
             print 'Finished downloading image', image_id
