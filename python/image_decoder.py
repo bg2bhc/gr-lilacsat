@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # 
-# Copyright 2016 Daniel Estevez
+# Copyright 2016 Daniel Estevez <daniel@destevez.net>
 # 
 # This is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -21,10 +21,21 @@
 
 import struct
 import os.path
+import binascii
+
+from csp.csp_header import CSP
 
 import numpy
 from gnuradio import gr
 import pmt
+
+flags = {-1 : 'FLAG_CAM_ERR_POWERON',\
+         -2 : 'FLAG_CAM_ERR_BEGIN',\
+         -3 : 'FLAG_CAM_ERR_STOP',\
+         -4 : 'FLAG_CAM_ERR_GETLEN',\
+         -5 : 'FLAG_CAM_ERR_READ',\
+         -6 : 'FLAG_FRAM_ERR_READ'}
+
 
 class image_decoder(gr.basic_block):
     """
@@ -41,7 +52,7 @@ class image_decoder(gr.basic_block):
         self.set_msg_handler(pmt.intern('in'), self.handle_msg)
         self.files = dict()
         self.remaining = dict()
-
+                
     def handle_msg(self, msg_pmt):
         msg = pmt.cdr(msg_pmt)
         if not pmt.is_u8vector(msg):
@@ -49,19 +60,25 @@ class image_decoder(gr.basic_block):
             return
         packet = bytearray(pmt.u8vector_elements(msg))
 
-        dst = (packet[1] & 0xf0) >> 4
-        if dst != 6:
+        csp = CSP(packet[:4])
+
+        # destination 6 is used for JPEG chunks
+        if csp.destination != 6:
             return
 
-        # TODO check CRC
-
-        image_id = packet[4]
-        length = struct.unpack('<H', packet[9:11])[0]
-        index = struct.unpack('<H', packet[12:14])[0]
+        image_id = struct.unpack('<I', packet[4:8])[0]
+        flag = struct.unpack('<b', packet[8:9])[0]
+        length = struct.unpack('<I', packet[9:12] + bytearray([0]))[0]
+        index = struct.unpack('<I', packet[12:15] + bytearray([0]))[0]
         data = packet[15:-8]
 
+        if flag in flags:
+            print 'Received flag', flags[flag]
+            return
+
+        filename = os.path.join(self.path, str(image_id) + '.jpg')
         if image_id not in self.files:
-            self.files[image_id] = open(os.path.join(self.path, str(image_id) + '.jpg'), 'wb', 0)
+            self.files[image_id] = open(filename, 'wb', 0)
             self.remaining[image_id] = length
 
         f = self.files[image_id]
