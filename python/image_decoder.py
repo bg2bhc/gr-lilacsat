@@ -90,10 +90,13 @@ class image_decoder(gr.basic_block):
 
         self.remaining[image_id] = self.remaining[image_id] - len(data)
 
-        if image_id not in self.displaying and \
+        if self.display and image_id not in self.displaying and \
           length - self.remaining[image_id] >= 64*10:
             self.displaying.append(image_id)
-            subprocess.Popen(['feh', '-R 1', filename])
+            try:
+                subprocess.Popen(['feh', '-R 1', filename])
+            except Exception:
+                pass
         
         if self.remaining[image_id] <= 0:
             # image finished
