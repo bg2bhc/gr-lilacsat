@@ -31,4 +31,5 @@ except ImportError:
 	pass
 
 # import any pure python here
+from image_decoder import image_decoder
 #

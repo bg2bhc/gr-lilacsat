@@ -39,5 +39,6 @@ install(FILES
     lilacsat_sync_det_b.xml
     lilacsat_sync_det_b.xml
     lilacsat_lilacsat1_frame_depack.xml
-    lilacsat_gmsk_demod.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_gmsk_demod.xml
+    lilacsat_image_decoder.xml DESTINATION share/gnuradio/grc/blocks
 )
