@@ -10,6 +10,13 @@ This project is supported by Harbin Institute of Technology.
 
 Visit http://lilacsat.hit.edu.cn/ for more information.
 
+## Requirements
+---------------------------------------
+
+* [gr-csp](https://github.com/daniestevez/gr-csp/)
+* [construct 2.8](https://construct.readthedocs.io/en/latest/) For telemetry parser
+* [feh](https://feh.finalrewind.org/) For realtime image display
+
 ## Examples
 ---------------------------------------
 frontend_rx_\*.grc in examples folder for different devices:
