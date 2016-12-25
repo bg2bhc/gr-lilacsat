@@ -32,4 +32,5 @@ except ImportError:
 
 # import any pure python here
 from image_decoder import image_decoder
+from telemetry_parser import telemetry_parser
 #
