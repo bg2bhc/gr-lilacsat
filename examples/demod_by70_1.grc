@@ -69,7 +69,7 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>samp_rate</value>
+      <value>nfilts</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -77,7 +77,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>48000</value>
+      <value>16</value>
     </param>
     <param>
       <key>alias</key>
@@ -85,61 +85,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 99)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>alpha</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>0.35</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(520, 19)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable</key>
-    <param>
-      <key>id</key>
-      <value>rrc_taps</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), alpha, 11*sps*nfilts)</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(448, 83)</value>
+      <value>(448, 19)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -177,7 +123,7 @@
     <key>variable</key>
     <param>
       <key>id</key>
-      <value>nfilts</value>
+      <value>rrc_taps</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -185,7 +131,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>16</value>
+      <value>firdes.root_raised_cosine(nfilts, nfilts, 1.0/float(sps), alpha, 11*sps*nfilts)</value>
     </param>
     <param>
       <key>alias</key>
@@ -193,7 +139,61 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(448, 19)</value>
+      <value>(448, 83)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>alpha</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>0.35</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(520, 19)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>variable</key>
+    <param>
+      <key>id</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>value</key>
+      <value>48000</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(8, 99)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1245,81 +1245,6 @@
     <param>
       <key>_coordinate</key>
       <value>(728, 619)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>lilacsat_plan13_cc</key>
-    <param>
-      <key>id</key>
-      <value>lilacsat_plan13_cc_0</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>enable</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>tle1</key>
-      <value>1 28650U 05017B   15231.04877893  .00000753  00000-0  88279-4 0  9995</value>
-    </param>
-    <param>
-      <key>tle2</key>
-      <value>2 28650  97.5791 220.6855 0024006 179.5744 180.5498 14.87574725556795</value>
-    </param>
-    <param>
-      <key>lon</key>
-      <value>126.6121</value>
-    </param>
-    <param>
-      <key>lat</key>
-      <value>45.7297</value>
-    </param>
-    <param>
-      <key>height</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>fc</key>
-      <value>437200000</value>
-    </param>
-    <param>
-      <key>samp_rate</key>
-      <value>samp_rate</value>
-    </param>
-    <param>
-      <key>txrx</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>verbose</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>affinity</key>
-      <value></value>
-    </param>
-    <param>
-      <key>minoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>maxoutbuf</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(352, 235)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -2881,6 +2806,81 @@
     <param>
       <key>_coordinate</key>
       <value>(1000, 635)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>lilacsat_plan13_cc</key>
+    <param>
+      <key>id</key>
+      <value>lilacsat_plan13_cc_0</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>enable</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>tle1</key>
+      <value>1 41909U 16083C   17002.67225097  .00392198  23238-5  79217-3 0  9993</value>
+    </param>
+    <param>
+      <key>tle2</key>
+      <value>2 41909  97.5869  80.5790 0213874 346.1470  13.3714 15.70100521   852</value>
+    </param>
+    <param>
+      <key>lon</key>
+      <value>126.6121</value>
+    </param>
+    <param>
+      <key>lat</key>
+      <value>45.7297</value>
+    </param>
+    <param>
+      <key>height</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>fc</key>
+      <value>436200000</value>
+    </param>
+    <param>
+      <key>samp_rate</key>
+      <value>samp_rate</value>
+    </param>
+    <param>
+      <key>txrx</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>verbose</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(352, 235)</value>
     </param>
     <param>
       <key>_rotation</key>
