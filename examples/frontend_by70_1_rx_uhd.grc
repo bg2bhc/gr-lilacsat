@@ -3,6 +3,69 @@
 <flow_graph>
   <timestamp>Tue Aug  4 09:55:54 2015</timestamp>
   <block>
+    <key>options</key>
+    <param>
+      <key>id</key>
+      <value>frontend_by70_1_rx_UHD</value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>title</key>
+      <value>Frontend BY70-1 RX UHD</value>
+    </param>
+    <param>
+      <key>author</key>
+      <value>WEI Mingchuan, BG2BHC</value>
+    </param>
+    <param>
+      <key>description</key>
+      <value>BY70-1 receiver frontend for USRP. Tested on GRC 3.7.8.</value>
+    </param>
+    <param>
+      <key>window_size</key>
+      <value>1024,768</value>
+    </param>
+    <param>
+      <key>generate_options</key>
+      <value>qt_gui</value>
+    </param>
+    <param>
+      <key>category</key>
+      <value>Custom</value>
+    </param>
+    <param>
+      <key>run_options</key>
+      <value>prompt</value>
+    </param>
+    <param>
+      <key>run</key>
+      <value>True</value>
+    </param>
+    <param>
+      <key>max_nouts</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>realtime_scheduling</key>
+      <value></value>
+    </param>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(16, 19)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+  </block>
+  <block>
     <key>variable</key>
     <param>
       <key>id</key>
@@ -50,65 +113,6 @@
     <param>
       <key>_coordinate</key>
       <value>(16, 107)</value>
-    </param>
-    <param>
-      <key>_rotation</key>
-      <value>0</value>
-    </param>
-  </block>
-  <block>
-    <key>variable_qtgui_range</key>
-    <param>
-      <key>id</key>
-      <value>rx_gain</value>
-    </param>
-    <param>
-      <key>_enabled</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>label</key>
-      <value>RX Gain</value>
-    </param>
-    <param>
-      <key>value</key>
-      <value>30</value>
-    </param>
-    <param>
-      <key>start</key>
-      <value>0</value>
-    </param>
-    <param>
-      <key>stop</key>
-      <value>73</value>
-    </param>
-    <param>
-      <key>step</key>
-      <value>1</value>
-    </param>
-    <param>
-      <key>widget</key>
-      <value>counter_slider</value>
-    </param>
-    <param>
-      <key>orient</key>
-      <value>Qt.Horizontal</value>
-    </param>
-    <param>
-      <key>min_len</key>
-      <value>200</value>
-    </param>
-    <param>
-      <key>gui_hint</key>
-      <value>0,0</value>
-    </param>
-    <param>
-      <key>alias</key>
-      <value></value>
-    </param>
-    <param>
-      <key>_coordinate</key>
-      <value>(16, 179)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1813,11 +1817,11 @@
     </param>
     <param>
       <key>int_min</key>
-      <value>-100</value>
+      <value>-120</value>
     </param>
     <param>
       <key>int_max</key>
-      <value>0</value>
+      <value>-20</value>
     </param>
     <param>
       <key>grid</key>
@@ -1985,54 +1989,50 @@
     </param>
   </block>
   <block>
-    <key>options</key>
+    <key>variable_qtgui_range</key>
     <param>
       <key>id</key>
-      <value>frontend_by70_1_rx_UHD</value>
+      <value>rx_gain</value>
     </param>
     <param>
       <key>_enabled</key>
       <value>True</value>
     </param>
     <param>
-      <key>title</key>
-      <value>Frontend BY70-1 RX UHD</value>
+      <key>label</key>
+      <value>RX Gain</value>
     </param>
     <param>
-      <key>author</key>
-      <value>WEI Mingchuan, BG2BHC</value>
+      <key>value</key>
+      <value>35</value>
     </param>
     <param>
-      <key>description</key>
-      <value>BY70-1 receiver frontend for USRP. Tested on GRC 3.7.8.</value>
-    </param>
-    <param>
-      <key>window_size</key>
-      <value>1024,768</value>
-    </param>
-    <param>
-      <key>generate_options</key>
-      <value>qt_gui</value>
-    </param>
-    <param>
-      <key>category</key>
-      <value>Custom</value>
-    </param>
-    <param>
-      <key>run_options</key>
-      <value>prompt</value>
-    </param>
-    <param>
-      <key>run</key>
-      <value>True</value>
-    </param>
-    <param>
-      <key>max_nouts</key>
+      <key>start</key>
       <value>0</value>
     </param>
     <param>
-      <key>realtime_scheduling</key>
-      <value></value>
+      <key>stop</key>
+      <value>73</value>
+    </param>
+    <param>
+      <key>step</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>widget</key>
+      <value>counter_slider</value>
+    </param>
+    <param>
+      <key>orient</key>
+      <value>Qt.Horizontal</value>
+    </param>
+    <param>
+      <key>min_len</key>
+      <value>200</value>
+    </param>
+    <param>
+      <key>gui_hint</key>
+      <value>0,0</value>
     </param>
     <param>
       <key>alias</key>
@@ -2040,7 +2040,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(16, 19)</value>
+      <value>(16, 179)</value>
     </param>
     <param>
       <key>_rotation</key>
