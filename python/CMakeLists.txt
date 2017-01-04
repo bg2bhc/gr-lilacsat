@@ -33,6 +33,7 @@ GR_PYTHON_INSTALL(
     __init__.py
     image_decoder.py
     telemetry_parser.py
+    camera_telemetry_parser.py
     telemetry.py DESTINATION ${GR_PYTHON_DIR}/lilacsat
 )
 
