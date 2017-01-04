@@ -41,5 +41,6 @@ install(FILES
     lilacsat_lilacsat1_frame_depack.xml
     lilacsat_gmsk_demod.xml
     lilacsat_image_decoder.xml
-    lilacsat_telemetry_parser.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_telemetry_parser.xml
+    lilacsat_camera_telemetry_parser.xml DESTINATION share/gnuradio/grc/blocks
 )

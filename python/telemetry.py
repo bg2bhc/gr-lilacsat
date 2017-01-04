@@ -21,10 +21,16 @@
 
 from construct import *
 
+PayloadMode = BitStruct('open_telecommand' / Flag,\
+                     'camera_task' / Flag,\
+                     'valid_image_data' / Flag,\
+                     'camera_power' / Flag,\
+                     'rest' / Nibble)
+
 Hk_STM32 = Struct(Const(b'\x1c\xa1'),\
                   'config' / Int8ul,\
                   'flag_direct_ins' / Int8ul,\
-                  'payload_mode' / Int8ul,\
+                  'payload_mode' / PayloadMode,\
                   'tx_mode' / Int8ul,\
                   'gain_tx' / Int16sl,\
                   'i_3v3' / Int16sl,\
