@@ -71,7 +71,7 @@ namespace gr {
 
 		}
 		
-		mkfifo((const char *)(d_path.data()), (__mode_t)permission);
+		mkfifo((const char *)(d_path.data()), (mode_t)permission);
     }
 
 	void pipe_sink_pdu_impl::pmt_in_callback(pmt::pmt_t msg)

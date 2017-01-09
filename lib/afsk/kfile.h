@@ -221,8 +221,8 @@ int kfile_gets(struct KFile *fd, char *buf, int size);
 int kfile_gets_echo(struct KFile *fd, char *buf, int size, bool echo);
 //void kfile_resync(KFile *fd, mtime_t delay);
 void kfile_init(struct KFile *fd);
-inline int kfile_error(struct KFile *fd);
-inline void kfile_clearerr(struct KFile *fd);
+int kfile_error(struct KFile *fd);
+void kfile_clearerr(struct KFile *fd);
 
 /* \} */
 
