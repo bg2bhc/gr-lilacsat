@@ -24,6 +24,8 @@ import urllib2
 
 import json
 
+from kiss_decoder import KISS_Decoder
+
 class MyForm(QtGui.QMainWindow):
     def __init__(self, parent=None): 
         QtGui.QWidget.__init__(self, parent) 
@@ -47,11 +49,12 @@ class MyForm(QtGui.QMainWindow):
         self.HOST = 'lilacsat.hit.edu.cn'       
         self.PORT_C_DA = 60061
         self.PORT_C_DB = 60062
-        self.PORT_S_D = 61161
+        self.PORT_S_D = 61261
         self.Proxy_D_S=None
         self.Proxy_D_S_B=None
         self.Proxy_D_LA=None
         self.Proxy_D_LB=None
+        self.Kiss_Decoder = KISS_Decoder(self.handle_D_L2RA_Kiss)
         self.ProxyRunning = False
         
         try:
@@ -124,7 +127,7 @@ class MyForm(QtGui.QMainWindow):
             
     def StartGNURadio(self):
         if os.fork() == 0:
-            os.execvp("gnome-terminal",("gnome-terminal","-x","bash","-c", "/home/lilac/workspace/ftp_server_simulator/Debug/ftp_server_simulator -a20 -s127.0.0.1 -fpacketlog_node4.db"))
+            os.execvp("gnome-terminal",("gnome-terminal","-x","bash","-c", "/home/lilac/workspace_l1/ftp_server_simulator/Debug/ftp_server_simulator -a20 -s127.0.0.1 -fpacketlog_node4.db"))
     
     
     def SaveData(self):
@@ -252,6 +255,11 @@ class MyForm(QtGui.QMainWindow):
     
     #下行数据，本地端到远程端处理程序
     def handle_D_L2RA(self,caller,data):
+        self.Kiss_Decoder.AppendStream(data)
+        
+        
+        
+    def handle_D_L2RA_Kiss(self,data):
         Length_Bin=struct.pack("I",len(data)+64)
         tmp_data="PaC_t" +Length_Bin+"\x01" + self.NickName + struct.pack("d",self.Lon) + struct.pack("d",self.Lat) + " "*32 +data
         self.Proxy_D_S.SendData(tmp_data)
