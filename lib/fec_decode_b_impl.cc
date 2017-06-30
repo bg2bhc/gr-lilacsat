@@ -81,7 +81,7 @@ namespace gr {
 	
 	fprintf(stdout, "\n**** %02d:%02d:%02d, byte_corr = %d\n", tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec, byte_corr);
 
-	if (byte_corr != -1)
+	if (byte_corr != -1 || obj_ptr_loc->d_pass_all)
 	{
 		obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(len, buf)));
 	}
