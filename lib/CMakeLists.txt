@@ -85,7 +85,9 @@ list(APPEND lilacsat_sources
     cc_decode_bb_impl.cc
     sync_det_b_impl.cc
     lilacsat1_frame_depack_impl.cc
-    gmsk_demod_impl.cc )
+    gmsk_demod_impl.cc
+    dslwp_tm_header_parser_impl.cc
+    file_sink_pdu_impl.cc )
 
 set(lilacsat_sources "${lilacsat_sources}" PARENT_SCOPE)
 if(NOT lilacsat_sources)

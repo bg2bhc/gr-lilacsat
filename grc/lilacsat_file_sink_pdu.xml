@@ -1,0 +1,21 @@
+<block>
+  <name>File Sink PDU</name>
+  <key>lilacsat_file_sink_pdu</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.file_sink_pdu($path, $format)</make>
+  <param>
+    <name>Path</name>
+    <key>path</key>
+    <type>string</type>
+  </param>
+  <param>
+    <name>Format</name>
+    <key>format</key>
+    <type>int</type>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+</block>

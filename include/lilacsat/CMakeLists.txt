@@ -44,5 +44,7 @@ install(FILES
     sync_det_b.h
     sync_det_b.h
     lilacsat1_frame_depack.h
-    gmsk_demod.h DESTINATION include/lilacsat
+    gmsk_demod.h
+    dslwp_tm_header_parser.h
+    file_sink_pdu.h DESTINATION include/lilacsat
 )
