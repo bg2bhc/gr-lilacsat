@@ -32,6 +32,7 @@
 #include "lilacsat/gmsk_demod.h"
 #include "lilacsat/dslwp_tm_header_parser.h"
 #include "lilacsat/file_sink_pdu.h"
+#include "lilacsat/dslwp_tm_parser.h"
 %}
 
 
@@ -95,3 +96,5 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, gmsk_demod);
 GR_SWIG_BLOCK_MAGIC2(lilacsat, dslwp_tm_header_parser);
 %include "lilacsat/file_sink_pdu.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, file_sink_pdu);
+%include "lilacsat/dslwp_tm_parser.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, dslwp_tm_parser);

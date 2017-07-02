@@ -46,5 +46,6 @@ install(FILES
     lilacsat1_frame_depack.h
     gmsk_demod.h
     dslwp_tm_header_parser.h
-    file_sink_pdu.h DESTINATION include/lilacsat
+    file_sink_pdu.h
+    dslwp_tm_parser.h DESTINATION include/lilacsat
 )

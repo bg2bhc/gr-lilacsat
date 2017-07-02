@@ -1,0 +1,69 @@
+#ifndef __DSLWP_HK_H__
+#define __DSLWP_HK_H__
+
+#include <inttypes.h>
+
+typedef struct hk_uv_t
+{
+	uint8_t config;
+	uint8_t tx_mode;
+	uint8_t tx_gain;
+	uint8_t rsvd0;
+	uint16_t rsvd1;
+	uint8_t n_cmd_buf;
+	uint8_t n_cmd_dropped;
+	// 8
+	uint8_t i_bus_rx;
+	uint8_t u_bus_rx;
+	uint8_t i_bus_tx;
+	uint8_t u_bus_tx;
+	int8_t t_pa;
+	int8_t t_tx7021;
+	int16_t rsvd4;
+	// 16
+	uint8_t n_422_tx;
+	uint8_t n_422_rx;
+	uint8_t n_422_rx_pkg_err;
+	uint8_t n_422_rx_exe_err;
+	uint8_t cmd_422_last_rx;
+	uint8_t n_rf_tx;
+	uint8_t n_rf_tx_dropped;
+	uint8_t n_rf_rx;
+	// 24
+	uint8_t n_rf_rx_pkg_err;
+	uint8_t n_rf_rx_exe_err;
+	uint8_t n_rf_rx_last_cmd;
+	uint8_t n_rf_rx_fec_err;
+	uint32_t n_ul;
+	// 32
+	int16_t fc_tc;
+	int16_t fc_ham;
+	uint16_t rsvd7;
+	uint16_t rsvd8;
+	// 40
+	uint8_t rssi_tc;
+	uint8_t rssi_ham;
+	int16_t rsvd15;
+	int16_t	rsvd16;
+	int16_t	rsvd17;
+	// 48
+	uint8_t cam_mode;
+	uint8_t cam_task_flag;
+	int8_t cam_err_flag;
+	int8_t cam_pic_len_2;
+	int8_t cam_pic_len_1;
+	int8_t cam_pic_len_0;
+	int16_t	rsvd12;
+	// 56
+	uint8_t n_reset;
+	uint8_t flag_reset;
+	uint8_t flag_sys;
+	uint8_t n_dma_overflow;
+	uint32_t runtime;
+	// 64
+	uint32_t rsvd13;
+	uint32_t rsvd14;
+	// 72
+} hk_uv_t;
+
+#endif
