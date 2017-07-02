@@ -105,8 +105,8 @@ namespace gr {
 		fprintf(stdout, "n_rf_rx = %d\n", hk_uv.n_rf_rx);
 		fprintf(stdout, "n_rf_rx_pkg_err = %d\n", hk_uv.n_rf_rx_pkg_err);
 		fprintf(stdout, "n_rf_rx_exe_err = %d\n", hk_uv.n_rf_rx_exe_err);
-		fprintf(stdout, "n_rf_rx_last_cmd = %d\n", hk_uv.n_rf_rx_last_cmd);
 		fprintf(stdout, "n_rf_rx_fec_err = %d\n", hk_uv.n_rf_rx_fec_err);
+		fprintf(stdout, "cmd_rf_last_rx = 0x%02x\n", hk_uv.cmd_rf_last_rx);
 		fprintf(stdout, "n_ul = %d\n", sw32(hk_uv.n_ul));
 		fprintf(stdout, "fc_tc = 0x%04x\n", hk_uv.fc_tc);
 		fprintf(stdout, "fc_ham = 0x%04x\n", hk_uv.fc_ham);
