@@ -87,6 +87,7 @@ namespace gr {
 		fprintf(stdout, "config = 0x%02x\n", hk_uv.config);
 		fprintf(stdout, "tx_mode = 0x%02x\n", hk_uv.tx_mode);
 		fprintf(stdout, "tx_gain = 0x%02x\n", hk_uv.tx_gain);
+		fprintf(stdout, "flag_7021 = 0x%02x\n", hk_uv.flag_7021);
 		fprintf(stdout, "n_cmd_buf = 0x%02x\n", hk_uv.n_cmd_buf);
 		fprintf(stdout, "n_cmd_dropped = 0x%02x\n", hk_uv.n_cmd_dropped);
 		fprintf(stdout, "i_bus_rx = %f\n", ((float)hk_uv.i_bus_rx) * 3.2f);

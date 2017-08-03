@@ -8,7 +8,7 @@ typedef struct hk_uv_t
 	uint8_t config;
 	uint8_t tx_mode;
 	uint8_t tx_gain;
-	uint8_t rsvd0;
+	uint8_t flag_7021;
 	uint16_t rsvd1;
 	uint8_t n_cmd_buf;
 	uint8_t n_cmd_dropped;
