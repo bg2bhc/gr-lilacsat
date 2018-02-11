@@ -32,6 +32,8 @@
 #include <gnuradio/io_signature.h>
 #include "kiss_encode_pdu_impl.h"
 
+#include <unistd.h>
+
 namespace gr {
   namespace lilacsat {
 
@@ -94,12 +96,13 @@ namespace gr {
 	{
 		while(sent < len_kiss)
 		{
-			if(len_kiss - sent < 114)
+			if(len_kiss - sent < d_const_length)
 			{
-				for(i=0; i<114-len_kiss+sent; i++)	buf_kiss[len_kiss+i] = 0xC0;
+				for(i=0; i<d_const_length-len_kiss+sent; i++)	buf_kiss[len_kiss+i] = 0xC0;
 			}
 			kiss_encode_pdu_impl::message_port_pub(kiss_encode_pdu_impl::d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(d_const_length, (const uint8_t *)buf_kiss+sent)));
 			sent += d_const_length;
+			usleep(10);
 		}
 	}
     }
