@@ -49,7 +49,7 @@ unsigned long txOutLong;
 unsigned long rxFrequencyLong;
 unsigned long txFrequencyLong;
 float dopplerFactor;
-const static double   YM = 365.25;                           /* Days in a year                     */
+static constexpr double   YM = 365.25;                           /* Days in a year                     */
 double   EL;                           /* Elevation                          */
 double   TN;                           /*                                    */
 
@@ -88,7 +88,7 @@ double   U;
 double   Ux;
 double   Uy;
 double   Uz;
-const static double   YT = 365.2421970;
+static constexpr double   YT = 365.2421970;
 double   WW;
 double   WE;
 double   W0;
