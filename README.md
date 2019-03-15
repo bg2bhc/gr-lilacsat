@@ -13,7 +13,7 @@ Visit http://lilacsat.hit.edu.cn/ for more information.
 ## Requirements
 ---------------------------------------
 
-* [gr-csp](https://github.com/daniestevez/gr-csp/)
+* [gr-satellites](https://github.com/daniestevez/gr-satellites/)
 * [construct 2.8](https://construct.readthedocs.io/en/latest/) For telemetry parser
 * [feh](https://feh.finalrewind.org/) For realtime image display
 
