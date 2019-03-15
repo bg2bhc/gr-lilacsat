@@ -4,9 +4,9 @@
 <lon>0</lon>
 <lat>0</lat>
 <alt>0</alt>
-<host>lilacsat.hit.edu.cn</host>
+<host>data.lilacsat.online</host>
 <back_host>localhost</back_host>
 <back_host_enable>0</back_host_enable>
 <port>61261</port>
-<tle>http://lilacsat.hit.edu.cn/tle/lilacsat1.txt</tle>
+<tle>http://data.lilacsat.online/tle/lilacsat1.txt</tle>
 </settings>
