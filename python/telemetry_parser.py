@@ -25,7 +25,7 @@ import pmt
 
 import telemetry
 from construct.core import ConstError
-from csp.csp_header import CSP
+from satellites.csp_header import CSP
 import struct
 
 class telemetry_parser(gr.basic_block):

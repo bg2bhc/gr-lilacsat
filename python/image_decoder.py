@@ -24,7 +24,7 @@ import os.path
 import binascii
 import subprocess
 
-from csp.csp_header import CSP
+from satellites.csp_header import CSP
 
 import numpy
 from gnuradio import gr
