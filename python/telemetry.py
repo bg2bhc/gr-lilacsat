@@ -153,7 +153,7 @@ Cfg = Struct(Const(b'\x1c\xa2'),\
              'interval_hk_OBC' / Int32ul,\
              'interval_hk_TLM' / Int32ul,\
              'interval_hk_BEACON' / Int32ul,\
-             'message' / String(28),\
+             'message' / PascalString(28, "utf8"),\
              'cam_delay' / Int32ul,\
              'crc' / Int32ul)
 
