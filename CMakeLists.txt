@@ -42,6 +42,14 @@ if(CMAKE_COMPILER_IS_GNUCXX AND NOT WIN32)
     add_definitions(-fvisibility=hidden)
 endif()
 
+# Set C++ standard to an older version to prevent incompatibilities to C++11
+# FIXME: Code should be fixed instead
+if(CMAKE_VERSION VERSION_LESS "3.1")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++98")
+else()
+    set(CMAKE_CXX_STANDARD 98)
+endif()
+
 ########################################################################
 # Find boost
 ########################################################################
