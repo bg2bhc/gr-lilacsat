@@ -181,9 +181,18 @@ class MyForm(QtGui.QMainWindow):
             f=urllib2.urlopen(str(self.ui.txt_TLE.text()))
             tle = f.read()
             tle=tle.split("\n")
+
+            index_num = 0
+
+            for ele in tle:
+                x = str.strip(ele)
+                if x == 'LILACSAT-2' or 'LILACSAT 2':
+                    index_num = tle.index(ele)
+                else:
+                    pass
             
-            tle1 = tle[1]
-            tle2 = tle[2]
+            tle1 = tle[index_num + 1].replace('\r', '')
+            tle2 = tle[index_num + 2].replace('\r', '')
             
 
             with open(os.path.split(os.path.realpath(__file__))[0] + "/grc_param.py", 'w') as fp: 
