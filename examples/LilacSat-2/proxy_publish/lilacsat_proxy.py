@@ -186,7 +186,7 @@ class MyForm(QtGui.QMainWindow):
 
             for ele in tle:
                 x = str.strip(ele)
-                if x == 'LILACSAT-2' or 'LILACSAT 2':
+                if x == 'LILACSAT-2' or x == 'LILACSAT 2':
                     index_num = tle.index(ele)
                 else:
                     pass
