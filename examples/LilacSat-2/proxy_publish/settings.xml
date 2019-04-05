@@ -8,5 +8,5 @@
 <back_host>localhost</back_host>
 <back_host_enable>0</back_host_enable>
 <port>61161</port>
-<tle>http://data.lilacsat.online/tle/lilacsat.txt</tle>
+<tle>https://celestrak.com/NORAD/elements/amateur.txt</tle>
 </settings>
