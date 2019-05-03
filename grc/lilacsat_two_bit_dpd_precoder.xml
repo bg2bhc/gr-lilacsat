@@ -1,5 +1,5 @@
 <block>
-  <name>Two-bit DPD Encoder</name>
+  <name>Two-bit DPD Precoder</name>
   <key>lilacsat_two_bit_dpd_precoder</key>
   <category>[LILACSAT]</category>
   <import>import lilacsat</import>

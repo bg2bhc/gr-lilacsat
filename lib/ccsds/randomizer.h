@@ -27,4 +27,6 @@
 void ccsds_generate_sequence(char *sequence, int length);
 void ccsds_xor_sequence(unsigned char *data, char *sequence, int length);
 
+extern char sequence[255];
+
 #endif /* _RANDOMIZER_H_ */

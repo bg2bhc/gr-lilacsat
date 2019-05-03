@@ -1,0 +1,38 @@
+<block>
+  <name>Attach Preamble and Tailer</name>
+  <key>lilacsat_attach_preamble_and_tailer</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.attach_preamble_and_tailer($len_preamble, $len_tailer, $padding_type)</make>
+  <param>
+    <name>Preamble Length</name>
+    <key>len_preamble</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Tailer Length</name>
+    <key>len_tailer</key>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Padding Type</name>
+    <key>padding_type</key>
+    <type>bool</type>
+    <option>
+	<name>1</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>0</name>
+	<key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

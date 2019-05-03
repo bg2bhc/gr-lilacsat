@@ -48,5 +48,7 @@ install(FILES
     dslwp_tm_header_parser.h
     file_sink_pdu.h
     dslwp_tm_parser.h
-    two_bit_dpd_precoder.h DESTINATION include/lilacsat
+    two_bit_dpd_precoder.h
+    attach_preamble_and_tailer.h
+    attach_rs_codeblock.h DESTINATION include/lilacsat
 )

@@ -24,6 +24,8 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "randomizer.h"
+
 char sequence[255] =
 {
     0xFF, 0x48, 0x0E, 0xC0, 0x9A, 0x0D, 0x70, 0xBC,

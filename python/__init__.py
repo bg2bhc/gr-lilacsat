@@ -31,7 +31,4 @@ except ImportError:
 	pass
 
 # import any pure python here
-#from image_decoder import image_decoder
-#from telemetry_parser import telemetry_parser
-#from camera_telemetry_parser import camera_telemetry_parser
 #

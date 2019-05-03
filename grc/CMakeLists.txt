@@ -46,5 +46,7 @@ install(FILES
     lilacsat_dslwp_tm_header_parser.xml
     lilacsat_file_sink_pdu.xml
     lilacsat_dslwp_tm_parser.xml
-    lilacsat_two_bit_dpd_encoder.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_two_bit_dpd_precoder.xml
+    lilacsat_attach_preamble_and_tailer.xml
+    lilacsat_attach_rs_codeblock.xml DESTINATION share/gnuradio/grc/blocks
 )
