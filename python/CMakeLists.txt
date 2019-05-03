@@ -30,11 +30,11 @@ endif()
 ########################################################################
 GR_PYTHON_INSTALL(
     FILES
-    __init__.py
-    image_decoder.py
-    telemetry_parser.py
-    camera_telemetry_parser.py
-    telemetry.py DESTINATION ${GR_PYTHON_DIR}/lilacsat
+    __init__.py DESTINATION ${GR_PYTHON_DIR}/lilacsat
+    #image_decoder.py
+    #telemetry_parser.py
+    #camera_telemetry_parser.py
+    #telemetry.py DESTINATION ${GR_PYTHON_DIR}/lilacsat
 )
 
 ########################################################################

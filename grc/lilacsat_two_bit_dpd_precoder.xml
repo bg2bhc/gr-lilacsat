@@ -1,0 +1,29 @@
+<block>
+  <name>Two-bit DPD Encoder</name>
+  <key>lilacsat_two_bit_dpd_precoder</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.two_bit_dpd_precoder($init_value)</make>
+  <param>
+    <name>Init Value</name>
+    <key>init_value</key>
+    <value>True</value>
+    <type>bool</type>
+    <option>
+	<name>1</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>0</name>
+	<key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

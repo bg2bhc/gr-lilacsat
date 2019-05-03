@@ -33,6 +33,7 @@
 #include "lilacsat/dslwp_tm_header_parser.h"
 #include "lilacsat/file_sink_pdu.h"
 #include "lilacsat/dslwp_tm_parser.h"
+#include "lilacsat/two_bit_dpd_precoder.h"
 %}
 
 
@@ -98,3 +99,6 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, dslwp_tm_header_parser);
 GR_SWIG_BLOCK_MAGIC2(lilacsat, file_sink_pdu);
 %include "lilacsat/dslwp_tm_parser.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, dslwp_tm_parser);
+
+%include "lilacsat/two_bit_dpd_precoder.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, two_bit_dpd_precoder);
