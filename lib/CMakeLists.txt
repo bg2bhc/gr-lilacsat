@@ -91,7 +91,8 @@ list(APPEND lilacsat_sources
     dslwp_tm_parser_impl.cc
     two_bit_dpd_precoder_impl.cc
     attach_preamble_and_tailer_impl.cc
-    attach_rs_codeblock_impl.cc )
+    attach_rs_codeblock_impl.cc
+    pdu_f32_to_u8_impl.cc )
 
 set(lilacsat_sources "${lilacsat_sources}" PARENT_SCOPE)
 if(NOT lilacsat_sources)

@@ -50,5 +50,6 @@ install(FILES
     dslwp_tm_parser.h
     two_bit_dpd_precoder.h
     attach_preamble_and_tailer.h
-    attach_rs_codeblock.h DESTINATION include/lilacsat
+    attach_rs_codeblock.h
+    pdu_f32_to_u8.h DESTINATION include/lilacsat
 )

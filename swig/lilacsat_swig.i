@@ -36,6 +36,7 @@
 #include "lilacsat/two_bit_dpd_precoder.h"
 #include "lilacsat/attach_preamble_and_tailer.h"
 #include "lilacsat/attach_rs_codeblock.h"
+#include "lilacsat/pdu_f32_to_u8.h"
 %}
 
 
@@ -109,3 +110,5 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, two_bit_dpd_precoder);
 GR_SWIG_BLOCK_MAGIC2(lilacsat, attach_preamble_and_tailer);
 %include "lilacsat/attach_rs_codeblock.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, attach_rs_codeblock);
+%include "lilacsat/pdu_f32_to_u8.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, pdu_f32_to_u8);

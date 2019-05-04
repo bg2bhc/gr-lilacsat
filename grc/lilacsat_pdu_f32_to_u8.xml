@@ -1,0 +1,15 @@
+<block>
+  <name>PDU f32 to u8</name>
+  <key>lilacsat_pdu_f32_to_u8</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.pdu_f32_to_u8()</make>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>
