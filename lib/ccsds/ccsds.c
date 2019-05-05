@@ -186,7 +186,7 @@ unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits
         {
             if(cc->preamble_len > 0)
             {	
-		static int i = 0;
+		static unsigned char i = 0;
                 current_data = sequence[i%255];
 		i++;
                 cc->preamble_len--;
@@ -198,7 +198,7 @@ unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits
             }
             else if(cc->trailer_len > 0)
             {
-		static int i = 0;
+		static unsigned char i = 0;
                 current_data = sequence[i%255];
 		i++;
                 if(!cc->cfg_continous) cc->trailer_len--;
