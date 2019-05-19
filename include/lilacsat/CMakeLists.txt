@@ -51,5 +51,7 @@ install(FILES
     two_bit_dpd_precoder.h
     attach_preamble_and_tailer.h
     attach_rs_codeblock.h
-    pdu_f32_to_u8.h DESTINATION include/lilacsat
+    pdu_f32_to_u8.h
+    two_bit_dpd_frame_recovery.h
+    rs_decode_pdu.h DESTINATION include/lilacsat
 )

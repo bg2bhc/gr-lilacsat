@@ -1,0 +1,15 @@
+<block>
+  <name>RS Decode PDU</name>
+  <key>lilacsat_rs_decode_pdu</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.rs_decode_pdu()</make>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>
