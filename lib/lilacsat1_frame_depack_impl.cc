@@ -85,7 +85,8 @@ namespace gr {
 
 		size_t msg_len, n_path;
 		const uint8_t* bytes_in = pmt::u8vector_elements(bytes, msg_len);
-		int i, j;
+		int i, j, i_data_field = 0;
+        uint8_t buf_data_field[81];
 		if(msg_len != 116)
 		{
 			return;
@@ -116,9 +117,11 @@ namespace gr {
 			}
 			else
 			{
-				kiss_rx_byte(&d_ki, bytes_in[i]);
+				//kiss_rx_byte(&d_ki, bytes_in[i]);
+                buf_data_field[i_data_field++] = bytes_in[i];                
 			}
 		}
+        this->message_port_pub(this->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(81, (const uint8_t *)buf_data_field)));
     }
 
     int
