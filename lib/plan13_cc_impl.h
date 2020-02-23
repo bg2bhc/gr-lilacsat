@@ -62,6 +62,13 @@ namespace gr {
 	double d_RV;
 	double d_ALON;
 
+	float k_real, k_imag;
+	double  current_phase, f_doppler, f_doppler_var;
+	int sample_in_second;
+	char init;
+	time_t time_curr, time_next, time_new;
+	struct tm *tblock_curr, *tblock_next;
+
 	pmt::pmt_t d_freq_port;
 	pmt::pmt_t d_rotator_port;
 
