@@ -64,6 +64,8 @@ namespace gr {
 
 		d_out_port = pmt::mp("out");	      
       	message_port_register_out(d_out_port);
+
+        set_output_multiple(8);
 	}
 
     /*
