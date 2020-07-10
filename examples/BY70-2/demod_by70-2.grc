@@ -809,7 +809,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1152, 720)</value>
+      <value>(1152, 736)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1018,6 +1018,65 @@
     <param>
       <key>minoutbuf</key>
       <value>0</value>
+    </param>
+  </block>
+  <block>
+    <key>blocks_socket_pdu</key>
+    <param>
+      <key>alias</key>
+      <value></value>
+    </param>
+    <param>
+      <key>comment</key>
+      <value></value>
+    </param>
+    <param>
+      <key>affinity</key>
+      <value></value>
+    </param>
+    <param>
+      <key>_enabled</key>
+      <value>1</value>
+    </param>
+    <param>
+      <key>_coordinate</key>
+      <value>(1136, 928)</value>
+    </param>
+    <param>
+      <key>_rotation</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>host</key>
+      <value>127.0.0.1</value>
+    </param>
+    <param>
+      <key>id</key>
+      <value>blocks_socket_pdu_0_0</value>
+    </param>
+    <param>
+      <key>mtu</key>
+      <value>10000</value>
+    </param>
+    <param>
+      <key>maxoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>minoutbuf</key>
+      <value>0</value>
+    </param>
+    <param>
+      <key>port</key>
+      <value>8001</value>
+    </param>
+    <param>
+      <key>tcp_no_delay</key>
+      <value>False</value>
+    </param>
+    <param>
+      <key>type</key>
+      <value>"TCP_CLIENT"</value>
     </param>
   </block>
   <block>
@@ -1406,7 +1465,7 @@
     </param>
   </block>
   <block>
-    <key>dslwp_tm_header_parser</key>
+    <key>dslwp_kiss_encode_pdu</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -1414,6 +1473,10 @@
     <param>
       <key>comment</key>
       <value></value>
+    </param>
+    <param>
+      <key>const_length</key>
+      <value>-1</value>
     </param>
     <param>
       <key>affinity</key>
@@ -1425,7 +1488,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(992, 904)</value>
+      <value>(1128, 868)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -1433,7 +1496,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>dslwp_tm_header_parser_0</value>
+      <value>dslwp_kiss_encode_pdu_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1491,7 +1554,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(8, 275)</value>
+      <value>(8, 276)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -3394,16 +3457,10 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>dslwp_tm_header_parser_0</source_block_id>
-    <sink_block_id>blocks_message_debug_0</sink_block_id>
-    <source_key>out 0</source_key>
-    <sink_key>print_pdu</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>dslwp_tm_header_parser_0</source_block_id>
-    <sink_block_id>blocks_message_debug_0</sink_block_id>
-    <source_key>out 2</source_key>
-    <sink_key>print_pdu</sink_key>
+    <source_block_id>dslwp_kiss_encode_pdu_0</source_block_id>
+    <sink_block_id>blocks_socket_pdu_0_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>pdus</sink_key>
   </connection>
   <connection>
     <source_block_id>lilacsat_codec2_decode_bf_0</source_block_id>
@@ -3425,7 +3482,13 @@
   </connection>
   <connection>
     <source_block_id>lilacsat_lilacsat1_frame_depack_0</source_block_id>
-    <sink_block_id>dslwp_tm_header_parser_0</sink_block_id>
+    <sink_block_id>blocks_message_debug_0</sink_block_id>
+    <source_key>out</source_key>
+    <sink_key>print_pdu</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>lilacsat_lilacsat1_frame_depack_0</source_block_id>
+    <sink_block_id>dslwp_kiss_encode_pdu_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>in</sink_key>
   </connection>

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=LilacProxy
+Exec=/home/lilac/gr-dslwp/examples/DSLWP-Downlink-Proxy/mun_downlink_proxy.py
+Icon=/home/lilac/gr-dslwp/examples/DSLWP-Downlink-Proxy/icon.xpm
+Terminal=false
+Type=Application
+Name[en_US]=dslwp_proxy.desktop
