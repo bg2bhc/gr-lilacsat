@@ -1,0 +1,33 @@
+<block>
+  <name>CCSDS Pseudo Randomizer</name>
+  <key>lilacsat_ccsds_pseudo_randomizer</key>
+  <category>[LILACSAT]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.ccsds_pseudo_randomizer($data_format)</make>
+  <param>
+    <name>Data Format</name>
+    <key>data_format</key>
+    <value>1</value>
+	<type>enum</type>
+	<option>
+		<name>Bits</name>
+		<key>1</key>
+	</option>
+	<option>
+		<name>Packed bits</name>
+		<key>2</key>
+	</option>
+	<option>
+		<name>Float Bits</name>
+		<key>3</key>
+	</option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

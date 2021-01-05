@@ -53,5 +53,6 @@ install(FILES
     attach_rs_codeblock.h
     pdu_f32_to_u8.h
     two_bit_dpd_frame_recovery.h
-    rs_decode_pdu.h DESTINATION include/lilacsat
+    rs_decode_pdu.h
+    ccsds_pseudo_randomizer.h DESTINATION include/lilacsat
 )

@@ -107,14 +107,6 @@ namespace gr {
 		fprintf(stdout, "Elements Set To:\n");
 		fprintf(stdout, "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n", d_YE, d_TE, d_IN, d_RA, d_EC, d_WP, d_MA, d_MM, d_M2, d_RV, d_ALON);
 	}
-
-	k_real = 1;
-	k_imag = 0;
-	current_phase = 0;
-	f_doppler = 0.0;
-	f_doppler_var = 0.0;
-	sample_in_second = 0;
-	init = 0;
     }
 
     void plan13_cc_impl::ssplit(char *dest, char *src, int n)
@@ -179,72 +171,23 @@ namespace gr {
         gr_complex *out = (gr_complex *) output_items[0];
 
 	int i;
+	static float k_real = 1, k_imag = 0;
+	static double  current_phase = 0, f_doppler = 0.0, f_doppler_var = 0.0;
+	static int sample_in_second = 0;
+	static char init = 0;
+	static time_t time_curr, time_next, time_new;
+	static struct tm *tblock_curr, *tblock_next;
 	unsigned char msg_freq[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x00, 0x00, 0x50, 0x37, 0x44, 0x01, 0xFD};
 
-	if(d_enable && noutput_items)
+	if(!init)
 	{
-		time_new = time(NULL);
-		if(!init)
-		{
-			init = 1;
-			sample_in_second = 0;
-			time_curr = time_new;		
-		}
-		else if( ((time_new - time_curr)>1) || ((time_curr - time_new)>1) )
-		{
-			sample_in_second = 0;
-			time_curr = time_new;
-
-			tblock_curr =  gmtime(&time_curr);
-			p13.setTime(tblock_curr->tm_year+1900, tblock_curr->tm_mon+1, tblock_curr->tm_mday, tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec);
-			p13.setElements(d_YE, d_TE, d_IN, d_RA, d_EC, d_WP, d_MA, d_MM, d_M2, d_RV, d_ALON);
-			p13.initSat();
-			p13.satvec();
-			p13.rangevec();
-			if(d_txrx)
-			{
-				f_doppler = (double)p13.txOutLong - (double)p13.rxFrequencyLong;
-				freq_cmd_gen((unsigned char *)msg_freq, p13.txOutLong);
-			}
-			else
-			{
-				f_doppler = (double)p13.rxFrequencyLong - (double)p13.rxOutLong;
-				freq_cmd_gen((unsigned char *)msg_freq, p13.rxOutLong);
-			}
-
-			message_port_pub(d_freq_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_freq), (const uint8_t *)msg_freq)));
-
-			if(d_verbose)
-			{
-				fprintf(stdout, "%02d:%02d:%02d ", tblock_curr->tm_hour, tblock_curr->tm_min, tblock_curr->tm_sec);
-				fprintf(stdout, "AZ: %lf ", p13.AZ);
-				fprintf(stdout, "EL: %lf ", p13.EL);
-				fprintf(stdout, "SLAT: %lf ", p13.SLAT);
-				fprintf(stdout, "SLON: %lf ", p13.SLON);
-				fprintf(stdout, "RR: %lf ", p13.RR);
-				fprintf(stdout, "Doppler: %lf\n", f_doppler);
-			}
-
-			// Linear Interpolation
-			time_next = time_curr + 1;
-			tblock_next =  gmtime(&time_next);
-			p13.setTime(tblock_next->tm_year+1900, tblock_next->tm_mon+1, tblock_next->tm_mday, tblock_next->tm_hour, tblock_next->tm_min, tblock_next->tm_sec); 
-			p13.setElements(d_YE, d_TE, d_IN, d_RA, d_EC, d_WP, d_MA, d_MM, d_M2, d_RV, d_ALON);
-			p13.initSat();
-			p13.satvec();
-			p13.rangevec();
-			if(d_txrx)
-			{
-				f_doppler_var = ((double)p13.txOutLong - (double)p13.txFrequencyLong - f_doppler)/d_samp_rate;
-			}
-			else
-			{
-				f_doppler_var = ((double)p13.rxFrequencyLong - (double)p13.rxOutLong - f_doppler)/d_samp_rate;
-			}	
-		}
+		init = 1;
+		sample_in_second = 0;
+		time_curr = time(NULL);
+		
 	}
 
-    // Do <+signal processing+>
+        // Do <+signal processing+>
 	for(i=0; i<noutput_items; i++)
 	{
 		if(d_enable)
