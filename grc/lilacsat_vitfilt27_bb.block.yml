@@ -1,0 +1,15 @@
+id: lilacsat_vitfilt27_bb
+label: Vitfilt 27 BB
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.vitfilt27_bb()
+inputs:
+- label: in
+  domain: stream
+  dtype: byte
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+file_format: 1

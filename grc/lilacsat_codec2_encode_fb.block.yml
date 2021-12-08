@@ -1,0 +1,20 @@
+id: lilacsat_codec2_encode_fb
+label: Codec2 Encode FB
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.codec2_encode_fb(${mode})
+parameters:
+- id: mode
+  label: Mode
+  dtype: int
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+  vlen: '8'
+file_format: 1

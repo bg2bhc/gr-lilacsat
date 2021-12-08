@@ -1,0 +1,15 @@
+id: lilacsat_angle_cf
+label: Angle CF
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.angle_cf()
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+file_format: 1

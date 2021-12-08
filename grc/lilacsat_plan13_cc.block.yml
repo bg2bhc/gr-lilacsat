@@ -1,0 +1,62 @@
+id: lilacsat_plan13_cc
+label: Plan13 CC
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.plan13_cc(${enable}, ${tle1}, ${tle2}, ${lon}, ${lat}, ${height},
+    ${fc}, ${samp_rate}, ${txrx}, ${verbose})
+parameters:
+- id: enable
+  label: Enable
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: tle1
+  label: TLE (Line 1)
+  dtype: string
+- id: tle2
+  label: TLE (Line 2)
+  dtype: string
+- id: lon
+  label: Longtitude
+  dtype: float
+- id: lat
+  label: Latitude
+  dtype: float
+- id: height
+  label: Height (m)
+  dtype: float
+- id: fc
+  label: Center Frequency (Hz)
+  dtype: float
+- id: samp_rate
+  label: Sample Rate (Hz)
+  dtype: float
+- id: txrx
+  label: TXRX
+  dtype: bool
+  default: 'False'
+  options: ['False', 'True']
+  option_labels: ['RX', 'TX']
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'False'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- label: out
+  domain: stream
+  dtype: complex
+- domain: message
+  id: freq
+  optional: true
+- domain: message
+  id: rotator
+  optional: true
+file_format: 1

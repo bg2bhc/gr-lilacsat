@@ -1,0 +1,14 @@
+id: lilacsat_afsk1200_rx_f
+label: AFSK1200 RX
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.afsk1200_rx_f()
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+outputs:
+- domain: message
+  id: out
+file_format: 1

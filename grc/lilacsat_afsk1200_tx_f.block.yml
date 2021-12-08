@@ -1,0 +1,40 @@
+id: lilacsat_afsk1200_tx_f
+label: AFSK1200 TX
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.afsk1200_tx_f(${destination}, ${source}, ${repeater1}, ${repeater2},
+    ${padding_zero})
+parameters:
+- id: destination
+  label: Destination
+  dtype: string
+  default: BY2HIT
+- id: source
+  label: Source
+  dtype: string
+  default: BG2BHC
+- id: repeater1
+  label: Repeater1
+  dtype: string
+- id: repeater2
+  label: Repeater2
+  dtype: string
+- id: padding_zero
+  label: Padding_zero
+  dtype: bool
+  default: 'False'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+  hide: ${ ('part' if str(padding_zero) == 'False' else 'none') }
+inputs:
+- domain: message
+  id: in
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+- domain: message
+  id: ptt
+  optional: true
+file_format: 1

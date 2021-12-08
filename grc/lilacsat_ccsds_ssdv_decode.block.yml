@@ -1,0 +1,39 @@
+id: lilacsat_ccsds_ssdv_decode
+label: CCSDS SSDV Decode
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.ccsds_ssdv_decode(${frame_len}, ${using_m}, ${using_convolutional_code},
+    ${pass_all})
+parameters:
+- id: frame_len
+  label: Frame Length
+  dtype: int
+  default: 114
+- id: using_m
+  label: Using M Code
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: using_convolutional_code
+  label: Using Convolutional Code
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: pass_all
+  label: Pass All
+  dtype: bool
+  default: 'False'
+  hide: ${ ('part' if str(pass_all) == 'False' else 'none') }
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- label: in
+  domain: stream
+  dtype: float
+outputs:
+- domain: message
+  id: out
+file_format: 1

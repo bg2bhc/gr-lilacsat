@@ -1,0 +1,55 @@
+id: lilacsat_fec_encode_b
+label: FEC Encode
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.fec_encode_b(${frame_len}, ${preamble_len}, ${trailer_len}, ${continous},
+    ${padding_zero}, ${using_m}, ${using_convolutional_code})
+parameters:
+- id: frame_len
+  label: Frame Length
+  dtype: int
+  default: 114
+- id: preamble_len
+  label: Preamble Length
+  dtype: int
+  default: 300
+- id: trailer_len
+  label: Trailer Length
+  dtype: int
+  default: 100
+- id: continous
+  label: Continous
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: padding_zero
+  label: Padding Zero
+  dtype: bool
+  default: 'False'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: using_m
+  label: Using M Code
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: using_convolutional_code
+  label: Using Convolutional Code
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- domain: message
+  id: in
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+- domain: message
+  id: ptt
+  optional: true
+file_format: 1

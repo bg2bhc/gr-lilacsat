@@ -1,0 +1,17 @@
+id: lilacsat_file_sink_pdu
+label: File Sink PDU
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.file_sink_pdu(${path}, ${format})
+parameters:
+- id: path
+  label: Path
+  dtype: string
+- id: format
+  label: Format
+  dtype: int
+inputs:
+- domain: message
+  id: in
+file_format: 1

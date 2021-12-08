@@ -1,0 +1,26 @@
+id: lilacsat_pipe_sink_pdu
+label: Pipe Sink PDU
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.pipe_sink_pdu(${label}, ${path}, ${permission}, ${debug})
+parameters:
+- id: label
+  label: Label
+  dtype: string
+- id: path
+  label: Path
+  dtype: string
+- id: permission
+  label: Permission
+  dtype: int
+- id: debug
+  label: Debug
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- domain: message
+  id: in
+file_format: 1

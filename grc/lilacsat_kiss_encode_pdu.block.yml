@@ -1,0 +1,18 @@
+id: lilacsat_kiss_encode_pdu
+label: KISS Encode PDU
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.kiss_encode_pdu(${const_length})
+parameters:
+- id: const_length
+  label: Const Length
+  dtype: int
+  default: -1
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+file_format: 1

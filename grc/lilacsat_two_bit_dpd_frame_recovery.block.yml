@@ -1,0 +1,18 @@
+id: lilacsat_two_bit_dpd_frame_recovery
+label: Two-bit DPD Frame Recovery
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.two_bit_dpd_frame_recovery(${snr_threshold})
+parameters:
+- id: snr_threshold
+  label: SNR Threshold
+  dtype: float
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- domain: message
+  id: out
+file_format: 1

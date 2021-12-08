@@ -1,0 +1,17 @@
+id: lilacsat_lilacsat1_frame_depack
+label: LilacSat-1 Frame Depack
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.lilacsat1_frame_depack()
+inputs:
+- domain: message
+  id: in
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+  vlen: '8'
+- domain: message
+  id: out
+file_format: 1

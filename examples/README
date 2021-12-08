@@ -1,4 +1,2 @@
-It is considered good practice to add examples in here to demonstrate the
-functionality of your OOT module. Python scripts, GRC flow graphs or other
-code can go here.
+**WARNING** The examples not upgrade for GNURadio 3.8 or 3.9.
 
