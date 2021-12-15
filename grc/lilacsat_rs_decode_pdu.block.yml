@@ -1,0 +1,13 @@
+id: lilacsat_rs_decode_pdu
+label: RS Decode PDU
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.rs_decode_pdu()
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+file_format: 1

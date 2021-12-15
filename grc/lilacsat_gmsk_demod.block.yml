@@ -1,0 +1,31 @@
+id: lilacsat_gmsk_demod
+label: GMSK Demod
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.gmsk_demod(${dtll_gain}, ${pd_N_avg}, ${pd_k1}, ${pd_k2}, ${vco_gain})
+parameters:
+- id: dtll_gain
+  label: DTLL Gain
+  dtype: float
+- id: pd_N_avg
+  label: PD N Avg
+  dtype: int
+- id: pd_k1
+  label: PD K1
+  dtype: float
+- id: pd_k2
+  label: PD K2
+  dtype: float
+- id: vco_gain
+  label: VCO Gain
+  dtype: float
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- label: out
+  domain: stream
+  dtype: complex
+file_format: 1

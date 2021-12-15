@@ -1,0 +1,55 @@
+id: lilacsat_satellite_channel_cc
+label: Satellite Channel
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.satellite_channel_cc(${r_semi_long_axis}, ${alpha_aos}, ${fc}, ${samp_rate},
+    ${d0}, ${doppler}, ${link_loss}, ${verbose})
+parameters:
+- id: r_semi_long_axis
+  label: Semi Long Axis
+  dtype: float
+  default: 6902e3
+- id: alpha_aos
+  label: AOS Angle
+  dtype: float
+  default: 5
+- id: fc
+  label: Center Frequency
+  dtype: float
+  default: 437.2125e6
+- id: samp_rate
+  label: Sample Rate
+  dtype: float
+  default: 96e3
+- id: d0
+  label: Distance at 0 dB Loss
+  dtype: float
+  default: 524e3
+- id: doppler
+  label: Doppler
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: link_loss
+  label: Link Loss
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: verbose
+  label: Verbose
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- label: out
+  domain: stream
+  dtype: complex
+file_format: 1

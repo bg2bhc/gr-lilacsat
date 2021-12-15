@@ -22,9 +22,10 @@ FIND_LIBRARY(
           /usr/local/lib64
           /usr/lib
           /usr/lib64
-)
+          )
+
+include("${CMAKE_CURRENT_LIST_DIR}/lilacsatTarget.cmake")
 
 INCLUDE(FindPackageHandleStandardArgs)
 FIND_PACKAGE_HANDLE_STANDARD_ARGS(LILACSAT DEFAULT_MSG LILACSAT_LIBRARIES LILACSAT_INCLUDE_DIRS)
 MARK_AS_ADVANCED(LILACSAT_LIBRARIES LILACSAT_INCLUDE_DIRS)
-

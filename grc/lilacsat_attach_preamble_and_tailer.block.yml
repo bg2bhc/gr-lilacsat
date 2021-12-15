@@ -1,0 +1,25 @@
+id: lilacsat_attach_preamble_and_tailer
+label: Attach Preamble and Tailer
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.attach_preamble_and_tailer(${len_preamble}, ${len_tailer}, ${padding_type})
+parameters:
+- id: len_preamble
+  label: Preamble Length
+  dtype: int
+- id: Tailer Length
+  label: Len_tailer
+  dtype: int
+- id: Padding Type
+  label: Padding_type
+  dtype: bool
+  options: ['False', 'True']
+  option_labels: ['0', '1']
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+file_format: 1

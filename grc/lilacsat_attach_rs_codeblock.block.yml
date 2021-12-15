@@ -1,0 +1,17 @@
+id: lilacsat_attach_rs_codeblock
+label: Attach RS Codeblock
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.attach_rs_codeblock(${interleaving})
+parameters:
+- id: interleaving
+  label: Interleaving
+  dtype: int
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+file_format: 1

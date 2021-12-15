@@ -1,0 +1,13 @@
+id: lilacsat_kiss_decode_pdu
+label: KISS Decode PDU
+category: '[Lilacsat]'
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+templates:
+  imports: import lilacsat
+  make: lilacsat.kiss_decode_pdu()
+file_format: 1

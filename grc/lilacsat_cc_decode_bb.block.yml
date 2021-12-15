@@ -1,0 +1,18 @@
+id: lilacsat_cc_decode_bb
+label: CC Decode
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.cc_decode_bb()
+inputs:
+- label: in
+  domain: stream
+  dtype: byte
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+  vlen: '7'
+- domain: message
+  id: out
+file_format: 1

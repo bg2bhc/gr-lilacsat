@@ -1,0 +1,15 @@
+id: lilacsat_bpsk_demod_cb
+label: BPSK Demod
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.bpsk_demod_cb()
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+outputs:
+- label: out
+  domain: stream
+  dtype: byte
+file_format: 1

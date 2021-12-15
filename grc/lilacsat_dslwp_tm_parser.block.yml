@@ -1,0 +1,10 @@
+id: lilacsat_dslwp_tm_parser
+label: DSLWP TM Parser
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.dslwp_tm_parser()
+inputs:
+- domain: message
+  id: in
+file_format: 1

@@ -1,0 +1,18 @@
+id: lilacsat_print_to_file_b
+label: Print to File
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.print_to_file_b(${path}, ${format})
+parameters:
+- id: path
+  label: Path
+  dtype: string
+- id: format
+  label: Format
+  dtype: raw
+inputs:
+- label: in
+  domain: stream
+  dtype: byte
+file_format: 1

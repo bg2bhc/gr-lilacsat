@@ -1,0 +1,31 @@
+id: lilacsat_sync_det_b
+label: Sync Det
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.sync_det_b(${sync_word}, ${len}, ${nrz}, ${descrambling})
+parameters:
+- id: sync_word
+  label: Sync Word
+  dtype: raw
+- id: len
+  label: Frame Length
+  dtype: int
+- id: nrz
+  label: NRZ
+  dtype: bool
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+- id: descrambling
+  label: Descrambling
+  dtype: bool
+  options: ['False', 'True']
+  option_labels: ['Off', 'On']
+inputs:
+- label: in
+  domain: stream
+  dtype: byte
+outputs:
+- domain: message
+  id: out
+file_format: 1

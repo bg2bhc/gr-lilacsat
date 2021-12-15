@@ -1,0 +1,20 @@
+id: lilacsat_codec2_decode_bf
+label: Codec2 Decode BF
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.codec2_decode_bf(${mode})
+parameters:
+- id: mode
+  label: Mode
+  dtype: int
+inputs:
+- label: in
+  domain: stream
+  dtype: byte
+  vlen: '8'
+outputs:
+- label: out
+  domain: stream
+  dtype: float
+file_format: 1

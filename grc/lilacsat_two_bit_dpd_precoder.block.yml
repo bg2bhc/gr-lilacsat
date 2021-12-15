@@ -1,0 +1,20 @@
+id: lilacsat_two_bit_dpd_precoder
+label: Two-bit DPD Precoder
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.two_bit_dpd_precoder(${init_value})
+parameters:
+- id: init_value
+  label: Init Value
+  dtype: bool
+  default: 'True'
+  options: ['False', 'True']
+  option_labels: ['0', '1']
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out
+file_format: 1

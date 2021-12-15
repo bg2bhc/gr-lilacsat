@@ -1,0 +1,20 @@
+id: lilacsat_dslwp_tm_header_parser
+label: DSLWP TM Header Parser
+category: '[Lilacsat]'
+templates:
+  imports: import lilacsat
+  make: lilacsat.dslwp_tm_header_parser()
+inputs:
+- domain: message
+  id: in
+outputs:
+- domain: message
+  id: out 0
+  optional: true
+- domain: message
+  id: out 1
+  optional: true
+- domain: message
+  id: out 2
+  optional: true
+file_format: 1
