@@ -2,7 +2,7 @@
 ---------------------------------------
 GNU Radio OOT Module for telemetry decoding of LilacSat-1, LilacSat-2 and BY70-1 satellites.
 
-For on GRC 3.8.x.
+For on GRC 3.8.x. For 3.7.x please use the maint-3.7 branch.
 
 Currently this OOT module does not work on ubuntu 16.04 LTS. Please contact me if you can find a solution.
 
