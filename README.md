@@ -36,9 +36,12 @@ proxy_publish is also included in examples folder for upload telemetry for displ
 
 ## LilacSat-2 Live CD
 ---------------------------------------
-A Live CD is also provided: http://lilacsat.hit.edu.cn/?page_id=257
+A Live CD is also provided: 
+https://pan.baidu.com/s/1jGAiTRC
+http://drive.google.com/file/d/0B4xzC5u2abn2bHRhbk9QYlRfMGc
 
-Manual: http://lilacsat.hit.edu.cn/wp-content/uploads/2015/09/LilacSat-2_Live_CD_User_Manual.pdf
+Manual: 
+http://lilacsat.hit.edu.cn/wp-content/uploads/2015/09/LilacSat-2_Live_CD_User_Manual.pdf
 
 ## LilacSat-1 Downlink IQ Record
 ---------------------------------------
