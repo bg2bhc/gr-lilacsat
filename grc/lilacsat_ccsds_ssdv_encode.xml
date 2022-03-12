@@ -1,0 +1,89 @@
+<block>
+  <name>CCSDS SSDV Encode</name>
+  <key>lilacsat_ccsds_ssdv_encode</key>
+  <category>[LilacSat]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.ccsds_ssdv_encode($frame_len, $preamble_len, $trailer_len, $continous, $padding_zero, $using_m, $using_convolutional_code)</make>
+  <param>
+    <name>Frame length</name>
+    <key>frame_len</key>
+    <value>256</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Preamble length</name>
+    <key>preamble_len</key>
+    <value>300</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Trailer length</name>
+    <key>trailer_len</key>
+    <value>100</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Continous</name>
+    <key>continous</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Padding zero</name>
+    <key>padding_zero</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Using M</name>
+    <key>using_m</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Using convolutional code</name>
+    <key>using_convolutional_code</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>message</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>float</type>
+  </source>
+</block>

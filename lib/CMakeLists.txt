@@ -39,6 +39,7 @@ list(APPEND lilacsat_sources
     ccsds/randomizer.c
     kiss/kiss.c
     ccsds/viterbi27.c
+    ccsds_ssdv/ccsds_ssdv.c
     afsk1200_rx_f_impl.cc
     afsk1200_tx_f_impl.cc
     fec_decode_b_impl.cc
@@ -94,7 +95,9 @@ list(APPEND lilacsat_sources
     attach_rs_codeblock_impl.cc
     pdu_f32_to_u8_impl.cc
     two_bit_dpd_frame_recovery_impl.cc
-    rs_decode_pdu_impl.cc )
+    rs_decode_pdu_impl.cc
+    ccsds_ssdv_decode_impl.cc
+    ccsds_ssdv_encode_impl.cc )
 
 set(lilacsat_sources "${lilacsat_sources}" PARENT_SCOPE)
 if(NOT lilacsat_sources)

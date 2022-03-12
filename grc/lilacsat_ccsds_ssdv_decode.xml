@@ -1,0 +1,63 @@
+<block>
+  <name>CCSDS SSDV Decode</name>
+  <key>lilacsat_ccsds_ssdv_decode</key>
+  <category>[LilacSat]</category>
+  <import>import lilacsat</import>
+  <make>lilacsat.ccsds_ssdv_decode($frame_len, $using_m, $using_convolutional_code, $pass_all)</make>
+  <param>
+    <name>Frame length</name>
+    <key>frame_len</key>
+    <value>256</value>
+    <type>int</type>
+  </param>
+  <param>
+    <name>Using M</name>
+    <key>using_m</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Using convolutional code</name>
+    <key>using_convolutional_code</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <param>
+    <name>Pass all</name>
+    <key>pass_all</key>
+    <value>False</value>
+    <type>bool</type>
+    <option>
+	<name>On</name>
+	<key>True</key>
+    </option>
+    <option>
+	<name>Off</name>
+	<key>False</key>
+    </option>
+  </param>
+  <sink>
+    <name>in</name>
+    <type>float</type>
+  </sink>
+  <source>
+    <name>out</name>
+    <type>message</type>
+  </source>
+</block>

@@ -39,6 +39,8 @@
 #include "lilacsat/pdu_f32_to_u8.h"
 #include "lilacsat/two_bit_dpd_frame_recovery.h"
 #include "lilacsat/rs_decode_pdu.h"
+#include "lilacsat/ccsds_ssdv_decode.h"
+#include "lilacsat/ccsds_ssdv_encode.h"
 %}
 
 
@@ -119,3 +121,7 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, pdu_f32_to_u8);
 GR_SWIG_BLOCK_MAGIC2(lilacsat, two_bit_dpd_frame_recovery);
 %include "lilacsat/rs_decode_pdu.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, rs_decode_pdu);
+%include "lilacsat/ccsds_ssdv_decode.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_ssdv_decode);
+%include "lilacsat/ccsds_ssdv_encode.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_ssdv_encode);
