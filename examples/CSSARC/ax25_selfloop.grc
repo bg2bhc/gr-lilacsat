@@ -143,7 +143,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>17.5</value>
+      <value>20.5</value>
     </param>
     <param>
       <key>_enabled</key>
@@ -625,7 +625,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(776, 244)</value>
+      <value>(776, 220)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -845,7 +845,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>180</value>
+      <value>120</value>
     </param>
     <param>
       <key>type</key>
@@ -904,7 +904,7 @@
     </param>
   </block>
   <block>
-    <key>lilacsat_ccsds_ssdv_decode</key>
+    <key>lilacsat_afsk1200_rx_f</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -922,12 +922,8 @@
       <value>True</value>
     </param>
     <param>
-      <key>frame_len</key>
-      <value>256</value>
-    </param>
-    <param>
       <key>_coordinate</key>
-      <value>(312, 696)</value>
+      <value>(368, 720)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -935,7 +931,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>lilacsat_ccsds_ssdv_decode_0</value>
+      <value>lilacsat_afsk1200_rx_f_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -945,21 +941,9 @@
       <key>minoutbuf</key>
       <value>0</value>
     </param>
-    <param>
-      <key>pass_all</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>using_m</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>using_convolutional_code</key>
-      <value>False</value>
-    </param>
   </block>
   <block>
-    <key>lilacsat_ccsds_ssdv_encode</key>
+    <key>lilacsat_afsk1200_tx_f</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -969,24 +953,20 @@
       <value></value>
     </param>
     <param>
-      <key>continous</key>
-      <value>False</value>
-    </param>
-    <param>
       <key>affinity</key>
       <value></value>
     </param>
     <param>
-      <key>_enabled</key>
-      <value>1</value>
+      <key>destination</key>
+      <value>BY2HIT</value>
     </param>
     <param>
-      <key>frame_len</key>
-      <value>256</value>
+      <key>_enabled</key>
+      <value>True</value>
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(1016, 168)</value>
+      <value>(1040, 176)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -994,7 +974,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>lilacsat_ccsds_ssdv_encode_0</value>
+      <value>lilacsat_afsk1200_tx_f_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -1009,20 +989,16 @@
       <value>False</value>
     </param>
     <param>
-      <key>preamble_len</key>
-      <value>300</value>
+      <key>repeater1</key>
+      <value></value>
     </param>
     <param>
-      <key>trailer_len</key>
-      <value>100</value>
+      <key>repeater2</key>
+      <value></value>
     </param>
     <param>
-      <key>using_m</key>
-      <value>False</value>
-    </param>
-    <param>
-      <key>using_convolutional_code</key>
-      <value>False</value>
+      <key>source</key>
+      <value>BG2BHC</value>
     </param>
   </block>
   <block>
@@ -1108,7 +1084,7 @@
   </connection>
   <connection>
     <source_block_id>analog_nbfm_rx_0</source_block_id>
-    <sink_block_id>lilacsat_ccsds_ssdv_decode_0</sink_block_id>
+    <sink_block_id>lilacsat_afsk1200_rx_f_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1138,7 +1114,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_message_strobe_0_0</source_block_id>
-    <sink_block_id>lilacsat_ccsds_ssdv_encode_0</sink_block_id>
+    <sink_block_id>lilacsat_afsk1200_tx_f_0</sink_block_id>
     <source_key>strobe</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -1156,7 +1132,7 @@
   </connection>
   <connection>
     <source_block_id>blocks_tagged_stream_to_pdu_0</source_block_id>
-    <sink_block_id>lilacsat_ccsds_ssdv_encode_0</sink_block_id>
+    <sink_block_id>lilacsat_afsk1200_tx_f_0</sink_block_id>
     <source_key>pdus</source_key>
     <sink_key>in</sink_key>
   </connection>
@@ -1167,25 +1143,25 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_decode_0</source_block_id>
+    <source_block_id>lilacsat_afsk1200_rx_f_0</source_block_id>
     <sink_block_id>blocks_message_debug_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>print_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_decode_0</source_block_id>
+    <source_block_id>lilacsat_afsk1200_rx_f_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_encode_0</source_block_id>
+    <source_block_id>lilacsat_afsk1200_tx_f_0</source_block_id>
     <sink_block_id>analog_nbfm_tx_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_encode_0</source_block_id>
+    <source_block_id>lilacsat_afsk1200_tx_f_0</source_block_id>
     <sink_block_id>blocks_wavfile_sink_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
