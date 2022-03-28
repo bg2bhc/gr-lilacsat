@@ -73,7 +73,27 @@ static void ax25_decode(AX25Ctx *ctx)
 //	LOG_INFO("DATA: %.*s\n", msg.len, msg.info);
 	
 	if (ctx->hook)
+    {
+        int j;
+
+        fprintf(stdout, "%.6s", msg.src.call);
+        fprintf(stdout, "-%d>", msg.src.ssid);
+
+        fprintf(stdout, "%.6s", msg.dst.call);
+        fprintf(stdout, "-%d", msg.dst.ssid);
+
+        for(j=0; j<msg.rpt_cnt; j++)
+        {
+            fprintf(stdout, ","); 
+            fprintf(stdout, "%.6s", msg.rpt_lst[j].call);
+            fprintf(stdout, "-%d", msg.rpt_lst[j].ssid);
+        }
+   
+        fprintf(stdout, ":");  
+        fprintf(stdout, "\n");
+
 		ctx->hook(ctx->obj_ptr, &msg);
+    }
 }
 
 
