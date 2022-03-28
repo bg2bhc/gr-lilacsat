@@ -66,8 +66,8 @@ namespace gr {
 
     void afsk1200_rx_f_impl::AX25_MsgCallBack(void *obj_ptr, struct AX25Msg *msg)
     {
-	afsk1200_rx_f_impl *obj_ptr_loc = (afsk1200_rx_f_impl *)obj_ptr;
-	obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(msg->len, msg->info)));
+	    afsk1200_rx_f_impl *obj_ptr_loc = (afsk1200_rx_f_impl *)obj_ptr;
+	    obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(msg->len, msg->info)));    
     }
 
     void afsk1200_rx_f_impl::rx_init()

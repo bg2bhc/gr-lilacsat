@@ -44,6 +44,7 @@
   <sink>
     <name>in</name>
     <type>message</type>
+    <optional>1</optional>
   </sink>
   <source>
     <name>out</name>
