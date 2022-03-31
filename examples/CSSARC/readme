@@ -1,0 +1,3 @@
+To decode:
+
+./ssdv -d output1.bin output1.jpeg
