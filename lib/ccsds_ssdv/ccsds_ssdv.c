@@ -526,7 +526,7 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
                     if(cc->n_out == cc->len_frame+RS_LENGTH)
                     {
                         cc->syncing = 0;
-                        for(int i=0; i<cc->len_frame+RS_LENGTH; i++) cc->buf_sync_out[i] ^= sequence[i%255]);
+                        for(int i=0; i<cc->len_frame+RS_LENGTH; i++) cc->buf_sync_out[i] ^= sequence[i%255];
                         byte_corr = decode_rs(cc->buf_sync_out, (int *)0, 0, RS_BLOCK_LENGTH-cc->len_frame-RS_LENGTH);
                         cc->hook(cc->buf_sync_out, cc->len_frame, byte_corr, cc->obj_ptr);
                     }
@@ -534,7 +534,7 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
                     if(cc->n_out == cc->len_frame)
                     {
                         cc->syncing = 0;
-						for(int i=0; i<cc->len_frame; i++) cc->buf_sync_out[i] ^= sequence[i%255]);
+						for(int i=0; i<cc->len_frame; i++) cc->buf_sync_out[i] ^= sequence[i%255];
                         cc->hook(cc->buf_sync_out, cc->len_frame, byte_corr, cc->obj_ptr);
                     }
                     #endif
