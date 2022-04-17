@@ -32,6 +32,8 @@ list(APPEND lilacsat_sources
     afsk/fifobuf.c
     afsk/kfile.c
     afsk/wavegen.c
+    afsk/direwolf_demod_afsk.c
+    afsk/direwolf_dsp.c
     ccsds/rs.c
     ccsds/ccsds.c
     ccsds/tab.c

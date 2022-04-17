@@ -506,3 +506,59 @@ void afsk_init(Afsk *af)
 	af->phase_inc = MARK_INC;
 }
 
+void direwolf_afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize)
+{
+	while(blocksize>0)
+	{
+		demod_afsk_process_sample (0, 0, (int)(*pSrc * 32767.0), &af->direwolf_state);
+
+		blocksize--;
+		pSrc++;
+	}
+}
+
+static void direwolf_afsk_demod_callback(void *obj_ptr, int demod_data)
+{
+    Afsk *af = (Afsk *)obj_ptr;
+
+    af->found_bits <<= 1;
+    if(demod_data) af->found_bits |= 1;
+    hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo);
+}
+
+void direwolf_afsk_init(Afsk *af)
+{
+	int i;
+
+//	#if CONFIG_AFSK_RXTIMEOUT != -1
+//	MOD_CHECK(timer);
+//	#endif
+	memset(af, 0, sizeof(*af));
+//	af->adc_ch = adc_ch;
+//	af->dac_ch = dac_ch;
+
+    demod_afsk_init (9600, 1200, 1200, 2200, 'E', &af->direwolf_state, (void *)af, direwolf_afsk_demod_callback);
+
+	//fifo_init_q15(&af->delay_fifo, (int16_t *)af->delay_buf, (SAMPLEPERBIT / 2 + 1));
+	fifo_init(&af->rx_fifo, af->rx_buf, sizeof(af->rx_buf));
+
+	/* Fill sample FIFO with 0 */
+	//for (i = 0; i < SAMPLEPERBIT / 2; i++)
+	//	fifo_push_q15(&af->delay_fifo, 0);
+	fifo_init(&af->tx_fifo, af->tx_buf, sizeof(af->tx_buf));
+
+//	AFSK_ADC_INIT(adc_ch, af);
+//	AFSK_DAC_INIT(dac_ch, af);
+//	AFSK_STROBE_INIT();
+//	LOG_INFO("MARK_INC %d, SPACE_INC %d\n", MARK_INC, SPACE_INC);
+
+	DB(af->fd._type = KFT_AFSK);
+	af->fd.write = afsk_write;
+	af->fd.read = afsk_read;
+	af->fd.flush = afsk_flush;
+	af->fd.error = afsk_error;
+	af->fd.clearerr = afsk_clearerr;
+	af->phase_inc = MARK_INC;
+}
+
+

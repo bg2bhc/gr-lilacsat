@@ -608,3 +608,85 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
     }
 
 }
+
+
+void direwolf_ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
+{
+	while(blocksize>0)
+	{
+		demod_afsk_process_sample (0, 0, (int)(*pSrc * 32767.0), &cc->direwolf_state);
+
+		blocksize--;
+		pSrc++;
+	}
+}
+
+static void direwolf_afsk_demod_callback(void *obj_ptr, int demod_data)
+{
+    Ccsds_ssdv *cc = (Ccsds_ssdv *)obj_ptr;
+
+	if(cc->bit_count_rx == 0)
+    {
+        ccsds_rxwrite(cc, cc->current_byte_rx);
+        cc->bit_count_rx = 8;
+    }
+    cc->bit_count_rx--;
+    cc->current_byte_rx <<= 1;
+
+	if(demod_data) cc->current_byte_rx += 1;
+
+    //af->found_bits <<= 1;
+    //if(demod_data) af->found_bits |= 1;
+    //hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo);
+}
+
+void direwolf_ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook)
+{
+    //float RATE=0.5;
+    //float ebn0 = 12.0;
+    //float esn0 = RATE*pow(10.0, ebn0/10);
+
+
+    //gen_met(mettab, amp, esn0, 0.0, 4);
+
+	demod_afsk_init (9600, 1200, 2200, 1200, 'E', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
+
+    vitfilt27_init(&(cc->vi));
+
+    cc->sending = 0;
+    fifo_init(&cc->tx_fifo, cc->tx_buf, sizeof(cc->tx_buf));
+    fifo_init(&cc->rx_fifo, cc->rx_buf, sizeof(cc->rx_buf));
+
+    //fifo_init_q15(&cc->delay_fifo, (int16_t *)cc->delay_buf, (SAMPLEPERBIT / 2 + 1));
+	/* Fill sample FIFO with 0 */
+	//for (int i = 0; i < SAMPLEPERBIT / 2; i++)
+	//	fifo_push_q15(&cc->delay_fifo, 0);
+
+    cc->sync_word = sync_word;
+    cc->len_frame = len_frame;
+    cc->syncing = 0;
+    cc->buffer_sync_det = 0;
+    cc->n_out = 0;
+    cc->mask_bit_out = 0x80;
+    cc->obj_ptr = obj_ptr;
+    cc->hook = hook;
+    cc->rx_bit_state = 0;
+    cc->tx_bit_state = 0;
+
+    cc->cfg_continous = 0;
+    cc->cfg_padding_zero = 0;
+    cc->cfg_using_m = 0;
+    cc->cfg_using_convolutional_code = 0;
+    cc->cfg_preamble_len = 75;
+    cc->cfg_trailer_len = 30;
+
+    cc->sample_count = 0;
+    cc->bit_count = 0;
+    cc->current_data = 0;
+    cc->phase_inc = SPACE_INC;
+    cc->phase_acc = 0;
+
+    cc->bit_count_rx = 0;
+    cc->curr_phase = 0;
+}
+

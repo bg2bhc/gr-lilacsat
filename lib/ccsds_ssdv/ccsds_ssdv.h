@@ -34,6 +34,7 @@
 #include "ccsds/rs.h"
 #include "ccsds/tab.h"
 #include "afsk/fifobuf.h"
+#include "afsk/direwolf_demod_afsk.h"
 
 //#define USING_RS
 
@@ -131,6 +132,7 @@ typedef struct Ccsds_ssdv
     uint8_t cfg_padding_zero;
     uint8_t cfg_using_m;
     uint8_t cfg_using_convolutional_code;
+	struct demodulator_state_s direwolf_state;
 } Ccsds_ssdv;
 
 void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook);
@@ -142,6 +144,9 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc);
 unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocksize);
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms);
 void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize);
+
+void direwolf_ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook);
+void direwolf_ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize);
 
 
 #endif

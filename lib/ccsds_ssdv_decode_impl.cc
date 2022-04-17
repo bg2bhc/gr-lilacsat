@@ -50,7 +50,7 @@ namespace gr {
         message_port_register_out(d_out_port);
 
         set_output_multiple(16);
-        ccsds_ssdv_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
+        direwolf_ccsds_ssdv_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
 
         cc.cfg_using_m = using_m;
         cc.cfg_using_convolutional_code = using_convolutional_code;
@@ -87,7 +87,7 @@ namespace gr {
       float *in = (float *) input_items[0];
 
       // Do <+signal processing+>
-      ccsds_ssdv_rx_proc(&cc, in, noutput_items);
+      direwolf_ccsds_ssdv_rx_proc(&cc, in, noutput_items);
       ccsds_ssdv_pull(&cc);
       // Tell runtime system how many output items we produced.
       return noutput_items;
