@@ -341,8 +341,8 @@ void ccsds_send(Ccsds *cc, uint8_t *message)
     ccsds_txwrite(cc, (uint8_t)(((cc->sync_word)&0x0000ff00) >> 8));
     ccsds_txwrite(cc, (uint8_t)((cc->sync_word)&0x000000ff));
 
-    for(i=0; i<cc->len_frame; i++) ccsds_txwrite(cc, message[i]^sequence[i]);
-    for(i=0; i<RS_LENGTH; i++) ccsds_txwrite(cc, rs_data[i]^sequence[i+cc->len_frame]);
+    for(i=0; i<cc->len_frame; i++) ccsds_txwrite(cc, message[i]^sequence[i%255]);
+    for(i=0; i<RS_LENGTH; i++) ccsds_txwrite(cc, rs_data[i]^sequence[(i+cc->len_frame)%255]);
 }
 
 void ccsds_pull(Ccsds *cc)
@@ -385,7 +385,7 @@ void ccsds_pull(Ccsds *cc)
                 if(cc->n_out == cc->len_frame+RS_LENGTH)
                 {
                     cc->syncing = 0;
-                    ccsds_xor_sequence(cc->buf_sync_out, sequence, cc->len_frame+RS_LENGTH);
+					for(int i=0; i<cc->len_frame+RS_LENGTH; i++) cc->buf_sync_out[i] ^= sequence[i%255]);
                     byte_corr = decode_rs(cc->buf_sync_out, (int *)0, 0, RS_BLOCK_LENGTH-cc->len_frame-RS_LENGTH);
                     cc->hook(cc->buf_sync_out, cc->len_frame, byte_corr, cc->obj_ptr);
                 }
