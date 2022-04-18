@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "ccsds_ssdv.h"
+#include "ccsds_afsk.h"
 #include "afsk/wavegen.h"
 #include <stdio.h>
 
@@ -35,7 +35,7 @@
 
 extern char sequence[]; //伪随机序列
 
-void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook)
+void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
 {
     //float RATE=0.5;
     //float ebn0 = 12.0;
@@ -84,7 +84,7 @@ void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, voi
 }
 
 
-static inline void ccsds_txwrite(Ccsds_ssdv *cc, unsigned char c)
+static inline void ccsds_txwrite(Ccsds_afsk *cc, unsigned char c)
 {
     if(!cc->sending)
     {
@@ -173,7 +173,7 @@ static unsigned char m_decode_tab[] =
     0x84, 0x85, 0x87, 0x86, 0x82, 0x83, 0x81, 0x80
 };
 
-static inline void ccsds_rxwrite(Ccsds_ssdv *cc, unsigned char c)
+static inline void ccsds_rxwrite(Ccsds_afsk *cc, unsigned char c)
 {
     if(fifo_isfull(&(cc->rx_fifo)))
     {
@@ -183,7 +183,7 @@ static inline void ccsds_rxwrite(Ccsds_ssdv *cc, unsigned char c)
 }
 
 //unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits)
-unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocksize)
+unsigned int ccsds_afsk_tx_proc(Ccsds_afsk *cc, float *pDst, unsigned int blocksize)
 {
     //unsigned char current_data;
     //unsigned int i, j, nbytes;
@@ -309,7 +309,7 @@ unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocks
 
 /*blocksize must be a multiple of 16*/
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
-void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
+void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 {
     while(blocksize>0)
     {
@@ -463,7 +463,7 @@ void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
     }*/
 }
 
-void ccsds_ssdv_send(Ccsds_ssdv *cc, uint8_t *message)
+void ccsds_afsk_send(Ccsds_afsk *cc, uint8_t *message)
 {
     int i;
 
@@ -489,7 +489,7 @@ void ccsds_ssdv_send(Ccsds_ssdv *cc, uint8_t *message)
     #endif
 }
 
-void ccsds_ssdv_pull(Ccsds_ssdv *cc)
+void ccsds_afsk_pull(Ccsds_afsk *cc)
 {
     uint8_t current_in;
     int16_t byte_corr = 0;
@@ -610,7 +610,7 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
 }
 
 
-void direwolf_ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
+void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 {
 	while(blocksize>0)
 	{
@@ -623,7 +623,7 @@ void direwolf_ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int block
 
 static void direwolf_afsk_demod_callback(void *obj_ptr, int demod_data)
 {
-    Ccsds_ssdv *cc = (Ccsds_ssdv *)obj_ptr;
+    Ccsds_afsk *cc = (Ccsds_afsk *)obj_ptr;
 
 	if(cc->bit_count_rx == 0)
     {
@@ -640,7 +640,7 @@ static void direwolf_afsk_demod_callback(void *obj_ptr, int demod_data)
     //hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo);
 }
 
-void direwolf_ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook)
+void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
 {
     //float RATE=0.5;
     //float ebn0 = 12.0;

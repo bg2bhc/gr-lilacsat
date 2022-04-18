@@ -1,9 +1,9 @@
 <block>
-  <name>CCSDS SSDV Decode</name>
-  <key>lilacsat_ccsds_ssdv_decode</key>
+  <name>CCSDS AFSK Decode</name>
+  <key>lilacsat_ccsds_afsk_decode</key>
   <category>[LilacSat]</category>
   <import>import lilacsat</import>
-  <make>lilacsat.ccsds_ssdv_decode($frame_len, $using_m, $using_convolutional_code, $pass_all)</make>
+  <make>lilacsat.ccsds_afsk_decode($frame_len, $using_m, $using_convolutional_code, $pass_all)</make>
   <param>
     <name>Frame length</name>
     <key>frame_len</key>

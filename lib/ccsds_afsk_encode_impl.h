@@ -18,28 +18,30 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_IMPL_H
-#define INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_IMPL_H
+#ifndef INCLUDED_LILACSAT_CCSDS_AFSK_ENCODE_IMPL_H
+#define INCLUDED_LILACSAT_CCSDS_AFSK_ENCODE_IMPL_H
 
-#include <lilacsat/ccsds_ssdv_decode.h>
+#include <lilacsat/ccsds_afsk_encode.h>
 extern "C"
 {
-	#include "ccsds_ssdv/ccsds_ssdv.h"
+	#include "ccsds_afsk/ccsds_afsk.h"
 }
 namespace gr {
   namespace lilacsat {
 
-    class ccsds_ssdv_decode_impl : public ccsds_ssdv_decode
+    class ccsds_afsk_encode_impl : public ccsds_afsk_encode
     {
      private:
-      pmt::pmt_t d_out_port;
-      Ccsds_ssdv cc;
-      bool d_pass_all;
-      static void callback(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr);
+      // Nothing to declare in this block.
+        pmt::pmt_t d_in_port;
+        pmt::pmt_t d_ptt_port;
+        Ccsds_afsk cc;
+        char d_ptt;
 
+        void pmt_in_callback(pmt::pmt_t msg);
      public:
-      ccsds_ssdv_decode_impl(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all);
-      ~ccsds_ssdv_decode_impl();
+      ccsds_afsk_encode_impl(int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code);
+      ~ccsds_afsk_encode_impl();
 
       // Where all the action really happens
       int work(
@@ -52,5 +54,5 @@ namespace gr {
   } // namespace lilacsat
 } // namespace gr
 
-#endif /* INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_IMPL_H */
+#endif /* INCLUDED_LILACSAT_CCSDS_AFSK_ENCODE_IMPL_H */
 

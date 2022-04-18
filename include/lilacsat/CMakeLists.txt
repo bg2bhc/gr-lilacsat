@@ -54,6 +54,6 @@ install(FILES
     pdu_f32_to_u8.h
     two_bit_dpd_frame_recovery.h
     rs_decode_pdu.h
-    ccsds_ssdv_decode.h
-    ccsds_ssdv_encode.h DESTINATION include/lilacsat
+    ccsds_afsk_decode.h
+    ccsds_afsk_encode.h DESTINATION include/lilacsat
 )

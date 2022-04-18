@@ -19,8 +19,8 @@
  */
 
 
-#ifndef INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_H
-#define INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_H
+#ifndef INCLUDED_LILACSAT_CCSDS_AFSK_DECODE_H
+#define INCLUDED_LILACSAT_CCSDS_AFSK_DECODE_H
 
 #include <lilacsat/api.h>
 #include <gnuradio/sync_block.h>
@@ -33,17 +33,17 @@ namespace gr {
      * \ingroup lilacsat
      *
      */
-    class LILACSAT_API ccsds_ssdv_decode : virtual public gr::sync_block
+    class LILACSAT_API ccsds_afsk_decode : virtual public gr::sync_block
     {
      public:
-      typedef boost::shared_ptr<ccsds_ssdv_decode> sptr;
+      typedef boost::shared_ptr<ccsds_afsk_decode> sptr;
 
       /*!
-       * \brief Return a shared_ptr to a new instance of lilacsat::ccsds_ssdv_decode.
+       * \brief Return a shared_ptr to a new instance of lilacsat::ccsds_afsk_decode.
        *
-       * To avoid accidental use of raw pointers, lilacsat::ccsds_ssdv_decode's
+       * To avoid accidental use of raw pointers, lilacsat::ccsds_afsk_decode's
        * constructor is in a private implementation
-       * class. lilacsat::ccsds_ssdv_decode::make is the public interface for
+       * class. lilacsat::ccsds_afsk_decode::make is the public interface for
        * creating new instances.
        */
       static sptr make(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all);
@@ -52,5 +52,5 @@ namespace gr {
   } // namespace lilacsat
 } // namespace gr
 
-#endif /* INCLUDED_LILACSAT_CCSDS_SSDV_DECODE_H */
+#endif /* INCLUDED_LILACSAT_CCSDS_AFSK_DECODE_H */
 

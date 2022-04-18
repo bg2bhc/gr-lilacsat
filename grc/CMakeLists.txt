@@ -52,6 +52,6 @@ install(FILES
     lilacsat_pdu_f32_to_u8.xml
     lilacsat_two_bit_dpd_frame_recovery.xml
     lilacsat_rs_decode_pdu.xml
-    lilacsat_ccsds_ssdv_decode.xml
-    lilacsat_ccsds_ssdv_encode.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_ccsds_afsk_decode.xml
+    lilacsat_ccsds_afsk_encode.xml DESTINATION share/gnuradio/grc/blocks
 )

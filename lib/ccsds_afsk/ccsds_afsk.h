@@ -24,8 +24,8 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#ifndef __CCSDS_SSDV_H__
-#define __CCSDS_SSDV_H__
+#ifndef __CCSDS_AFSK_H__
+#define __CCSDS_AFSK_H__
 
 #include <inttypes.h>
 
@@ -89,9 +89,9 @@
 #define PHASE_MAX    (SAMPLEPERBIT * PHASE_BIT)
 #define PHASE_THRES  (PHASE_MAX / 2) // - PHASE_BIT / 2)
 
-typedef void (*ssdv_sync_hook_t)(uint8_t *, uint16_t, int16_t byte_corr, void *obj_ptr);
+typedef void (*afsk_sync_hook_t)(uint8_t *, uint16_t, int16_t byte_corr, void *obj_ptr);
 
-typedef struct Ccsds_ssdv
+typedef struct Ccsds_afsk
 {
     FIFOBuffer tx_fifo;
     uint8_t tx_buf[CONFIG_CCSDS_TX_BUFLEN];
@@ -125,7 +125,7 @@ typedef struct Ccsds_ssdv
     uint8_t rx_bit_state;
     uint8_t tx_bit_state;
     void *obj_ptr;
-    ssdv_sync_hook_t hook;
+    afsk_sync_hook_t hook;
     uint16_t cfg_preamble_len;
     uint16_t cfg_trailer_len;
     uint8_t cfg_continous;
@@ -133,20 +133,20 @@ typedef struct Ccsds_ssdv
     uint8_t cfg_using_m;
     uint8_t cfg_using_convolutional_code;
 	struct demodulator_state_s direwolf_state;
-} Ccsds_ssdv;
+} Ccsds_afsk;
 
-void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook);
+void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
 
-void ccsds_ssdv_send(Ccsds_ssdv *cc, uint8_t *message);
-void ccsds_ssdv_pull(Ccsds_ssdv *cc);
+void ccsds_afsk_send(Ccsds_afsk *cc, uint8_t *message);
+void ccsds_afsk_pull(Ccsds_afsk *cc);
 
 //unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbytes);
-unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocksize);
+unsigned int ccsds_afsk_tx_proc(Ccsds_afsk *cc, float *pDst, unsigned int blocksize);
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms);
-void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize);
+void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 
-void direwolf_ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook);
-void direwolf_ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize);
+void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
+void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 
 
 #endif

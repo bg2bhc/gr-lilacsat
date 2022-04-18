@@ -23,26 +23,26 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "ccsds_ssdv_decode_impl.h"
+#include "ccsds_afsk_decode_impl.h"
 
 #include <time.h>
 
 namespace gr {
   namespace lilacsat {
 
-    ccsds_ssdv_decode::sptr
-    ccsds_ssdv_decode::make(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
+    ccsds_afsk_decode::sptr
+    ccsds_afsk_decode::make(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_ssdv_decode_impl(frame_len, using_m, using_convolutional_code, pass_all));
+        (new ccsds_afsk_decode_impl(frame_len, using_m, using_convolutional_code, pass_all));
     }
 
 
     /*
      * The private constructor
      */
-    ccsds_ssdv_decode_impl::ccsds_ssdv_decode_impl(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
-      : gr::sync_block("ccsds_ssdv_decode",
+    ccsds_afsk_decode_impl::ccsds_afsk_decode_impl(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
+      : gr::sync_block("ccsds_afsk_decode",
               gr::io_signature::make(1, 1, sizeof(float)),
               gr::io_signature::make(0,0,0)), d_pass_all(pass_all)
       {
@@ -50,7 +50,7 @@ namespace gr {
         message_port_register_out(d_out_port);
 
         set_output_multiple(16);
-        direwolf_ccsds_ssdv_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
+        direwolf_ccsds_afsk_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
 
         cc.cfg_using_m = using_m;
         cc.cfg_using_convolutional_code = using_convolutional_code;
@@ -59,15 +59,15 @@ namespace gr {
     /*
      * Our virtual destructor.
      */
-    ccsds_ssdv_decode_impl::~ccsds_ssdv_decode_impl()
+    ccsds_afsk_decode_impl::~ccsds_afsk_decode_impl()
     {
     }
 
-    void ccsds_ssdv_decode_impl::callback(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr)
+    void ccsds_afsk_decode_impl::callback(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr)
     {
         static time_t time_curr;
         static struct tm *tblock_curr;
-        ccsds_ssdv_decode_impl *obj_ptr_loc = (ccsds_ssdv_decode_impl *)obj_ptr;
+        ccsds_afsk_decode_impl *obj_ptr_loc = (ccsds_afsk_decode_impl *)obj_ptr;
 
         time_curr = time(NULL);
         tblock_curr =  gmtime(&time_curr);
@@ -80,15 +80,15 @@ namespace gr {
         }
     }
     int
-    ccsds_ssdv_decode_impl::work(int noutput_items,
+    ccsds_afsk_decode_impl::work(int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
       float *in = (float *) input_items[0];
 
       // Do <+signal processing+>
-      direwolf_ccsds_ssdv_rx_proc(&cc, in, noutput_items);
-      ccsds_ssdv_pull(&cc);
+      direwolf_ccsds_afsk_rx_proc(&cc, in, noutput_items);
+      ccsds_afsk_pull(&cc);
       // Tell runtime system how many output items we produced.
       return noutput_items;
     }

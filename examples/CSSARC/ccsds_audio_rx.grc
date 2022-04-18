@@ -391,7 +391,7 @@
     </param>
   </block>
   <block>
-    <key>lilacsat_ccsds_ssdv_decode</key>
+    <key>lilacsat_ccsds_afsk_decode</key>
     <param>
       <key>alias</key>
       <value></value>
@@ -422,7 +422,7 @@
     </param>
     <param>
       <key>id</key>
-      <value>lilacsat_ccsds_ssdv_decode_0</value>
+      <value>lilacsat_ccsds_afsk_decode_0</value>
     </param>
     <param>
       <key>maxoutbuf</key>
@@ -816,7 +816,7 @@
   </connection>
   <connection>
     <source_block_id>audio_source_0</source_block_id>
-    <sink_block_id>lilacsat_ccsds_ssdv_decode_0</sink_block_id>
+    <sink_block_id>lilacsat_ccsds_afsk_decode_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -839,13 +839,13 @@
     <sink_key>0</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_decode_0</source_block_id>
+    <source_block_id>lilacsat_ccsds_afsk_decode_0</source_block_id>
     <sink_block_id>blocks_message_debug_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>print_pdu</sink_key>
   </connection>
   <connection>
-    <source_block_id>lilacsat_ccsds_ssdv_decode_0</source_block_id>
+    <source_block_id>lilacsat_ccsds_afsk_decode_0</source_block_id>
     <sink_block_id>blocks_pdu_to_tagged_stream_0</sink_block_id>
     <source_key>out</source_key>
     <sink_key>pdus</sink_key>
