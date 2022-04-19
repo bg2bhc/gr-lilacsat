@@ -265,6 +265,43 @@ void demod_afsk_init (int samples_per_sec, int baud, int mark_freq, int space_fr
 	    D->pll_searching_inertia = 0.50;
 	    break;
 
+	  case 'G':
+
+		/* 1200 baud - Started out similar to C but add prefilter. */
+		/* Version 1.2 */
+		/* Enhancements: 					*/
+		/*  + Add prefilter.  Previously used for 300 baud D, but not 1200. */
+		/*  + Prefilter length now independent of M/S filters.	*/
+		/*  + Lowpass filter length now independent of M/S filters.	*/
+		/*  + Allow mixed window types.	*/
+
+	    //D->bp_window = BP_WINDOW_COSINE;	/* The name says BP but it is used for all of them. */
+
+	    D->use_prefilter = 0;		/* first, a bandpass filter. */
+	    D->prefilter_baud = 0.23;
+	    D->pre_filter_len_bits = 156 * 1200. / 44100.;
+	    D->pre_window = BP_WINDOW_TRUNCATED;
+
+	    D->ms_filter_len_bits = 74 * 1200. / 44100.;
+	    D->ms_window = BP_WINDOW_COSINE;
+
+	    D->lpf_use_fir = 1;
+	    D->lpf_baud = 1.18;
+	    D->lp_filter_len_bits = 63 * 1200. / 44100.;
+	    D->lp_window = BP_WINDOW_TRUNCATED;
+
+	    //D->agc_fast_attack = 0.300;
+	    //D->agc_slow_decay = 0.000185;
+	    D->agc_fast_attack = 0.820;
+	    D->agc_slow_decay = 0.000214;
+	    D->hysteresis = 0.01;
+
+	    //D->pll_locked_inertia = 0.57;
+	    //D->pll_searching_inertia = 0.33;
+	    D->pll_locked_inertia = 0.8;
+	    D->pll_searching_inertia = 0.60;
+	    break;
+
 	  default:
 
 	    //text_color_set(DW_COLOR_ERROR);

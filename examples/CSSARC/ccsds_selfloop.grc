@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>9600</value>
+      <value>19200</value>
     </param>
   </block>
   <block>
@@ -132,7 +132,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>1200</value>
+      <value>1200*2</value>
     </param>
   </block>
   <block>
@@ -198,7 +198,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>48000</value>
+      <value>96000</value>
     </param>
   </block>
   <block>
@@ -845,7 +845,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>180</value>
+      <value>180*2</value>
     </param>
     <param>
       <key>type</key>

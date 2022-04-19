@@ -62,20 +62,20 @@
 
 // Modulator constants
 
-#define SAMPLERATE 9600
+#define SAMPLERATE 19200
 
-#define BITRATE    1200
+#define BITRATE    2400
 
 #define SAMPLEPERBIT (SAMPLERATE / BITRATE)
 
-#define CONFIG_AFSK_DAC_SAMPLERATE 9600
+#define CONFIG_AFSK_DAC_SAMPLERATE 19200
 
 #define DIV_ROUND(dividend, divisor)  (((dividend) + (divisor) / 2) / (divisor))
 
 #define MARK_FREQ  1200
 #define MARK_INC   (uint16_t)(DIV_ROUND(SIN_LEN * (uint32_t)MARK_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
-#define SPACE_FREQ 2200
+#define SPACE_FREQ 2400
 #define SPACE_INC  (uint16_t)(DIV_ROUND(SIN_LEN * (uint32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
 #define DAC_SAMPLEPERBIT (CONFIG_AFSK_DAC_SAMPLERATE / BITRATE)
@@ -132,7 +132,14 @@ typedef struct Ccsds_afsk
     uint8_t cfg_padding_zero;
     uint8_t cfg_using_m;
     uint8_t cfg_using_convolutional_code;
+
 	struct demodulator_state_s direwolf_state;
+
+    FIFOBuffer_q15 delay_fifo_i;
+    int16_t delay_buf_i[SAMPLEPERBIT + 1];
+    FIFOBuffer_q15 delay_fifo_q;
+    int16_t delay_buf_q[SAMPLEPERBIT + 1];
+    uint16_t phase_acc_lo;
 } Ccsds_afsk;
 
 void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
@@ -148,6 +155,8 @@ void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
 void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 
+void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
+void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 
 #endif
 

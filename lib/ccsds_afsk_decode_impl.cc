@@ -50,7 +50,7 @@ namespace gr {
         message_port_register_out(d_out_port);
 
         set_output_multiple(16);
-        direwolf_ccsds_afsk_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
+        ccsds_afsk_init_dpd(&cc, 0x1ACFFC1D, frame_len, this, callback);
 
         cc.cfg_using_m = using_m;
         cc.cfg_using_convolutional_code = using_convolutional_code;
@@ -87,7 +87,7 @@ namespace gr {
       float *in = (float *) input_items[0];
 
       // Do <+signal processing+>
-      direwolf_ccsds_afsk_rx_proc(&cc, in, noutput_items);
+      ccsds_afsk_rx_proc_dpd(&cc, in, noutput_items);
       ccsds_afsk_pull(&cc);
       // Tell runtime system how many output items we produced.
       return noutput_items;

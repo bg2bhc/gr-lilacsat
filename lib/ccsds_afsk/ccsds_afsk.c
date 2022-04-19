@@ -649,7 +649,7 @@ void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_f
 
     //gen_met(mettab, amp, esn0, 0.0, 4);
 
-	demod_afsk_init (9600, 1200, 2200, 1200, 'E', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
+	demod_afsk_init (19200, 2400, 2400, 1200, 'G', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
 
     vitfilt27_init(&(cc->vi));
 
@@ -689,4 +689,235 @@ void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_f
     cc->bit_count_rx = 0;
     cc->curr_phase = 0;
 }
+
+void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
+{
+    //float RATE=0.5;
+    //float ebn0 = 12.0;
+    //float esn0 = RATE*pow(10.0, ebn0/10);
+
+
+    //gen_met(mettab, amp, esn0, 0.0, 4);
+
+    vitfilt27_init(&(cc->vi));
+
+    cc->sending = 0;
+    fifo_init(&cc->tx_fifo, cc->tx_buf, sizeof(cc->tx_buf));
+    fifo_init(&cc->rx_fifo, cc->rx_buf, sizeof(cc->rx_buf));
+
+    //fifo_init_q15(&cc->delay_fifo, (int16_t *)cc->delay_buf, (SAMPLEPERBIT / 2 + 1));
+	/* Fill sample FIFO with 0 */
+	//for (int i = 0; i < SAMPLEPERBIT / 2; i++)
+	//	fifo_push_q15(&cc->delay_fifo, 0);
+
+    fifo_init_q15(&cc->delay_fifo_i, (int16_t *)cc->delay_buf_i, SAMPLEPERBIT+1);
+    for (int i = 0; i < SAMPLEPERBIT; i++)
+		fifo_push_q15(&cc->delay_fifo_i, 0);
+
+    fifo_init_q15(&cc->delay_fifo_q, (int16_t *)cc->delay_buf_q, SAMPLEPERBIT+1);
+    for (int i = 0; i < SAMPLEPERBIT; i++)
+		fifo_push_q15(&cc->delay_fifo_q, 0);
+
+    cc->phase_acc_lo = 0;
+
+    cc->sync_word = sync_word;
+    cc->len_frame = len_frame;
+    cc->syncing = 0;
+    cc->buffer_sync_det = 0;
+    cc->n_out = 0;
+    cc->mask_bit_out = 0x80;
+    cc->obj_ptr = obj_ptr;
+    cc->hook = hook;
+    cc->rx_bit_state = 0;
+    cc->tx_bit_state = 0;
+
+    cc->cfg_continous = 0;
+    cc->cfg_padding_zero = 0;
+    cc->cfg_using_m = 0;
+    cc->cfg_using_convolutional_code = 0;
+    cc->cfg_preamble_len = 75;
+    cc->cfg_trailer_len = 30;
+
+    cc->sample_count = 0;
+    cc->bit_count = 0;
+    cc->current_data = 0;
+    cc->phase_inc = SPACE_INC;
+    cc->phase_acc = 0;
+
+    cc->bit_count_rx = 0;
+    cc->curr_phase = 0;
+}
+
+
+#define PHASE_INC_LO  (uint16_t)(DIV_ROUND(SIN_LEN * ( (uint32_t)MARK_FREQ + (uint32_t)SPACE_FREQ )/2, SAMPLERATE))
+
+/*blocksize must be a multiple of 16*/
+//void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
+void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
+{
+    while(blocksize>0)
+    {
+        uint8_t bits;
+
+		int16_t mix_q = (int16_t)(((float)sinetable[cc->phase_acc_lo]) * (*pSrc));
+        int16_t mix_i = (int16_t)(((float)sinetable[(cc->phase_acc_lo + SIN_LEN/4) % SIN_LEN]) * (*pSrc));
+
+        cc->phase_acc_lo += PHASE_INC_LO;
+        cc->phase_acc_lo %= SIN_LEN;
+
+        /*
+         * Frequency discriminator and LP IIR filter.
+         * This filter is designed to work
+         * at the given sample rate and bit rate.
+         */
+
+		/*
+		* Frequency discrimination is achieved by simply multiplying
+		* the sample with a delayed sample of (samples per bit) / 2.
+		* Then the signal is lowpass filtered with a first order,
+		* 600 Hz filter. The filter implementation is selectable
+		* through the CONFIG_AFSK_FILTER config variable.
+		*/
+
+		int32_t demod_out = (((int32_t)mix_i * (int32_t)fifo_pop_q15(&cc->delay_fifo_q)) >> 2) - (((int32_t)mix_q * (int32_t)fifo_pop_q15(&cc->delay_fifo_i)) >> 2);
+
+		fifo_push_q15(&cc->delay_fifo_q, mix_q);
+        fifo_push_q15(&cc->delay_fifo_i, mix_i);
+
+		cc->iir_x[0] = cc->iir_x[1];
+
+		cc->iir_x[1] = demod_out;
+
+		cc->iir_y[0] = cc->iir_y[1];
+
+		/*
+		 * This should be (af->iir_y[0] * 0.438) but
+		 * (af->iir_y[0] >> 1) is a faster approximation :-)
+		 */
+		cc->iir_y[1] = cc->iir_x[0] + cc->iir_x[1] + (cc->iir_y[0] >> 1);
+
+		/* Save this sampled bit in a delay line */
+		cc->sampled_bits <<= 1;
+		cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
+
+		/* Store current ADC sample in the af->delay_fifo */
+		//fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));
+
+		/* If there is an edge, adjust phase sampling */
+		if (EDGE_FOUND(cc->sampled_bits))
+		{
+			if (cc->curr_phase < PHASE_THRES)
+				cc->curr_phase += PHASE_INC;
+			else
+				cc->curr_phase -= PHASE_INC;
+		}
+		cc->curr_phase += PHASE_BIT;
+
+		/* sample the bit */
+		if (cc->curr_phase >= PHASE_MAX)
+		{
+			cc->curr_phase %= PHASE_MAX;
+
+			/* Shift 1 position in the shift register of the found bits */
+			//cc->found_bits <<= 1;
+
+            if(cc->bit_count_rx == 0)
+            {
+                ccsds_rxwrite(cc, cc->current_byte_rx);
+                cc->bit_count_rx = 8;
+            }
+            cc->bit_count_rx--;
+            cc->current_byte_rx <<= 1;
+            //cc->current_byte_rx += (*(syms++))?1:0;
+
+			/*
+			* Determine bit value by reading the last 3 sampled bits.
+			* If the number of ones is two or greater, the bit value is a 1,
+			* otherwise is a 0.
+			* This algorithm presumes that there are 8 samples per bit.
+			*/
+			bits = (cc->sampled_bits & 0x07);
+			if (bits == 0x07 // 111, 3 bits set to 1
+			|| bits == 0x06 // 110, 2 bits
+			|| bits == 0x05 // 101, 2 bits
+			|| bits == 0x03 // 011, 2 bits
+			)
+				//cc->found_bits |= 1;
+				cc->current_byte_rx += 1;
+
+			/*
+			* NRZI coding: if 2 consecutive bits have the same value
+			* a 1 is received, otherwise it's a 0.
+			*/
+			//if (!hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo))
+			//	af->status |= AFSK_RXFIFO_OVERRUN;
+
+		}
+
+        blocksize--;
+		pSrc++;
+    }
+/*    unsigned int i, j;
+    unsigned char current_out, syms_tmp[16];
+
+
+    if(cc->cfg_using_convolutional_code)
+    {
+        for (i = 0; i < n_syms/16; i++)
+        {
+            for(j=0; j<16; j++)
+            {
+                syms_tmp[j] = ((*(syms++)) ? 0xff : 0x00);
+            }
+
+            vitfilt27_decode(&(cc->vi), syms_tmp, &current_out, 16);
+
+            if(cc->cfg_using_m)
+
+            {
+                if(cc->rx_bit_state)
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[0xFF-current_out];
+                }
+                else
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[current_out];
+                }
+            }
+
+            ccsds_rxwrite(cc, current_out);
+        }
+    }
+    else
+    {
+        for (i = 0; i < n_syms/8; i++)
+        {
+            for(j=0; j<8; j++)
+            {
+                current_out <<= 1;
+                current_out += (*(syms++))?1:0;
+            }
+
+            if(cc->cfg_using_m)
+            {
+                if(cc->rx_bit_state)
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[0xFF-current_out];
+                }
+                else
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[current_out];
+
+                }
+            }
+
+            ccsds_rxwrite(cc, current_out);
+        }
+    }*/
+}
+
 
