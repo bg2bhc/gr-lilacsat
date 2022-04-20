@@ -81,25 +81,21 @@
 #define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
 #define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)SPACE_FREQ - (int32_t)MARK_FREQ )/2, SAMPLERATE))
 
-#define BT0R5
-
 #if SAMPLEPERBIT==8
-	#define LEN_RECEIVER_FILTER		39 // SPS = 8
-	#ifdef BT0R5
-		#define LEN_PULSE_SHARPING		19 // BT = 0.5
-	#endif
+	#define LEN_RECEIVER_FILTER			39 // SPS = 8
 	#ifdef BT0R35
 		#define LEN_PULSE_SHARPING		25 // BT = 0.35
+	#else
+		#define LEN_PULSE_SHARPING		19 // BT = 0.5
 	#endif
 #endif
 
 #if SAMPLEPERBIT==4
-	#define LEN_RECEIVER_FILTER		37 // SPS = 4
-	#ifdef BT0R5
-		#define LEN_PULSE_SHARPING		9 // BT = 0.5
-	#endif
+	#define LEN_RECEIVER_FILTER			37 // SPS = 4
 	#ifdef BT0R35
 		#define LEN_PULSE_SHARPING		13 // BT = 0.35
+	#else
+		#define LEN_PULSE_SHARPING		9 // BT = 0.5
 	#endif
 #endif
 
