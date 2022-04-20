@@ -88,7 +88,7 @@ namespace gr {
 
     int n_ret;
       // Do <+signal processing+>
-    n_ret = ccsds_afsk_tx_proc(&cc, out, noutput_items);
+    n_ret = ccsds_afsk_tx_proc_gmsk(&cc, out, noutput_items);
     if((d_ptt == 0) && (n_ret != 0))
 	{
 		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_on), (const uint8_t *)msg_ptt_on)));

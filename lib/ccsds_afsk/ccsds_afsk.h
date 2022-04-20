@@ -73,10 +73,17 @@
 #define DIV_ROUND(dividend, divisor)  (((dividend) + (divisor) / 2) / (divisor))
 
 #define MARK_FREQ  1200
-#define MARK_INC   (uint16_t)(DIV_ROUND(SIN_LEN * (uint32_t)MARK_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
+#define MARK_INC   (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)MARK_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
 #define SPACE_FREQ 2400
-#define SPACE_INC  (uint16_t)(DIV_ROUND(SIN_LEN * (uint32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
+#define SPACE_INC  (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
+
+#define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
+#define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)SPACE_FREQ - (int32_t)MARK_FREQ )/2, SAMPLERATE))
+
+#define LEN_PULSE_SHARPING		19 // For BT=0.5
+//#define LEN_PULSE_SHARPING		25 // For BT=0.35
+#define LEN_RECEIVER_FILTER		39
 
 #define DAC_SAMPLEPERBIT (CONFIG_AFSK_DAC_SAMPLERATE / BITRATE)
 
@@ -102,8 +109,8 @@ typedef struct Ccsds_afsk
     uint8_t sample_count;
     uint8_t bit_count;
     uint8_t current_data;
-    uint16_t phase_inc;
-    uint16_t phase_acc;
+    int16_t phase_inc;
+    int16_t phase_acc;
     FIFOBuffer rx_fifo;
     uint8_t rx_buf[CONFIG_CCSDS_RX_BUFLEN];
     v27 vi;
@@ -140,6 +147,9 @@ typedef struct Ccsds_afsk
     FIFOBuffer_q15 delay_fifo_q;
     int16_t delay_buf_q[SAMPLEPERBIT + 1];
     uint16_t phase_acc_lo;
+	int16_t d_pulse_sharping[LEN_PULSE_SHARPING];
+	int32_t d_receiver_filter[LEN_RECEIVER_FILTER];
+
 } Ccsds_afsk;
 
 void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
@@ -157,6 +167,7 @@ void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int block
 
 void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
 void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
+unsigned int ccsds_afsk_tx_proc_gmsk(Ccsds_afsk *cc, float *pDst, unsigned int blocksize);
 
 #endif
 
