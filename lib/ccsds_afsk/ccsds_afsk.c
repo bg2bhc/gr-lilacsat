@@ -748,9 +748,25 @@ void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame,
     cc->curr_phase = 0;
 }
 
+#if SAMPLEPERBIT==8
+	int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-39, -253, -401, -395, -200, 140, 500, 714, 645, 246, -388, -1032, -1386, -1181, -276, 1266, 3170, 5015, 6352, 6840, 6352, 5015, 3170, 1266, -276, -1181, -1386, -1032, -388, 246, 645, 714, 500, 140, -200, -395, -401, -253, -39};
+	#ifdef BT0R5
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {1, 5, 26, 112, 382, 1040, 2266, 3952, 5517, 6166, 5517, 3952, 2266, 1040, 382, 112, 26, 5, 1};
+	#endif
+	#ifdef BT0R35
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {2, 6, 19, 52, 132, 299, 607, 1105, 1804, 2643, 3471, 4087, 4316, 4087, 3471, 2643, 1804, 1105, 607, 299, 132, 52, 19, 6, 2};
+	#endif
+#endif
 
-int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-39, -253, -401, -395, -200, 140, 500, 714, 645, 246, -388, -1032, -1386, -1181, -276, 1266, 3170, 5015, 6352, 6840, 6352, 5015, 3170, 1266, -276, -1181, -1386, -1032, -388, 246, 645, 714, 500, 140, -200, -395, -401, -253, -39};
-
+#if SAMPLEPERBIT==4
+	int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-67, -99, 64, 214, 17, -336, -212, 399, 533, -310, -960, -48, 1431, 860, -1863, -2650, 2168, 10138, 14107, 10138, 2168, -2650, -1863, 860, 1431, -48, -960, -310, 533, 399, -212, -336, 17, 214, 64, -99, -67};
+	#ifdef BT0R5
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {10, 225, 2080, 7903, 12332, 7903, 2080, 225, 10};
+	#endif
+	#ifdef BT0R35
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {3, 37, 264, 1213, 3609, 6941, 8632, 6941, 3609, 1213, 264, 37, 3};
+	#endif
+#endif
 
 /*blocksize must be a multiple of 16*/
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
@@ -931,11 +947,6 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
         }
     }*/
 }
-
-// For BT=0.5
-int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {1, 5, 26, 112, 382, 1040, 2266, 3952, 5517, 6166, 5517, 3952, 2266, 1040, 382, 112, 26, 5, 1};
-// For BT=0.35
-//int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {2, 6, 19, 52, 132, 299, 607, 1105, 1804, 2643, 3471, 4087, 4316, 4087, 3471, 2643, 1804, 1105, 607, 299, 132, 52, 19, 6, 2};
 
 //unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits)
 unsigned int ccsds_afsk_tx_proc_gmsk(Ccsds_afsk *cc, float *pDst, unsigned int blocksize)

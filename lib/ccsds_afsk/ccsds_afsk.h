@@ -62,13 +62,13 @@
 
 // Modulator constants
 
-#define SAMPLERATE 19200
+#define SAMPLERATE 9600
 
 #define BITRATE    2400
 
 #define SAMPLEPERBIT (SAMPLERATE / BITRATE)
 
-#define CONFIG_AFSK_DAC_SAMPLERATE 19200
+#define CONFIG_AFSK_DAC_SAMPLERATE 9600
 
 #define DIV_ROUND(dividend, divisor)  (((dividend) + (divisor) / 2) / (divisor))
 
@@ -81,16 +81,40 @@
 #define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
 #define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)SPACE_FREQ - (int32_t)MARK_FREQ )/2, SAMPLERATE))
 
-#define LEN_PULSE_SHARPING		19 // For BT=0.5
-//#define LEN_PULSE_SHARPING		25 // For BT=0.35
-#define LEN_RECEIVER_FILTER		39
+#define BT0R5
+
+#if SAMPLEPERBIT==8
+	#define LEN_RECEIVER_FILTER		39 // SPS = 8
+	#ifdef BT0R5
+		#define LEN_PULSE_SHARPING		19 // BT = 0.5
+	#endif
+	#ifdef BT0R35
+		#define LEN_PULSE_SHARPING		25 // BT = 0.35
+	#endif
+#endif
+
+#if SAMPLEPERBIT==4
+	#define LEN_RECEIVER_FILTER		37 // SPS = 4
+	#ifdef BT0R5
+		#define LEN_PULSE_SHARPING		9 // BT = 0.5
+	#endif
+	#ifdef BT0R35
+		#define LEN_PULSE_SHARPING		13 // BT = 0.35
+	#endif
+#endif
 
 #define DAC_SAMPLEPERBIT (CONFIG_AFSK_DAC_SAMPLERATE / BITRATE)
 
 #define BIT_DIFFER(bitline1, bitline2) (((bitline1) ^ (bitline2)) & 0x01)
 #define EDGE_FOUND(bitline)            BIT_DIFFER((bitline), (bitline) >> 1)
 
-#define PHASE_BIT    8
+#if SAMPLEPERBIT==8
+	#define PHASE_BIT    8
+#endif
+#if SAMPLEPERBIT==4
+	#define PHASE_BIT    16
+#endif
+
 #define PHASE_INC    1
 
 #define PHASE_MAX    (SAMPLEPERBIT * PHASE_BIT)

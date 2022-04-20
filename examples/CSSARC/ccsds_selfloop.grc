@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>19200</value>
+      <value>19200/2</value>
     </param>
   </block>
   <block>
@@ -198,7 +198,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>96000</value>
+      <value>audio_rate*5</value>
     </param>
   </block>
   <block>
@@ -924,7 +924,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>180*2</value>
+      <value>295</value>
     </param>
     <param>
       <key>type</key>
