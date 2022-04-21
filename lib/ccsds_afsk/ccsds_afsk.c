@@ -1065,7 +1065,7 @@ unsigned int ccsds_afsk_tx_proc_gmsk(Ccsds_afsk *cc, float *pDst, unsigned int b
 
         cc->sample_count--;
 
-        *pDst = ((float)sinetable[cc->phase_acc])/32768;
+        *pDst = ((float)sinetable[cc->phase_acc])/57344.0;
 
         pDst++;
     }

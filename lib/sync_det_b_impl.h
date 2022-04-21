@@ -39,20 +39,20 @@ namespace gr {
      private:
 	  pmt::pmt_t	d_out_port;
 	  uint32_t		d_sync_word;
-	  uint8_t		d_frame_length;
+	  uint32_t		d_frame_length;
 	  uint8_t		d_nrz;
 	  uint8_t		d_descrambling;
 	  uint8_t		d_rx_bit_state;
 	  uint8_t		d_mask_bit_out;
 	  uint8_t		d_syncing;
       uint32_t		d_buffer_sync_det;
-	  uint8_t		d_n_out;
+	  uint32_t		d_n_out;
 	  uint8_t		d_buf_sync_out[LENTH_BUF_SYNC_OUT];
 
       static void	kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len);
 
      public:
-      sync_det_b_impl(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling);
+      sync_det_b_impl(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling);
       ~sync_det_b_impl();
 
       // Where all the action really happens

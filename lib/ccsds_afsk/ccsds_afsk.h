@@ -81,6 +81,8 @@
 #define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
 #define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ - (int32_t)SPACE_FREQ )/2, SAMPLERATE))
 
+#define BT0R35
+
 #if SAMPLEPERBIT==8
 	#define LEN_RECEIVER_FILTER			39 // SPS = 8
 	#ifdef BT0R35
