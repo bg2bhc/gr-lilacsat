@@ -105,7 +105,7 @@
     </param>
     <param>
       <key>value</key>
-      <value>19200</value>
+      <value>baud_rate*8</value>
     </param>
   </block>
   <block>
@@ -394,7 +394,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 468)</value>
+      <value>(1120, 468)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -449,7 +449,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(112, 668)</value>
+      <value>(896, 420)</value>
     </param>
     <param>
       <key>_rotation</key>
@@ -924,7 +924,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>295</value>
+      <value>295*baud_rate/2400</value>
     </param>
     <param>
       <key>type</key>
@@ -985,6 +985,10 @@
   <block>
     <key>lilacsat_ccsds_afsk_decode</key>
     <param>
+      <key>bitrate</key>
+      <value>baud_rate</value>
+    </param>
+    <param>
       <key>alias</key>
       <value></value>
     </param>
@@ -1039,6 +1043,10 @@
   </block>
   <block>
     <key>lilacsat_ccsds_afsk_encode</key>
+    <param>
+      <key>bitrate</key>
+      <value>baud_rate</value>
+    </param>
     <param>
       <key>alias</key>
       <value></value>
@@ -1215,7 +1223,7 @@
     </param>
     <param>
       <key>_coordinate</key>
-      <value>(968, 532)</value>
+      <value>(1120, 540)</value>
     </param>
     <param>
       <key>gui_hint</key>
@@ -1544,19 +1552,7 @@
   </block>
   <connection>
     <source_block_id>analog_nbfm_rx_0</source_block_id>
-    <sink_block_id>audio_sink_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_nbfm_rx_0</source_block_id>
     <sink_block_id>band_pass_filter_0</sink_block_id>
-    <source_key>0</source_key>
-    <sink_key>0</sink_key>
-  </connection>
-  <connection>
-    <source_block_id>analog_nbfm_rx_0</source_block_id>
-    <sink_block_id>qtgui_time_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>
@@ -1574,7 +1570,19 @@
   </connection>
   <connection>
     <source_block_id>band_pass_filter_0</source_block_id>
+    <sink_block_id>audio_sink_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>band_pass_filter_0</source_block_id>
     <sink_block_id>lilacsat_ccsds_afsk_decode_0</sink_block_id>
+    <source_key>0</source_key>
+    <sink_key>0</sink_key>
+  </connection>
+  <connection>
+    <source_block_id>band_pass_filter_0</source_block_id>
+    <sink_block_id>qtgui_time_sink_x_0</sink_block_id>
     <source_key>0</source_key>
     <sink_key>0</sink_key>
   </connection>

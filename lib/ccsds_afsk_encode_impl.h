@@ -40,7 +40,7 @@ namespace gr {
 
         void pmt_in_callback(pmt::pmt_t msg);
      public:
-      ccsds_afsk_encode_impl(int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code);
+      ccsds_afsk_encode_impl(int bitrate, int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code);
       ~ccsds_afsk_encode_impl();
 
       // Where all the action really happens

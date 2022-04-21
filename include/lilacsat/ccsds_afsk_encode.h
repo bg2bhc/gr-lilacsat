@@ -46,7 +46,7 @@ namespace gr {
        * class. lilacsat::ccsds_afsk_encode::make is the public interface for
        * creating new instances.
        */
-      static sptr make(int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code);
+      static sptr make(int bitrate, int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code);
     };
 
   } // namespace lilacsat

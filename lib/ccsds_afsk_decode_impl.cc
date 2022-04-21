@@ -31,17 +31,17 @@ namespace gr {
   namespace lilacsat {
 
     ccsds_afsk_decode::sptr
-    ccsds_afsk_decode::make(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
+    ccsds_afsk_decode::make(int bitrate, int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_afsk_decode_impl(frame_len, using_m, using_convolutional_code, pass_all));
+        (new ccsds_afsk_decode_impl(bitrate, frame_len, using_m, using_convolutional_code, pass_all));
     }
 
 
     /*
      * The private constructor
      */
-    ccsds_afsk_decode_impl::ccsds_afsk_decode_impl(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
+    ccsds_afsk_decode_impl::ccsds_afsk_decode_impl(int bitrate, int frame_len, bool using_m, bool using_convolutional_code, bool pass_all)
       : gr::sync_block("ccsds_afsk_decode",
               gr::io_signature::make(1, 1, sizeof(float)),
               gr::io_signature::make(0,0,0)), d_pass_all(pass_all)
@@ -50,7 +50,25 @@ namespace gr {
         message_port_register_out(d_out_port);
 
         set_output_multiple(16);
-        ccsds_afsk_init_dpd(&cc, 0x1ACFFC1D, frame_len, this, callback);
+
+		switch(bitrate)
+		{
+			case 1200:
+				cc.bitrate = 1200;
+				cc.mark_freq = 1200;
+				cc.space_freq = 2200;
+				direwolf_ccsds_afsk_init(&cc, 0x1ACFFC1D, frame_len, this, callback);
+				break;
+			case 2400:
+				cc.bitrate = 2400;
+				cc.mark_freq = 1200;
+				cc.space_freq = 2400;
+				ccsds_afsk_init_dpd(&cc, 0x1ACFFC1D, frame_len, this, callback);
+				break;
+			default:
+				exit(0);
+				break;
+		}
 
         cc.cfg_using_m = using_m;
         cc.cfg_using_convolutional_code = using_convolutional_code;
@@ -87,7 +105,18 @@ namespace gr {
       float *in = (float *) input_items[0];
 
       // Do <+signal processing+>
-      ccsds_afsk_rx_proc_dpd(&cc, in, noutput_items);
+      switch(cc.bitrate)
+      {
+		case 1200:
+			direwolf_ccsds_afsk_rx_proc(&cc, in, noutput_items);
+			break;
+		case 2400:
+			ccsds_afsk_rx_proc_dpd(&cc, in, noutput_items);
+			break;
+		default:
+			exit(0);
+			break;
+      }
       ccsds_afsk_pull(&cc);
       // Tell runtime system how many output items we produced.
       return noutput_items;

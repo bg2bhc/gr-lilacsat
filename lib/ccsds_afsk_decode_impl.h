@@ -38,7 +38,7 @@ namespace gr {
       static void callback(unsigned char *buf, unsigned short len, int16_t byte_corr, void *obj_ptr);
 
      public:
-      ccsds_afsk_decode_impl(int frame_len, bool using_m, bool using_convolutional_code, bool pass_all);
+      ccsds_afsk_decode_impl(int bitrate, int frame_len, bool using_m, bool using_convolutional_code, bool pass_all);
       ~ccsds_afsk_decode_impl();
 
       // Where all the action really happens

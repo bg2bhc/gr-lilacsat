@@ -61,7 +61,7 @@
 
 
 // Modulator constants
-
+/*
 #define SAMPLERATE 19200
 
 #define BITRATE    2400
@@ -76,6 +76,29 @@
 #define MARK_INC   (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)MARK_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
 #define SPACE_FREQ 2400
+#define SPACE_INC  (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
+
+#define DAC_SAMPLEPERBIT (CONFIG_AFSK_DAC_SAMPLERATE / BITRATE)
+
+#define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
+#define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ - (int32_t)SPACE_FREQ )/2, SAMPLERATE))
+*/
+
+
+#define SAMPLEPERBIT 8
+#define DAC_SAMPLEPERBIT SAMPLEPERBIT
+
+#define BITRATE    cc->bitrate
+
+#define SAMPLERATE BITRATE * SAMPLEPERBIT
+#define CONFIG_AFSK_DAC_SAMPLERATE SAMPLERATE
+
+#define DIV_ROUND(dividend, divisor)  (((dividend) + (divisor) / 2) / (divisor))
+
+#define MARK_FREQ  cc->mark_freq
+#define MARK_INC   (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)MARK_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
+
+#define SPACE_FREQ cc->space_freq
 #define SPACE_INC  (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
 #define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
@@ -100,8 +123,6 @@
 		#define LEN_PULSE_SHARPING		9 // BT = 0.5
 	#endif
 #endif
-
-#define DAC_SAMPLEPERBIT (CONFIG_AFSK_DAC_SAMPLERATE / BITRATE)
 
 #define BIT_DIFFER(bitline1, bitline2) (((bitline1) ^ (bitline2)) & 0x01)
 #define EDGE_FOUND(bitline)            BIT_DIFFER((bitline), (bitline) >> 1)
@@ -172,6 +193,9 @@ typedef struct Ccsds_afsk
 	int16_t d_pulse_sharping[LEN_PULSE_SHARPING];
 	int32_t d_receiver_filter[LEN_RECEIVER_FILTER];
 
+	int bitrate;
+	int mark_freq;
+	int space_freq;
 } Ccsds_afsk;
 
 void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
