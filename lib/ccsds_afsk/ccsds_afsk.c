@@ -278,7 +278,7 @@ unsigned int ccsds_afsk_tx_proc(Ccsds_afsk *cc, float *pDst, unsigned int blocks
                 cc->bit_count = 8;
             }
 
-            cc->phase_inc = (cc->current_data & 0x80) ? SPACE_INC : MARK_INC;
+            cc->phase_inc = (cc->current_data & 0x80) ? MARK_INC : SPACE_INC;
             cc->current_data <<= 1;
             cc->bit_count--;
 
@@ -343,7 +343,7 @@ void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 
 		/* Save this sampled bit in a delay line */
 		cc->sampled_bits <<= 1;
-		cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
+		cc->sampled_bits |= (cc->iir_y[1] > 0) ? 0 : 1;
 
 		/* Store current ADC sample in the af->delay_fifo */
 		fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));
@@ -649,7 +649,7 @@ void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_f
 
     //gen_met(mettab, amp, esn0, 0.0, 4);
 
-	demod_afsk_init (19200, 2400, 2400, 1200, 'G', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
+	demod_afsk_init (SAMPLERATE, BITRATE, MARK_FREQ, SPACE_FREQ, 'G', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
 
     vitfilt27_init(&(cc->vi));
 
@@ -824,7 +824,7 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 		/* Save this sampled bit in a delay line */
 		cc->sampled_bits <<= 1;
 		//cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
-		cc->sampled_bits |= (acc_receiver_filter > 0) ? 1 : 0;
+		cc->sampled_bits |= (acc_receiver_filter > 0) ? 0 : 1;
 
 		/* Store current ADC sample in the af->delay_fifo */
 		//fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));

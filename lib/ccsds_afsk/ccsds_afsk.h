@@ -62,13 +62,13 @@
 
 // Modulator constants
 
-#define SAMPLERATE 9600
+#define SAMPLERATE 19200
 
 #define BITRATE    2400
 
 #define SAMPLEPERBIT (SAMPLERATE / BITRATE)
 
-#define CONFIG_AFSK_DAC_SAMPLERATE 9600
+#define CONFIG_AFSK_DAC_SAMPLERATE 19200
 
 #define DIV_ROUND(dividend, divisor)  (((dividend) + (divisor) / 2) / (divisor))
 
@@ -79,7 +79,7 @@
 #define SPACE_INC  (int16_t)(DIV_ROUND(SIN_LEN * (int32_t)SPACE_FREQ, CONFIG_AFSK_DAC_SAMPLERATE))
 
 #define FC_PHASE_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ + (int32_t)SPACE_FREQ )/2, SAMPLERATE))
-#define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)SPACE_FREQ - (int32_t)MARK_FREQ )/2, SAMPLERATE))
+#define DIVISION_INC  (int16_t)(DIV_ROUND(SIN_LEN * ( (int32_t)MARK_FREQ - (int32_t)SPACE_FREQ )/2, SAMPLERATE))
 
 #if SAMPLEPERBIT==8
 	#define LEN_RECEIVER_FILTER			39 // SPS = 8
