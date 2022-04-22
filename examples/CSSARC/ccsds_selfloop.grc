@@ -390,7 +390,7 @@
     </param>
     <param>
       <key>_enabled</key>
-      <value>1</value>
+      <value>0</value>
     </param>
     <param>
       <key>_coordinate</key>
@@ -457,7 +457,7 @@
     </param>
     <param>
       <key>gain</key>
-      <value>1</value>
+      <value>0.01</value>
     </param>
     <param>
       <key>high_cutoff_freq</key>
@@ -924,7 +924,7 @@
     </param>
     <param>
       <key>samples_per_second</key>
-      <value>295*baud_rate/2400</value>
+      <value>295*baud_rate/2400*10</value>
     </param>
     <param>
       <key>type</key>

@@ -107,7 +107,8 @@
 #define BT0R35
 
 #if SAMPLEPERBIT==8
-	#define LEN_RECEIVER_FILTER			39 // SPS = 8
+	//#define LEN_RECEIVER_FILTER			39 // SPS = 8
+    #define LEN_RECEIVER_LPF            61
 	#ifdef BT0R35
 		#define LEN_PULSE_SHARPING		25 // BT = 0.35
 	#else
@@ -116,7 +117,7 @@
 #endif
 
 #if SAMPLEPERBIT==4
-	#define LEN_RECEIVER_FILTER			37 // SPS = 4
+	//#define LEN_RECEIVER_FILTER			37 // SPS = 4
 	#ifdef BT0R35
 		#define LEN_PULSE_SHARPING		13 // BT = 0.35
 	#else
@@ -191,7 +192,10 @@ typedef struct Ccsds_afsk
     int16_t delay_buf_q[SAMPLEPERBIT + 1];
     uint16_t phase_acc_lo;
 	int16_t d_pulse_sharping[LEN_PULSE_SHARPING];
-	int32_t d_receiver_filter[LEN_RECEIVER_FILTER];
+	//int32_t d_receiver_filter[LEN_RECEIVER_FILTER];
+    
+    int16_t d_receiver_lpf_i[LEN_RECEIVER_LPF];
+    int16_t d_receiver_lpf_q[LEN_RECEIVER_LPF];
 
 	int bitrate;
 	int mark_freq;

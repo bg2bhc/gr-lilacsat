@@ -749,7 +749,8 @@ void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame,
 }
 
 #if SAMPLEPERBIT==8
-	int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-39, -253, -401, -395, -200, 140, 500, 714, 645, 246, -388, -1032, -1386, -1181, -276, 1266, 3170, 5015, 6352, 6840, 6352, 5015, 3170, 1266, -276, -1181, -1386, -1032, -388, 246, 645, 714, 500, 140, -200, -395, -401, -253, -39};
+	//int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-39, -253, -401, -395, -200, 140, 500, 714, 645, 246, -388, -1032, -1386, -1181, -276, 1266, 3170, 5015, 6352, 6840, 6352, 5015, 3170, 1266, -276, -1181, -1386, -1032, -388, 246, 645, 714, 500, 140, -200, -395, -401, -253, -39};
+	int16_t taps_receiver_lpf[LEN_RECEIVER_LPF] = {-7, 174, 319, 386, 351, 214, 7, -221, -407, -497, -455, -280, -7, 301, 561, 695, 649, 407, 7, -468, -900, -1159, -1132, -751, -7, 1037, 2255, 3477, 4520, 5221, 5468, 5221, 4520, 3477, 2255, 1037, -7, -751, -1132, -1159, -900, -468, 7, 407, 649, 695, 561, 301, -7, -280, -455, -497, -407, -221, 7, 214, 351, 386, 319, 174, -7};
 	#ifdef BT0R35
 		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {2, 6, 19, 52, 132, 299, 607, 1105, 1804, 2643, 3471, 4087, 4316, 4087, 3471, 2643, 1804, 1105, 607, 299, 132, 52, 19, 6, 2};
 	#else
@@ -758,7 +759,7 @@ void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame,
 #endif
 
 #if SAMPLEPERBIT==4
-	int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-67, -99, 64, 214, 17, -336, -212, 399, 533, -310, -960, -48, 1431, 860, -1863, -2650, 2168, 10138, 14107, 10138, 2168, -2650, -1863, 860, 1431, -48, -960, -310, 533, 399, -212, -336, 17, 214, 64, -99, -67};
+	//int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-67, -99, 64, 214, 17, -336, -212, 399, 533, -310, -960, -48, 1431, 860, -1863, -2650, 2168, 10138, 14107, 10138, 2168, -2650, -1863, 860, 1431, -48, -960, -310, 533, 399, -212, -336, 17, 214, 64, -99, -67};
 	#ifdef BT0R35
 		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {3, 37, 264, 1213, 3609, 6941, 8632, 6941, 3609, 1213, 264, 37, 3};
 	#else
@@ -774,8 +775,8 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
     {
         uint8_t bits;
 
-		int16_t mix_q = (int16_t)(((float)sinetable[cc->phase_acc_lo]) * (*pSrc));
-        int16_t mix_i = (int16_t)(((float)sinetable[(cc->phase_acc_lo + SIN_LEN/4) % SIN_LEN]) * (*pSrc));
+		int16_t mix_q = (int16_t)(((float)sinetable[cc->phase_acc_lo]) * (*pSrc) / 2.0);
+        int16_t mix_i = (int16_t)(((float)sinetable[(cc->phase_acc_lo + SIN_LEN/4) % SIN_LEN]) * (*pSrc) / 2.0);
 
         cc->phase_acc_lo += FC_PHASE_INC;
         cc->phase_acc_lo %= SIN_LEN;
@@ -794,6 +795,30 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 		* through the CONFIG_AFSK_FILTER config variable.
 		*/
 
+		int32_t acc_receiver_lpf_q = 0;
+		for(int j=0; j<LEN_RECEIVER_LPF-1; j++)
+		{
+			cc->d_receiver_lpf_q[j] = cc->d_receiver_lpf_q[j+1];
+			acc_receiver_lpf_q += ((int32_t)cc->d_receiver_lpf_q[j]) * ((int32_t)taps_receiver_lpf[j]);
+		}
+		cc->d_receiver_lpf_q[LEN_RECEIVER_LPF-1] = mix_q;
+		acc_receiver_lpf_q += ((int32_t)mix_q) * ((int32_t)taps_receiver_lpf[LEN_RECEIVER_LPF-1]);
+        
+		int32_t acc_receiver_lpf_i = 0;
+		for(int j=0; j<LEN_RECEIVER_LPF-1; j++)
+		{
+			cc->d_receiver_lpf_i[j] = cc->d_receiver_lpf_i[j+1];
+			acc_receiver_lpf_i += ((int32_t)cc->d_receiver_lpf_i[j]) * ((int32_t)taps_receiver_lpf[j]);
+		}
+		cc->d_receiver_lpf_i[LEN_RECEIVER_LPF-1] = mix_i;
+		acc_receiver_lpf_i += ((int32_t)mix_i) * ((int32_t)taps_receiver_lpf[LEN_RECEIVER_LPF-1]);
+
+		int64_t demod_out = ((int64_t)acc_receiver_lpf_i * (int64_t)fifo_pop_q15(&cc->delay_fifo_q)) - ((int64_t)acc_receiver_lpf_q * (int64_t)fifo_pop_q15(&cc->delay_fifo_i));
+
+		fifo_push_q15(&cc->delay_fifo_q, (int16_t)(acc_receiver_lpf_q>>15));
+        fifo_push_q15(&cc->delay_fifo_i, (int16_t)(acc_receiver_lpf_i>>15));
+
+		/*
 		int32_t demod_out = (((int32_t)mix_i * (int32_t)fifo_pop_q15(&cc->delay_fifo_q)) >> 2) - (((int32_t)mix_q * (int32_t)fifo_pop_q15(&cc->delay_fifo_i)) >> 2);
 
 		fifo_push_q15(&cc->delay_fifo_q, mix_q);
@@ -808,6 +833,7 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 		}
 		cc->d_receiver_filter[LEN_RECEIVER_FILTER-1] = demod_out;
 		acc_receiver_filter += ((int64_t)demod_out) * ((int64_t)taps_receiver_filter[LEN_RECEIVER_FILTER-1]);
+		*/
 
 		//cc->iir_x[0] = cc->iir_x[1];
 
@@ -824,7 +850,8 @@ void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 		/* Save this sampled bit in a delay line */
 		cc->sampled_bits <<= 1;
 		//cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
-		cc->sampled_bits |= (acc_receiver_filter > 0) ? 0 : 1;
+		//cc->sampled_bits |= (acc_receiver_filter > 0) ? 0 : 1;
+		cc->sampled_bits |= (demod_out > 0) ? 0 : 1;
 
 		/* Store current ADC sample in the af->delay_fifo */
 		//fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));
