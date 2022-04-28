@@ -65,6 +65,12 @@ namespace gr {
 				cc.space_freq = 2400;
 				ccsds_afsk_init_dpd(&cc, 0x1ACFFC1D, frame_len, this, callback);
 				break;
+			case 24001:
+				cc.bitrate = 2400;
+				cc.mark_freq = 1050;
+				cc.space_freq = 2250;
+				ccsds_afsk_init_dpd(&cc, 0x1ACFFC1D, frame_len, this, callback);
+				break;
 			default:
 				exit(0);
 				break;
@@ -111,6 +117,7 @@ namespace gr {
 			direwolf_ccsds_afsk_rx_proc(&cc, in, noutput_items);
 			break;
 		case 2400:
+		case 24001:
 			ccsds_afsk_rx_proc_dpd(&cc, in, noutput_items);
 			break;
 		default:

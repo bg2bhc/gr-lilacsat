@@ -10,12 +10,16 @@
     <value>2400</value>
     <type>int</type>
     <option>
-	<name>1200</name>
+	<name>1200 baud</name>
 	<key>1200</key>
     </option>
     <option>
-	<name>2400</name>
+	<name>2400 (fc = 1800)</name>
 	<key>2400</key>
+    </option>
+    <option>
+	<name>2400 (fc = 1650)</name>
+	<key>24001</key>
     </option>
   </param>
   <param>

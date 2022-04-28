@@ -65,6 +65,11 @@ namespace gr {
 				cc.mark_freq = 1200;
 				cc.space_freq = 2400;
 				break;
+			case 24001:
+				cc.bitrate = 2400;
+				cc.mark_freq = 1050;
+				cc.space_freq = 2250;
+				break;
 			default:
 				exit(0);
 				break;
@@ -114,6 +119,7 @@ namespace gr {
 			n_ret = ccsds_afsk_tx_proc(&cc, out, noutput_items);
 			break;
 		case 2400:
+		case 24001:
 			n_ret = ccsds_afsk_tx_proc_gmsk(&cc, out, noutput_items);
 			break;
 		default:
