@@ -8,11 +8,11 @@ parameters:
 - id: len_preamble
   label: Preamble Length
   dtype: int
-- id: Tailer Length
-  label: Len_tailer
+- id: len_tailer
+  label: Tailer Length
   dtype: int
-- id: Padding Type
-  label: Padding_type
+- id: padding_type
+  label: Padding Type
   dtype: bool
   options: ['False', 'True']
   option_labels: ['0', '1']
