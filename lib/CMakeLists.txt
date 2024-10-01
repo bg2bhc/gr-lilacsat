@@ -32,7 +32,9 @@ list(APPEND lilacsat_sources
     afsk/fifobuf.c
     afsk/kfile.c
     afsk/wavegen.c
-    ccsds_ssdv/ccsds_ssdv.c
+    afsk/direwolf_demod_afsk.c
+    afsk/direwolf_dsp.c
+    ccsds_afsk/ccsds_afsk.c
     ccsds/rs.c
     ccsds/ccsds.c
     ccsds/tab.c
@@ -96,8 +98,8 @@ list(APPEND lilacsat_sources
     two_bit_dpd_precoder_impl.cc
     vitfilt27_bb_impl.cc
     vitfilt27_fb_impl.cc
-    ccsds_ssdv_encode_impl.cc
-    ccsds_ssdv_decode_impl.cc )
+    ccsds_afsk_encode_impl.cc
+    ccsds_afsk_decode_impl.cc )
 
 set(lilacsat_sources "${lilacsat_sources}" PARENT_SCOPE)
 if(NOT lilacsat_sources)
@@ -140,7 +142,6 @@ include_directories(${CPPUNIT_INCLUDE_DIRS})
 #include_directories()
 # List all files that contain Boost.UTF unit tests here
 list(APPEND test_lilacsat_sources
-qa_two_bit_dpd_precoder.cc
 )
 # Anything we need to link to for the unit tests go here
 list(APPEND GR_TEST_TARGET_DEPS gnuradio-lilacsat)
