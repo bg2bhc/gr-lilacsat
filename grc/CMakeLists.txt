@@ -50,5 +50,7 @@ install(FILES
     lilacsat_vitfilt27_bb.block.yml
     lilacsat_vitfilt27_fb.block.yml
     lilacsat_ccsds_ssdv_encode.block.yml
-    lilacsat_ccsds_ssdv_decode.block.yml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_ccsds_ssdv_decode.block.yml
+    lilacsat_ccsds_afsk_decode.xml
+    lilacsat_ccsds_afsk_encode.xml DESTINATION share/gnuradio/grc/blocks
 )

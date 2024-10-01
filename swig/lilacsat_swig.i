@@ -39,8 +39,8 @@
 #include "lilacsat/two_bit_dpd_precoder.h"
 #include "lilacsat/vitfilt27_bb.h"
 #include "lilacsat/vitfilt27_fb.h"
-#include "lilacsat/ccsds_ssdv_encode.h"
-#include "lilacsat/ccsds_ssdv_decode.h"
+#include "lilacsat/ccsds_afsk_decode.h"
+#include "lilacsat/ccsds_afsk_encode.h"
 %}
 
 %include "lilacsat/afsk1200_rx_f.h"
@@ -108,7 +108,8 @@ GR_SWIG_BLOCK_MAGIC2(lilacsat, vitfilt27_bb);
 %include "lilacsat/vitfilt27_fb.h"
 GR_SWIG_BLOCK_MAGIC2(lilacsat, vitfilt27_fb);
 
-%include "lilacsat/ccsds_ssdv_encode.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_ssdv_encode);
-%include "lilacsat/ccsds_ssdv_decode.h"
-GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_ssdv_decode);
+
+%include "lilacsat/ccsds_afsk_decode.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_afsk_decode);
+%include "lilacsat/ccsds_afsk_encode.h"
+GR_SWIG_BLOCK_MAGIC2(lilacsat, ccsds_afsk_encode);

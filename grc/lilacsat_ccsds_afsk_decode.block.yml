@@ -1,11 +1,17 @@
-id: lilacsat_ccsds_ssdv_decode
-label: CCSDS SSDV Decode
+id: lilacsat_ccsds_afsk_decode
+label: CCSDS AFSK Decode
 category: '[Lilacsat]'
 templates:
   imports: import lilacsat
-  make: lilacsat.ccsds_ssdv_decode(${frame_len}, ${using_m}, ${using_convolutional_code},
+  make: lilacsat.ccsds_afsk_decode(${bitrate}, ${frame_len}, ${using_m}, ${using_convolutional_code},
     ${pass_all})
 parameters:
+- id: bitrate
+  label: Bitrate
+  dtype: enum
+  default: '1200'
+  options: ['1200', '2400', '24001']
+  option_labels: ['1200', '2400 (fc = 1800)', '2400 (fc = 1650)']
 - id: frame_len
   label: Frame Length
   dtype: int

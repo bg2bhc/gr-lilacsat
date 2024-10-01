@@ -46,7 +46,7 @@ namespace gr {
        * class. lilacsat::sync_det_b::make is the public interface for
        * creating new instances.
        */
-      static sptr make(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling);
+      static sptr make(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling);
     };
 
   } // namespace lilacsat
