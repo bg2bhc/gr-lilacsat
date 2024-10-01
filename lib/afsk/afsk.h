@@ -9,6 +9,7 @@
 #include "kfile.h"
 #include "cfg_afsk.h"
 #include "bertos.h"
+#include "direwolf_demod_afsk.h"
 
 
 /**
@@ -147,6 +148,8 @@ typedef struct Afsk
 	uint16_t trailer_len;
 
 	uint8_t cfg_padding_zero;
+
+    struct demodulator_state_s direwolf_state;
 } Afsk;
 
 
@@ -158,6 +161,9 @@ typedef struct Afsk
 void afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize);
 unsigned int afsk_tx_proc(Afsk *af, float *pDst, uint32_t blocksize);
 void afsk_init(Afsk *af);
+
+void direwolf_afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize);
+void direwolf_afsk_init(Afsk *af);
 
 #endif
 

@@ -72,7 +72,7 @@ namespace gr {
 
     void afsk1200_rx_f_impl::rx_init()
     {
-	afsk_init(&afsk);
+	direwolf_afsk_init(&afsk);
 	/*
 	 * Here we initialize AX25 context, the channel (KFile) we are going to read messages
 	 * from and the callback that will be called on incoming messages.
@@ -87,7 +87,7 @@ namespace gr {
     {
         float *in = (float *) input_items[0];
 
-        afsk_rx_proc(&afsk, in, noutput_items);
+        direwolf_afsk_rx_proc(&afsk, in, noutput_items);
         ax25_poll(&ax25);
 				
         // Tell runtime system how many output items we produced.

@@ -38,7 +38,7 @@ namespace gr {
   namespace lilacsat {
 
     sync_det_b::sptr
-    sync_det_b::make(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling)
+    sync_det_b::make(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling)
     {
       return gnuradio::get_initial_sptr
         (new sync_det_b_impl(sync_word, len, nrz, descrambling));
@@ -47,7 +47,7 @@ namespace gr {
     /*
      * The private constructor
      */
-    sync_det_b_impl::sync_det_b_impl(uint32_t sync_word, uint8_t len, uint8_t nrz, uint8_t descrambling)
+    sync_det_b_impl::sync_det_b_impl(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling)
       : gr::sync_block("sync_det_b",
               gr::io_signature::make(1, 1, sizeof(char)),
               gr::io_signature::make(0, 0, 0))
@@ -124,7 +124,7 @@ namespace gr {
 
 					if(d_mask_bit_out == 0x00)
 					{
-						if(d_descrambling) d_buf_sync_out[d_n_out] ^= sequence[d_n_out];
+						if(d_descrambling) d_buf_sync_out[d_n_out] ^= sequence[d_n_out%255];
 
 						d_mask_bit_out = 0x80;
 						d_n_out++;

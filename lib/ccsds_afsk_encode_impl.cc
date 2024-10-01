@@ -23,25 +23,25 @@
 #endif
 
 #include <gnuradio/io_signature.h>
-#include "ccsds_ssdv_encode_impl.h"
+#include "ccsds_afsk_encode_impl.h"
 #include <stdio.h>
 
 namespace gr {
   namespace lilacsat {
 
-    ccsds_ssdv_encode::sptr
-    ccsds_ssdv_encode::make(int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code)
+    ccsds_afsk_encode::sptr
+    ccsds_afsk_encode::make(int bitrate, int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code)
     {
       return gnuradio::get_initial_sptr
-        (new ccsds_ssdv_encode_impl(frame_len, preamble_len, trailer_len, continous, padding_zero, using_m, using_convolutional_code));
+        (new ccsds_afsk_encode_impl(bitrate, frame_len, preamble_len, trailer_len, continous, padding_zero, using_m, using_convolutional_code));
     }
 
 
     /*
      * The private constructor
      */
-    ccsds_ssdv_encode_impl::ccsds_ssdv_encode_impl(int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code)
-      : gr::sync_block("ccsds_ssdv_encode",
+    ccsds_afsk_encode_impl::ccsds_afsk_encode_impl(int bitrate, int frame_len, int preamble_len, int trailer_len, bool continous, bool padding_zero, bool using_m, bool using_convolutional_code)
+      : gr::sync_block("ccsds_afsk_encode",
               gr::io_signature::make(0, 0, 0),
               gr::io_signature::make(1, 1, sizeof(float)))
       {
@@ -50,9 +50,33 @@ namespace gr {
         d_ptt_port = pmt::mp("ptt");
         message_port_register_out(d_ptt_port);
 
-        set_msg_handler(d_in_port, boost::bind(&ccsds_ssdv_encode_impl::pmt_in_callback, this ,_1) );
+        set_msg_handler(d_in_port, boost::bind(&ccsds_afsk_encode_impl::pmt_in_callback, this ,_1) );
         set_output_multiple(16);
-        ccsds_ssdv_init(&cc, 0x1ACFFC1D, frame_len, this, 0);
+
+		switch(bitrate)
+		{
+			case 1200:
+				cc.bitrate = 1200;
+				cc.mark_freq = 1200;
+				cc.space_freq = 2200;
+				break;
+			case 2400:
+				cc.bitrate = 2400;
+				cc.mark_freq = 1200;
+				cc.space_freq = 2400;
+				break;
+			case 24001:
+				cc.bitrate = 2400;
+				cc.mark_freq = 1050;
+				cc.space_freq = 2250;
+				break;
+			default:
+				exit(0);
+				break;
+		} 
+
+		ccsds_afsk_init(&cc, 0x1ACFFC1D, frame_len, this, 0);
+
         cc.cfg_preamble_len = preamble_len;
         cc.cfg_trailer_len = trailer_len;
         cc.cfg_continous = continous;
@@ -61,24 +85,24 @@ namespace gr {
         cc.cfg_using_convolutional_code = using_convolutional_code;
       }
 
-    void ccsds_ssdv_encode_impl::pmt_in_callback(pmt::pmt_t msg){
+    void ccsds_afsk_encode_impl::pmt_in_callback(pmt::pmt_t msg){
         pmt::pmt_t meta(pmt::car(msg));
 		pmt::pmt_t bytes(pmt::cdr(msg));
 	
 		size_t msg_len, n_path;
 		const uint8_t* bytes_in = pmt::u8vector_elements(bytes, msg_len);
-        ccsds_ssdv_send(&cc, (uint8_t *)bytes_in);
+        ccsds_afsk_send(&cc, (uint8_t *)bytes_in);
     }
 
     /*
      * Our virtual destructor.
      */
-    ccsds_ssdv_encode_impl::~ccsds_ssdv_encode_impl()
+    ccsds_afsk_encode_impl::~ccsds_afsk_encode_impl()
     {
     }
 
     int
-    ccsds_ssdv_encode_impl::work(int noutput_items,
+    ccsds_afsk_encode_impl::work(int noutput_items,
         gr_vector_const_void_star &input_items,
         gr_vector_void_star &output_items)
     {
@@ -88,7 +112,21 @@ namespace gr {
 
     int n_ret;
       // Do <+signal processing+>
-    n_ret = ccsds_ssdv_tx_proc(&cc, out, noutput_items);
+
+	switch(cc.bitrate)
+	{
+		case 1200:
+			n_ret = ccsds_afsk_tx_proc(&cc, out, noutput_items);
+			break;
+		case 2400:
+		case 24001:
+			n_ret = ccsds_afsk_tx_proc_gmsk(&cc, out, noutput_items);
+			break;
+		default:
+			exit(0);
+			break;
+	} 
+    
     if((d_ptt == 0) && (n_ret != 0))
 	{
 		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_on), (const uint8_t *)msg_ptt_on)));

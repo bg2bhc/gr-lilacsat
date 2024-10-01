@@ -83,12 +83,22 @@ namespace gr {
 
     int afsk1200_tx_f_impl::setcall(AX25Call *ax25call, std::string str)
     {
+	int i;	
 	if(!str.size())	return -1;	//长度为空
-	for(int i=0; i<str.size(); i++)
+	for(i=0; i<str.size(); i++)
 	{
 		if(i<6 && (((str[i] >= '0') && (str[i] <= '9')) || ((str[i] >= 'A') && (str[i] <= 'Z'))))
 		{
 			ax25call->call[i] = str[i];
+
+			if( i == (str.size()-1) )
+			{
+				if(i<5)
+				{
+					for(int j=i+1; j<6; j++) ax25call->call[j] = ' ';
+				}
+				ax25call->ssid = 0;
+			}
 		}
 		else if((str[i] == '-') && (i>2))
 		{
@@ -97,30 +107,71 @@ namespace gr {
 				for(int j=i; j<6; j++) ax25call->call[j] = ' ';
 			}
 
-			if(str.size()==i+2)
+			if(str[str.size()-1] == '*')
 			{
-				if((str[i+1] >= '0') && (str[i+1] <= '9'))
+				if(str.size()==i+3)
 				{
-					ax25call->ssid = str[i+1];
+					if((str[i+1] >= '0') && (str[i+1] <= '9'))
+					{
+						ax25call->ssid = str[i+1];
+					}
+					else
+					{
+						return -2;//SSID数值过大
+					}
 				}
-			}
-			else if(str.size()==i+3)
-			{
-				if((str[i+1] == '1') && (str[i+2] >= '0') && (str[i+2] <= '5'))					
+				else if(str.size()==i+4)
 				{
-					ax25call->ssid = 10+str[i+2];
+					if((str[i+1] == '1') && (str[i+2] >= '0') && (str[i+2] <= '5'))					
+					{
+						ax25call->ssid = 10+str[i+2];
+					}
+					else
+					{
+						return -2;//SSID数值过大
+					}
 				}
 				else
 				{
-					return -2;//SSID数值过大
+					return -3;//SSID字节数过多
 				}
+				ax25call->ssid = ax25call->ssid ^ 0x40;
 			}
 			else
 			{
-				return -3;//SSID字节数过多
+				if(str.size()==i+2)
+				{
+					if((str[i+1] >= '0') && (str[i+1] <= '9'))
+					{
+						ax25call->ssid = str[i+1];
+					}
+				}
+				else if(str.size()==i+3)
+				{
+					if((str[i+1] == '1') && (str[i+2] >= '0') && (str[i+2] <= '5'))					
+					{
+						ax25call->ssid = 10+str[i+2];
+					}
+					else
+					{
+						return -2;//SSID数值过大
+					}
+				}
+				else
+				{
+					return -3;//SSID字节数过多
+				}
 			}
 			
 			break;
+		}
+		else if((str[i] == '*') && (i>2) && (str.size() == (i+1)))
+		{
+			if(i<6)
+			{
+				for(int j=i; j<6; j++) ax25call->call[j] = ' ';
+			}
+			ax25call->ssid = 0x40;			
 		}
 		else
 		{
@@ -128,6 +179,7 @@ namespace gr {
 			break;
 		}
 	}
+
 	return 0;
     }
 

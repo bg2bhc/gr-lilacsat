@@ -40,7 +40,8 @@ static void ax25_decode(AX25Ctx *ctx)
 		for (msg.rpt_cnt = 0; !(*buf++ & 0x01) && (msg.rpt_cnt < countof(msg.rpt_lst)); msg.rpt_cnt++)
 		{
 			DECODE_CALL(buf, msg.rpt_lst[msg.rpt_cnt].call);
-			msg.rpt_lst[msg.rpt_cnt].ssid = (*buf >> 1) & 0x0F;
+			msg.rpt_lst[msg.rpt_cnt].ssid = (*buf >> 1);
+//			msg.rpt_lst[msg.rpt_cnt].ssid = (*buf >> 1) & 0x0F;
 //			LOG_INFO("RPT%d[%.6s-%d]\n", msg.rpt_cnt, msg.rpt_lst[msg.rpt_cnt].call, msg.rpt_lst[msg.rpt_cnt].ssid);
 		}
 	#else
@@ -49,8 +50,9 @@ static void ax25_decode(AX25Ctx *ctx)
 			char rpt[6];
 			uint8_t ssid;
 			DECODE_CALL(buf, rpt);
-			ssid = (*buf >> 1) & 0x0F;
-			LOG_INFO("RPT[%.6s-%d]\n", rpt, ssid);
+			ssid = (*buf >> 1);
+//			ssid = (*buf >> 1) & 0x0F;
+//			LOG_INFO("RPT[%.6s-%d]\n", rpt, ssid);
 		}
 	#endif
 
@@ -73,7 +75,30 @@ static void ax25_decode(AX25Ctx *ctx)
 //	LOG_INFO("DATA: %.*s\n", msg.len, msg.info);
 	
 	if (ctx->hook)
+    {
+        int j;
+
+        fprintf(stdout, "%.6s", msg.src.call);
+        if(msg.src.ssid) fprintf(stdout, "-%d", msg.src.ssid);
+
+		fprintf(stdout, ">");  
+
+        fprintf(stdout, "%.6s", msg.dst.call);
+        if(msg.dst.ssid) fprintf(stdout, "-%d", msg.dst.ssid);
+
+        for(j=0; j<msg.rpt_cnt; j++)
+        {
+            fprintf(stdout, ","); 
+            fprintf(stdout, "%.6s", msg.rpt_lst[j].call);
+            if(msg.rpt_lst[j].ssid & 0x0F) fprintf(stdout, "-%d", msg.rpt_lst[j].ssid & 0x0F);
+			if(msg.rpt_lst[j].ssid & 0x40) fprintf(stdout, "*");
+        }
+   
+        fprintf(stdout, ":");  
+        fprintf(stdout, "\n");
+
 		ctx->hook(ctx->obj_ptr, &msg);
+    }
 }
 
 

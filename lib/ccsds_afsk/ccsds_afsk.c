@@ -24,7 +24,7 @@
  * Boston, MA 02110-1301, USA.
  */
 
-#include "ccsds_ssdv.h"
+#include "ccsds_afsk.h"
 #include "afsk/wavegen.h"
 #include <stdio.h>
 
@@ -35,7 +35,7 @@
 
 extern char sequence[]; //伪随机序列
 
-void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, ssdv_sync_hook_t hook)
+void ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
 {
     //float RATE=0.5;
     //float ebn0 = 12.0;
@@ -84,7 +84,7 @@ void ccsds_ssdv_init(Ccsds_ssdv *cc, uint32_t sync_word, uint16_t len_frame, voi
 }
 
 
-static inline void ccsds_txwrite(Ccsds_ssdv *cc, unsigned char c)
+static inline void ccsds_txwrite(Ccsds_afsk *cc, unsigned char c)
 {
     if(!cc->sending)
     {
@@ -173,7 +173,7 @@ static unsigned char m_decode_tab[] =
     0x84, 0x85, 0x87, 0x86, 0x82, 0x83, 0x81, 0x80
 };
 
-static inline void ccsds_rxwrite(Ccsds_ssdv *cc, unsigned char c)
+static inline void ccsds_rxwrite(Ccsds_afsk *cc, unsigned char c)
 {
     if(fifo_isfull(&(cc->rx_fifo)))
     {
@@ -183,7 +183,7 @@ static inline void ccsds_rxwrite(Ccsds_ssdv *cc, unsigned char c)
 }
 
 //unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits)
-unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocksize)
+unsigned int ccsds_afsk_tx_proc(Ccsds_afsk *cc, float *pDst, unsigned int blocksize)
 {
     //unsigned char current_data;
     //unsigned int i, j, nbytes;
@@ -278,7 +278,7 @@ unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocks
                 cc->bit_count = 8;
             }
 
-            cc->phase_inc = (cc->current_data & 0x80) ? SPACE_INC : MARK_INC;
+            cc->phase_inc = (cc->current_data & 0x80) ? MARK_INC : SPACE_INC;
             cc->current_data <<= 1;
             cc->bit_count--;
 
@@ -290,7 +290,7 @@ unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocks
 
         cc->sample_count--;
 
-        *pDst = ((float)sinetable[cc->phase_acc])/32768;
+        *pDst = ((float)sinetable[cc->phase_acc])/32768.0;
 
         pDst++;
     }
@@ -309,7 +309,7 @@ unsigned int ccsds_ssdv_tx_proc(Ccsds_ssdv *cc, float *pDst, unsigned int blocks
 
 /*blocksize must be a multiple of 16*/
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
-void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
+void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
 {
     while(blocksize>0)
     {
@@ -343,7 +343,7 @@ void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
 
 		/* Save this sampled bit in a delay line */
 		cc->sampled_bits <<= 1;
-		cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
+		cc->sampled_bits |= (cc->iir_y[1] > 0) ? 0 : 1;
 
 		/* Store current ADC sample in the af->delay_fifo */
 		fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));
@@ -463,7 +463,7 @@ void ccsds_ssdv_rx_proc(Ccsds_ssdv *cc, float *pSrc, unsigned int blocksize)
     }*/
 }
 
-void ccsds_ssdv_send(Ccsds_ssdv *cc, uint8_t *message)
+void ccsds_afsk_send(Ccsds_afsk *cc, uint8_t *message)
 {
     int i;
 
@@ -489,7 +489,7 @@ void ccsds_ssdv_send(Ccsds_ssdv *cc, uint8_t *message)
     #endif
 }
 
-void ccsds_ssdv_pull(Ccsds_ssdv *cc)
+void ccsds_afsk_pull(Ccsds_afsk *cc)
 {
     uint8_t current_in;
     int16_t byte_corr = 0;
@@ -526,7 +526,7 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
                     if(cc->n_out == cc->len_frame+RS_LENGTH)
                     {
                         cc->syncing = 0;
-                        for(int i=0; i<cc->len_frame+RS_LENGTH; i++) cc->buf_sync_out[i] ^= sequence[i%255];
+						for(int i=0; i<cc->len_frame+RS_LENGTH; i++) cc->buf_sync_out[i] ^= sequence[i%255];
                         byte_corr = decode_rs(cc->buf_sync_out, (int *)0, 0, RS_BLOCK_LENGTH-cc->len_frame-RS_LENGTH);
                         cc->hook(cc->buf_sync_out, cc->len_frame, byte_corr, cc->obj_ptr);
                     }
@@ -608,3 +608,504 @@ void ccsds_ssdv_pull(Ccsds_ssdv *cc)
     }
 
 }
+
+
+void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
+{
+	while(blocksize>0)
+	{
+		demod_afsk_process_sample (0, 0, (int)(*pSrc * 32767.0), &cc->direwolf_state);
+
+		blocksize--;
+		pSrc++;
+	}
+}
+
+static void direwolf_afsk_demod_callback(void *obj_ptr, int demod_data)
+{
+    Ccsds_afsk *cc = (Ccsds_afsk *)obj_ptr;
+
+	if(cc->bit_count_rx == 0)
+    {
+        ccsds_rxwrite(cc, cc->current_byte_rx);
+        cc->bit_count_rx = 8;
+    }
+    cc->bit_count_rx--;
+    cc->current_byte_rx <<= 1;
+
+	if(demod_data) cc->current_byte_rx += 1;
+
+    //af->found_bits <<= 1;
+    //if(demod_data) af->found_bits |= 1;
+    //hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo);
+}
+
+void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
+{
+    //float RATE=0.5;
+    //float ebn0 = 12.0;
+    //float esn0 = RATE*pow(10.0, ebn0/10);
+
+
+    //gen_met(mettab, amp, esn0, 0.0, 4);
+
+	demod_afsk_init (SAMPLERATE, BITRATE, MARK_FREQ, SPACE_FREQ, 'G', &cc->direwolf_state, (void *)cc, direwolf_afsk_demod_callback);
+
+    vitfilt27_init(&(cc->vi));
+
+    cc->sending = 0;
+    fifo_init(&cc->tx_fifo, cc->tx_buf, sizeof(cc->tx_buf));
+    fifo_init(&cc->rx_fifo, cc->rx_buf, sizeof(cc->rx_buf));
+
+    //fifo_init_q15(&cc->delay_fifo, (int16_t *)cc->delay_buf, (SAMPLEPERBIT / 2 + 1));
+	/* Fill sample FIFO with 0 */
+	//for (int i = 0; i < SAMPLEPERBIT / 2; i++)
+	//	fifo_push_q15(&cc->delay_fifo, 0);
+
+    cc->sync_word = sync_word;
+    cc->len_frame = len_frame;
+    cc->syncing = 0;
+    cc->buffer_sync_det = 0;
+    cc->n_out = 0;
+    cc->mask_bit_out = 0x80;
+    cc->obj_ptr = obj_ptr;
+    cc->hook = hook;
+    cc->rx_bit_state = 0;
+    cc->tx_bit_state = 0;
+
+    cc->cfg_continous = 0;
+    cc->cfg_padding_zero = 0;
+    cc->cfg_using_m = 0;
+    cc->cfg_using_convolutional_code = 0;
+    cc->cfg_preamble_len = 75;
+    cc->cfg_trailer_len = 30;
+
+    cc->sample_count = 0;
+    cc->bit_count = 0;
+    cc->current_data = 0;
+    cc->phase_inc = SPACE_INC;
+    cc->phase_acc = 0;
+
+    cc->bit_count_rx = 0;
+    cc->curr_phase = 0;
+}
+
+void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook)
+{
+    //float RATE=0.5;
+    //float ebn0 = 12.0;
+    //float esn0 = RATE*pow(10.0, ebn0/10);
+
+
+    //gen_met(mettab, amp, esn0, 0.0, 4);
+
+    vitfilt27_init(&(cc->vi));
+
+    cc->sending = 0;
+    fifo_init(&cc->tx_fifo, cc->tx_buf, sizeof(cc->tx_buf));
+    fifo_init(&cc->rx_fifo, cc->rx_buf, sizeof(cc->rx_buf));
+
+    //fifo_init_q15(&cc->delay_fifo, (int16_t *)cc->delay_buf, (SAMPLEPERBIT / 2 + 1));
+	/* Fill sample FIFO with 0 */
+	//for (int i = 0; i < SAMPLEPERBIT / 2; i++)
+	//	fifo_push_q15(&cc->delay_fifo, 0);
+
+    fifo_init_q15(&cc->delay_fifo_i, (int16_t *)cc->delay_buf_i, SAMPLEPERBIT+1);
+    for (int i = 0; i < SAMPLEPERBIT; i++)
+		fifo_push_q15(&cc->delay_fifo_i, 0);
+
+    fifo_init_q15(&cc->delay_fifo_q, (int16_t *)cc->delay_buf_q, SAMPLEPERBIT+1);
+    for (int i = 0; i < SAMPLEPERBIT; i++)
+		fifo_push_q15(&cc->delay_fifo_q, 0);
+
+    cc->phase_acc_lo = 0;
+
+    cc->sync_word = sync_word;
+    cc->len_frame = len_frame;
+    cc->syncing = 0;
+    cc->buffer_sync_det = 0;
+    cc->n_out = 0;
+    cc->mask_bit_out = 0x80;
+    cc->obj_ptr = obj_ptr;
+    cc->hook = hook;
+    cc->rx_bit_state = 0;
+    cc->tx_bit_state = 0;
+
+    cc->cfg_continous = 0;
+    cc->cfg_padding_zero = 0;
+    cc->cfg_using_m = 0;
+    cc->cfg_using_convolutional_code = 0;
+    cc->cfg_preamble_len = 75;
+    cc->cfg_trailer_len = 30;
+
+    cc->sample_count = 0;
+    cc->bit_count = 0;
+    cc->current_data = 0;
+    cc->phase_inc = SPACE_INC;
+    cc->phase_acc = 0;
+
+    cc->bit_count_rx = 0;
+    cc->curr_phase = 0;
+}
+
+#if SAMPLEPERBIT==8
+	//int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-39, -253, -401, -395, -200, 140, 500, 714, 645, 246, -388, -1032, -1386, -1181, -276, 1266, 3170, 5015, 6352, 6840, 6352, 5015, 3170, 1266, -276, -1181, -1386, -1032, -388, 246, 645, 714, 500, 140, -200, -395, -401, -253, -39};
+	int16_t taps_receiver_lpf[LEN_RECEIVER_LPF] = {-7, 174, 319, 386, 351, 214, 7, -221, -407, -497, -455, -280, -7, 301, 561, 695, 649, 407, 7, -468, -900, -1159, -1132, -751, -7, 1037, 2255, 3477, 4520, 5221, 5468, 5221, 4520, 3477, 2255, 1037, -7, -751, -1132, -1159, -900, -468, 7, 407, 649, 695, 561, 301, -7, -280, -455, -497, -407, -221, 7, 214, 351, 386, 319, 174, -7};
+	#ifdef BT0R35
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {2, 6, 19, 52, 132, 299, 607, 1105, 1804, 2643, 3471, 4087, 4316, 4087, 3471, 2643, 1804, 1105, 607, 299, 132, 52, 19, 6, 2};
+	#else
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {1, 5, 26, 112, 382, 1040, 2266, 3952, 5517, 6166, 5517, 3952, 2266, 1040, 382, 112, 26, 5, 1};
+	#endif
+#endif
+
+#if SAMPLEPERBIT==4
+	//int16_t taps_receiver_filter[LEN_RECEIVER_FILTER] = {-67, -99, 64, 214, 17, -336, -212, 399, 533, -310, -960, -48, 1431, 860, -1863, -2650, 2168, 10138, 14107, 10138, 2168, -2650, -1863, 860, 1431, -48, -960, -310, 533, 399, -212, -336, 17, 214, 64, -99, -67};
+	#ifdef BT0R35
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {3, 37, 264, 1213, 3609, 6941, 8632, 6941, 3609, 1213, 264, 37, 3};
+	#else
+		int16_t taps_pulse_sharping[LEN_PULSE_SHARPING] = {10, 225, 2080, 7903, 12332, 7903, 2080, 225, 10};
+	#endif
+#endif
+
+/*blocksize must be a multiple of 16*/
+//void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
+void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
+{
+    while(blocksize>0)
+    {
+        uint8_t bits;
+
+		int16_t mix_q = (int16_t)(((float)sinetable[cc->phase_acc_lo]) * (*pSrc) / 2.0);
+        int16_t mix_i = (int16_t)(((float)sinetable[(cc->phase_acc_lo + SIN_LEN/4) % SIN_LEN]) * (*pSrc) / 2.0);
+
+        cc->phase_acc_lo += FC_PHASE_INC;
+        cc->phase_acc_lo %= SIN_LEN;
+
+        /*
+         * Frequency discriminator and LP IIR filter.
+         * This filter is designed to work
+         * at the given sample rate and bit rate.
+         */
+
+		/*
+		* Frequency discrimination is achieved by simply multiplying
+		* the sample with a delayed sample of (samples per bit) / 2.
+		* Then the signal is lowpass filtered with a first order,
+		* 600 Hz filter. The filter implementation is selectable
+		* through the CONFIG_AFSK_FILTER config variable.
+		*/
+
+		int32_t acc_receiver_lpf_q = 0;
+		for(int j=0; j<LEN_RECEIVER_LPF-1; j++)
+		{
+			cc->d_receiver_lpf_q[j] = cc->d_receiver_lpf_q[j+1];
+			acc_receiver_lpf_q += ((int32_t)cc->d_receiver_lpf_q[j]) * ((int32_t)taps_receiver_lpf[j]);
+		}
+		cc->d_receiver_lpf_q[LEN_RECEIVER_LPF-1] = mix_q;
+		acc_receiver_lpf_q += ((int32_t)mix_q) * ((int32_t)taps_receiver_lpf[LEN_RECEIVER_LPF-1]);
+        
+		int32_t acc_receiver_lpf_i = 0;
+		for(int j=0; j<LEN_RECEIVER_LPF-1; j++)
+		{
+			cc->d_receiver_lpf_i[j] = cc->d_receiver_lpf_i[j+1];
+			acc_receiver_lpf_i += ((int32_t)cc->d_receiver_lpf_i[j]) * ((int32_t)taps_receiver_lpf[j]);
+		}
+		cc->d_receiver_lpf_i[LEN_RECEIVER_LPF-1] = mix_i;
+		acc_receiver_lpf_i += ((int32_t)mix_i) * ((int32_t)taps_receiver_lpf[LEN_RECEIVER_LPF-1]);
+
+		int64_t demod_out = ((int64_t)acc_receiver_lpf_i * (int64_t)fifo_pop_q15(&cc->delay_fifo_q)) - ((int64_t)acc_receiver_lpf_q * (int64_t)fifo_pop_q15(&cc->delay_fifo_i));
+
+		fifo_push_q15(&cc->delay_fifo_q, (int16_t)(acc_receiver_lpf_q>>15));
+        fifo_push_q15(&cc->delay_fifo_i, (int16_t)(acc_receiver_lpf_i>>15));
+
+		/*
+		int32_t demod_out = (((int32_t)mix_i * (int32_t)fifo_pop_q15(&cc->delay_fifo_q)) >> 2) - (((int32_t)mix_q * (int32_t)fifo_pop_q15(&cc->delay_fifo_i)) >> 2);
+
+		fifo_push_q15(&cc->delay_fifo_q, mix_q);
+        fifo_push_q15(&cc->delay_fifo_i, mix_i);
+
+
+		int64_t acc_receiver_filter = 0;
+		for(int j=0; j<LEN_RECEIVER_FILTER-1; j++)
+		{
+			cc->d_receiver_filter[j] = cc->d_receiver_filter[j+1];
+			acc_receiver_filter += ((int64_t)cc->d_receiver_filter[j]) * ((int64_t)taps_receiver_filter[j]);
+		}
+		cc->d_receiver_filter[LEN_RECEIVER_FILTER-1] = demod_out;
+		acc_receiver_filter += ((int64_t)demod_out) * ((int64_t)taps_receiver_filter[LEN_RECEIVER_FILTER-1]);
+		*/
+
+		//cc->iir_x[0] = cc->iir_x[1];
+
+		//cc->iir_x[1] = demod_out;
+
+		//cc->iir_y[0] = cc->iir_y[1];
+
+		/*
+		 * This should be (af->iir_y[0] * 0.438) but
+		 * (af->iir_y[0] >> 1) is a faster approximation :-)
+		 */
+		//cc->iir_y[1] = cc->iir_x[0] + cc->iir_x[1] + (cc->iir_y[0] >> 1);
+
+		/* Save this sampled bit in a delay line */
+		cc->sampled_bits <<= 1;
+		//cc->sampled_bits |= (cc->iir_y[1] > 0) ? 1 : 0;
+		//cc->sampled_bits |= (acc_receiver_filter > 0) ? 0 : 1;
+		cc->sampled_bits |= (demod_out > 0) ? 0 : 1;
+
+		/* Store current ADC sample in the af->delay_fifo */
+		//fifo_push_q15(&cc->delay_fifo, (int16_t)((*pSrc)*32768));
+
+		/* If there is an edge, adjust phase sampling */
+		if (EDGE_FOUND(cc->sampled_bits))
+		{
+			if (cc->curr_phase < PHASE_THRES)
+				cc->curr_phase += PHASE_INC;
+			else
+				cc->curr_phase -= PHASE_INC;
+		}
+		cc->curr_phase += PHASE_BIT;
+
+		/* sample the bit */
+		if (cc->curr_phase >= PHASE_MAX)
+		{
+			cc->curr_phase %= PHASE_MAX;
+
+			/* Shift 1 position in the shift register of the found bits */
+			//cc->found_bits <<= 1;
+
+            if(cc->bit_count_rx == 0)
+            {
+                ccsds_rxwrite(cc, cc->current_byte_rx);
+                cc->bit_count_rx = 8;
+            }
+            cc->bit_count_rx--;
+            cc->current_byte_rx <<= 1;
+            //cc->current_byte_rx += (*(syms++))?1:0;
+
+			/*
+			* Determine bit value by reading the last 3 sampled bits.
+			* If the number of ones is two or greater, the bit value is a 1,
+			* otherwise is a 0.
+			* This algorithm presumes that there are 8 samples per bit.
+			*/
+			bits = (cc->sampled_bits & 0x07);
+			if (bits == 0x07 // 111, 3 bits set to 1
+			|| bits == 0x06 // 110, 2 bits
+			|| bits == 0x05 // 101, 2 bits
+			|| bits == 0x03 // 011, 2 bits
+			)
+				//cc->found_bits |= 1;
+				cc->current_byte_rx += 1;
+
+			/*
+			* NRZI coding: if 2 consecutive bits have the same value
+			* a 1 is received, otherwise it's a 0.
+			*/
+			//if (!hdlc_parse(&af->hdlc, !EDGE_FOUND(af->found_bits), &af->rx_fifo))
+			//	af->status |= AFSK_RXFIFO_OVERRUN;
+
+		}
+
+        blocksize--;
+		pSrc++;
+    }
+/*    unsigned int i, j;
+    unsigned char current_out, syms_tmp[16];
+
+
+    if(cc->cfg_using_convolutional_code)
+    {
+        for (i = 0; i < n_syms/16; i++)
+        {
+            for(j=0; j<16; j++)
+            {
+                syms_tmp[j] = ((*(syms++)) ? 0xff : 0x00);
+            }
+
+            vitfilt27_decode(&(cc->vi), syms_tmp, &current_out, 16);
+
+            if(cc->cfg_using_m)
+
+            {
+                if(cc->rx_bit_state)
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[0xFF-current_out];
+                }
+                else
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[current_out];
+                }
+            }
+
+            ccsds_rxwrite(cc, current_out);
+        }
+    }
+    else
+    {
+        for (i = 0; i < n_syms/8; i++)
+        {
+            for(j=0; j<8; j++)
+            {
+                current_out <<= 1;
+                current_out += (*(syms++))?1:0;
+            }
+
+            if(cc->cfg_using_m)
+            {
+                if(cc->rx_bit_state)
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[0xFF-current_out];
+                }
+                else
+                {
+                    cc->rx_bit_state = current_out&0x01;
+                    current_out = m_decode_tab[current_out];
+
+                }
+            }
+
+            ccsds_rxwrite(cc, current_out);
+        }
+    }*/
+}
+
+//unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits)
+unsigned int ccsds_afsk_tx_proc_gmsk(Ccsds_afsk *cc, float *pDst, unsigned int blocksize)
+{
+    //unsigned char current_data;
+    //unsigned int i, j, nbytes;
+    unsigned int i;
+
+    /*if(cc->cfg_using_convolutional_code)
+    {
+        nbytes = nbits/16;
+    }
+    else
+    {
+        nbytes = nbits/8;
+    }*/
+
+    for(i=0; i<blocksize; i++)
+    {
+        if(cc->sample_count == 0)
+        {
+            if(cc->bit_count == 0)
+            {
+                if(cc->sending)
+                {
+                    if(cc->preamble_len > 0)
+                    {
+                        static unsigned char i = 0;
+                        cc->current_data = sequence[i%255];
+                        i++;
+                        cc->preamble_len--;
+                    }
+                    else if(!fifo_isempty(&(cc->tx_fifo)))
+                    {
+                        cc->current_data = fifo_pop(&(cc->tx_fifo));
+                        cc->trailer_len = cc->cfg_trailer_len;
+                    }
+                    else if(cc->trailer_len > 0)
+                    {
+                        static unsigned char i = 0;
+                        cc->current_data = sequence[i%255];
+                        i++;
+                        if(!cc->cfg_continous) cc->trailer_len--;
+                    }
+                    else
+                    {
+                        cc->sending = 0;
+                        TX_DIS();//Turn off transmitter
+                    }
+                }
+                else
+                {
+                    if(cc->cfg_padding_zero)
+                    {
+                        cc->current_data = 0;//输出0
+                    }
+                    else
+                    {
+                        break;
+                    }
+                }
+
+                if(cc->cfg_using_m)
+                {
+                    cc->current_data = m_encode_tab[cc->current_data];
+
+                    if(cc->tx_bit_state)
+                    {
+                        cc->current_data = 0xFF-cc->current_data;
+                    }
+
+                    cc->tx_bit_state = cc->current_data&0x01;
+                }
+
+                /*if(cc->cfg_using_convolutional_code)
+                {
+                    encode27(&(cc->encstate), symbols, &current_data, 1);
+                    symbols += 16;
+                }
+                else
+                {
+                    for(j=0; j<8; j++)
+                    {
+                        if(current_data & 0x80)
+                        {
+                            *(symbols++) = 1;
+                        }
+                        else
+                        {
+                            *(symbols++) = 0;
+                        }
+                        current_data <<= 1;
+                    }
+                }*/
+                cc->bit_count = 8;
+            }
+
+            cc->phase_inc = (cc->current_data & 0x80) ? DIVISION_INC : -DIVISION_INC;
+            cc->current_data <<= 1;
+            cc->bit_count--;
+
+            cc->sample_count = DAC_SAMPLEPERBIT;
+        }
+        /* Get new sample and put it out on the DAC */
+
+		int32_t acc_pulse_sharping = 0;
+		for(int j=0; j<LEN_PULSE_SHARPING-1; j++)
+		{
+			cc->d_pulse_sharping[j] = cc->d_pulse_sharping[j+1];
+			acc_pulse_sharping += ((int32_t)cc->d_pulse_sharping[j]) * ((int32_t)taps_pulse_sharping[j]);
+		}
+		cc->d_pulse_sharping[LEN_PULSE_SHARPING-1] = cc->phase_inc;
+		acc_pulse_sharping += ((int32_t)cc->phase_inc) * ((int32_t)taps_pulse_sharping[LEN_PULSE_SHARPING-1]);
+
+        cc->phase_acc += ((int16_t)((acc_pulse_sharping + 16384) >> 15)) + FC_PHASE_INC;
+		//cc->phase_acc += cc->phase_inc + FC_PHASE_INC;
+        cc->phase_acc %= SIN_LEN;
+
+        cc->sample_count--;
+
+        *pDst = ((float)sinetable[cc->phase_acc])/32768.0;
+
+        pDst++;
+    }
+
+    /*if(cc->cfg_using_convolutional_code)
+    {
+        return i * 16;
+    }
+    else
+    {
+        return i * 8;
+    }*/
+
+    return i;
+}
+
