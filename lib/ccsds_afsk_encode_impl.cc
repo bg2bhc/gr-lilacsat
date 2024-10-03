@@ -107,14 +107,14 @@ namespace gr {
         gr_vector_void_star &output_items)
     {
       float *out = (float *) output_items[0];
-    unsigned char msg_ptt_on[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x01, 0xFD};
-	unsigned char msg_ptt_off[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x00, 0xFD};
+      unsigned char msg_ptt_on[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x01, 0xFD};
+      unsigned char msg_ptt_off[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x00, 0xFD};
 
-    int n_ret;
+      int n_ret;
       // Do <+signal processing+>
 
-	switch(cc.bitrate)
-	{
+      switch(cc.bitrate)
+      {
 		case 1200:
 			n_ret = ccsds_afsk_tx_proc(&cc, out, noutput_items);
 			break;
@@ -125,18 +125,21 @@ namespace gr {
 		default:
 			exit(0);
 			break;
-	} 
+      } 
     
-    if((d_ptt == 0) && (n_ret != 0))
-	{
+      if((d_ptt == 0) && (n_ret != 0))
+      {
 		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_on), (const uint8_t *)msg_ptt_on)));
 		d_ptt = 1;
-	}
-	else if((d_ptt != 0) && (n_ret == 0))
-	{
+      }
+      else if((d_ptt != 0) && (n_ret == 0))
+      {
 		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_off), (const uint8_t *)msg_ptt_off)));
 		d_ptt = 0;
-	}
+      }
+      
+      if(n_ret == 0) usleep(1000);
+      
       // Tell runtime system how many output items we produced.
       return n_ret;
     }

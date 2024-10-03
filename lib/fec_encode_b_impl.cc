@@ -109,6 +109,8 @@ namespace gr {
 		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_off), (const uint8_t *)msg_ptt_off)));
 		d_ptt = 0;
 	}
+	
+	if(n_ret == 0) usleep(1000);
 
         // Tell runtime system how many output items we produced.
         return n_ret;
