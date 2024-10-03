@@ -113,7 +113,7 @@ namespace gr {
       int n_ret;
       // Do <+signal processing+>
 
-      Sbaswitch(cc.bitrate)
+      switch(cc.bitrate)
       {
 		case 1200:
 			n_ret = ccsds_afsk_tx_proc(&cc, out, noutput_items);
