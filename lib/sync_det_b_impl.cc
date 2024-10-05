@@ -59,13 +59,13 @@ namespace gr {
 		d_rx_bit_state = 0;
 	  	d_mask_bit_out = 0x80;
 	  	d_syncing = 0;
-      	d_buffer_sync_det = 0;
+	  	d_buffer_sync_det = 0;
 	  	d_n_out = 0;
 
 		d_out_port = pmt::mp("out");	      
-      	message_port_register_out(d_out_port);
+	  	message_port_register_out(d_out_port);
 
-        set_output_multiple(8);
+	  	set_output_multiple(8);
 	}
 
     /*
@@ -88,10 +88,10 @@ namespace gr {
 		for (i = 0; i < noutput_items/8; i++)
 		{
 			for(j=0; j<8; j++)
-            {
-                current_in <<= 1;
-                current_in += (*(in++))?1:0;
-            }
+		{
+			current_in <<= 1;
+			current_in += (*(in++))?1:0;
+		}
 
 			if(d_nrz == 1)
 			{
@@ -132,7 +132,7 @@ namespace gr {
 						if(d_n_out == d_frame_length)
 						{
 						    d_syncing = 0;
-							message_port_pub(d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(d_frame_length, (const uint8_t *)d_buf_sync_out)));
+						    message_port_pub(d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(d_frame_length, (const uint8_t *)d_buf_sync_out)));
 						}
 					}
 				}

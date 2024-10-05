@@ -49,6 +49,6 @@ install(FILES
     lilacsat_two_bit_dpd_precoder.block.yml
     lilacsat_vitfilt27_bb.block.yml
     lilacsat_vitfilt27_fb.block.yml
-    lilacsat_ccsds_afsk_decode.block.xml
-    lilacsat_ccsds_afsk_encode.block.xml DESTINATION share/gnuradio/grc/blocks
+    lilacsat_ccsds_afsk_decode.block.yml
+    lilacsat_ccsds_afsk_encode.block.yml DESTINATION share/gnuradio/grc/blocks
 )
