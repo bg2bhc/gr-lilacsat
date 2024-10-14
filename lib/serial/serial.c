@@ -12,6 +12,7 @@
 #include <errno.h>
 #include <time.h>
 #include <poll.h>
+#include <sys/ioctl.h>
 
 #include "serial.h"
 
@@ -234,4 +235,24 @@ char** getSerialPorts(void) {
     closedir(dir);
     files[i] = NULL;
     return files;
+}
+
+void setRTS(int fd) {
+    int flag = TIOCM_RTS;
+    ioctl(fd, TIOCMBIS, &flag);
+}
+
+void clearRTS(int fd) {
+    int flag = TIOCM_RTS;
+    ioctl(fd, TIOCMBIC, &flag);
+}
+
+void setDTR(int fd) {
+    int flag = TIOCM_DTR;
+    ioctl(fd, TIOCMBIS, &flag);
+}
+
+void clearDTR(int fd) {
+    int flag = TIOCM_DTR;
+    ioctl(fd, TIOCMBIC, &flag);
 }

@@ -102,23 +102,58 @@ namespace gr {
 	}
 	else
 	{
-		nwrite = serialWriteRaw(fd, (const char *)bytes_in, msg_len);
-		if(d_debug)
+		if(pmt::symbol_to_string(meta) == "data")
 		{
-			if (nwrite != msg_len)
+			nwrite = serialWriteRaw(fd, (const char *)bytes_in, msg_len);
+			if(d_debug)
 			{
-				fprintf(stdout, "WriteError\n");
+				if (nwrite != msg_len)
+				{
+					fprintf(stdout, "WriteError\n");
+				}
+			}
+
+			if(d_debug)
+			{
+				fprintf(stdout, "BeginWaiting\n");
+			}
+			serialWaitUntilSent(fd);
+			if(d_debug)
+			{
+				fprintf(stdout, "StopWaiting\n");
 			}
 		}
-
-		if(d_debug)
+		else if(pmt::symbol_to_string(meta) == "set_rts")
 		{
-			fprintf(stdout, "BeginWaiting\n");
+			setRTS(fd);
+			if(d_debug)
+			{
+				fprintf(stdout, "SetRTS\n");
+			}
 		}
-		serialWaitUntilSent(fd);
-		if(d_debug)
+		else if(pmt::symbol_to_string(meta) == "clear_rts")
 		{
-			fprintf(stdout, "StopWaiting\n");
+			clearRTS(fd);
+			if(d_debug)
+			{
+				fprintf(stdout, "ClearRTS\n");
+			}
+		}
+		else if(pmt::symbol_to_string(meta) == "set_dtr")
+		{
+			setDTR(fd);
+			if(d_debug)
+			{
+				fprintf(stdout, "SetDTR\n");
+			}
+		}
+		else if(pmt::symbol_to_string(meta) == "clear_dtr")
+		{
+			clearDTR(fd);
+			if(d_debug)
+			{
+				fprintf(stdout, "ClearDTR\n");
+			}
 		}
 
 		// close(fd);

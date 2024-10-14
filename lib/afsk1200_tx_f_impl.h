@@ -49,6 +49,9 @@ namespace gr {
 	const std::string d_source;
 	const std::string d_repeater1;
 	const std::string d_repeater2;
+	int d_ptt_mode;
+	const std::vector<uint8_t> d_msg_ptt_on;
+	const std::vector<uint8_t> d_msg_ptt_off;
 	Afsk afsk;
 	AX25Ctx ax25;
 	AX25Call path[4];
@@ -59,7 +62,7 @@ namespace gr {
 	static void AX25_MsgCallBack(void *obj_ptr, struct AX25Msg *msg);
 
      public:
-      afsk1200_tx_f_impl(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero);
+      afsk1200_tx_f_impl(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero, int ptt_mode, const std::vector<uint8_t> msg_ptt_on, const std::vector<uint8_t> msg_ptt_off);
       ~afsk1200_tx_f_impl();
 
       // Where all the action really happens

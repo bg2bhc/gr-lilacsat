@@ -46,7 +46,7 @@ namespace gr {
        * class. lilacsat::afsk1200_tx_f::make is the public interface for
        * creating new instances.
        */
-      static sptr make(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero);
+      static sptr make(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero, int ptt_mode, const std::vector<uint8_t> msg_ptt_on, const std::vector<uint8_t> msg_ptt_off);
     };
 
   } // namespace lilacsat

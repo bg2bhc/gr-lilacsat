@@ -4,7 +4,7 @@ category: '[Lilacsat]'
 templates:
   imports: import lilacsat
   make: lilacsat.afsk1200_tx_f(${destination}, ${source}, ${repeater1}, ${repeater2},
-    ${padding_zero})
+    ${padding_zero}, ${ptt_mode}, ${msg_ptt_on}, ${msg_ptt_off})
 parameters:
 - id: destination
   label: Destination
@@ -27,6 +27,20 @@ parameters:
   options: ['False', 'True']
   option_labels: ['Off', 'On']
   hide: ${ ('part' if str(padding_zero) == 'False' else 'none') }
+- id: ptt_mode
+  label: PTT Mode
+  dtype: enum
+  default: '1'
+  options: ['0', '1', '2']
+  option_labels: ['Message', 'RTS', 'DTR']
+- id: msg_ptt_on
+  label: Message PTT ON
+  dtype: raw
+  default: [0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x01, 0xFD]
+- id: msg_ptt_off
+  label: Message PTT OFF
+  dtype: raw
+  default: [0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x00, 0xFD]
 inputs:
 - domain: message
   id: in

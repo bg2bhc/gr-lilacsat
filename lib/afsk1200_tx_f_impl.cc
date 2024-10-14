@@ -39,16 +39,16 @@ namespace gr {
   namespace lilacsat {
 
     afsk1200_tx_f::sptr
-    afsk1200_tx_f::make(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero)
+    afsk1200_tx_f::make(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero, int ptt_mode, const std::vector<uint8_t> msg_ptt_on, const std::vector<uint8_t> msg_ptt_off)
     {
       return gnuradio::get_initial_sptr
-        (new afsk1200_tx_f_impl(destination, source, repeater1, repeater2, padding_zero));
+        (new afsk1200_tx_f_impl(destination, source, repeater1, repeater2, padding_zero, ptt_mode, msg_ptt_on, msg_ptt_off));
     }
 
     /*
      * The private constructor
      */
-    afsk1200_tx_f_impl::afsk1200_tx_f_impl(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero)
+    afsk1200_tx_f_impl::afsk1200_tx_f_impl(const std::string& destination, const std::string& source, const std::string& repeater1, const std::string& repeater2, bool padding_zero, int ptt_mode, const std::vector<uint8_t> msg_ptt_on, const std::vector<uint8_t> msg_ptt_off)
       : gr::sync_block("afsk1200_tx_f",
               gr::io_signature::make(0, 0, 0),
               gr::io_signature::make(1, 1, sizeof(float))),
@@ -56,6 +56,9 @@ namespace gr {
               d_source(source),
               d_repeater1(repeater1),
               d_repeater2(repeater2),
+              d_ptt_mode(ptt_mode),
+              d_msg_ptt_on(msg_ptt_on),
+              d_msg_ptt_off(msg_ptt_off),
               d_ptt(0)
     {
 	d_in_port = pmt::mp("in");
@@ -212,20 +215,92 @@ namespace gr {
     {
         float *out = (float *) output_items[0];
 	int n_ret;
-	unsigned char msg_ptt_on[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x01, 0xFD};
-	unsigned char msg_ptt_off[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x1C, 0x00, 0x00, 0xFD};
 
         // Do <+signal processing+>
 	n_ret = afsk_tx_proc(&afsk, out, noutput_items);
-
+	
+	pmt::pmt_t p_dict = pmt::make_dict();
+        p_dict = pmt::dict_add(p_dict, pmt::mp("data"), pmt::from_double(0.0));
+/*
 	if((d_ptt == 0) && (n_ret != 0))
 	{
-		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_on), (const uint8_t *)msg_ptt_on)));
+		if(d_ptt_mode == 0) //
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("data"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(d_msg_ptt_off.size(), (const uint8_t *)&d_msg_ptt_on)));
+		}
+		else if(d_ptt_mode == 1)
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("set_rts"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		else if(d_ptt_mode == 2)
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("set_dtr"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		
 		d_ptt = 1;
 	}
 	else if((d_ptt != 0) && (n_ret == 0))
 	{
-		message_port_pub(d_ptt_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(sizeof(msg_ptt_off), (const uint8_t *)msg_ptt_off)));
+		if(d_ptt_mode == 0) //
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("data"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(d_msg_ptt_off.size(), (const uint8_t *)&d_msg_ptt_off)));
+		}
+		else if(d_ptt_mode == 1)
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("reset_rts"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		else if(d_ptt_mode == 2)
+		{
+			pmt::pmt_t p_dict = pmt::make_dict();
+        		p_dict = pmt::dict_add(p_dict, pmt::mp("reset_dtr"), pmt::from_double(0.0));
+        		message_port_pub(d_ptt_port, pmt::cons(p_dict, pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		
+		d_ptt = 0;
+	}
+*/	
+	if((d_ptt == 0) && (n_ret != 0))
+	{
+		if(d_ptt_mode == 0) 
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("data"), pmt::init_u8vector(d_msg_ptt_off.size(), d_msg_ptt_on)));
+		}
+		else if(d_ptt_mode == 1)
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("set_rts"), pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		else if(d_ptt_mode == 2)
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("set_dtr"), pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		
+		d_ptt = 1;
+	}
+	else if((d_ptt != 0) && (n_ret == 0))
+	{
+		if(d_ptt_mode == 0) //
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("data"), pmt::init_u8vector(d_msg_ptt_off.size(), d_msg_ptt_off)));
+		}
+		else if(d_ptt_mode == 1)
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("clear_rts"), pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		else if(d_ptt_mode == 2)
+		{
+        		message_port_pub(d_ptt_port, pmt::cons(pmt::intern("clear_dtr"), pmt::init_u8vector(0, (const uint8_t *)0)));
+		}
+		
 		d_ptt = 0;
 	}
 	

@@ -135,4 +135,9 @@ void serialWriteChar(int fd, char c);
  */
 void serialWriteString(int fd, const char *s);
 
+void setRTS(int fd);
+void clearRTS(int fd);
+void setDTR(int fd);
+void clearDTR(int fd);
+
 #endif
