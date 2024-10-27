@@ -1,0 +1,2 @@
+# To compile
+gcc proxy_mmt_gui.c -o proxy_mmt_gui -lncurses -lzmq -lwebsockets -lconfig -lcjson
