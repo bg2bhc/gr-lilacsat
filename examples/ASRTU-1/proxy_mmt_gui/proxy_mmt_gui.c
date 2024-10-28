@@ -9,6 +9,7 @@
 #include <stdint.h>
 #include <cjson/cJSON.h>
 #include <ncurses.h>
+#include <signal.h>
 
 #define MAX_PAYLOAD_SIZE 4096 // Adjust as needed
 
@@ -18,6 +19,8 @@ WINDOW *win_log;
 
 int reconnect_needed = 0;
 char ws_host[256];
+
+int max_y, max_x;
 
 // Structure to hold configuration data
 typedef struct
@@ -213,7 +216,6 @@ int main(int argc, char **argv)
     noecho();
     curs_set(0); // 隐藏光标
 
-    int max_y, max_x;
     getmaxyx(stdscr, max_y, max_x);
 
     // 计算窗口大小
@@ -466,6 +468,7 @@ int main(int argc, char **argv)
             wrefresh(win_log);
             interrupted = 1;
         }
+        signal(SIGWINCH,NULL);
     }
 
     // 清理
