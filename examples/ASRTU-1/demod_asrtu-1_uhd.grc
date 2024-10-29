@@ -605,7 +605,7 @@ blocks:
   parameters:
     alias: ''
     comment: ''
-    imports: from /home/lilac/DSLWP-Downlink-Proxy/grc_param import *
+    imports: from grc_param import *
   states:
     bus_sink: false
     bus_source: false
