@@ -362,7 +362,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: ./asrtu-1_tm_test.raw
+    file: ~/asrtu-1_tm_test.raw
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'

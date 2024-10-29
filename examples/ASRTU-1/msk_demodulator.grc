@@ -303,7 +303,7 @@ blocks:
     alias: ''
     begin_tag: pmt.PMT_NIL
     comment: ''
-    file: ./recording_msk.raw
+    file: ~/recording_msk.raw
     length: '0'
     maxoutbuf: '0'
     minoutbuf: '0'
