@@ -60,7 +60,7 @@ blocks:
   id: variable_qtgui_entry
   parameters:
     comment: ''
-    gui_hint: 3,0
+    gui_hint: 4,0
     label: ''
     type: real
     value: '20'
@@ -143,6 +143,21 @@ blocks:
     coordinate: [1208, 104]
     rotation: 0
     state: enabled
+- name: freq_corr
+  id: variable_qtgui_entry
+  parameters:
+    comment: ''
+    gui_hint: 1,0
+    label: ''
+    type: real
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [1616, 364.0]
+    rotation: 0
+    state: true
 - name: if_freq
   id: variable
   parameters:
@@ -159,7 +174,7 @@ blocks:
   id: variable_qtgui_entry
   parameters:
     comment: ''
-    gui_hint: 2,0
+    gui_hint: 3,0
     label: ''
     type: real
     value: '20'
@@ -219,7 +234,7 @@ blocks:
   id: variable_qtgui_entry
   parameters:
     comment: ''
-    gui_hint: 1,0
+    gui_hint: 2,0
     label: ''
     type: real
     value: '10'
@@ -845,7 +860,7 @@ blocks:
     fftsize: '4096'
     freqhalf: 'True'
     grid: 'False'
-    gui_hint: 5,0
+    gui_hint: 6,0
     label: Relative Gain
     label1: ''
     label10: ''
@@ -1065,7 +1080,7 @@ blocks:
     fftsize: '1024'
     freqhalf: 'True'
     grid: 'False'
-    gui_hint: 4,0
+    gui_hint: 5,0
     int_max: '0'
     int_min: '-100'
     label1: ''
@@ -1225,7 +1240,7 @@ blocks:
     clock_source6: ''
     clock_source7: ''
     comment: ''
-    corr0: '0'
+    corr0: freq_corr
     corr1: '0'
     corr10: '0'
     corr11: '0'
@@ -1476,7 +1491,7 @@ blocks:
   parameters:
     alias: ''
     comment: ''
-    gui_hint: 0,1,6,1
+    gui_hint: 0,1,7,1
     label0: Demodulator
     label1: Loop
     label10: Tab 10
