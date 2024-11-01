@@ -97,6 +97,14 @@ int serialOpen(const char *port, unsigned int baud) {
     tcsetattr(fd, TCSANOW, &options);
 
     tcflush(fd, TCIOFLUSH);
+    
+    int flag;
+    // clearRTS
+    flag = TIOCM_RTS;
+    ioctl(fd, TIOCMBIC, &flag);
+    // clearDTR
+    flag = TIOCM_DTR;
+    ioctl(fd, TIOCMBIC, &flag);
 
     return fd;
 }
