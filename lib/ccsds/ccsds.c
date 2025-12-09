@@ -266,7 +266,7 @@ unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbits
 }
 
 /*blocksize must be a multiple of 16*/
-void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
+void ccsds_rx_proc(Ccsds *cc, const unsigned char *syms, unsigned int n_syms)
 {
     unsigned int i, j;
     unsigned char current_out, syms_tmp[16];

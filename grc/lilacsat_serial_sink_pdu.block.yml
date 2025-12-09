@@ -2,7 +2,7 @@ id: lilacsat_serial_sink_pdu
 label: Serial Sink PDU
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.serial_sink_pdu(${path}, ${baudrate}, ${debug})
 parameters:
 - id: path

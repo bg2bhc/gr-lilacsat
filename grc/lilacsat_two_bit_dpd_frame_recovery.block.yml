@@ -2,7 +2,7 @@ id: lilacsat_two_bit_dpd_frame_recovery
 label: Two-bit DPD Frame Recovery
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.two_bit_dpd_frame_recovery(${snr_threshold})
 parameters:
 - id: snr_threshold

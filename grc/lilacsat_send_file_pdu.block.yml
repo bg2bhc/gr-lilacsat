@@ -1,8 +1,8 @@
 id: lilacsat_send_file_pdu
 label: Send File PDU
-category: '[LilacSat]'
+category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.send_file_pdu(${path}, ${pdu_len}, ${period}, ${terminal})
 parameters:
 - id: path

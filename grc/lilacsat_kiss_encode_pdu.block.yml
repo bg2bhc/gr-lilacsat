@@ -2,7 +2,7 @@ id: lilacsat_kiss_encode_pdu
 label: KISS Encode PDU
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.kiss_encode_pdu(${const_length})
 parameters:
 - id: const_length

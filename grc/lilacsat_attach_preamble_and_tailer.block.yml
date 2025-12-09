@@ -2,7 +2,7 @@ id: lilacsat_attach_preamble_and_tailer
 label: Attach Preamble and Tailer
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.attach_preamble_and_tailer(${len_preamble}, ${len_tailer}, ${padding_type})
 parameters:
 - id: len_preamble

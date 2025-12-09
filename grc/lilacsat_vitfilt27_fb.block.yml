@@ -2,7 +2,7 @@ id: lilacsat_vitfilt27_fb
 label: Vitfilt 27 FB
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.vitfilt27_fb()
 inputs:
 - label: in

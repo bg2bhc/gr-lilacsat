@@ -2,7 +2,7 @@ id: lilacsat_sync_det_b
 label: Sync Det
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.sync_det_b(${sync_word}, ${len}, ${nrz}, ${descrambling})
 parameters:
 - id: sync_word

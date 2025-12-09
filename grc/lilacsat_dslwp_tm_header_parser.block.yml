@@ -1,8 +1,9 @@
 id: lilacsat_dslwp_tm_header_parser
 label: DSLWP TM Header Parser
 category: '[Lilacsat]'
+
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.dslwp_tm_header_parser()
 inputs:
 - domain: message

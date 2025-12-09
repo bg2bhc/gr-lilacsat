@@ -2,7 +2,7 @@ id: lilacsat_dslwp_tm_parser
 label: DSLWP TM Parser
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.dslwp_tm_parser()
 inputs:
 - domain: message

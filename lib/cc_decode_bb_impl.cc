@@ -1,35 +1,15 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "cc_decode_bb_impl.h"
+#include <gnuradio/io_signature.h>
 
 #include <stdio.h>
 
@@ -38,26 +18,27 @@ extern unsigned char m_decode_tab[];
 
 #define	LEN_FRAME	116
 #define	SYNC_WORD	0x1ACFFC1D
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    cc_decode_bb::sptr
-    cc_decode_bb::make()
-    {
-      return gnuradio::get_initial_sptr
-        (new cc_decode_bb_impl());
-    }
+using input_type = char;
+using output_type = char;
+cc_decode_bb::sptr cc_decode_bb::make() {
+    return gnuradio::make_block_sptr<cc_decode_bb_impl>();
+}
 
-    /*
-     * The private constructor
-     */
-    cc_decode_bb_impl::cc_decode_bb_impl()
-      : gr::block("cc_decode_bb",
-              gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(1, 1, 7*sizeof(char)))
-    {
-		d_rx_bit_state = 0;
+
+/*
+ * The private constructor
+ */
+cc_decode_bb_impl::cc_decode_bb_impl()
+    : gr::block("cc_decode_bb",
+                gr::io_signature::make(
+                    1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
+                gr::io_signature::make(
+                    1 /* min outputs */, 1 /*max outputs */, 7*sizeof(output_type))) {
+					
+	  	d_rx_bit_state = 0;
 	  	d_mask_bit_out = 0x80;
 	  	d_syncing = 0;
       	d_buffer_sync_det = 0;
@@ -67,41 +48,36 @@ namespace gr {
       	message_port_register_out(d_out_port);
 
 		kiss_init(&d_ki, (void *)this, &cc_decode_bb_impl::kiss_msg_callback);
-	}
+						
+}
 
-    /*
-     * Our virtual destructor.
-     */
-    cc_decode_bb_impl::~cc_decode_bb_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+cc_decode_bb_impl::~cc_decode_bb_impl() {}
 
-    void
-    cc_decode_bb_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
-    {
-        /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-    }
+void cc_decode_bb_impl::forecast(int noutput_items,
+                                 gr_vector_int& ninput_items_required) {
+    /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
+}
 
     void cc_decode_bb_impl::kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len)
     {
 		cc_decode_bb_impl *obj_ptr_loc = (cc_decode_bb_impl *)obj_ptr;
 		//obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(len, (const uint8_t *)ptr)));
     }
-
-    int
-    cc_decode_bb_impl::general_work (int noutput_items,
-                       gr_vector_int &ninput_items,
-                       gr_vector_const_void_star &input_items,
-                       gr_vector_void_star &output_items)
-    {
-        const char *in = (const char *) input_items[0];
-        char *out = (char *) output_items[0];
+int cc_decode_bb_impl::general_work(int noutput_items,
+                                    gr_vector_int& ninput_items,
+                                    gr_vector_const_void_star& input_items,
+                                    gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
+    auto out = static_cast<output_type*>(output_items[0]);
 		int i, j, n_codec2_out = 0;
 		uint8_t mask_bit_in, current_in;
 
-        // Do <+signal processing+>
-        // Tell runtime system how many input items we consumed on
-        // each input stream.
+    // Do <+signal processing+>
+    // Tell runtime system how many input items we consumed on
+    // each input stream.
 		fprintf(stdout, "%d\n", *in);
 
 		for (i = 0; i < noutput_items/8; i++)
@@ -238,8 +214,7 @@ message_port_pub(d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(LEN_
 
         // Tell runtime system how many output items we produced.
         return n_codec2_out;
-    }
+}
 
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

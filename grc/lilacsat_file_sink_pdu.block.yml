@@ -2,7 +2,7 @@ id: lilacsat_file_sink_pdu
 label: File Sink PDU
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.file_sink_pdu(${path}, ${format})
 parameters:
 - id: path

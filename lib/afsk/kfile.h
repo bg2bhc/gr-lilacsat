@@ -100,7 +100,7 @@
 
 #ifndef KERN_KFILE_H
 #define KERN_KFILE_H
-
+#include <stddef.h>
 #include "bertos.h"
 
 
@@ -133,13 +133,13 @@ typedef enum KSeekMode
  * Read from file.
  * \return the number of bytes read.
  */
-typedef uint32_t (*ReadFunc_t) (struct KFile *fd, void *buf, uint32_t size);
+typedef size_t (*ReadFunc_t) (struct KFile *fd, void *buf, size_t size);
 
 /**
  * Write to file.
  * \return the number of bytes written.
  */
-typedef uint32_t (*WriteFunc_t) (struct KFile *fd, const void *buf, uint32_t size);
+typedef size_t (*WriteFunc_t) (struct KFile *fd, const void *buf, size_t size);
 
 /**
  * Seek into file (if seekable).

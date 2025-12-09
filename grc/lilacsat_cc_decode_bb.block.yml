@@ -2,7 +2,7 @@ id: lilacsat_cc_decode_bb
 label: CC Decode
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.cc_decode_bb()
 inputs:
 - label: in

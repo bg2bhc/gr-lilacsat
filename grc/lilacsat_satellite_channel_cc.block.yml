@@ -2,9 +2,9 @@ id: lilacsat_satellite_channel_cc
 label: Satellite Channel
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
-  make: lilacsat.satellite_channel_cc(${r_semi_long_axis}, ${alpha_aos}, ${fc}, ${samp_rate},
-    ${d0}, ${doppler}, ${link_loss}, ${verbose})
+  imports: from gnuradio import lilacsat
+  make: lilacsat.satellite_channel_cc(${r_semi_long_axis}, ${alpha_aos}, ${fc}, ${samp_rate}, ${d0}, ${doppler}, ${link_loss}, ${verbose})
+
 parameters:
 - id: r_semi_long_axis
   label: Semi Long Axis

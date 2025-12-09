@@ -2,7 +2,7 @@ id: lilacsat_encode27_bb
 label: Encode 27 BB
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.encode27_bb()
 inputs:
 - label: in

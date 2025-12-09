@@ -506,7 +506,7 @@ void afsk_init(Afsk *af)
 	af->phase_inc = MARK_INC;
 }
 
-void direwolf_afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize)
+void direwolf_afsk_rx_proc(Afsk *af, const float *pSrc, uint32_t blocksize)
 {
 	while(blocksize>0)
 	{

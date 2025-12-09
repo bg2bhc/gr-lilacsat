@@ -2,9 +2,9 @@ id: lilacsat_ccsds_afsk_decode
 label: CCSDS AFSK Decode
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
-  make: lilacsat.ccsds_afsk_decode(${bitrate}, ${frame_len}, ${using_m}, ${using_convolutional_code},
-    ${pass_all})
+  imports: from gnuradio import lilacsat
+  make: lilacsat.ccsds_afsk_decode(${bitrate}, ${frame_len}, ${using_m}, ${using_convolutional_code}, ${pass_all})
+
 parameters:
 - id: bitrate
   label: Bitrate

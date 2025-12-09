@@ -1,8 +1,9 @@
 id: lilacsat_codec2_encode_fb
 label: Codec2 Encode FB
 category: '[Lilacsat]'
+
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.codec2_encode_fb(${mode})
 parameters:
 - id: mode

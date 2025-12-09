@@ -2,7 +2,7 @@ id: lilacsat_angle_cf
 label: Angle CF
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.angle_cf()
 inputs:
 - label: in

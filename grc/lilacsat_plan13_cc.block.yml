@@ -2,9 +2,9 @@ id: lilacsat_plan13_cc
 label: Plan13 CC
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
-  make: lilacsat.plan13_cc(${enable}, ${tle1}, ${tle2}, ${lon}, ${lat}, ${height},
-    ${fc}, ${samp_rate}, ${txrx}, ${verbose})
+  imports: from gnuradio import lilacsat
+  make: lilacsat.plan13_cc(${enable}, ${tle1}, ${tle2}, ${lon}, ${lat}, ${height}, ${fc}, ${samp_rate}, ${txrx}, ${verbose})
+
 parameters:
 - id: enable
   label: Enable

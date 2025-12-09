@@ -2,7 +2,7 @@ id: lilacsat_gmsk_demod
 label: GMSK Demod
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.gmsk_demod(${dtll_gain}, ${pd_N_avg}, ${pd_k1}, ${pd_k2}, ${vco_gain})
 parameters:
 - id: dtll_gain

@@ -2,7 +2,7 @@ id: lilacsat_pdu_f32_to_u8
 label: PDU f32 to u8
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.pdu_f32_to_u8()
 inputs:
 - domain: message

@@ -42,6 +42,14 @@
 #include <stdlib.h>
 #include <math.h>
 
+#ifndef M_SQRT2
+#define M_SQRT2 1.41421356237309504880
+#endif
+
+#ifndef M_LOG2E
+#define M_LOG2E 1.44269504088896340736
+#endif
+
 //declare erf in case it was missing in math.h and provided for by the build system
 extern double erf(double x);
 

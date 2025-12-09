@@ -1,61 +1,59 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
 
-#include <gnuradio/io_signature.h>
 #include "plan13_cc_impl.h"
-
+#include <gnuradio/io_signature.h>
 #include <math.h>
 #include <time.h>
 #include <stdio.h>
 #include <memory.h>
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    plan13_cc::sptr
-    plan13_cc::make(bool enable, const std::string& tle1, const std::string& tle2, float lon, float lat, float height, float fc, float samp_rate, bool txrx, bool verbose)
-    {
-      return gnuradio::get_initial_sptr
-        (new plan13_cc_impl(enable, tle1, tle2, lon, lat, height, fc, samp_rate, txrx, verbose));
-    }
+using input_type = gr_complex;
+using output_type = gr_complex;
+plan13_cc::sptr plan13_cc::make(bool enable,
+                                const std::string& tle1,
+                                const std::string& tle2,
+                                float lon,
+                                float lat,
+                                float height,
+                                float fc,
+                                float samp_rate,
+                                bool txrx,
+                                bool verbose) {
+    return gnuradio::make_block_sptr<plan13_cc_impl>(
+        enable, tle1, tle2, lon, lat, height, fc, samp_rate, txrx, verbose);
+}
 
-    /*
-     * The private constructor
-     */
-    plan13_cc_impl::plan13_cc_impl(bool enable, const std::string& tle1, const std::string& tle2, float lon, float lat, float height, float fc, float samp_rate, bool txrx, bool verbose)
-      : gr::sync_block("plan13_cc",
-              gr::io_signature::make(1, 1, sizeof(gr_complex)),
-              gr::io_signature::make(1, 1, sizeof(gr_complex))),
-		d_enable(enable), d_tle1(tle1), d_tle2(tle2), d_lon(lon), d_lat(lat), d_height(height), d_fc(fc), d_samp_rate(samp_rate), d_txrx(txrx), d_verbose(verbose)
-    {
+
+/*
+ * The private constructor
+ */
+plan13_cc_impl::plan13_cc_impl(bool enable,
+                               const std::string& tle1,
+                               const std::string& tle2,
+                               float lon,
+                               float lat,
+                               float height,
+                               float fc,
+                               float samp_rate,
+                               bool txrx,
+                               bool verbose)
+    : gr::sync_block("plan13_cc",
+                     gr::io_signature::make(
+                         1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
+                     gr::io_signature::make(
+                         1 /* min outputs */, 1 /*max outputs */, sizeof(output_type))),
+					 d_enable(enable), d_tle1(tle1), d_tle2(tle2), d_lon(lon), d_lat(lat), d_height(height), d_fc(fc), d_samp_rate(samp_rate), d_txrx(txrx), d_verbose(verbose) {
 	char buffer[20];
 	int tmp;
 
@@ -115,16 +113,14 @@ namespace gr {
 	f_doppler_var = 0.0;
 	sample_in_second = 0;
 	init = 0;
-    }
+}
 
-    void plan13_cc_impl::ssplit(char *dest, char *src, int n)
-    {
+void plan13_cc_impl::ssplit(char *dest, char *src, int n) {
 	memcpy(dest, src, n);
 	dest[n] = 0;
-    }
+}
 
-    void plan13_cc_impl::freq_cmd_gen(unsigned char *dest, unsigned long freq)
-    {
+void plan13_cc_impl::freq_cmd_gen(unsigned char *dest, unsigned long freq) {
 	dest[0] = 0xFE;
 	dest[1] = 0xFE;
 	dest[2] = 0x7C;
@@ -161,22 +157,17 @@ namespace gr {
 	dest[5] += freq;
 
 	dest[10]  = 0xFD;
-    }
+}
+/*
+ * Our virtual destructor.
+ */
+plan13_cc_impl::~plan13_cc_impl() {}
 
-    /*
-     * Our virtual destructor.
-     */
-    plan13_cc_impl::~plan13_cc_impl()
-    {
-    }
-
-    int
-    plan13_cc_impl::work(int noutput_items,
-			  gr_vector_const_void_star &input_items,
-			  gr_vector_void_star &output_items)
-    {
-        const gr_complex *in = (const gr_complex *) input_items[0];
-        gr_complex *out = (gr_complex *) output_items[0];
+int plan13_cc_impl::work(int noutput_items,
+                         gr_vector_const_void_star& input_items,
+                         gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
+    auto out = static_cast<output_type*>(output_items[0]);
 
 	int i;
 	unsigned char msg_freq[] = {0xFE, 0xFE, 0x7C, 0xE0, 0x00, 0x00, 0x50, 0x37, 0x44, 0x01, 0xFD};
@@ -243,7 +234,6 @@ namespace gr {
 			}	
 		}
 	}
-
     // Do <+signal processing+>
 	for(i=0; i<noutput_items; i++)
 	{
@@ -321,11 +311,9 @@ namespace gr {
 		*((float*)output_items[0]+2*i) = k_real * *((float*)input_items[0]+2*i) - k_imag * *((float*)input_items[0]+2*i+1);
 		*((float*)output_items[0]+2*i+1) = k_real * *((float*)input_items[0]+2*i+1) + k_imag * *((float*)input_items[0]+2*i);
 	}
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-        // Tell runtime system how many output items we produced.
-        return noutput_items;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

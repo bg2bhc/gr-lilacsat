@@ -2,7 +2,7 @@ id: lilacsat_attach_rs_codeblock
 label: Attach RS Codeblock
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.attach_rs_codeblock(${interleaving})
 parameters:
 - id: interleaving

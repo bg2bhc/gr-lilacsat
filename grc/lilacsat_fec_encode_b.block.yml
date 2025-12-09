@@ -2,9 +2,9 @@ id: lilacsat_fec_encode_b
 label: FEC Encode
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
-  make: lilacsat.fec_encode_b(${frame_len}, ${preamble_len}, ${trailer_len}, ${continous},
-    ${padding_zero}, ${using_m}, ${using_convolutional_code})
+  imports: from gnuradio import lilacsat
+  make: lilacsat.fec_encode_b(${frame_len}, ${preamble_len}, ${trailer_len}, ${continous}, ${padding_zero}, ${using_m}, ${using_convolutional_code})
+
 parameters:
 - id: frame_len
   label: Frame Length

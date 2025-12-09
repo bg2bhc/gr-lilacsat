@@ -1,8 +1,9 @@
 id: lilacsat_codec2_decode_bf
 label: Codec2 Decode BF
 category: '[Lilacsat]'
+
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.codec2_decode_bf(${mode})
 parameters:
 - id: mode

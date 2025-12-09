@@ -2,7 +2,7 @@ id: lilacsat_bpsk_demod_cb
 label: BPSK Demod
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.bpsk_demod_cb()
 inputs:
 - label: in

@@ -33,7 +33,7 @@
 #include "randomizer.h"
 #include "rs.h"
 #include "tab.h"
-#include "afsk/fifobuf.h"
+#include "../afsk/fifobuf.h"
 
 #define LENTH_BUF_SYNC_OUT 1024
 
@@ -94,7 +94,7 @@ void ccsds_send(Ccsds *cc, uint8_t *message);
 void ccsds_pull(Ccsds *cc);
 
 unsigned int ccsds_tx_proc(Ccsds *cc, unsigned char *symbols, unsigned int nbytes);
-void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms);
+void ccsds_rx_proc(Ccsds *cc, const unsigned char *syms, unsigned int n_syms);
 
 
 

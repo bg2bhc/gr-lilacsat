@@ -1,63 +1,42 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
 
-#include <gnuradio/io_signature.h>
 #include "lilacsat1_frame_depack_impl.h"
-
+#include <gnuradio/io_signature.h>
 #include <stdio.h>
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    lilacsat1_frame_depack::sptr
-    lilacsat1_frame_depack::make()
-    {
-      return gnuradio::get_initial_sptr
-        (new lilacsat1_frame_depack_impl());
-    }
+using output_type = char;
+lilacsat1_frame_depack::sptr lilacsat1_frame_depack::make() {
+    return gnuradio::make_block_sptr<lilacsat1_frame_depack_impl>();
+}
 
-    /*
-     * The private constructor
-     */
-    lilacsat1_frame_depack_impl::lilacsat1_frame_depack_impl()
-      : gr::sync_block("lilacsat1_frame_depack",
-              gr::io_signature::make(0, 0, 0),
-              gr::io_signature::make(1, 1, 8*sizeof(char)))
-    {
-		d_in_port = pmt::mp("in");
+
+/*
+ * The private constructor
+ */
+lilacsat1_frame_depack_impl::lilacsat1_frame_depack_impl()
+    : gr::sync_block("lilacsat1_frame_depack",
+                     gr::io_signature::make(
+                         0 /* min inputs */, 0 /* max inputs */, 0),
+                     gr::io_signature::make(
+                         1 /* min outputs */, 1 /*max outputs */, 8*sizeof(output_type))) {
+	d_in_port = pmt::mp("in");
 		message_port_register_in(d_in_port);
 
 		d_out_port = pmt::mp("out");	      
 		message_port_register_out(d_out_port);
 
-		set_msg_handler(d_in_port, boost::bind(&lilacsat1_frame_depack_impl::pmt_in_callback, this ,_1) );
+		set_msg_handler(d_in_port, [this](pmt::pmt_t msg) { this->pmt_in_callback(msg); } );
 
 		kiss_init(&d_ki, (void *)this, &lilacsat1_frame_depack_impl::kiss_msg_callback);
 		fifo_init(&d_fifo, d_buf, LENTH_BUF_CODEC2);
@@ -65,21 +44,17 @@ namespace gr {
 		d_term = 1;
 	}
 
-    /*
-     * Our virtual destructor.
-     */
-    lilacsat1_frame_depack_impl::~lilacsat1_frame_depack_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+lilacsat1_frame_depack_impl::~lilacsat1_frame_depack_impl() {}
 
-    void lilacsat1_frame_depack_impl::kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len)
-    {
+void lilacsat1_frame_depack_impl::kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len) {
 		lilacsat1_frame_depack_impl *obj_ptr_loc = (lilacsat1_frame_depack_impl *)obj_ptr;
 		obj_ptr_loc->message_port_pub(obj_ptr_loc->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(len, (const uint8_t *)ptr)));
-    }
+}
 
-    void lilacsat1_frame_depack_impl::pmt_in_callback(pmt::pmt_t msg)
-    {
+void lilacsat1_frame_depack_impl::pmt_in_callback(pmt::pmt_t msg) {
 		pmt::pmt_t meta(pmt::car(msg));
 		pmt::pmt_t bytes(pmt::cdr(msg));
 
@@ -122,18 +97,16 @@ namespace gr {
 			}
 		}
         this->message_port_pub(this->d_out_port, pmt::cons(pmt::make_dict(), pmt::init_u8vector(81, (const uint8_t *)buf_data_field)));
-    }
-
-    int
-    lilacsat1_frame_depack_impl::work(int noutput_items,
-			  gr_vector_const_void_star &input_items,
-			  gr_vector_void_star &output_items)
-    {
-        char *out = (char *) output_items[0];
+}
+int lilacsat1_frame_depack_impl::work(int noutput_items,
+                                      gr_vector_const_void_star& input_items,
+                                      gr_vector_void_star& output_items) {
+        auto out = static_cast<output_type*>(output_items[0]);
 		int i, j, k=0;
 
-        // Do <+signal processing+>
-		for(i=0; i<noutput_items; i++)
+    // Do <+signal processing+>
+
+	for(i=0; i<noutput_items; i++)
 		{
 			if(d_term)
 			{
@@ -168,10 +141,9 @@ namespace gr {
 				}
 			} 
 		}
-        // Tell runtime system how many output items we produced.
-        return noutput_items;
-    }
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

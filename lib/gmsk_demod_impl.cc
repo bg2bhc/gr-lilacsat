@@ -1,36 +1,15 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "gmsk_demod_impl.h"
-
+#include <gnuradio/io_signature.h>
 #include <math.h>
 #include <stdio.h>
 
@@ -46,30 +25,33 @@ const static float c0[] =
 	0.002568939766761, 0.000786904582129, 0.000189364711802, 0.000034979282676, 0.000004841119054, 0.000000489267564,
 	0.000000035120767, 0.000000001738318, 0.000000000057746, 0.000000000001309, 0.000000000000034
 };
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    gmsk_demod::sptr
-    gmsk_demod::make(float dtll_gain, int pd_N_avg, float pd_k1, float pd_k2, float vco_gain)
-    {
-      return gnuradio::get_initial_sptr
-        (new gmsk_demod_impl(dtll_gain, pd_N_avg, pd_k1, pd_k2, vco_gain));
-    }
+using input_type = gr_complex;
+using output_type = gr_complex;
+gmsk_demod::sptr gmsk_demod::make(
+    float dtll_gain, int pd_N_avg, float pd_k1, float pd_k2, float vco_gain) {
+    return gnuradio::make_block_sptr<gmsk_demod_impl>(
+        dtll_gain, pd_N_avg, pd_k1, pd_k2, vco_gain);
+}
 
-    /*
-     * The private constructor
-     */
-    gmsk_demod_impl::gmsk_demod_impl(float dtll_gain, int pd_N_avg, float pd_k1, float pd_k2, float vco_gain)
-      : gr::block("gmsk_demod",
-              gr::io_signature::make(1, 1, sizeof(gr_complex)),
-              gr::io_signature::make(1, 1, sizeof(gr_complex))),
-              d_dtll_gain(dtll_gain),
-              d_pd_N_avg(pd_N_avg),
-              d_pd_k1(pd_k1),
-              d_pd_k2(pd_k2),
-              d_vco_gain(vco_gain)
-    {
+
+/*
+ * The private constructor
+ */
+gmsk_demod_impl::gmsk_demod_impl(
+    float dtll_gain, int pd_N_avg, float pd_k1, float pd_k2, float vco_gain)
+    : gr::block("gmsk_demod",
+                gr::io_signature::make(
+                    1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
+                gr::io_signature::make(
+                    1 /* min outputs */, 1 /*max outputs */, sizeof(output_type))),
+				d_dtll_gain(dtll_gain),
+                d_pd_N_avg(pd_N_avg),
+                d_pd_k1(pd_k1),
+                d_pd_k2(pd_k2),
+                d_vco_gain(vco_gain) {
 	int i;
 
 	d_vco_phase = 0;
@@ -103,24 +85,19 @@ namespace gr {
 
 	d_lf_out = 0;
 
-	d_mean_out_last = 0;
-    }
+	d_mean_out_last = 0;		
+}
 
-    /*
-     * Our virtual destructor.
-     */
-    gmsk_demod_impl::~gmsk_demod_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+gmsk_demod_impl::~gmsk_demod_impl() {}
 
-    void
-    gmsk_demod_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
-    {
-        /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-    }
+void gmsk_demod_impl::forecast(int noutput_items, gr_vector_int& ninput_items_required) {
+    /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
+}
 
-    void gmsk_demod_impl::fir_filt_f(fir_instance_f *instance, float *pSrc, float *pDst, uint32_t len)
-    {
+void gmsk_demod_impl::fir_filt_f(fir_instance_f *instance, float *pSrc, float *pDst, uint32_t len) {
 	uint32_t i, j;
 	float acc;
 
@@ -139,27 +116,24 @@ namespace gr {
 		}
 		pDst[i] = acc;
 	}
-    }
-
-    int
-    gmsk_demod_impl::general_work (int noutput_items,
-                       gr_vector_int &ninput_items,
-                       gr_vector_const_void_star &input_items,
-                       gr_vector_void_star &output_items)
-    {
-        const gr_complex *in = (const gr_complex *) input_items[0];
-        gr_complex *out = (gr_complex *) output_items[0];
+}
+int gmsk_demod_impl::general_work(int noutput_items,
+                                  gr_vector_int& ninput_items,
+                                  gr_vector_const_void_star& input_items,
+                                  gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
+    auto out = static_cast<output_type*>(output_items[0]);
 
 	int i, j, nout=0;
 	float	vco_real, vco_imag, 
 		mix_out_real, mix_out_imag, 
 		match_out_real, match_out_imag,
 		pd_out, mean_out, lf_out;
-
-        // Do <+signal processing+>
-        // Tell runtime system how many input items we consumed on
-        // each input stream.
-	for(i=0; i<noutput_items; i++)
+		
+    // Do <+signal processing+>
+    // Tell runtime system how many input items we consumed on
+    // each input stream.
+for(i=0; i<noutput_items; i++)
 	{
 		vco_real = cos(-d_vco_phase * PI);
 		vco_imag = sin(-d_vco_phase * PI);
@@ -254,16 +228,11 @@ namespace gr {
 			d_vco_phase = d_vco_phase + 2.0;
 		}
 	}
+    consume_each(noutput_items);
 
-	//fprintf(stdout, "%d, %d, %f, %f, %f\n", noutput_items, nout, mean_out, d_lf_out, d_vco_phase);
+    // Tell runtime system how many output items we produced.
+    return nout;
+}
 
-        //consume(0, noutput_items);
-	consume_each(noutput_items);
-
-        // Tell runtime system how many output items we produced.
-        return nout;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

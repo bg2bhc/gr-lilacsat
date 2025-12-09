@@ -85,7 +85,7 @@ static inline float z (float x, float y)
         }
 }
 #endif
-
+int hdlc_rec_data_detect_any (int chan);
 /* Add sample to buffer and shift the rest down. */
 
 __attribute__((hot)) __attribute__((always_inline))

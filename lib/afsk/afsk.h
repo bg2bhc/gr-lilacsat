@@ -162,7 +162,7 @@ void afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize);
 unsigned int afsk_tx_proc(Afsk *af, float *pDst, uint32_t blocksize);
 void afsk_init(Afsk *af);
 
-void direwolf_afsk_rx_proc(Afsk *af, float *pSrc, uint32_t blocksize);
+void direwolf_afsk_rx_proc(Afsk *af, const float *pSrc, uint32_t blocksize);
 void direwolf_afsk_init(Afsk *af);
 
 #endif

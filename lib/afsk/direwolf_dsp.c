@@ -50,6 +50,9 @@
 #define MIN(a,b) ((a)<(b)?(a):(b))
 #define MAX(a,b) ((a)>(b)?(a):(b))
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
 
 // Don't remove this.  It serves as a reminder that an experiment is underway.
 

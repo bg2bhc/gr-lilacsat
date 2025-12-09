@@ -1,58 +1,40 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "sync_det_b_impl.h"
-
+#include <gnuradio/io_signature.h>
 extern char sequence[255];
 extern unsigned char m_decode_tab[];
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    sync_det_b::sptr
-    sync_det_b::make(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling)
-    {
-      return gnuradio::get_initial_sptr
-        (new sync_det_b_impl(sync_word, len, nrz, descrambling));
-    }
+using input_type = char;
+sync_det_b::sptr
+sync_det_b::make(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling) {
+    return gnuradio::make_block_sptr<sync_det_b_impl>(sync_word, len, nrz, descrambling);
+}
 
-    /*
-     * The private constructor
-     */
-    sync_det_b_impl::sync_det_b_impl(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling)
-      : gr::sync_block("sync_det_b",
-              gr::io_signature::make(1, 1, sizeof(char)),
-              gr::io_signature::make(0, 0, 0))
-    {
-		d_sync_word = sync_word;
+
+/*
+ * The private constructor
+ */
+sync_det_b_impl::sync_det_b_impl(uint32_t sync_word,
+                                 uint32_t len,
+                                 uint8_t nrz,
+                                 uint8_t descrambling)
+    : gr::sync_block("sync_det_b",
+                     gr::io_signature::make(
+                         1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
+                     gr::io_signature::make(
+                         0 /* min outputs */, 0 /*max outputs */, 0)) {
+	d_sync_word = sync_word;
 		d_frame_length = len;
 		d_nrz = nrz;
 		d_descrambling = descrambling;
@@ -65,26 +47,21 @@ namespace gr {
 		d_out_port = pmt::mp("out");	      
 	  	message_port_register_out(d_out_port);
 
-	  	set_output_multiple(8);
-	}
+	  	set_output_multiple(8);						 
+}
 
-    /*
-     * Our virtual destructor.
-     */
-    sync_det_b_impl::~sync_det_b_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+sync_det_b_impl::~sync_det_b_impl() {}
 
-    int
-    sync_det_b_impl::work(int noutput_items,
-			  gr_vector_const_void_star &input_items,
-			  gr_vector_void_star &output_items)
-    {
-        const char *in = (const char *) input_items[0];
+int sync_det_b_impl::work(int noutput_items,
+                          gr_vector_const_void_star& input_items,
+                          gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
 		int i, j;
 		uint8_t mask_bit_in, current_in;
-
-        // Do <+signal processing+>
+    // Do <+signal processing+>
 		for (i = 0; i < noutput_items/8; i++)
 		{
 			for(j=0; j<8; j++)
@@ -193,11 +170,9 @@ namespace gr {
 				}
 			}
 		}
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-        // Tell runtime system how many output items we produced.
-        return noutput_items;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

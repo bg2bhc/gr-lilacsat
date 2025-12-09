@@ -2,7 +2,7 @@ id: lilacsat_two_bit_dpd_precoder
 label: Two-bit DPD Precoder
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.two_bit_dpd_precoder(${init_value})
 parameters:
 - id: init_value

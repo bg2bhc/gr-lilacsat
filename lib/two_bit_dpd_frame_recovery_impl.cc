@@ -1,54 +1,40 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2019 <+YOU OR YOUR COMPANY+>.
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+/*
+ * Copyright 2025 BG2BHC.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "two_bit_dpd_frame_recovery_impl.h"
+#include <gnuradio/io_signature.h>
+
 #include <stdio.h>
 
 const float asm32_dpd[] = 
 {
 	0.000000, 0.879120, -0.526581, 0.719482, -0.813904, 0.392609, -0.876312, 0.141327, -0.859985, 0.033142, -0.845764, 0.005005, -0.842316, 0.000946, -0.845764, 0.005005, -0.859985, 0.033142, -0.876312, 0.141327, -0.813904, 0.392609, -0.526581, 0.719482, 0.000000, 0.879120, 0.526581, 0.719543, 0.814362, 0.393372, 0.880463, 0.147339, 0.878235, 0.067810, 0.880524, 0.147308, 0.815277, 0.393250, 0.533844, 0.720520, 0.034668, 0.899078, -0.427734, 0.838287, -0.603577, 0.760101, -0.420593, 0.837219, 0.067810, 0.878235, 0.608521, 0.594421, 0.843719, 0.000000, 0.608521, -0.594421, 0.067810, -0.878235, -0.420593, -0.837219, -0.603577, -0.760101, -0.427734, -0.838287, 0.034668, -0.899078, 0.533844, -0.720520, 0.815277, -0.393250, 0.880524, -0.147308, 0.878235, -0.067810, 0.880463, -0.147339, 0.814362, -0.393372, 0.526581, -0.719543, 0.000000, -0.879120, -0.526581, -0.719543, -0.814362, -0.393372, -0.880463, -0.147339, -0.878235, -0.067810, -0.880463, -0.147339, -0.814362, -0.393372, -0.526581, -0.719543, 0.000000, -0.879120, 0.526642, -0.719513, 0.815063, -0.392914, 0.885345, -0.142334, 0.899078, -0.034637, 0.941132, -0.006012, 0.971558, -0.000793, 0.945343, -0.000061, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945374, 0.000000, 0.972015, 0.000000, 0.945374, 0.000000, 0.919067, 0.000000, 0.945343, -0.000061, 0.971558, -0.000793, 0.941132, -0.006012, 0.899078, -0.034637, 0.885345, -0.142334, 0.815063, -0.392914, 0.526642, -0.719513, 0.000000, -0.879120, -0.526581, -0.719482, -0.813904, -0.392609, -0.876312, -0.141327, -0.859985, -0.033142, -0.845703, -0.004974, -0.841614, -0.000458, -0.840973, -0.000031, -0.840912, 0.000000, -0.840881, 0.000000, -0.840881, 0.000000, -0.840881, 0.000000, -0.840912, 0.000000, -0.840973, -0.000031, -0.841614, -0.000458, -0.845703, -0.004974, -0.859985, -0.033142, -0.876312, -0.141327, -0.813904, -0.392609, -0.526581, -0.719482, 0.000000, -0.879120, 0.526642, -0.719513, 0.815063, -0.392914, 0.885345, -0.142334, 0.899078, -0.034637, 0.941101, -0.005920, 0.971069, 0.000000, 0.941101, 0.005920, 0.899078, 0.034637, 0.885406, 0.142334, 0.815979, 0.392792, 0.533905, 0.720520, 0.034668, 0.899078, -0.427826, 0.838257, -0.604492, 0.760010, -0.427826, 0.838257, 0.034668, 0.899078, 0.533905, 0.720520, 0.815979, 0.392792, 0.885406, 0.142334
 };
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    two_bit_dpd_frame_recovery::sptr
-    two_bit_dpd_frame_recovery::make(float snr_threshold)
-    {
-      return gnuradio::get_initial_sptr
-        (new two_bit_dpd_frame_recovery_impl(snr_threshold));
-    }
+using input_type = gr_complex;
+two_bit_dpd_frame_recovery::sptr two_bit_dpd_frame_recovery::make(float snr_threshold) {
+    return gnuradio::make_block_sptr<two_bit_dpd_frame_recovery_impl>(snr_threshold);
+}
 
-    /*
-     * The private constructor
-     */
-    two_bit_dpd_frame_recovery_impl::two_bit_dpd_frame_recovery_impl(float snr_threshold)
-      : gr::sync_block("two_bit_dpd_frame_recovery",
-              gr::io_signature::make(1, 1, sizeof(gr_complex)),
-              gr::io_signature::make(0, 0, 0)), d_snr_threshold(snr_threshold)
-    {
+
+/*
+ * The private constructor
+ */
+two_bit_dpd_frame_recovery_impl::two_bit_dpd_frame_recovery_impl(float snr_threshold)
+    : gr::sync_block("two_bit_dpd_frame_recovery",
+                     gr::io_signature::make(
+                         1 /* min inputs */, 1 /* max inputs */, sizeof(input_type)),
+                     gr::io_signature::make(
+                         0 /* min outputs */, 0 /*max outputs */, 0)) {
 	d_out_port = pmt::mp("out");	      
       	message_port_register_out(d_out_port);
 	i_dpd_buf = 0;
@@ -60,24 +46,19 @@ namespace gr {
 	n_rx_bytes = 0;
 	bit_in_byte = 0;
 	ptr_current_byte = buf_rx_frame;
-    }
+	}
 
-    /*
-     * Our virtual destructor.
-     */
-    two_bit_dpd_frame_recovery_impl::~two_bit_dpd_frame_recovery_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+two_bit_dpd_frame_recovery_impl::~two_bit_dpd_frame_recovery_impl() {}
 
-    int
-    two_bit_dpd_frame_recovery_impl::work(int noutput_items,
-        gr_vector_const_void_star &input_items,
-        gr_vector_void_star &output_items)
-    {
-      const gr_complex *in = (const gr_complex *) input_items[0];
-      int i, j;
-
-      // Do <+signal processing+>
+int two_bit_dpd_frame_recovery_impl::work(int noutput_items,
+                                          gr_vector_const_void_star& input_items,
+                                          gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
+	int i, j;
+        // Do <+signal processing+>
       for(i=0; i<noutput_items; i++)
       {
 	// Calculate power of ASM
@@ -212,12 +193,9 @@ namespace gr {
 	}
 
       }
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-
-      // Tell runtime system how many output items we produced.
-      return noutput_items;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

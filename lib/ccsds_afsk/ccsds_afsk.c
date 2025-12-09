@@ -610,7 +610,7 @@ void ccsds_afsk_pull(Ccsds_afsk *cc)
 }
 
 
-void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
+void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, const float *pSrc, unsigned int blocksize)
 {
 	while(blocksize>0)
 	{
@@ -769,7 +769,7 @@ void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame,
 
 /*blocksize must be a multiple of 16*/
 //void ccsds_rx_proc(Ccsds *cc, unsigned char *syms, unsigned int n_syms)
-void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize)
+void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, const float *pSrc, unsigned int blocksize)
 {
     while(blocksize>0)
     {

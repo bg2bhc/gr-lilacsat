@@ -2,7 +2,7 @@ id: lilacsat_afsk1200_tx_f
 label: AFSK1200 TX
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.afsk1200_tx_f(${destination}, ${source}, ${repeater1}, ${repeater2},
     ${padding_zero}, ${ptt_mode}, ${msg_ptt_on}, ${msg_ptt_off})
 parameters:

@@ -1,42 +1,21 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifndef INCLUDED_LILACSAT_SYNC_DET_B_IMPL_H
 #define INCLUDED_LILACSAT_SYNC_DET_B_IMPL_H
 
-#include <lilacsat/sync_det_b.h>
+#include <gnuradio/lilacsat/sync_det_b.h>
 
 #define	LENTH_BUF_SYNC_OUT	1024
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    class sync_det_b_impl : public sync_det_b
-    {
-     private:
+class sync_det_b_impl : public sync_det_b {
+private:
 	  pmt::pmt_t	d_out_port;
 	  uint32_t		d_sync_word;
 	  uint32_t		d_frame_length;
@@ -50,19 +29,17 @@ namespace gr {
 	  uint8_t		d_buf_sync_out[LENTH_BUF_SYNC_OUT];
 
 	  static void	kiss_msg_callback(void *obj_ptr, char *ptr, uint16_t len);
+public:
+    sync_det_b_impl(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling);
+    ~sync_det_b_impl();
 
-     public:
-      sync_det_b_impl(uint32_t sync_word, uint32_t len, uint8_t nrz, uint8_t descrambling);
-      ~sync_det_b_impl();
+    // Where all the action really happens
+    int work(int noutput_items,
+             gr_vector_const_void_star& input_items,
+             gr_vector_void_star& output_items);
+};
 
-      // Where all the action really happens
-      int work(int noutput_items,
-	       gr_vector_const_void_star &input_items,
-	       gr_vector_void_star &output_items);
-    };
-
-  } // namespace lilacsat
+} // namespace lilacsat
 } // namespace gr
 
 #endif /* INCLUDED_LILACSAT_SYNC_DET_B_IMPL_H */
-

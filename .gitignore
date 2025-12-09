@@ -1,0 +1,6 @@
+.DS_Store
+.conda/
+.vscode/
+.cache/
+build*/
+__pycache__/

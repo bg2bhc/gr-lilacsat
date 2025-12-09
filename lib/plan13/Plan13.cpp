@@ -16,6 +16,10 @@
 #define DEBUG false
 #define TEST false
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 /*
 Plan13::Plan13() {
 

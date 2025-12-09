@@ -1,76 +1,55 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2015 WEI Mingchuan, BG2BHC <bg2bhc@gmail.com>
- * Copyright 2015 HIT Research Center of Satellite Technology
- * Copyright 2015 HIT Amateur Radio Club, BY2HIT
+/*
+ * Copyright 2025 BG2BHC.
  *
- * Harbin Institute of Technology <http://www.hit.edu.cn/>
- * LilacSat - HIT Student Satellites <http://lilacsat.hit.edu.cn/>
- * HIT Amateur Radio Club <http://www.by2hit.net/>
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "codec2_decode_bf_impl.h"
+#include <gnuradio/io_signature.h>
 
 #include <stdio.h>
 
 #define	SAMPLES_PER_FRAME	320
 #define	BITS_PER_FRAME		52
-
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    codec2_decode_bf::sptr
-    codec2_decode_bf::make(int mode)
-    {
-      return gnuradio::get_initial_sptr
-        (new codec2_decode_bf_impl(mode));
-    }
+using input_type = char;
+using output_type = float;
+codec2_decode_bf::sptr codec2_decode_bf::make(int mode) {
+    return gnuradio::make_block_sptr<codec2_decode_bf_impl>(mode);
+}
 
-    /*
-     * The private constructor
-     */
-    codec2_decode_bf_impl::codec2_decode_bf_impl(int mode)
-      : gr::sync_interpolator("codec2_decode_bf",
-              gr::io_signature::make(1, 1, 8*sizeof(char)),
-              gr::io_signature::make(1, 1, sizeof(float)), SAMPLES_PER_FRAME)
-    {
+
+/*
+ * The private constructor
+ */
+codec2_decode_bf_impl::codec2_decode_bf_impl(int mode)
+    : gr::sync_interpolator(
+          "codec2_decode_bf",
+          gr::io_signature::make(
+              1 /* min inputs */, 1 /* max inputs */, 8*sizeof(input_type)),
+          gr::io_signature::make(
+              1 /* min outputs */, 1 /*max outputs */, sizeof(output_type)),
+          SAMPLES_PER_FRAME /*<+interpolation+>*/) {
 	codec2 = codec2_create(CODEC2_MODE_1300);
-    }
+}
 
-    /*
-     * Our virtual destructor.
-     */
-    codec2_decode_bf_impl::~codec2_decode_bf_impl()
-    {
-    }
+/*
+ * Our virtual destructor.
+ */
+codec2_decode_bf_impl::~codec2_decode_bf_impl() {}
 
-    int
-    codec2_decode_bf_impl::work(int noutput_items,
-			  gr_vector_const_void_star &input_items,
-			  gr_vector_void_star &output_items)
-    {
-        const char *in = (const char *) input_items[0];
-        float *out = (float *) output_items[0];
+int codec2_decode_bf_impl::work(int noutput_items,
+                                gr_vector_const_void_star& input_items,
+                                gr_vector_void_star& output_items) {
+    auto in = static_cast<const input_type*>(input_items[0]);
+    auto out = static_cast<output_type*>(output_items[0]);
+
 	int i, j;
 	int16_t buf[SAMPLES_PER_FRAME];
 
@@ -83,11 +62,9 @@ namespace gr {
 			out[i*SAMPLES_PER_FRAME + j] = (float)buf[j]/32767.0;
 		}
 	}
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-        // Tell runtime system how many output items we produced.
-        return noutput_items;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

@@ -2,7 +2,7 @@ id: lilacsat_afsk1200_rx_f
 label: AFSK1200 RX
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.afsk1200_rx_f()
 inputs:
 - label: in

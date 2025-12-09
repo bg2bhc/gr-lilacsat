@@ -213,10 +213,10 @@ unsigned int ccsds_afsk_tx_proc(Ccsds_afsk *cc, float *pDst, unsigned int blocks
 void ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
 
 void direwolf_ccsds_afsk_init(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
-void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
+void direwolf_ccsds_afsk_rx_proc(Ccsds_afsk *cc, const float *pSrc, unsigned int blocksize);
 
 void ccsds_afsk_init_dpd(Ccsds_afsk *cc, uint32_t sync_word, uint16_t len_frame, void *obj_ptr, afsk_sync_hook_t hook);
-void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, float *pSrc, unsigned int blocksize);
+void ccsds_afsk_rx_proc_dpd(Ccsds_afsk *cc, const float *pSrc, unsigned int blocksize);
 unsigned int ccsds_afsk_tx_proc_gmsk(Ccsds_afsk *cc, float *pDst, unsigned int blocksize);
 
 #endif

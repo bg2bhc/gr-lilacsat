@@ -1,30 +1,15 @@
 /* -*- c++ -*- */
-/* 
- * Copyright 2017 <+YOU OR YOUR COMPANY+>.
- * 
- * This is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation; either version 3, or (at your option)
- * any later version.
- * 
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this software; see the file COPYING.  If not, write to
- * the Free Software Foundation, Inc., 51 Franklin Street,
- * Boston, MA 02110-1301, USA.
+/*
+ * Copyright 2025 BG2BHC.
+ *
+ * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
-
-#include <gnuradio/io_signature.h>
 #include "dslwp_tm_header_parser_impl.h"
-
+#include <gnuradio/io_signature.h>
 extern "C"
 {
     #include "dslwp_tm_header.h"
@@ -33,54 +18,51 @@ extern "C"
 #include <stdio.h>
 
 namespace gr {
-  namespace lilacsat {
+namespace lilacsat {
 
-    dslwp_tm_header_parser::sptr
-    dslwp_tm_header_parser::make()
-    {
-      return gnuradio::get_initial_sptr
-        (new dslwp_tm_header_parser_impl());
-    }
+using input_type = char;
+using output_type = char;
+dslwp_tm_header_parser::sptr dslwp_tm_header_parser::make() {
+    return gnuradio::make_block_sptr<dslwp_tm_header_parser_impl>();
+}
 
-    /*
-     * The private constructor
-     */
-    dslwp_tm_header_parser_impl::dslwp_tm_header_parser_impl()
-      : gr::block("dslwp_tm_header_parser",
-              gr::io_signature::make(0, 0, sizeof(char)),
-              gr::io_signature::make(0, 0, sizeof(char)))
-    {
+
+/*
+ * The private constructor
+ */
+dslwp_tm_header_parser_impl::dslwp_tm_header_parser_impl()
+    : gr::block("dslwp_tm_header_parser",
+                gr::io_signature::make(
+                    0 /* min inputs */, 0 /* max inputs */, sizeof(input_type)),
+                gr::io_signature::make(
+                    0 /* min outputs */, 0 /*max outputs */, sizeof(output_type))) {
 	d_in_port = pmt::mp("in");
-      	message_port_register_in(d_in_port);
+    message_port_register_in(d_in_port);
 
 	d_out_port_0 = pmt::mp("out 0");	      
-      	message_port_register_out(d_out_port_0);
+    message_port_register_out(d_out_port_0);
 
 	d_out_port_1 = pmt::mp("out 1");	      
-      	message_port_register_out(d_out_port_1);
+    message_port_register_out(d_out_port_1);
 
 	d_out_port_2 = pmt::mp("out 2");	      
-      	message_port_register_out(d_out_port_2);
+    message_port_register_out(d_out_port_2);
+	
+	set_msg_handler(d_in_port, [this](pmt::pmt_t msg) { this->pmt_in_callback(msg); });
+}
 
-	set_msg_handler(d_in_port, boost::bind(&dslwp_tm_header_parser_impl::pmt_in_callback, this ,_1) );
-    }
+/*
+ * Our virtual destructor.
+ */
+dslwp_tm_header_parser_impl::~dslwp_tm_header_parser_impl() {}
 
-    /*
-     * Our virtual destructor.
-     */
-    dslwp_tm_header_parser_impl::~dslwp_tm_header_parser_impl()
-    {
-    }
-
-    void
-    dslwp_tm_header_parser_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
-    {
-      /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-    }
+void dslwp_tm_header_parser_impl::forecast(int noutput_items,
+                                           gr_vector_int& ninput_items_required) {
+    /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
+}
 
 
-    void dslwp_tm_header_parser_impl::pmt_in_callback(pmt::pmt_t msg)
-    {
+void dslwp_tm_header_parser_impl::pmt_in_callback(pmt::pmt_t msg) {
 	pmt::pmt_t meta(pmt::car(msg));
 	pmt::pmt_t bytes(pmt::cdr(msg));
 
@@ -128,26 +110,21 @@ namespace gr {
 		}
 	}
 
-    }
+}
+int dslwp_tm_header_parser_impl::general_work(int noutput_items,
+                                              gr_vector_int& ninput_items,
+                                              gr_vector_const_void_star& input_items,
+                                              gr_vector_void_star& output_items) {
+    
 
-    int
-    dslwp_tm_header_parser_impl::general_work (int noutput_items,
-                       gr_vector_int &ninput_items,
-                       gr_vector_const_void_star &input_items,
-                       gr_vector_void_star &output_items)
-    {
-      //const <+ITYPE+> *in = (const <+ITYPE+> *) input_items[0];
-      //<+OTYPE+> *out = (<+OTYPE+> *) output_items[0];
+    // Do <+signal processing+>
+    // Tell runtime system how many input items we consumed on
+    // each input stream.
+    consume_each(noutput_items);
 
-      // Do <+signal processing+>
-      // Tell runtime system how many input items we consumed on
-      // each input stream.
-      consume_each (noutput_items);
+    // Tell runtime system how many output items we produced.
+    return noutput_items;
+}
 
-      // Tell runtime system how many output items we produced.
-      return noutput_items;
-    }
-
-  } /* namespace lilacsat */
+} /* namespace lilacsat */
 } /* namespace gr */
-

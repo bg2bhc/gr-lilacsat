@@ -2,7 +2,7 @@ id: lilacsat_pipe_sink_pdu
 label: Pipe Sink PDU
 category: '[Lilacsat]'
 templates:
-  imports: import lilacsat
+  imports: from gnuradio import lilacsat
   make: lilacsat.pipe_sink_pdu(${label}, ${path}, ${permission}, ${debug})
 parameters:
 - id: label
