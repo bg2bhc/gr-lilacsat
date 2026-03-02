@@ -1,6 +1,7 @@
 options:
   parameters:
     author: ''
+    catch_exceptions: 'True'
     category: Custom
     cmake_opt: ''
     comment: ''
@@ -44,6 +45,18 @@ blocks:
     coordinate: [960, 20]
     rotation: 0
     state: enabled
+- name: alt
+  id: variable
+  parameters:
+    comment: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [112, 176.0]
+    rotation: 0
+    state: enabled
 - name: audio_rate
   id: variable
   parameters:
@@ -63,7 +76,7 @@ blocks:
     gui_hint: tab@1:3,0
     label: 'Equalizer: Gain'
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '0.0'
     step: '0.01'
@@ -96,7 +109,7 @@ blocks:
     gui_hint: tab@1:0,0
     label: 'FLL: Bandwidth'
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '0.0'
     step: '0.001'
@@ -134,6 +147,30 @@ blocks:
     coordinate: [16, 540.0]
     rotation: 0
     state: enabled
+- name: lat
+  id: variable
+  parameters:
+    comment: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [64, 176.0]
+    rotation: 0
+    state: enabled
+- name: lon
+  id: variable
+  parameters:
+    comment: ''
+    value: '0'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [16, 176.0]
+    rotation: 0
+    state: enabled
 - name: nfilts
   id: variable
   parameters:
@@ -153,7 +190,7 @@ blocks:
     gui_hint: tab@1:2,0
     label: 'Phase: Bandwidth'
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '0.0'
     step: '0.01'
@@ -210,7 +247,7 @@ blocks:
     gui_hint: tab@1:1,0
     label: 'Time: Bandwidth'
     min_len: '200'
-    orient: Qt.Horizontal
+    orient: QtCore.Qt.Horizontal
     rangeType: float
     start: '0.0'
     step: '0.01'
@@ -224,12 +261,31 @@ blocks:
     coordinate: [1616, 228.0]
     rotation: 0
     state: enabled
+- name: variable_adaptive_algorithm_0
+  id: variable_adaptive_algorithm
+  parameters:
+    comment: ''
+    cons: variable_constellation_0
+    delta: '10.0'
+    ffactor: '0.99'
+    modulus: '2'
+    step_size: equalizer_gain
+    type: lms
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [352, 804.0]
+    rotation: 0
+    state: enabled
 - name: variable_constellation_0
   id: variable_constellation
   parameters:
     comment: ''
     const_points: '[-1, 1]'
     dims: '1'
+    normalization: digital.constellation.AMPLITUDE_NORMALIZATION
+    npwr: '1.0'
     precision: '8'
     rot_sym: '2'
     soft_dec_lut: None
@@ -272,6 +328,7 @@ blocks:
     offset: '0'
     phase: '0'
     samp_rate: if_rate
+    showports: 'False'
     type: complex
     waveform: analog.GR_COS_WAVE
   states:
@@ -326,6 +383,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     num_ports: '1'
+    showports: 'False'
     type: float
     vlen: '1'
   states:
@@ -357,6 +415,8 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
+    en_uvec: 'True'
+    log_level: info
   states:
     bus_sink: false
     bus_source: false
@@ -505,23 +565,25 @@ blocks:
     coordinate: [960, 344.0]
     rotation: 0
     state: enabled
-- name: digital_lms_dd_equalizer_cc_0_0
-  id: digital_lms_dd_equalizer_cc
+- name: digital_linear_equalizer_0
+  id: digital_linear_equalizer
   parameters:
+    adapt_after_training: 'True'
     affinity: ''
+    alg: variable_adaptive_algorithm_0
     alias: ''
-    cnst: variable_constellation_0
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    mu: equalizer_gain
     num_taps: '2'
     sps: '2'
+    training_sequence: '[ ]'
+    training_start_tag: corr_est
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [344, 660.0]
+    coordinate: [344, 692.0]
     rotation: 0
     state: enabled
 - name: digital_pfb_clock_sync_xxx_0
@@ -558,19 +620,6 @@ blocks:
     bus_source: false
     bus_structure: null
     coordinate: [16, 612.0]
-    rotation: 0
-    state: enabled
-- name: import_0_0
-  id: import
-  parameters:
-    alias: ''
-    comment: ''
-    imports: from grc_param import *
-  states:
-    bus_sink: false
-    bus_source: false
-    bus_structure: null
-    coordinate: [1240, 20]
     rotation: 0
     state: enabled
 - name: lilacsat_fec_decode_b_0_0
@@ -682,7 +731,7 @@ blocks:
     samp_rate: if_rate
     type: fir_filter_ccf
     width: 2e3
-    win: firdes.WIN_HAMMING
+    win: window.WIN_HAMMING
   states:
     bus_sink: false
     bus_source: false
@@ -834,6 +883,7 @@ blocks:
     minoutbuf: '0'
     name: '""'
     nconnections: '1'
+    norm_window: 'False'
     showports: 'True'
     tr_chan: '0'
     tr_level: '0.0'
@@ -852,7 +902,7 @@ blocks:
     width7: '1'
     width8: '1'
     width9: '1'
-    wintype: firdes.WIN_BLACKMAN_hARRIS
+    wintype: window.WIN_BLACKMAN_hARRIS
     ymax: '10'
     ymin: '-140'
   states:
@@ -914,6 +964,7 @@ blocks:
     minoutbuf: '0'
     name: '""'
     nconnections: '2'
+    norm_window: 'False'
     showports: 'True'
     tr_chan: '0'
     tr_level: '0.0'
@@ -932,7 +983,7 @@ blocks:
     width7: '1'
     width8: '1'
     width9: '1'
-    wintype: firdes.WIN_BLACKMAN_hARRIS
+    wintype: window.WIN_BLACKMAN_hARRIS
     ymax: '0'
     ymin: '-100'
   states:
@@ -1058,7 +1109,7 @@ blocks:
     showports: 'True'
     type: float
     update_time: '0.10'
-    wintype: firdes.WIN_BLACKMAN_hARRIS
+    wintype: window.WIN_BLACKMAN_hARRIS
   states:
     bus_sink: false
     bus_source: false
@@ -1134,11 +1185,11 @@ connections:
 - [blocks_rms_xx_0, '0', blocks_nlog10_ff_0, '0']
 - [blocks_unpack_k_bits_bb_0_0_0, '0', lilacsat_fec_decode_b_0_0_0, '0']
 - [blocks_unpack_k_bits_bb_0_0_0_0, '0', lilacsat_fec_decode_b_0_0, '0']
-- [digital_costas_loop_cc_0_0, '0', digital_lms_dd_equalizer_cc_0_0, '0']
+- [digital_costas_loop_cc_0_0, '0', digital_linear_equalizer_0, '0']
 - [digital_fll_band_edge_cc_0, '0', digital_pfb_clock_sync_xxx_0, '0']
 - [digital_fll_band_edge_cc_0, '0', qtgui_freq_sink_x_0_0, '1']
-- [digital_lms_dd_equalizer_cc_0_0, '0', blocks_complex_to_real_0, '0']
-- [digital_lms_dd_equalizer_cc_0_0, '0', qtgui_const_sink_x_0, '0']
+- [digital_linear_equalizer_0, '0', blocks_complex_to_real_0, '0']
+- [digital_linear_equalizer_0, '0', qtgui_const_sink_x_0, '0']
 - [digital_pfb_clock_sync_xxx_0, '0', digital_costas_loop_cc_0_0, '0']
 - [lilacsat_fec_decode_b_0_0, out, blocks_message_debug_0_0, print_pdu]
 - [lilacsat_fec_decode_b_0_0, out, zeromq_pub_msg_sink_0, in]
@@ -1152,3 +1203,4 @@ connections:
 
 metadata:
   file_format: 1
+  grc_version: 3.10.12.0
